@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writer Init"
+  short_description: "Initialize a project truth surface and protocol"
+  default_prompt: "Use writer-init to define a project truth surface, data maintenance protocol, and script plan for writer-studio."

@@ -1,0 +1,21 @@
+{
+  "skillId": "test-driven-development",
+  "skillName": "test-driven-development",
+  "description": "Use when implementing any feature or bugfix, before writing implementation code",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "use",
+    "when",
+    "implementing",
+    "any",
+    "feature",
+    "bugfix",
+    "before",
+    "writing",
+    "implementation",
+    "code"
+  ],
+  "updatedAtMs": 1776083661028.2356,
+  "status": "ready"
+}

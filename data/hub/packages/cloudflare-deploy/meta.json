@@ -1,0 +1,23 @@
+{
+  "skillId": "cloudflare-deploy",
+  "skillName": "cloudflare-deploy",
+  "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
+  "group": "project-management",
+  "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+  "keywords": [
+    "deploy",
+    "applications",
+    "and",
+    "infrastructure",
+    "cloudflare",
+    "using",
+    "workers",
+    "pages",
+    "related",
+    "platform",
+    "services",
+    "use"
+  ],
+  "updatedAtMs": 1773070836669.531,
+  "status": "ready"
+}

@@ -1,0 +1,15 @@
+{
+  "skillId": "engineering-engineering-iot-solution-architect",
+  "skillName": "IoT 方案架构师",
+  "description": "物联网端到端方案设计专家——精通设备接入（MQTT/CoAP/LwM2M）、边缘计算、云平台（AWS IoT/Azure IoT/阿里云 IoT）、OTA、设备管理、数据管道和安全体系。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "物联网端到端方案设计专家——精通设备接入（mqtt/coap/lwm2m）、边缘计算、云平台（aws",
+    "iot/azure",
+    "iot/阿里云",
+    "iot）、ota、设备管理、数据管道和安全体系"
+  ],
+  "updatedAtMs": 1775894226601.204,
+  "status": "ready"
+}

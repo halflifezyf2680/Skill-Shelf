@@ -1,0 +1,12 @@
+{
+  "skillId": "product-product-feedback-synthesizer",
+  "skillName": "反馈分析师",
+  "description": "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。",
+  "group": "product",
+  "groupDescription": "产品规划、需求分析、用户反馈、优先级、路线图与产品研究。",
+  "keywords": [
+    "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议"
+  ],
+  "updatedAtMs": 1775894226849.973,
+  "status": "ready"
+}

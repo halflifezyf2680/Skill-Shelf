@@ -1,0 +1,12 @@
+{
+  "skillId": "project-management-project-management-jira-workflow-steward",
+  "skillName": "Jira工作流管家",
+  "description": "交付运营专家，执行Jira关联的Git工作流，确保提交可追溯、PR结构规范、分支策略安全可控。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "交付运营专家，执行jira关联的git工作流，确保提交可追溯、pr结构规范、分支策略安全可控"
+  ],
+  "updatedAtMs": 1775894226870.7358,
+  "status": "ready"
+}

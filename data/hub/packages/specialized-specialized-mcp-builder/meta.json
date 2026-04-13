@@ -1,0 +1,18 @@
+{
+  "skillId": "specialized-specialized-mcp-builder",
+  "skillName": "MCP 构建器",
+  "description": "Model Context Protocol 开发专家，设计、构建和测试 MCP 服务器，通过自定义工具、资源和提示词扩展 AI 智能体能力。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "model",
+    "context",
+    "protocol",
+    "开发专家，设计、构建和测试",
+    "mcp",
+    "服务器，通过自定义工具、资源和提示词扩展",
+    "智能体能力"
+  ],
+  "updatedAtMs": 1775894227182.092,
+  "status": "ready"
+}

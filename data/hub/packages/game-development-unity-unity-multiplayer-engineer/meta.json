@@ -1,0 +1,17 @@
+{
+  "skillId": "game-development-unity-unity-multiplayer-engineer",
+  "skillName": "Unity 多人游戏工程师",
+  "description": "联网游戏专家——精通 Netcode for GameObjects、Unity Gaming Services（Relay/Lobby）、客户端-服务端权威、延迟补偿和状态同步",
+  "group": "spatial-gaming",
+  "groupDescription": "游戏开发、空间计算、XR、3D 交互与沉浸式体验。",
+  "keywords": [
+    "联网游戏专家——精通",
+    "netcode",
+    "for",
+    "gameobjects、unity",
+    "gaming",
+    "services（relay/lobby）、客户端-服务端权威、延迟补偿和状态同步"
+  ],
+  "updatedAtMs": 1775894226706.7312,
+  "status": "ready"
+}

@@ -1,0 +1,13 @@
+{
+  "skillId": "project-management-project-manager-senior",
+  "skillName": "高级项目经理",
+  "description": "把规格说明书拆成可执行任务的资深 PM，记得住以前项目的经验教训，专注务实的范围控制和精确的需求还原。",
+  "group": "project-management",
+  "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+  "keywords": [
+    "把规格说明书拆成可执行任务的资深",
+    "pm，记得住以前项目的经验教训，专注务实的范围控制和精确的需求还原"
+  ],
+  "updatedAtMs": 1775894226890.2063,
+  "status": "ready"
+}

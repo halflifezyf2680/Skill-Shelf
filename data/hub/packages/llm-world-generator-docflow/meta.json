@@ -1,0 +1,23 @@
+{
+  "skillId": "llm-world-generator-docflow",
+  "skillName": "llm-world-generator-docflow",
+  "description": "用纯 markdown/yaml 文档流构建和运行 LLM 世界生成器。当用户要做世界观生成、骨架优先的 worldbuilding、分支或叶子级扩写、目录驱动的生成状态管理，或想避免沉重编辑器 UI 时，务必使用这个 skill。优先采用显式 run 文件、稳定 branch id / leaf id、渐进披露读取范围，以及把最终世界事实沉淀到 05-world-data，而不是一次性大量读取和自由散写。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "markdown/yaml",
+    "文档流构建和运行",
+    "llm",
+    "世界生成器。当用户要做世界观生成、骨架优先的",
+    "worldbuilding、分支或叶子级扩写、目录驱动的生成状态管理，或想避免沉重编辑器",
+    "时，务必使用这个",
+    "skill。优先采用显式",
+    "run",
+    "文件、稳定",
+    "branch",
+    "leaf",
+    "id、渐进披露读取范围，以及把最终世界事实沉淀到"
+  ],
+  "updatedAtMs": 1774788106605.3828,
+  "status": "ready"
+}

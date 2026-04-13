@@ -1,0 +1,17 @@
+{
+  "skillId": "writer-build-packet",
+  "skillName": "writer-build-packet",
+  "description": "从 truth surface 和查询结果生成正式 chapter packet。用于准备写章、写场景、或在 AI 主写前先锁定章节功能、POV、时间锚点和禁止动作的时候。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "truth",
+    "surface",
+    "和查询结果生成正式",
+    "chapter",
+    "packet。用于准备写章、写场景、或在",
+    "主写前先锁定章节功能、pov、时间锚点和禁止动作的时候"
+  ],
+  "updatedAtMs": 1774538309751.808,
+  "status": "ready"
+}

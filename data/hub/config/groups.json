@@ -1,0 +1,328 @@
+[
+  {
+    "group": "engineering",
+    "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+    "keywords": [
+      "software",
+      "engineering",
+      "backend",
+      "frontend",
+      "api",
+      "database",
+      "devops",
+      "ai",
+      "ml",
+      "data",
+      "code",
+      "developer",
+      "automation",
+      "infra",
+      "mobile"
+    ],
+    "aliases": [
+      "software-engineering",
+      "development",
+      "tech"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "design",
+    "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+    "keywords": [
+      "design",
+      "ui",
+      "ux",
+      "brand",
+      "visual",
+      "creative",
+      "figma",
+      "token",
+      "identity",
+      "banner",
+      "icon",
+      "styling"
+    ],
+    "aliases": [
+      "visual-design",
+      "ux-design"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "product",
+    "groupDescription": "产品规划、需求分析、用户反馈、优先级、路线图与产品研究。",
+    "keywords": [
+      "product",
+      "roadmap",
+      "requirement",
+      "feedback",
+      "prioritization",
+      "research",
+      "insight",
+      "discovery",
+      "feature"
+    ],
+    "aliases": [
+      "product-management"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "project-management",
+    "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+    "keywords": [
+      "project",
+      "program",
+      "delivery",
+      "milestone",
+      "planning",
+      "execution",
+      "coordination",
+      "timeline",
+      "stakeholder"
+    ],
+    "aliases": [
+      "pm",
+      "program-management"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "marketing",
+    "groupDescription": "品牌营销、内容营销、市场传播、增长叙事与活动策略。",
+    "keywords": [
+      "marketing",
+      "brand",
+      "content",
+      "campaign",
+      "growth",
+      "messaging",
+      "storytelling",
+      "audience",
+      "positioning"
+    ],
+    "aliases": [
+      "go-to-market",
+      "content-marketing"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "paid-media",
+    "groupDescription": "广告投放、媒介优化、买量、渠道归因与预算效率管理。",
+    "keywords": [
+      "paid",
+      "media",
+      "ads",
+      "advertising",
+      "acquisition",
+      "attribution",
+      "budget",
+      "campaign-optimization",
+      "performance-marketing"
+    ],
+    "aliases": [
+      "paid-ads",
+      "media-buying"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "sales",
+    "groupDescription": "销售、售前、线索管理、方案支持、成交推进与客户拓展。",
+    "keywords": [
+      "sales",
+      "lead",
+      "pipeline",
+      "prospect",
+      "deal",
+      "presales",
+      "account",
+      "crm",
+      "closing"
+    ],
+    "aliases": [
+      "business-development",
+      "presales"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "finance",
+    "groupDescription": "财务、预算、核算、定价、经营分析与资金相关能力。",
+    "keywords": [
+      "finance",
+      "financial",
+      "budget",
+      "pricing",
+      "accounting",
+      "forecast",
+      "cost",
+      "revenue",
+      "expense"
+    ],
+    "aliases": [
+      "finops",
+      "accounting"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "legal-compliance",
+    "groupDescription": "法务、合规、审计、政策、风险治理与监管要求处理。",
+    "keywords": [
+      "legal",
+      "compliance",
+      "audit",
+      "policy",
+      "risk",
+      "regulation",
+      "governance",
+      "contract",
+      "privacy"
+    ],
+    "aliases": [
+      "legal",
+      "compliance",
+      "risk"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "hr-talent",
+    "groupDescription": "招聘、人才、培训、组织发展与人事支持工作。",
+    "keywords": [
+      "hr",
+      "recruitment",
+      "talent",
+      "hiring",
+      "people",
+      "training",
+      "onboarding",
+      "candidate",
+      "organization"
+    ],
+    "aliases": [
+      "human-resources",
+      "talent-acquisition"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "support-operations",
+    "groupDescription": "客服、运营支持、行政协助、汇总汇报与后台支持工作。",
+    "keywords": [
+      "support",
+      "operations",
+      "assistant",
+      "reporting",
+      "responder",
+      "summary",
+      "maintainer",
+      "tracker",
+      "coordination"
+    ],
+    "aliases": [
+      "ops-support",
+      "backoffice"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "supply-chain",
+    "groupDescription": "供应链、采购、物流、库存、履约与上下游协同。",
+    "keywords": [
+      "supply",
+      "procurement",
+      "logistics",
+      "inventory",
+      "fulfillment",
+      "vendor",
+      "warehouse",
+      "operations"
+    ],
+    "aliases": [
+      "sourcing",
+      "supply-chain"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "academic-research",
+    "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+    "keywords": [
+      "academic",
+      "research",
+      "study",
+      "historian",
+      "anthropologist",
+      "psychologist",
+      "geographer",
+      "scholar",
+      "education"
+    ],
+    "aliases": [
+      "research",
+      "education"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "testing-qa",
+    "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+    "keywords": [
+      "testing",
+      "qa",
+      "quality",
+      "review",
+      "audit",
+      "validation",
+      "verification",
+      "benchmark",
+      "eval"
+    ],
+    "aliases": [
+      "quality-assurance",
+      "evaluation"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "spatial-gaming",
+    "groupDescription": "游戏开发、空间计算、XR、3D 交互与沉浸式体验。",
+    "keywords": [
+      "game",
+      "gaming",
+      "spatial",
+      "xr",
+      "vr",
+      "ar",
+      "3d",
+      "immersive",
+      "unity"
+    ],
+    "aliases": [
+      "game-development",
+      "spatial-computing"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "specialized-domain",
+    "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+    "keywords": [
+      "specialized",
+      "domain",
+      "industry",
+      "cross-functional",
+      "vertical",
+      "specialist"
+    ],
+    "aliases": [
+      "specialized",
+      "misc"
+    ],
+    "source": "builtin"
+  }
+]

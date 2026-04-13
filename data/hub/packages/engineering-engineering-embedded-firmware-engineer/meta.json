@@ -1,0 +1,20 @@
+{
+  "skillId": "engineering-engineering-embedded-firmware-engineer",
+  "skillName": "嵌入式固件工程师",
+  "description": "裸机和 RTOS 固件开发专家——精通 ESP32/ESP-IDF、PlatformIO、Arduino、ARM Cortex-M、STM32 HAL/LL、Nordic nRF5/nRF Connect SDK、FreeRTOS、Zephyr。",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "裸机和",
+    "rtos",
+    "固件开发专家——精通",
+    "esp32/esp-idf、platformio、arduino、arm",
+    "cortex-m、stm32",
+    "hal/ll、nordic",
+    "nrf5/nrf",
+    "connect",
+    "sdk、freertos、zephyr"
+  ],
+  "updatedAtMs": 1775894226586.6155,
+  "status": "ready"
+}

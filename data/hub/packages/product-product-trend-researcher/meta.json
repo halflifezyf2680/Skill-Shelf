@@ -1,0 +1,14 @@
+{
+  "skillId": "product-product-trend-researcher",
+  "skillName": "趋势研究员",
+  "description": "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来",
+    "6-18",
+    "个月的方向，在正确的时间做正确的事"
+  ],
+  "updatedAtMs": 1775894226859.6147,
+  "status": "ready"
+}

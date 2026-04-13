@@ -1,0 +1,15 @@
+{
+  "skillId": "testing-testing-api-tester",
+  "skillName": "API 测试员",
+  "description": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专注于全面",
+    "api",
+    "验证、性能测试和质量保证的",
+    "测试专家，覆盖所有系统和第三方集成"
+  ],
+  "updatedAtMs": 1775894227297.7297,
+  "status": "ready"
+}

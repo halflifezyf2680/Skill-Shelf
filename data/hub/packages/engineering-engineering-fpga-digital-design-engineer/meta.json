@@ -1,0 +1,18 @@
+{
+  "skillId": "engineering-engineering-fpga-digital-design-engineer",
+  "skillName": "FPGA/ASIC 数字设计工程师",
+  "description": "FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、VHDL、Vivado/Quartus、AXI/AHB 总线、时序收敛、Zynq/Intel SoC FPGA、高层次综合（HLS）。",
+  "group": "spatial-gaming",
+  "groupDescription": "游戏开发、空间计算、XR、3D 交互与沉浸式体验。",
+  "keywords": [
+    "fpga",
+    "asic",
+    "数字前端设计专家——精通",
+    "verilog/systemverilog、vhdl、vivado/quartus、axi/ahb",
+    "总线、时序收敛、zynq/intel",
+    "soc",
+    "fpga、高层次综合（hls"
+  ],
+  "updatedAtMs": 1775894226594.0894,
+  "status": "ready"
+}

@@ -1,0 +1,12 @@
+{
+  "skillId": "product-product-behavioral-nudge-engine",
+  "skillName": "行为助推引擎",
+  "description": "行为心理学专家，通过调整软件交互节奏和风格，最大化用户动力和成功率。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "行为心理学专家，通过调整软件交互节奏和风格，最大化用户动力和成功率"
+  ],
+  "updatedAtMs": 1775894226846.6836,
+  "status": "ready"
+}

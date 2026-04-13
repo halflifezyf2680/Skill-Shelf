@@ -1,0 +1,14 @@
+{
+  "skillId": "specialized-specialized-risk-assessor",
+  "skillName": "企业风险评估师",
+  "description": "面向中国企业的全面风险管理专家，精通国企风控体系建设、内控合规（COSO 框架本土化）、审计整改、ESG 风险管理及供应链风险评估，帮助企业构建系统化的风险识别、评估与应对机制，提升组织韧性。",
+  "group": "legal-compliance",
+  "groupDescription": "法务、合规、审计、政策、风险治理与监管要求处理。",
+  "keywords": [
+    "面向中国企业的全面风险管理专家，精通国企风控体系建设、内控合规（coso",
+    "框架本土化）、审计整改、esg",
+    "风险管理及供应链风险评估，帮助企业构建系统化的风险识别、评估与应对机制，提升组织韧性"
+  ],
+  "updatedAtMs": 1775894227205.0833,
+  "status": "ready"
+}

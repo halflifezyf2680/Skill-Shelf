@@ -1,0 +1,12 @@
+{
+  "skillId": "specialized-report-distribution-agent",
+  "skillName": "报告分发师",
+  "description": "自动把整合好的销售报告按区域分发给对应的销售代表，支持定时和手动触发。",
+  "group": "sales",
+  "groupDescription": "销售、售前、线索管理、方案支持、成交推进与客户拓展。",
+  "keywords": [
+    "自动把整合好的销售报告按区域分发给对应的销售代表，支持定时和手动触发"
+  ],
+  "updatedAtMs": 1775894227058.8523,
+  "status": "ready"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "skill-router-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Skill router MCP for dynamic skill discovery, hot reload, and on-demand skill reading.",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "skill-hub": "node --import tsx ./src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "e2e": "node --import tsx ./src/e2e-suite.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "chokidar": "^4.0.3",
+    "gray-matter": "^4.0.3",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "skillId": "game-development-narrative-designer",
+  "skillName": "叙事设计师",
+  "description": "故事系统与对话架构师——精通 GDD 对齐的叙事设计、分支对话、世界观架构和环境叙事，跨引擎通用",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "故事系统与对话架构师——精通",
+    "gdd",
+    "对齐的叙事设计、分支对话、世界观架构和环境叙事，跨引擎通用"
+  ],
+  "updatedAtMs": 1775894226662.9456,
+  "status": "ready"
+}

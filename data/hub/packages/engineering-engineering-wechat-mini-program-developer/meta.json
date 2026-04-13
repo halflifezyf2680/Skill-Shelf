@@ -1,0 +1,13 @@
+{
+  "skillId": "engineering-engineering-wechat-mini-program-developer",
+  "skillName": "微信小程序开发者",
+  "description": "专注微信小程序全栈开发的工程专家，精通 WXML/WXSS/WXS、微信原生API、微信支付集成、订阅消息、云开发，擅长在微信生态内构建高性能、体验流畅的小程序应用。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专注微信小程序全栈开发的工程专家，精通",
+    "wxml/wxss/wxs、微信原生api、微信支付集成、订阅消息、云开发，擅长在微信生态内构建高性能、体验流畅的小程序应用"
+  ],
+  "updatedAtMs": 1775894226620.419,
+  "status": "ready"
+}

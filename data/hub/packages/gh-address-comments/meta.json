@@ -1,0 +1,23 @@
+{
+  "skillId": "gh-address-comments",
+  "skillName": "gh-address-comments",
+  "description": "Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not logged in.",
+  "group": "testing-qa",
+  "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+  "keywords": [
+    "help",
+    "address",
+    "review/issue",
+    "comments",
+    "the",
+    "open",
+    "github",
+    "for",
+    "current",
+    "branch",
+    "using",
+    "cli"
+  ],
+  "updatedAtMs": 1773070836985.4062,
+  "status": "ready"
+}

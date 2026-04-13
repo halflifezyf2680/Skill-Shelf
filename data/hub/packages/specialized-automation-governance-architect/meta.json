@@ -1,0 +1,13 @@
+{
+  "skillId": "specialized-automation-governance-architect",
+  "skillName": "自动化治理架构师",
+  "description": "以治理为先的业务自动化架构师（n8n 优先），在实施之前先审计价值、风险和可维护性。",
+  "group": "legal-compliance",
+  "groupDescription": "法务、合规、审计、政策、风险治理与监管要求处理。",
+  "keywords": [
+    "以治理为先的业务自动化架构师（n8n",
+    "优先），在实施之前先审计价值、风险和可维护性"
+  ],
+  "updatedAtMs": 1775894226955.4336,
+  "status": "ready"
+}

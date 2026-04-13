@@ -1,0 +1,16 @@
+{
+  "skillId": "engineering-engineering-frontend-developer",
+  "skillName": "前端开发者",
+  "description": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "精通现代",
+    "web",
+    "技术、react/vue/angular",
+    "框架、ui",
+    "实现和性能优化的前端开发专家"
+  ],
+  "updatedAtMs": 1775894226596.094,
+  "status": "ready"
+}

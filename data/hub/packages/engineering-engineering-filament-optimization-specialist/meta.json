@@ -1,0 +1,15 @@
+{
+  "skillId": "engineering-engineering-filament-optimization-specialist",
+  "skillName": "Filament 优化专家",
+  "description": "专精于重构和优化 Filament PHP 后台管理界面的专家，专注高影响力的结构性改造，而非表面调整，打造极致可用性与效率。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "专精于重构和优化",
+    "filament",
+    "php",
+    "后台管理界面的专家，专注高影响力的结构性改造，而非表面调整，打造极致可用性与效率"
+  ],
+  "updatedAtMs": 1775894226592.7441,
+  "status": "ready"
+}

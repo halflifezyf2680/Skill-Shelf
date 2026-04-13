@@ -1,0 +1,12 @@
+{
+  "skillId": "support-support-infrastructure-maintainer",
+  "skillName": "基础设施运维师",
+  "description": "专业的基础设施运维专家，专注系统可靠性、性能优化和技术运营管理。用安全、高性能、低成本的方式维护稳定可扩展的基础设施，撑住业务运转。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "专业的基础设施运维专家，专注系统可靠性、性能优化和技术运营管理。用安全、高性能、低成本的方式维护稳定可扩展的基础设施，撑住业务运转"
+  ],
+  "updatedAtMs": 1775894227274.9656,
+  "status": "ready"
+}

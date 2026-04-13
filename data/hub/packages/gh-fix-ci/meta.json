@@ -1,0 +1,23 @@
+{
+  "skillId": "gh-fix-ci",
+  "skillName": "gh-fix-ci",
+  "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "use",
+    "when",
+    "user",
+    "asks",
+    "debug",
+    "fix",
+    "failing",
+    "github",
+    "checks",
+    "that",
+    "run",
+    "actions"
+  ],
+  "updatedAtMs": 1773070836993.1055,
+  "status": "ready"
+}

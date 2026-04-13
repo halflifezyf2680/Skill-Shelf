@@ -1,0 +1,14 @@
+{
+  "skillId": "engineering-engineering-technical-writer",
+  "skillName": "技术文档工程师",
+  "description": "专精于开发者文档、API 参考、README 和教程的技术写作专家。把复杂的工程概念转化为清晰、准确、开发者真正会读也用得上的文档。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专精于开发者文档、api",
+    "参考、readme",
+    "和教程的技术写作专家。把复杂的工程概念转化为清晰、准确、开发者真正会读也用得上的文档"
+  ],
+  "updatedAtMs": 1775894226615.8303,
+  "status": "ready"
+}

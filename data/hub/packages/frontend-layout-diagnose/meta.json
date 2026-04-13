@@ -1,0 +1,23 @@
+{
+  "skillId": "frontend-layout-diagnose",
+  "skillName": "frontend-layout-diagnose",
+  "description": "Diagnose and fix layout, alignment, spacing, overflow, scroll, overlap, and information-architecture problems in existing frontend pages. Use when the user points at a screenshot or running page and says things like 看图, 元素不对齐, 被挡住了, 这里空得离谱, 滚不动, 重排, 贴左/贴右, or asks to move, merge, remove, resize, or reorder UI sections. Treat screenshots as complaint input only; use DOM structure, computed geometry, overflow facts, and the page code as the source of truth.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "diagnose",
+    "and",
+    "fix",
+    "layout",
+    "alignment",
+    "spacing",
+    "overflow",
+    "scroll",
+    "overlap",
+    "information-architecture",
+    "problems",
+    "existing"
+  ],
+  "updatedAtMs": 1774582387379.815,
+  "status": "ready"
+}

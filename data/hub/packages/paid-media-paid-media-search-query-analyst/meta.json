@@ -1,0 +1,12 @@
+{
+  "skillId": "paid-media-paid-media-search-query-analyst",
+  "skillName": "搜索词分析师",
+  "description": "搜索词分析、否定关键词架构和查询意图映射专家，从海量搜索词报告中挖掘优化方向，消灭浪费、放大高意向流量。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "搜索词分析、否定关键词架构和查询意图映射专家，从海量搜索词报告中挖掘优化方向，消灭浪费、放大高意向流量"
+  ],
+  "updatedAtMs": 1775894226841.1716,
+  "status": "ready"
+}

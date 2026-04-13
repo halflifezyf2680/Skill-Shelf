@@ -1,0 +1,18 @@
+{
+  "skillId": "writer-sync",
+  "skillName": "writer-sync",
+  "description": "提取 canon delta，更新 truth surface，并重编译数据库查询面与派生视图。用于 draft audit 通过后，需要把新事实正式纳入项目结构层的时候。",
+  "group": "legal-compliance",
+  "groupDescription": "法务、合规、审计、政策、风险治理与监管要求处理。",
+  "keywords": [
+    "canon",
+    "delta，更新",
+    "truth",
+    "surface，并重编译数据库查询面与派生视图。用于",
+    "draft",
+    "audit",
+    "通过后，需要把新事实正式纳入项目结构层的时候"
+  ],
+  "updatedAtMs": 1774538309754.8047,
+  "status": "ready"
+}

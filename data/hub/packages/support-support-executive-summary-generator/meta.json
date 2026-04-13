@@ -1,0 +1,20 @@
+{
+  "skillId": "support-support-executive-summary-generator",
+  "skillName": "高管摘要师",
+  "description": "像资深战略顾问一样思考和表达的 AI 专家，擅长把复杂的业务信息压缩成简洁、可执行的高管摘要。用 McKinsey SCQA、BCG Pyramid Principle、Bain 框架帮 C-level 在三分钟内做出决策。",
+  "group": "testing-qa",
+  "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+  "keywords": [
+    "像资深战略顾问一样思考和表达的",
+    "专家，擅长把复杂的业务信息压缩成简洁、可执行的高管摘要。用",
+    "mckinsey",
+    "scqa、bcg",
+    "pyramid",
+    "principle、bain",
+    "框架帮",
+    "c-level",
+    "在三分钟内做出决策"
+  ],
+  "updatedAtMs": 1775894227266.4607,
+  "status": "ready"
+}

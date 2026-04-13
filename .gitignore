@@ -1,0 +1,17 @@
+node_modules/
+
+# Runtime artifacts (auto-generated)
+data/hub/index/
+data/hub/logs/
+data/hub/staging/
+
+# MPM local data
+.mpm-data/
+
+# Dev logs
+dev-log.md
+dev-log-archive/
+
+# OS
+.DS_Store
+Thumbs.db

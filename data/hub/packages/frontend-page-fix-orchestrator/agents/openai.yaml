@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Fix Orchestrator"
+  short_description: "Choose the right frontend diagnosis workflow first"
+  default_prompt: "Use frontend-page-fix-orchestrator to triage a page problem and choose the right specialist skill first."

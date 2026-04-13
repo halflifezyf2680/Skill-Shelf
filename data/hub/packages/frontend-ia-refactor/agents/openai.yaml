@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend IA Refactor"
+  short_description: "Refactor page sections, hierarchy, and information flow"
+  default_prompt: "Use frontend-ia-refactor to redesign a page hierarchy before changing the code."

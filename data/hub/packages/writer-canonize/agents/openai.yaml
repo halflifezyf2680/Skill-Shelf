@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writer Canonize"
+  short_description: "Promote candidates into canon"
+  default_prompt: "Use writer-canonize to turn brainstorm or candidate material into canon and update the project truth surface."

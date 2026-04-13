@@ -1,0 +1,22 @@
+{
+  "skillId": "playwright-interactive",
+  "skillName": "playwright-interactive",
+  "description": "Persistent browser and Electron interaction through `js_repl` for fast iterative UI debugging.",
+  "group": "hr-talent",
+  "groupDescription": "招聘、人才、培训、组织发展与人事支持工作。",
+  "keywords": [
+    "persistent",
+    "browser",
+    "and",
+    "electron",
+    "interaction",
+    "through",
+    "js_repl",
+    "for",
+    "fast",
+    "iterative",
+    "debugging"
+  ],
+  "updatedAtMs": 1773315526886.0642,
+  "status": "ready"
+}

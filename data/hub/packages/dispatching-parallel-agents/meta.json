@@ -1,0 +1,23 @@
+{
+  "skillId": "dispatching-parallel-agents",
+  "skillName": "dispatching-parallel-agents",
+  "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+  "group": "spatial-gaming",
+  "groupDescription": "游戏开发、空间计算、XR、3D 交互与沉浸式体验。",
+  "keywords": [
+    "use",
+    "when",
+    "facing",
+    "independent",
+    "tasks",
+    "that",
+    "can",
+    "worked",
+    "without",
+    "shared",
+    "state",
+    "sequential"
+  ],
+  "updatedAtMs": 1776083661013.9736,
+  "status": "ready"
+}

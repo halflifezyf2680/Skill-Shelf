@@ -1,0 +1,15 @@
+{
+  "skillId": "specialized-specialized-document-generator",
+  "skillName": "文档生成器",
+  "description": "专业文档创建专家，通过代码化方式生成专业的 PDF、PPTX、DOCX 和 XLSX 文件，支持格式化、图表和数据可视化。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "专业文档创建专家，通过代码化方式生成专业的",
+    "pdf、pptx、docx",
+    "xlsx",
+    "文件，支持格式化、图表和数据可视化"
+  ],
+  "updatedAtMs": 1775894227143.5315,
+  "status": "ready"
+}

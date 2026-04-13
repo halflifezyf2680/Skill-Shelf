@@ -1,0 +1,12 @@
+{
+  "skillId": "specialized-specialized-cultural-intelligence-strategist",
+  "skillName": "文化智能策略师",
+  "description": "文化智商（CQ）专家，检测隐性排斥、研究全球化上下文，确保软件产品在跨文化和交叉身份中产生真实共鸣。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "文化智商（cq）专家，检测隐性排斥、研究全球化上下文，确保软件产品在跨文化和交叉身份中产生真实共鸣"
+  ],
+  "updatedAtMs": 1775894227127.4824,
+  "status": "ready"
+}

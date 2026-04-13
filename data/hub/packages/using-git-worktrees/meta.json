@@ -1,0 +1,23 @@
+{
+  "skillId": "using-git-worktrees",
+  "skillName": "using-git-worktrees",
+  "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verification",
+  "group": "product",
+  "groupDescription": "产品规划、需求分析、用户反馈、优先级、路线图与产品研究。",
+  "keywords": [
+    "use",
+    "when",
+    "starting",
+    "feature",
+    "work",
+    "that",
+    "needs",
+    "isolation",
+    "from",
+    "current",
+    "workspace",
+    "before"
+  ],
+  "updatedAtMs": 1776083661029.799,
+  "status": "ready"
+}

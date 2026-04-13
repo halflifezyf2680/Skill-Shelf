@@ -1,0 +1,17 @@
+{
+  "skillId": "specialized-compliance-auditor",
+  "skillName": "合规审计师",
+  "description": "专业技术合规审计师，擅长 SOC 2、ISO 27001、HIPAA 和 PCI-DSS 审计——从就绪评估、证据收集到认证全流程。",
+  "group": "legal-compliance",
+  "groupDescription": "法务、合规、审计、政策、风险治理与监管要求处理。",
+  "keywords": [
+    "专业技术合规审计师，擅长",
+    "soc",
+    "2、iso",
+    "27001、hipaa",
+    "pci-dss",
+    "审计——从就绪评估、证据收集到认证全流程"
+  ],
+  "updatedAtMs": 1775894226962.4827,
+  "status": "ready"
+}

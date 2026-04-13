@@ -1,0 +1,12 @@
+{
+  "skillId": "project-management-project-management-studio-operations",
+  "skillName": "工作室运营",
+  "description": "专注工作室日常效率、流程优化和资源协调的运营管理专家，让所有团队都有好用的工具和顺畅的流程，保证事情稳定推进。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "专注工作室日常效率、流程优化和资源协调的运营管理专家，让所有团队都有好用的工具和顺畅的流程，保证事情稳定推进"
+  ],
+  "updatedAtMs": 1775894226880.6018,
+  "status": "ready"
+}

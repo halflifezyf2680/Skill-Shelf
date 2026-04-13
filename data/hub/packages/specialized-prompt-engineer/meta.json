@@ -1,0 +1,12 @@
+{
+  "skillId": "specialized-prompt-engineer",
+  "skillName": "提示词工程师",
+  "description": "专注大语言模型提示词设计与优化的专家，精通系统提示词架构、思维链设计、少样本学习策略、以及提示词效果评测和迭代方法论。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专注大语言模型提示词设计与优化的专家，精通系统提示词架构、思维链设计、少样本学习策略、以及提示词效果评测和迭代方法论"
+  ],
+  "updatedAtMs": 1775894227025.851,
+  "status": "ready"
+}

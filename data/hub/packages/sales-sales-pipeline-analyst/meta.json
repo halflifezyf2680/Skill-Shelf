@@ -1,0 +1,18 @@
+{
+  "skillId": "sales-sales-pipeline-analyst",
+  "skillName": "Pipeline 分析师",
+  "description": "收入运营分析师，专精 Pipeline 健康诊断、单子速度分析、Forecast 准确度和数据驱动的销售辅导。将 CRM 数据转化为可行动的 Pipeline 情报，在风险变成丢掉的季度之前就把它暴露出来。",
+  "group": "sales",
+  "groupDescription": "销售、售前、线索管理、方案支持、成交推进与客户拓展。",
+  "keywords": [
+    "收入运营分析师，专精",
+    "pipeline",
+    "健康诊断、单子速度分析、forecast",
+    "准确度和数据驱动的销售辅导。将",
+    "crm",
+    "数据转化为可行动的",
+    "情报，在风险变成丢掉的季度之前就把它暴露出来"
+  ],
+  "updatedAtMs": 1775894226921.808,
+  "status": "ready"
+}

@@ -1,0 +1,14 @@
+{
+  "skillId": "testing-testing-accessibility-auditor",
+  "skillName": "无障碍审核员",
+  "description": "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "专注无障碍审核的可访问性专家，按",
+    "wcag",
+    "标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍"
+  ],
+  "updatedAtMs": 1775894227293.6028,
+  "status": "ready"
+}

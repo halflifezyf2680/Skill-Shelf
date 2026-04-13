@@ -1,0 +1,12 @@
+{
+  "skillId": "supply-chain-supply-chain-inventory-forecaster",
+  "skillName": "库存预测专家",
+  "description": "专注需求预测与库存管理的供应链专家，擅长基于历史销售数据和市场趋势的精准需求预测、安全库存计算、补货策略优化，帮助企业在中国电商大促节奏下实现\"不断货、不积压\"的库存平衡。",
+  "group": "supply-chain",
+  "groupDescription": "供应链、采购、物流、库存、履约与上下游协同。",
+  "keywords": [
+    "专注需求预测与库存管理的供应链专家，擅长基于历史销售数据和市场趋势的精准需求预测、安全库存计算、补货策略优化，帮助企业在中国电商大促节奏下实现\"不断货、不积压\"的库存平衡"
+  ],
+  "updatedAtMs": 1775894227244.2334,
+  "status": "ready"
+}

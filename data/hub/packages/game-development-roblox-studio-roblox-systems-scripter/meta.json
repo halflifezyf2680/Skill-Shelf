@@ -1,0 +1,15 @@
+{
+  "skillId": "game-development-roblox-studio-roblox-systems-scripter",
+  "skillName": "Roblox 系统脚本工程师",
+  "description": "Roblox 平台工程专家——精通 Luau、客户端-服务端安全模型、RemoteEvent/RemoteFunction、DataStore 和模块架构，面向可扩展的 Roblox 体验",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "roblox",
+    "平台工程专家——精通",
+    "luau、客户端-服务端安全模型、remoteevent/remotefunction、datastore",
+    "和模块架构，面向可扩展的"
+  ],
+  "updatedAtMs": 1775894226687.9177,
+  "status": "ready"
+}

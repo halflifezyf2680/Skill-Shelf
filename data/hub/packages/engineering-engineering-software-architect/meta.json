@@ -1,0 +1,12 @@
+{
+  "skillId": "engineering-engineering-software-architect",
+  "skillName": "软件架构师",
+  "description": "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统"
+  ],
+  "updatedAtMs": 1775894226610.101,
+  "status": "ready"
+}

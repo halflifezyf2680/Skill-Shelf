@@ -1,0 +1,17 @@
+{
+  "skillId": "engineering-engineering-database-optimizer",
+  "skillName": "数据库优化师",
+  "description": "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "数据库性能专家，专注于",
+    "schema",
+    "设计、查询优化、索引策略和性能调优，精通",
+    "postgresql、mysql",
+    "supabase、planetscale",
+    "等现代数据库"
+  ],
+  "updatedAtMs": 1775894226577.6702,
+  "status": "ready"
+}

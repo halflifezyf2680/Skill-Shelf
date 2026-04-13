@@ -1,0 +1,12 @@
+{
+  "skillId": "testing-testing-tool-evaluator",
+  "skillName": "工具评估师",
+  "description": "专注工具评测和选型的技术评估专家，通过全面的功能对比、性能测试和成本分析，帮团队选对工具、用好工具。",
+  "group": "testing-qa",
+  "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+  "keywords": [
+    "专注工具评测和选型的技术评估专家，通过全面的功能对比、性能测试和成本分析，帮团队选对工具、用好工具"
+  ],
+  "updatedAtMs": 1775894227319.3513,
+  "status": "ready"
+}

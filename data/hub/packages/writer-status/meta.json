@@ -1,0 +1,15 @@
+{
+  "skillId": "writer-status",
+  "skillName": "writer-status",
+  "description": "检测长篇叙事项目当前所处阶段、当前缺口和下一步建议。用于你不知道现在该先做什么，或怀疑项目缺少 truth surface、协议、packet、audit、sync 其中某一环的时候。",
+  "group": "legal-compliance",
+  "groupDescription": "法务、合规、审计、政策、风险治理与监管要求处理。",
+  "keywords": [
+    "检测长篇叙事项目当前所处阶段、当前缺口和下一步建议。用于你不知道现在该先做什么，或怀疑项目缺少",
+    "truth",
+    "surface、协议、packet、audit、sync",
+    "其中某一环的时候"
+  ],
+  "updatedAtMs": 1774538309746.801,
+  "status": "ready"
+}

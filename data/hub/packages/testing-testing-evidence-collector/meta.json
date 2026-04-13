@@ -1,0 +1,12 @@
+{
+  "skillId": "testing-testing-evidence-collector",
+  "skillName": "证据收集者",
+  "description": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。",
+  "group": "testing-qa",
+  "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+  "keywords": [
+    "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑"
+  ],
+  "updatedAtMs": 1775894227305.1301,
+  "status": "ready"
+}

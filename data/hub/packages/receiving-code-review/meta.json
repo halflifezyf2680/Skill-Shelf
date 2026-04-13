@@ -1,0 +1,23 @@
+{
+  "skillId": "receiving-code-review",
+  "skillName": "receiving-code-review",
+  "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+  "group": "testing-qa",
+  "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+  "keywords": [
+    "use",
+    "when",
+    "receiving",
+    "code",
+    "review",
+    "feedback",
+    "before",
+    "implementing",
+    "suggestions",
+    "especially",
+    "seems",
+    "unclear"
+  ],
+  "updatedAtMs": 1776083661016.6277,
+  "status": "ready"
+}

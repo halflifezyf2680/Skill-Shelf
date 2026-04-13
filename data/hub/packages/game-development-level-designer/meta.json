@@ -1,0 +1,12 @@
+{
+  "skillId": "game-development-level-designer",
+  "skillName": "关卡设计师",
+  "description": "空间叙事与节奏流程专家——精通布局理论、节奏架构、遭遇战设计和环境叙事，跨引擎通用",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "空间叙事与节奏流程专家——精通布局理论、节奏架构、遭遇战设计和环境叙事，跨引擎通用"
+  ],
+  "updatedAtMs": 1775894226657.4983,
+  "status": "ready"
+}

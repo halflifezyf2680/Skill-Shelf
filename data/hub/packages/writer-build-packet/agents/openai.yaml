@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writer Build Packet"
+  short_description: "Build a chapter packet from canon"
+  default_prompt: "Use writer-build-packet to create a chapter execution packet from the current truth surface and query views."

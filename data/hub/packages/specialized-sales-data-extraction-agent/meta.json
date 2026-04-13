@@ -1,0 +1,13 @@
+{
+  "skillId": "specialized-sales-data-extraction-agent",
+  "skillName": "销售数据提取师",
+  "description": "监控 Excel 文件并提取关键销售指标（月累计、年累计、年末预测），服务于内部实时报告系统。",
+  "group": "sales",
+  "groupDescription": "销售、售前、线索管理、方案支持、成交推进与客户拓展。",
+  "keywords": [
+    "excel",
+    "文件并提取关键销售指标（月累计、年累计、年末预测），服务于内部实时报告系统"
+  ],
+  "updatedAtMs": 1775894227075.1006,
+  "status": "ready"
+}

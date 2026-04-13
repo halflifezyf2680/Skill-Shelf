@@ -1,0 +1,22 @@
+{
+  "skillId": "writing-skills",
+  "skillName": "writing-skills",
+  "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "use",
+    "when",
+    "creating",
+    "new",
+    "skills",
+    "editing",
+    "existing",
+    "verifying",
+    "work",
+    "before",
+    "deployment"
+  ],
+  "updatedAtMs": 1776083661035.605,
+  "status": "ready"
+}

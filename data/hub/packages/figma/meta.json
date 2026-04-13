@@ -1,0 +1,23 @@
+{
+  "skillId": "figma",
+  "skillName": "figma",
+  "description": "Use the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma nodes into production code. Trigger when a task involves Figma URLs, node IDs, design-to-code implementation, or Figma MCP setup and troubleshooting.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "use",
+    "the",
+    "figma",
+    "mcp",
+    "server",
+    "fetch",
+    "design",
+    "context",
+    "screenshots",
+    "variables",
+    "and",
+    "assets"
+  ],
+  "updatedAtMs": 1773070836979.4048,
+  "status": "ready"
+}

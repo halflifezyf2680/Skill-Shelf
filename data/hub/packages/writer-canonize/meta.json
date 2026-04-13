@@ -1,0 +1,18 @@
+{
+  "skillId": "writer-canonize",
+  "skillName": "writer-canonize",
+  "description": "把 brainstorm 或 candidate 材料收敛成正式 canon。用于命名、设定、情节、角色关系、事件方案已经出现多个候选，需要选定并进入 truth surface 的时候。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "brainstorm",
+    "candidate",
+    "材料收敛成正式",
+    "canon。用于命名、设定、情节、角色关系、事件方案已经出现多个候选，需要选定并进入",
+    "truth",
+    "surface",
+    "的时候"
+  ],
+  "updatedAtMs": 1774538309750.8032,
+  "status": "ready"
+}

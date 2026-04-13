@@ -1,0 +1,23 @@
+{
+  "skillId": "requesting-code-review",
+  "skillName": "requesting-code-review",
+  "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+  "group": "product",
+  "groupDescription": "产品规划、需求分析、用户反馈、优先级、路线图与产品研究。",
+  "keywords": [
+    "use",
+    "when",
+    "completing",
+    "tasks",
+    "implementing",
+    "major",
+    "features",
+    "before",
+    "merging",
+    "verify",
+    "work",
+    "meets"
+  ],
+  "updatedAtMs": 1776083661017.1492,
+  "status": "ready"
+}

@@ -1,0 +1,13 @@
+{
+  "skillId": "design-design-inclusive-visuals-specialist",
+  "skillName": "包容性视觉专家",
+  "description": "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专注于消除",
+    "生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板"
+  ],
+  "updatedAtMs": 1775894226544.2434,
+  "status": "ready"
+}

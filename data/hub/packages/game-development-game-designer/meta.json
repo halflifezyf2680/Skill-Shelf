@@ -1,0 +1,14 @@
+{
+  "skillId": "game-development-game-designer",
+  "skillName": "游戏设计师",
+  "description": "系统与机制架构师——精通 GDD 编写、玩家心理学、经济平衡和游戏循环设计，跨引擎跨品类通用",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "系统与机制架构师——精通",
+    "gdd",
+    "编写、玩家心理学、经济平衡和游戏循环设计，跨引擎跨品类通用"
+  ],
+  "updatedAtMs": 1775894226634.031,
+  "status": "ready"
+}

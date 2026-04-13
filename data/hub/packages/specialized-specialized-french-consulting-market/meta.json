@@ -1,0 +1,13 @@
+{
+  "skillId": "specialized-specialized-french-consulting-market",
+  "skillName": "法国咨询市场专家",
+  "description": "法国 ESN/SI 自由职业生态导航专家，精通利润模型、平台机制（Malt、collective.work）、薪资代管、费率定位和付款周期。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "esn/si",
+    "自由职业生态导航专家，精通利润模型、平台机制（malt、collective.work）、薪资代管、费率定位和付款周期"
+  ],
+  "updatedAtMs": 1775894227156.0984,
+  "status": "ready"
+}

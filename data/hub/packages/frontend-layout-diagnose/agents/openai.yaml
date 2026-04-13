@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Layout Diagnose"
+  short_description: "Diagnose and fix frontend layout pathologies"
+  default_prompt: "Use frontend-layout-diagnose to inspect a page from DOM, geometry, and scroll facts before changing the code."

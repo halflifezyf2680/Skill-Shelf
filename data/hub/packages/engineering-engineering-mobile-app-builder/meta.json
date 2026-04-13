@@ -1,0 +1,13 @@
+{
+  "skillId": "engineering-engineering-mobile-app-builder",
+  "skillName": "移动应用开发者",
+  "description": "精通 iOS/Android 原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "ios/android",
+    "原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验"
+  ],
+  "updatedAtMs": 1775894226603.3538,
+  "status": "ready"
+}

@@ -1,0 +1,16 @@
+{
+  "skillId": "sales-sales-outbound-strategist",
+  "skillName": "Outbound 策略师",
+  "description": "基于信号的 Outbound 专家，设计多渠道触达序列、定义 ICP、通过调研驱动的个性化开发 Pipeline——不靠量取胜，靠精准。",
+  "group": "sales",
+  "groupDescription": "销售、售前、线索管理、方案支持、成交推进与客户拓展。",
+  "keywords": [
+    "基于信号的",
+    "outbound",
+    "专家，设计多渠道触达序列、定义",
+    "icp、通过调研驱动的个性化开发",
+    "pipeline——不靠量取胜，靠精准"
+  ],
+  "updatedAtMs": 1775894226917.5625,
+  "status": "ready"
+}
