@@ -28,13 +28,13 @@ search_skills(query)
 
 ### 用户明确说了领域
 
-> "帮我写一篇小红书推广文案"
+> "帮我优化数据库查询性能"
 
 ```
-search_skills("小红书")  → 命中 marketing 组
-  → list_group_skills("marketing")
-  → 看到 "Xiaohongshu Operator"
-  → read_skill("Xiaohongshu Operator")
+search_skills("数据库")  → 命中 engineering 组
+  → list_group_skills("engineering")
+  → 看到 "Database Optimizer"
+  → read_skill("Database Optimizer")
 ```
 
 ### 用户意图模糊
