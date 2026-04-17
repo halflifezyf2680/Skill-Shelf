@@ -2,8 +2,18 @@
   "name": "skill-router-mcp",
   "version": "0.1.0",
   "license": "MIT",
+  "mcpName": "io.github.halflifezyf2680/skill-hub",
   "type": "module",
   "description": "Local MCP server providing progressive disclosure routing for 200+ professional skills. Search by group or skill name, load full skill body on demand.",
+  "bin": {
+    "skill-router-mcp": "bin/skill-router-mcp.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "data/hub/config/",
+    "data/hub/packages/"
+  ],
   "scripts": {
     "dev": "tsx src/server.ts",
     "skill-hub": "node --import tsx ./src/server.ts",
@@ -13,11 +23,11 @@
     "@modelcontextprotocol/sdk": "^1.17.4",
     "chokidar": "^4.0.3",
     "gray-matter": "^4.0.3",
+    "tsx": "^4.20.5",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
-    "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   }
 }

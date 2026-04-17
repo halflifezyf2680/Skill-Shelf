@@ -2,7 +2,7 @@
 
 ## 1. 这是什么
 
-Skill Hub 是一个本地 MCP 服务器，注册 14 个工具到 LLM 的 context，让它能按需访问 200+ 个专业技能——不需要的 skill 不占任何 token。
+Skill Hub 是一个本地 MCP 服务器，注册 9 个工具到 LLM 的 context，让它能按需访问 230+ 个专业技能——不需要的 skill 不占任何 token。内置 230+ 个 skill 只是起步，用户可通过 `install_skills` 持续扩充自己的 skill 库。
 
 ## 2. 路由流程
 

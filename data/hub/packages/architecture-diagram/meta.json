@@ -1,0 +1,23 @@
+{
+  "skillId": "architecture-diagram",
+  "skillName": "architecture-diagram",
+  "description": "Create professional, dark-themed architecture diagrams as standalone HTML files with SVG graphics. Use when the user asks for system architecture diagrams, infrastructure diagrams, cloud architecture visualizations, security diagrams, network topology diagrams, or any technical diagram showing system components and their relationships.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "create",
+    "professional",
+    "dark-themed",
+    "architecture",
+    "diagrams",
+    "standalone",
+    "html",
+    "files",
+    "with",
+    "svg",
+    "graphics",
+    "use"
+  ],
+  "updatedAtMs": 1776338042362.7905,
+  "status": "ready"
+}
