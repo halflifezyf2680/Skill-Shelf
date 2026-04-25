@@ -1,4 +1,0 @@
-interface:
-  display_name: "Writer Audit"
-  short_description: "Audit a draft for continuity and logic"
-  default_prompt: "Use writer-audit to check a draft against its packet, canon, and consistency rules before sync."

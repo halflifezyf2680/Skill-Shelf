@@ -1,0 +1,19 @@
+{
+  "skillId": "create-agent-group",
+  "skillName": "create-agent-group",
+  "description": "引导式多 Agent 流水线设计器。从用例描述到完整的 agent-group/ 目录，生成 group.yaml、workflow.md、agent system prompt、产出物模板和发布规范。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "引导式多",
+    "agent",
+    "流水线设计器。从用例描述到完整的",
+    "agent-group",
+    "目录，生成",
+    "group.yaml、workflow.md、agent",
+    "system",
+    "prompt、产出物模板和发布规范"
+  ],
+  "updatedAtMs": 1776854165204.2754,
+  "status": "ready"
+}

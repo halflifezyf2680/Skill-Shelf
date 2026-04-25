@@ -1,4 +1,0 @@
-interface:
-  display_name: "Writer Sync"
-  short_description: "Extract canon delta and sync views"
-  default_prompt: "Use writer-sync to extract canon delta, update the truth surface, and recompile the query view."

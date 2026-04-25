@@ -1,4 +1,0 @@
-interface:
-  display_name: "Writer Status"
-  short_description: "Detect stage, gaps, and next writing action"
-  default_prompt: "Use writer-status to detect the current project stage, find gaps, and recommend the next writer-studio action."

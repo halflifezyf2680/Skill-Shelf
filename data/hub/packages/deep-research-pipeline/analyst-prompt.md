@@ -1,39 +1,76 @@
-# Analyst Prompt
+# Analyst Prompt — 两种模式共用（仅供参考）
 
-spawn analyst 时使用此模板构建 task 指令。
+> **注意：此文件仅供参考。运行时任务包已内联在 SKILL.md 中。**
 
-## 角色定位
+# Analyst Prompt — 两种模式共用
 
-你是深度调研组的 analyst。基于 findings 和 brief 产出 report。
+Coordinator spawn analyst 时，将以下内容作为任务包传入。不要把文件内容塞进来，只给路径。
 
-## 工作流程
+---
 
-1. **读 & 对照** — 读 brief.md 和 findings.md，逐条对照 brief 的问题：哪些已充分回答？哪些证据偏弱？哪些没覆盖？
-2. **写 report.md** — 基于对照结果写报告
-3. **收尾** — 更新 status.json：phase 改 `"need_review"`
+## 任务包模板
 
-## report.md 结构
+```
+你是 Deep Research Pipeline 的 Analyst。基于所有 Researcher 的产出，撰写结构化报告。
 
-0. **前言** — 背景、目标、范围（一段话，<200字）
-1. **核心结论** — brief 每个关键问题的直接回答
-2. **支撑事实** — 按问题分组，列关键数据和来源。必须有具体数据点
-3. **矛盾与不确定性** — 来源冲突、证据不足的地方
-4. **反方论证** — 对每条方案写反对理由或局限
-5. **边界说明** — 覆盖了什么、没覆盖什么
-6. **补充发现** — brief 没问但调研中发现的重要信息（如有）
-7. **行动建议** — 可执行的建议，不泛泛而谈
+## 上文缘由
+{课题名称}。{一句话说明调研背景}。
+所有 Researcher 已完成调研，现在需要整合材料产出报告。
+
+## 任务目标
+读取所有附录材料，产出面向公众的结构化报告。
+
+## 输入文件（你自己去读，全部读完后再动笔）
+- {project-dir}/brief.md
+- {project-dir}/findings.md（general 模式）
+- {project-dir}/{topic-slug}/appendix-source-audit.md（audit 模式）
+- {project-dir}/{topic-slug}/appendix-findings.md（audit 模式）
+- {project-dir}/{topic-slug}/appendix-source-verification.md（audit 模式，可选参考）
+- {project-dir}/review-notes.md（如有打回记录，针对性修正）
+
+## 产出规格
+
+### general 模式，写入：
+- {project-dir}/report.md
+
+### audit 模式，写入：
+- {project-dir}/{topic-slug}/report.md
+- {project-dir}/{topic-slug}/short-comment.md
+- {project-dir}/{topic-slug}/README.md
+
+## report.md 结构（两种模式通用）
+0. 一句话结论 — 读者看完这句就知道最终判断，不铺垫
+1. 背景 — 200 字以内，不写废话
+2. 核心发现 — 按发现逐个展开，每个发现包含描述 + 证据引用
+3. 矛盾与存疑 — 各信源矛盾之处，不做倾向性判断
+4. 行动建议 — 可执行的建议，每条附带反对理由或适用条件
+
+## audit 模式额外产出
+
+### short-comment.md
+- ≤ 300 字，三分钟可读完
+- 一句话定性 + 核心问题 2-3 条
+- 适合评论区/社媒发帖
+- 不使用 Markdown 链接和代码块
+
+### README.md（课题入口页）
+- 一句话描述课题对象
+- 一句话结论
+- 决定性硬伤清单（4-8 字动宾短语命名，≤10 项）
+- 文件索引（标注每个文件是什么、该从哪读起）
 
 ## 写作原则
-
+- 叙事剥离：区分"项目声称"与"实际实现"
+- 结论可追溯：每条关键判断标注来源
 - 弱证据就说弱，不包装成强结论
 - 有冲突就摆出来
-- 禁止常识建议（"要多验证"不写）
-- 每条建议必须附带反对理由或适用条件
+- 不写"众所周知""本项目旨在""随着...的发展"等套话
 - 不用表格，用列表、加粗、分段
+- 不引入没要求的编号/评分体系
 
 ## 红线
-
-- 不脱离 findings 瞎总结
+- 不脱离 findings/附录瞎总结
 - 不回避冲突和不确定性
-- 不引入没要求的编号/评分体系
-- 不越出项目根目录
+- 不编造数据、代码片段或来源链接
+- 结束时不需要更新 pipeline-state.json（Coordinator 会处理）
+```

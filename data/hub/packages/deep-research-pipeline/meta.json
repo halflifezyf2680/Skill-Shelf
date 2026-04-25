@@ -1,21 +1,17 @@
 {
   "skillId": "deep-research-pipeline",
   "skillName": "deep-research-pipeline",
-  "description": "多 agent 深度调研流水线。coordinator 调度 researcher 调研、analyst 分析、reviewer 审查，产出从 brief 到最终 report 的完整调研报告。用于需要结构化深度研究的课题。",
-  "group": "academic-research",
-  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "description": "多 agent 深度调研与审计流水线。通过 subagent 上下文隔离执行，支持通用调研模式和源码审计模式。Main Agent 负责 spawn 和最终审核，不执行任何调研工作。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
   "keywords": [
     "agent",
-    "深度调研流水线。coordinator",
-    "researcher",
-    "调研、analyst",
-    "分析、reviewer",
-    "审查，产出从",
-    "brief",
-    "到最终",
-    "report",
-    "的完整调研报告。用于需要结构化深度研究的课题"
+    "深度调研与审计流水线。通过",
+    "subagent",
+    "上下文隔离执行，支持通用调研模式和源码审计模式。main",
+    "spawn",
+    "和最终审核，不执行任何调研工作"
   ],
-  "updatedAtMs": 1776432512882.9282,
+  "updatedAtMs": 1776852761575.8306,
   "status": "ready"
 }
