@@ -4,16 +4,16 @@
   </defs>
 
   <!-- Frame -->
-  <rect width="540" height="960" rx="28" fill="#FFF8F0" stroke="#2D2D2D" stroke-width="4"/>
+  <rect width="540" height="960" rx="28" fill="#FAF9F6" stroke="#2D2D2D" stroke-width="4"/>
 
   <!-- Title -->
-  <text x="270" y="48" font-family="system-ui,sans-serif" font-size="28" font-weight="900" fill="#1A1A2E" text-anchor="middle">💾 存储结构</text>
+  <text x="270" y="48" font-family="system-ui,sans-serif" font-size="28" font-weight="900" fill="#1E2A3A" text-anchor="middle">💾 存储结构</text>
   <text x="270" y="76" font-family="system-ui,sans-serif" font-size="13" fill="#6B7280" text-anchor="middle">本地文件系统 · 统一规格 · 零依赖</text>
 
   <!-- Directory tree card (green) -->
-  <rect x="24" y="100" width="492" height="260" rx="20" fill="#059669" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
+  <rect x="24" y="100" width="492" height="260" rx="20" fill="#2E8B6E" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
   <text x="48" y="130" font-family="system-ui,sans-serif" font-size="15" font-weight="800" fill="#FFF">📂 目录结构</text>
-  <rect x="40" y="158" width="460" height="188" rx="14" fill="#0F172A"/>
+  <rect x="40" y="158" width="460" height="188" rx="14" fill="#1A2332"/>
   <text x="52" y="180" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#E2E8F0">data/hub/</text>
   <text x="52" y="200" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#E2E8F0">├── config/groups.json</text>
   <text x="290" y="200" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#6A9955">  # 16 组定义</text>
@@ -30,51 +30,51 @@
   <text x="232" y="320" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#6A9955">    # 自动索引</text>
 
   <!-- SKILL.md format card (purple) -->
-  <rect x="24" y="380" width="492" height="258" rx="20" fill="#7C3AED" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
+  <rect x="24" y="380" width="492" height="258" rx="20" fill="#6B5B95" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
   <text x="48" y="410" font-family="system-ui,sans-serif" font-size="15" font-weight="800" fill="#FFF">📋 SKILL.md 规格</text>
-  <rect x="40" y="438" width="460" height="86" rx="14" fill="#0F172A"/>
-  <text x="52" y="458" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#569CD6">---</text>
-  <text x="52" y="476" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12"><tspan fill="#9CDCFE">name</tspan><tspan fill="#D4D4D4">: </tspan><tspan fill="#CE9178">"skill-name"</tspan></text>
-  <text x="52" y="494" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12"><tspan fill="#9CDCFE">description</tspan><tspan fill="#D4D4D4">: </tspan><tspan fill="#CE9178">"..."</tspan></text>
-  <text x="52" y="512" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#569CD6">---</text>
-  <text x="48" y="546" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">frontmatter（可选）：name + description，用于搜索索引</text>
-  <text x="48" y="566" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">正文（必填）：Markdown 格式的指令、步骤、示例</text>
-  <text x="48" y="586" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">可附 references/ 和 assets/ 目录</text>
+  <rect x="40" y="438" width="460" height="86" rx="14" fill="#1A2332"/>
+  <text x="52" y="458" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#5A9EC8">---</text>
+  <text x="52" y="476" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12"><tspan fill="#8BBAD8">name</tspan><tspan fill="#D0D0D0">: </tspan><tspan fill="#C89A78">"skill-name"</tspan></text>
+  <text x="52" y="494" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12"><tspan fill="#8BBAD8">description</tspan><tspan fill="#D0D0D0">: </tspan><tspan fill="#C89A78">"..."</tspan></text>
+  <text x="52" y="512" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#5A9EC8">---</text>
+  <text x="48" y="546" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.9">frontmatter（可选）：name + description，用于搜索索引</text>
+  <text x="48" y="566" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.9">正文（必填）：Markdown 格式的指令、步骤、示例</text>
+  <text x="48" y="586" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.9">可附 references/ 和 assets/ 目录</text>
   <rect x="40" y="600" width="460" height="26" rx="8" fill="#FFF" fill-opacity="0.15"/>
-  <text x="56" y="617" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF" fill-opacity="0.7"># 指令标题 → Markdown 正文内容...</text>
+  <text x="56" y="617" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF" fill-opacity="0.85"># 指令标题 → Markdown 正文内容...</text>
 
   <!-- Env vars card (blue) -->
-  <rect x="24" y="658" width="492" height="250" rx="20" fill="#2563EB" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
+  <rect x="24" y="658" width="492" height="250" rx="20" fill="#3B6FA0" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
   <text x="48" y="688" font-family="system-ui,sans-serif" font-size="15" font-weight="800" fill="#FFF">⚙️ 环境变量</text>
   <rect x="40" y="716" width="460" height="28" rx="8" fill="#FFF" fill-opacity="0.12"/>
-  <text x="52" y="734" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#1E40AF">变量名</text>
-  <text x="224" y="734" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#1E40AF">默认值</text>
-  <text x="360" y="734" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#1E40AF">说明</text>
+  <text x="52" y="734" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#2A5A9A">变量名</text>
+  <text x="224" y="734" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#2A5A9A">默认值</text>
+  <text x="360" y="734" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#2A5A9A">说明</text>
 
   <line x1="48" y1="748" x2="492" y2="748" stroke="#FFF" stroke-opacity="0.12" stroke-width="1"/>
   <text x="52" y="768" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">SKILL_HUB_ROOT</text>
   <text x="224" y="768" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">data/hub</text>
-  <text x="360" y="768" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.85">数据根目录</text>
+  <text x="360" y="768" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">数据根目录</text>
 
   <line x1="48" y1="780" x2="492" y2="780" stroke="#FFF" stroke-opacity="0.12" stroke-width="1"/>
   <text x="52" y="800" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">SEARCH_LIMIT</text>
   <text x="224" y="800" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">8</text>
-  <text x="360" y="800" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.85">搜索返回上限</text>
+  <text x="360" y="800" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">搜索返回上限</text>
 
   <line x1="48" y1="812" x2="492" y2="812" stroke="#FFF" stroke-opacity="0.12" stroke-width="1"/>
   <text x="52" y="832" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">MAX_KEYWORDS</text>
   <text x="224" y="832" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">12</text>
-  <text x="360" y="832" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.85">最大关键词数</text>
+  <text x="360" y="832" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">最大关键词数</text>
 
   <line x1="48" y1="844" x2="492" y2="844" stroke="#FFF" stroke-opacity="0.12" stroke-width="1"/>
   <text x="52" y="864" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">MAX_RELATED</text>
   <text x="224" y="864" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">5</text>
-  <text x="360" y="864" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.85">关联技能上限</text>
+  <text x="360" y="864" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">关联技能上限</text>
 
   <line x1="48" y1="876" x2="492" y2="876" stroke="#FFF" stroke-opacity="0.12" stroke-width="1"/>
   <text x="52" y="896" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">WATCH</text>
   <text x="224" y="896" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="11" fill="#FFF">1</text>
-  <text x="360" y="896" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.85">文件监听开关</text>
+  <text x="360" y="896" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">文件监听开关</text>
 
   <!-- Watermark -->
   <text x="270" y="936" font-family="system-ui,sans-serif" font-size="11" fill="#C4C4C4" text-anchor="middle">Skill Hub</text>
