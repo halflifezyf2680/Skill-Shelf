@@ -1,5 +1,5 @@
 import { Resvg } from '@resvg/resvg-js';
-import { readdir, readFile, writeFile, mkdir } from 'fs/promises';
+import { readdir, readFile, writeFile } from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -7,6 +7,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const svgDir = join(__dirname, '..', 'docs', 'diagrams', 'svg');
 const pngDir = join(__dirname, '..', 'docs', 'diagrams', 'png');
 const SCALE = 2; // 2x for retina
+
+// CJK font paths (Windows) — simhei for Chinese, Cascadia Code for monospace
+const SYSTEM_FONTS = [
+  'C:/Windows/Fonts/simhei.ttf',
+  'C:/Windows/Fonts/msyh.ttc',
+];
 
 async function convert() {
   const files = await readdir(svgDir);
@@ -18,6 +24,9 @@ async function convert() {
     const svgData = await readFile(svgPath);
 
     const resvg = new Resvg(svgData, {
+      font: {
+        fontFiles: SYSTEM_FONTS,
+      },
       fitTo: {
         mode: 'zoom',
         value: SCALE,

@@ -2,10 +2,6 @@
 
 **用 9 个工具的固定开销，按需访问 230+ 个专业技能，而不需要把任何 skill 正文常驻上下文。**
 
-<p align="center">
-  <img src="docs/diagrams/png/01-overview.png" width="270" alt="Skill Hub Overview"/>
-</p>
-
 传统做法：每个 skill 作为本地 skill 加载 → description 全量驻留 context → 230+ 个 skill = 数万 tokens 白白浪费，且每次对话都背着它们跑。
 
 内置 230+ 个 skill 只是起步。用户可通过 `install_skills` 从目录批量安装，持续扩充自己的 skill 库。
@@ -13,10 +9,6 @@
 Skill Hub 的做法：skill 全部存放在本地包仓库，context 里只有 9 个轻量工具定义。LLM 需要某个专业能力时，通过路由按需加载。不需要的时候，零开销。
 
 ## 路由协议
-
-<p align="center">
-  <img src="docs/diagrams/png/02-routing.png" width="270" alt="Routing Protocol"/>
-</p>
 
 ```
 search_skills(query)
@@ -57,10 +49,6 @@ search_skills 是辅助过滤，不是必须入口。搜不到就去 list_skill_
 
 ## 存储结构
 
-<p align="center">
-  <img src="docs/diagrams/png/04-storage.png" width="270" alt="Storage Structure"/>
-</p>
-
 ```
 data/hub/
   config/groups.json           # 组目录（16 个内置组 + 自定义组）
@@ -99,10 +87,6 @@ Skill 正文内容...
 
 ## 工具清单（9 个）
 
-<p align="center">
-  <img src="docs/diagrams/png/03-tools.png" width="270" alt="Tool List"/>
-</p>
-
 ### 路由（只读）
 
 | 工具 | 用途 |
@@ -123,10 +107,6 @@ Skill 正文内容...
 | `manage_group` | 创建/更新/删除组（mode: create/update/delete） |
 
 ## 组体系
-
-<p align="center">
-  <img src="docs/diagrams/png/05-classification.png" width="270" alt="Classification"/>
-</p>
 
 内置 16 个组，覆盖主要专业领域：
 
