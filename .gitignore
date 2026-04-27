@@ -8,6 +8,15 @@ data/hub/staging/
 # MPM local data
 .mpm-data/
 
+# Playwright MCP runtime
+.playwright-mcp/
+
+# Backup archives
+*.zip
+
+# Local-only scripts
+scripts/copy-to-claude.mjs
+
 # Dev logs
 dev-log.md
 dev-log-archive/
