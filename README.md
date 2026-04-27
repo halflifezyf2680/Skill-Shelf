@@ -130,24 +130,7 @@ Skill 正文内容...
 
 ## 安装
 
-### npx 一键启动（推荐）
-
-无需克隆仓库，直接配置 MCP Server 即可：
-
-```json
-{
-  "mcpServers": {
-    "skill-shelf": {
-      "command": "npx",
-      "args": ["-y", "skill-shelf"]
-    }
-  }
-}
-```
-
-npx 会自动下载并运行，首次稍慢，后续走缓存。
-
-### 从源码安装
+### 从 GitHub 克隆
 
 ```bash
 git clone https://github.com/halflifezyf2680/Skill-Shelf.git
@@ -160,19 +143,6 @@ npm install
 ### Claude Code
 
 在 `~/.claude.json` 的 `mcpServers` 中添加：
-
-```json
-{
-  "mcpServers": {
-    "skill-shelf": {
-      "command": "npx",
-      "args": ["-y", "skill-shelf"]
-    }
-  }
-}
-```
-
-从源码安装时使用：
 
 ```json
 {
@@ -194,14 +164,15 @@ npm install
 {
   "mcpServers": {
     "skill-shelf": {
-      "command": "npx",
-      "args": ["-y", "skill-shelf"]
+      "command": "npm",
+      "args": ["run", "skill-shelf"],
+      "cwd": "/your/path/to/Skill-Shelf"
     }
   }
 }
 ```
 
-配置完成后重启客户端即可。
+将 `/your/path/to/Skill-Shelf` 替换为实际克隆路径。配置完成后重启客户端即可。
 
 ## 环境变量
 
