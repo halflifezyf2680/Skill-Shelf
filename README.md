@@ -77,7 +77,7 @@ data/hub/
 可通过环境变量覆盖根目录：
 
 ```bash
-SKILL_HUB_ROOT=/your/custom/path
+SKILL_SHELF_ROOT=/your/custom/path
 ```
 
 ## Skill 包格式
@@ -150,8 +150,8 @@ npx 会自动下载并运行，首次稍慢，后续走缓存。
 ### 从源码安装
 
 ```bash
-git clone https://github.com/halflifezyf2680/skill-hub.git
-cd skill-hub
+git clone https://github.com/halflifezyf2680/Skill-Shelf.git
+cd Skill-Shelf
 npm install
 ```
 
@@ -180,7 +180,7 @@ npm install
     "skill-shelf": {
       "command": "npm",
       "args": ["run", "skill-shelf"],
-      "cwd": "/your/path/to/skill-hub"
+      "cwd": "/your/path/to/Skill-Shelf"
     }
   }
 }
@@ -207,10 +207,10 @@ npm install
 
 | 变量 | 默认值 | 说明 |
 |------|--------|------|
-| `SKILL_HUB_ROOT` | `<package>/data/hub` | 数据根目录 |
-| `SKILL_ROUTER_SEARCH_LIMIT` | `8` | search_skills 默认返回上限 |
-| `SKILL_ROUTER_MAX_RELATED_SKILLS` | `5` | read_skill 返回的最大关联 skill 数 |
-| `SKILL_ROUTER_WATCH` | `1` | 是否启用文件监听 |
+| `SKILL_SHELF_ROOT` | `<package>/data/hub` | 数据根目录 |
+| `SKILL_SHELF_SEARCH_LIMIT` | `8` | search_skills 默认返回上限 |
+| `SKILL_SHELF_MAX_RELATED_SKILLS` | `5` | read_skill 返回的最大关联 skill 数 |
+| `SKILL_SHELF_WATCH` | `1` | 是否启用文件监听 |
 
 ## 致谢
 

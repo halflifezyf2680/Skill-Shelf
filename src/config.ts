@@ -49,30 +49,30 @@ export type SkillRouterConfig = {
 export function loadConfig(): SkillRouterConfig {
   const packageRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
   const shelfRoot =
-    process.env.SKILL_HUB_ROOT ??
+    process.env.SKILL_SHELF_ROOT ??
     path.join(packageRoot, "data", "hub");
 
   const storage = resolveStorageLayout(shelfRoot);
   return {
     storage,
     installPolicy: {
-      acceptPackageDirectories: process.env.SKILL_ROUTER_ACCEPT_PACKAGES !== "0",
-      acceptRawMarkdown: process.env.SKILL_ROUTER_ACCEPT_RAW_MARKDOWN !== "0",
+      acceptPackageDirectories: process.env.SKILL_SHELF_ACCEPT_PACKAGES !== "0",
+      acceptRawMarkdown: process.env.SKILL_SHELF_ACCEPT_RAW_MARKDOWN !== "0",
       packagePrecedence: "package-first",
-      rawMarkdownRequiresFrontmatter: process.env.SKILL_ROUTER_RAW_REQUIRES_FRONTMATTER !== "0",
+      rawMarkdownRequiresFrontmatter: process.env.SKILL_SHELF_RAW_REQUIRES_FRONTMATTER !== "0",
     },
     indexPolicy: {
-      defaultSearchResultLimit: Number(process.env.SKILL_ROUTER_SEARCH_LIMIT ?? "8"),
-      maxKeywordsPerSkill: Number(process.env.SKILL_ROUTER_MAX_KEYWORDS ?? "12"),
-      maxRelatedSkills: Number(process.env.SKILL_ROUTER_MAX_RELATED_SKILLS ?? "5"),
+      defaultSearchResultLimit: Number(process.env.SKILL_SHELF_SEARCH_LIMIT ?? "8"),
+      maxKeywordsPerSkill: Number(process.env.SKILL_SHELF_MAX_KEYWORDS ?? "12"),
+      maxRelatedSkills: Number(process.env.SKILL_SHELF_MAX_RELATED_SKILLS ?? "5"),
     },
     watchPolicy: {
-      enabled: process.env.SKILL_ROUTER_WATCH !== "0",
-      usePolling: process.env.SKILL_ROUTER_WATCH_USE_POLLING !== "0",
-      pollingIntervalMs: Number(process.env.SKILL_ROUTER_WATCH_INTERVAL_MS ?? "100"),
-      awaitWriteStabilityMs: Number(process.env.SKILL_ROUTER_WATCH_STABILITY_MS ?? "300"),
-      awaitWritePollMs: Number(process.env.SKILL_ROUTER_WATCH_POLL_MS ?? "50"),
-      syncDelete: process.env.SKILL_ROUTER_WATCH_SYNC_DELETE !== "0",
+      enabled: process.env.SKILL_SHELF_WATCH !== "0",
+      usePolling: process.env.SKILL_SHELF_WATCH_USE_POLLING !== "0",
+      pollingIntervalMs: Number(process.env.SKILL_SHELF_WATCH_INTERVAL_MS ?? "100"),
+      awaitWriteStabilityMs: Number(process.env.SKILL_SHELF_WATCH_STABILITY_MS ?? "300"),
+      awaitWritePollMs: Number(process.env.SKILL_SHELF_WATCH_POLL_MS ?? "50"),
+      syncDelete: process.env.SKILL_SHELF_WATCH_SYNC_DELETE !== "0",
     },
   };
 }
