@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
 
-import type { InstallPolicy, SkillHubStorageLayout } from "../config.js";
+import type { InstallPolicy, SkillShelfStorageLayout } from "../config.js";
 import { SkillRegistry } from "../registry/registry.js";
 import type { SkillInstallEntry, SkillInstallFailure, SkillInstallResult } from "../types.js";
 
@@ -19,7 +19,7 @@ const EXCLUDED_MARKDOWN_BASENAMES = new Set([
 ]);
 
 export async function installSkills(params: {
-  storage: SkillHubStorageLayout;
+  storage: SkillShelfStorageLayout;
   registry: SkillRegistry;
   sourcePath: string;
   group?: string;
@@ -136,7 +136,7 @@ type InstallableSource =
     };
 
 async function resolveGroup(
-  storage: SkillHubStorageLayout,
+  storage: SkillShelfStorageLayout,
   registry: SkillRegistry,
   installable: InstallableSource,
   explicitGroup?: string,

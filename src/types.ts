@@ -139,7 +139,7 @@ export type WatcherStatus = {
   lastError: string | null;
 };
 
-export type HubStatus = {
+export type ShelfStatus = {
   groupsCount: number;
   skillsCount: number;
   importCount: number;

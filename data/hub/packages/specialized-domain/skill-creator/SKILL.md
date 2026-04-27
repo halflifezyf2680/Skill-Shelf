@@ -405,9 +405,9 @@ Take `best_description` from the JSON output and update the skill's SKILL.md fro
 
 ---
 
-### Install into Skill Hub
+### Install into Skill Shelf
 
-Once the skill is finalized and approved by the user, install it into the Skill Hub using the `install_skills` MCP tool:
+Once the skill is finalized and approved by the user, install it into the Skill Shelf using the `install_skills` MCP tool:
 
 ```
 install_skills(sourcePath="<path-to-skill-folder>")
@@ -415,7 +415,7 @@ install_skills(sourcePath="<path-to-skill-folder>")
 
 If the skill doesn't have a `group` in its frontmatter, the tool will return available groups for you to classify. Call again with the chosen group.
 
-This replaces the old `.skill` file packaging workflow — skills are now managed directly through the hub.
+This replaces the old `.skill` file packaging workflow — skills are now managed directly through the shelf.
 
 ---
 
@@ -435,7 +435,7 @@ In Claude.ai, the core workflow is the same (draft → test → review → impro
 
 **Blind comparison**: Requires subagents. Skip it.
 
-**Packaging**: Use `install_skills` to import the skill into the Skill Hub. No separate packaging step needed.
+**Packaging**: Use `install_skills` to import the skill into the Skill Shelf. No separate packaging step needed.
 
 **Updating an existing skill**: The user might be asking you to update an existing skill, not create a new one. In this case:
 - **Preserve the original name.** Note the skill's directory name and `name` frontmatter field -- use them unchanged. E.g., if the installed skill is `research-helper`, keep the name as-is (not `research-helper-v2`).

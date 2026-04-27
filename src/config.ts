@@ -2,8 +2,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-export type SkillHubStorageLayout = {
-  hubRoot: string;
+export type SkillShelfStorageLayout = {
+  shelfRoot: string;
   configRoot: string;
   groupCatalogPath: string;
   packagesRoot: string;
@@ -40,7 +40,7 @@ export type WatchPolicy = {
 };
 
 export type SkillRouterConfig = {
-  storage: SkillHubStorageLayout;
+  storage: SkillShelfStorageLayout;
   installPolicy: InstallPolicy;
   indexPolicy: IndexPolicy;
   watchPolicy: WatchPolicy;
@@ -48,11 +48,11 @@ export type SkillRouterConfig = {
 
 export function loadConfig(): SkillRouterConfig {
   const packageRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-  const hubRoot =
+  const shelfRoot =
     process.env.SKILL_HUB_ROOT ??
     path.join(packageRoot, "data", "hub");
 
-  const storage = resolveStorageLayout(hubRoot);
+  const storage = resolveStorageLayout(shelfRoot);
   return {
     storage,
     installPolicy: {
@@ -77,17 +77,17 @@ export function loadConfig(): SkillRouterConfig {
   };
 }
 
-export function resolveStorageLayout(hubRoot: string): SkillHubStorageLayout {
-  const normalizedHubRoot = path.resolve(hubRoot);
-  const configRoot = path.join(normalizedHubRoot, "config");
-  const indexRoot = path.join(normalizedHubRoot, "index");
-  const stagingRoot = path.join(normalizedHubRoot, "staging");
+export function resolveStorageLayout(shelfRoot: string): SkillShelfStorageLayout {
+  const normalizedShelfRoot = path.resolve(shelfRoot);
+  const configRoot = path.join(normalizedShelfRoot, "config");
+  const indexRoot = path.join(normalizedShelfRoot, "index");
+  const stagingRoot = path.join(normalizedShelfRoot, "staging");
 
   return {
-    hubRoot: normalizedHubRoot,
+    shelfRoot: normalizedShelfRoot,
     configRoot,
     groupCatalogPath: path.join(configRoot, "groups.json"),
-    packagesRoot: path.join(normalizedHubRoot, "packages"),
+    packagesRoot: path.join(normalizedShelfRoot, "packages"),
     indexRoot,
     groupListPath: path.join(indexRoot, "group-list.json"),
     groupsRoot: path.join(indexRoot, "groups"),
@@ -95,13 +95,13 @@ export function resolveStorageLayout(hubRoot: string): SkillHubStorageLayout {
     stagingRoot,
     stagingImportsRoot: path.join(stagingRoot, "imports"),
     stagingRepairedRoot: path.join(stagingRoot, "repaired"),
-    logsRoot: path.join(normalizedHubRoot, "logs"),
+    logsRoot: path.join(normalizedShelfRoot, "logs"),
   };
 }
 
-export async function ensureStorageLayout(layout: SkillHubStorageLayout): Promise<void> {
+export async function ensureStorageLayout(layout: SkillShelfStorageLayout): Promise<void> {
   await Promise.all([
-    fs.mkdir(layout.hubRoot, { recursive: true }),
+    fs.mkdir(layout.shelfRoot, { recursive: true }),
     fs.mkdir(layout.configRoot, { recursive: true }),
     fs.mkdir(layout.packagesRoot, { recursive: true }),
     fs.mkdir(layout.indexRoot, { recursive: true }),

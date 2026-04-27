@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { type IndexPolicy, type SkillHubStorageLayout } from "../config.js";
+import { type IndexPolicy, type SkillShelfStorageLayout } from "../config.js";
 import {
   createManagedGroup,
   deleteManagedGroup,
@@ -36,7 +36,7 @@ export class SkillRegistry {
   private indexUpdatedAtMs: number | null = null;
 
   constructor(
-    private readonly storage: SkillHubStorageLayout,
+    private readonly storage: SkillShelfStorageLayout,
     private readonly indexPolicy: IndexPolicy = {
       defaultSearchResultLimit: 8,
       maxKeywordsPerSkill: 12,

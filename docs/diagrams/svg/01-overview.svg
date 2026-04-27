@@ -1,97 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="640" height="1138">
   <defs>
-    <filter id="sh"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.2"/></filter>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.07"/></filter>
+    <filter id="shCard"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/></filter>
   </defs>
 
   <!-- Frame -->
-  <rect width="540" height="960" rx="28" fill="#FAF9F6" stroke="#2D2D2D" stroke-width="4"/>
+  <rect width="540" height="960" rx="0" fill="#FAF9F6" stroke="#2D2D2D" stroke-width="3"/>
 
   <!-- Title -->
-  <text x="270" y="48" font-family="system-ui,sans-serif" font-size="28" font-weight="900" fill="#1E2A3A" text-anchor="middle">📦 Skill Hub</text>
-  <text x="270" y="76" font-family="system-ui,sans-serif" font-size="14" fill="#C27D3C" text-anchor="middle" font-weight="700">230+ Skill 的规格化路由框架</text>
+  <text x="270" y="48" font-family="system-ui,sans-serif" font-size="28" font-weight="800" fill="#1E2A3A" text-anchor="middle">Skill Shelf</text>
+  <text x="270" y="76" font-family="system-ui,sans-serif" font-size="14" fill="#7A7A7A" text-anchor="middle" font-weight="500">用 6 个工具的开销，访问 500+ 个专业技能</text>
 
-  <!-- Pain point -->
-  <rect x="24" y="100" width="492" height="76" rx="20" fill="#B84C4C" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
-  <text x="270" y="130" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#FFF" text-anchor="middle">💥 230+ skill 全量加载 = context 爆炸 · 找不到 · 格式乱</text>
-  <text x="270" y="156" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.9" text-anchor="middle">传统做法：每个 skill 作为本地 skill → 数万 tokens 白白驻留</text>
+  <!-- Problem -->
+  <rect x="24" y="100" width="492" height="148" rx="14" fill="#F2ECE4" stroke="#C4B8A8" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="48" y="130" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#9A8870">问题</text>
+  <text x="48" y="162" font-family="system-ui,sans-serif" font-size="14" fill="#3A3A3A">每个 skill 的 description 常驻上下文。</text>
+  <text x="48" y="188" font-family="system-ui,sans-serif" font-size="14" fill="#3A3A3A">500 个 skill 就是数万 tokens 白白浪费，</text>
+  <text x="48" y="214" font-family="system-ui,sans-serif" font-size="14" fill="#3A3A3A">每次对话都背着它们跑。</text>
 
   <!-- Arrow -->
-  <line x1="270" y1="176" x2="270" y2="198" stroke="#2D2D2D" stroke-width="3"/>
-  <polygon points="260,194 270,210 280,194" fill="#2D2D2D"/>
+  <line x1="270" y1="248" x2="270" y2="270" stroke="#B0A898" stroke-width="1.5"/>
+  <polygon points="264,264 270,278 276,264" fill="#B0A898"/>
 
   <!-- Solution -->
-  <rect x="24" y="214" width="492" height="120" rx="20" fill="#2E8B6E" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
-  <text x="270" y="244" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#FFF" text-anchor="middle">✅ 解决方案：Skill 规格化框架</text>
-
-  <rect x="44" y="264" width="145" height="52" rx="14" fill="#FFF" fill-opacity="0.2"/>
-  <text x="116" y="286" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle">📋 统一格式</text>
-  <text x="116" y="304" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9" text-anchor="middle">SKILL.md 规格</text>
-
-  <rect x="200" y="264" width="145" height="52" rx="14" fill="#FFF" fill-opacity="0.2"/>
-  <text x="272" y="286" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle">🗂️ 自动分类</text>
-  <text x="272" y="304" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9" text-anchor="middle">16 组加权匹配</text>
-
-  <rect x="356" y="264" width="145" height="52" rx="14" fill="#FFF" fill-opacity="0.2"/>
-  <text x="428" y="286" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle">🔍 路由查找</text>
-  <text x="428" y="304" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9" text-anchor="middle">三步渐进加载</text>
+  <rect x="24" y="286" width="492" height="136" rx="14" fill="#4A6A8A" stroke="#3A5A7A" stroke-width="2" filter="url(#sh)"/>
+  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#FFF">方案</text>
+  <text x="48" y="348" font-family="system-ui,sans-serif" font-size="15" fill="#FFF" font-weight="700">6 个工具常驻上下文。技能存磁盘，按需搜索加载。</text>
+  <text x="48" y="380" font-family="system-ui,sans-serif" font-size="13" fill="#FFF" fill-opacity="0.65">不需要的专业能力，零开销。</text>
 
   <!-- Arrow -->
-  <line x1="270" y1="334" x2="270" y2="356" stroke="#2D2D2D" stroke-width="3"/>
-  <polygon points="260,352 270,368 280,352" fill="#2D2D2D"/>
+  <line x1="270" y1="422" x2="270" y2="444" stroke="#5A7A6A" stroke-width="1.5"/>
+  <polygon points="264,438 270,452 276,438" fill="#5A7A6A"/>
 
-  <!-- Architecture title -->
-  <text x="270" y="392" font-family="system-ui,sans-serif" font-size="14" font-weight="800" fill="#1E2A3A" text-anchor="middle">架构总览</text>
+  <!-- Design Philosophy -->
+  <rect x="24" y="460" width="492" height="190" rx="14" fill="#5A7A6A" stroke="#4A6A5A" stroke-width="2" filter="url(#sh)"/>
+  <text x="48" y="490" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#FFF">设计原则</text>
 
-  <!-- Layer 1: LLM (purple) -->
-  <rect x="24" y="408" width="492" height="108" rx="20" fill="#6B5B95" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
-  <circle cx="68" cy="440" r="20" fill="#FFF" fill-opacity="0.2"/>
-  <text x="68" y="446" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">🤖</text>
-  <text x="100" y="440" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFF">LLM 上下文</text>
-  <text x="100" y="460" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">只有 9 个轻量工具定义</text>
-  <rect x="100" y="476" width="80" height="22" rx="8" fill="#FFF" fill-opacity="0.2"/>
-  <text x="140" y="491" font-family="system-ui,sans-serif" font-size="10" fill="#FFF" text-anchor="middle" font-weight="600">9 个工具</text>
-  <rect x="188" y="476" width="80" height="22" rx="8" fill="#FFF" fill-opacity="0.2"/>
-  <text x="228" y="491" font-family="system-ui,sans-serif" font-size="10" fill="#FFF" text-anchor="middle" font-weight="600">零开销</text>
+  <circle cx="58" cy="518" r="3" fill="#FFF" fill-opacity="0.4"/>
+  <text x="76" y="523" font-family="system-ui,sans-serif" font-size="14" fill="#FFF">每个 skill 是 Markdown，不是可编程模块</text>
 
-  <!-- Arrow -->
-  <line x1="270" y1="516" x2="270" y2="540" stroke="#3B6FA0" stroke-width="3"/>
-  <polygon points="262,536 270,550 278,536" fill="#3B6FA0"/>
-  <text x="286" y="538" font-family="system-ui,sans-serif" font-size="10" fill="#3B6FA0" font-weight="600">stdio</text>
+  <circle cx="58" cy="546" r="3" fill="#FFF" fill-opacity="0.4"/>
+  <text x="76" y="551" font-family="system-ui,sans-serif" font-size="14" fill="#FFF">搜索只做一件事：确定性查找</text>
 
-  <!-- Layer 2: Service (blue) -->
-  <rect x="24" y="554" width="492" height="108" rx="20" fill="#3B6FA0" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
-  <circle cx="68" cy="586" r="20" fill="#FFF" fill-opacity="0.2"/>
-  <text x="68" y="592" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">⚡</text>
-  <text x="100" y="586" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFF">Skill Hub 服务</text>
-  <text x="100" y="606" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">MCP Server · 路由 · 分类 · 索引 · 热重载</text>
-  <rect x="100" y="620" width="52" height="22" rx="8" fill="#FFF" fill-opacity="0.2"/>
-  <text x="126" y="635" font-family="system-ui,sans-serif" font-size="10" fill="#FFF" text-anchor="middle" font-weight="600">路由</text>
-  <rect x="160" y="620" width="52" height="22" rx="8" fill="#FFF" fill-opacity="0.2"/>
-  <text x="186" y="635" font-family="system-ui,sans-serif" font-size="10" fill="#FFF" text-anchor="middle" font-weight="600">分类</text>
-  <rect x="220" y="620" width="52" height="22" rx="8" fill="#FFF" fill-opacity="0.2"/>
-  <text x="246" y="635" font-family="system-ui,sans-serif" font-size="10" fill="#FFF" text-anchor="middle" font-weight="600">索引</text>
-  <rect x="280" y="620" width="52" height="22" rx="8" fill="#FFF" fill-opacity="0.2"/>
-  <text x="306" y="635" font-family="system-ui,sans-serif" font-size="10" fill="#FFF" text-anchor="middle" font-weight="600">监听</text>
+  <circle cx="58" cy="574" r="3" fill="#FFF" fill-opacity="0.4"/>
+  <text x="76" y="579" font-family="system-ui,sans-serif" font-size="14" fill="#FFF">找到对的文档，读给 LLM 看，结束</text>
 
-  <!-- Arrow -->
-  <line x1="270" y1="662" x2="270" y2="686" stroke="#2E8B6E" stroke-width="3"/>
-  <polygon points="262,682 270,696 278,682" fill="#2E8B6E"/>
+  <circle cx="58" cy="602" r="3" fill="#FFF" fill-opacity="0.4"/>
+  <text x="76" y="607" font-family="system-ui,sans-serif" font-size="14" fill="#FFF">不做 skill 图谱、执行链、互相召唤</text>
 
-  <!-- Layer 3: Storage (green) -->
-  <rect x="24" y="700" width="492" height="108" rx="20" fill="#2E8B6E" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
-  <circle cx="68" cy="732" r="20" fill="#FFF" fill-opacity="0.2"/>
-  <text x="68" y="738" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">💾</text>
-  <text x="100" y="732" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFF">本地存储</text>
-  <text x="100" y="752" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">文件系统 · 持久化 · 版本管理</text>
-  <rect x="100" y="768" width="130" height="28" rx="10" fill="#FFF" fill-opacity="0.2"/>
-  <text x="165" y="786" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" text-anchor="middle" font-weight="700">📂 16 组目录</text>
-  <rect x="240" y="768" width="130" height="28" rx="10" fill="#FFF" fill-opacity="0.2"/>
-  <text x="305" y="786" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" text-anchor="middle" font-weight="700">📦 230+ 技能包</text>
+  <circle cx="58" cy="630" r="3" fill="#FFF" fill-opacity="0.4"/>
+  <text x="76" y="635" font-family="system-ui,sans-serif" font-size="14" fill="#FFF">分组是存储目录，不影响搜索范围</text>
 
-  <!-- Bottom bar (orange) -->
-  <rect x="24" y="836" width="492" height="48" rx="16" fill="#C27D3C" stroke="#2D2D2D" stroke-width="3" filter="url(#sh)"/>
-  <text x="270" y="864" font-family="system-ui,sans-serif" font-size="13" fill="#FFF" text-anchor="middle" font-weight="700">🚀 230+ 只是起步 · install_skills 持续扩展</text>
+  <!-- How it works: 2-step flow -->
+  <rect x="24" y="670" width="236" height="108" rx="14" fill="#E8E4DD" stroke="#8A8578" stroke-width="1.5" filter="url(#shCard)"/>
+  <text x="142" y="698" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#3A3A3A" text-anchor="middle">第一步：搜索</text>
+  <text x="142" y="724" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="14" font-weight="700" fill="#4A6A8A" text-anchor="middle">search_skills</text>
+  <text x="142" y="748" font-family="system-ui,sans-serif" font-size="11" fill="#8A8578" text-anchor="middle">全量扁平搜索，返回 Top N</text>
+  <text x="142" y="766" font-family="system-ui,sans-serif" font-size="11" fill="#8A8578" text-anchor="middle">覆盖名称、描述、关键词、别名</text>
+
+  <!-- Arrow between two flow cards -->
+  <text x="270" y="728" font-family="system-ui,sans-serif" font-size="20" fill="#B0A898" text-anchor="middle">→</text>
+
+  <rect x="280" y="670" width="236" height="108" rx="14" fill="#E8E4DD" stroke="#8A8578" stroke-width="1.5" filter="url(#shCard)"/>
+  <text x="398" y="698" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#3A3A3A" text-anchor="middle">第二步：读取</text>
+  <text x="398" y="724" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="14" font-weight="700" fill="#5A7A6A" text-anchor="middle">read_skill</text>
+  <text x="398" y="748" font-family="system-ui,sans-serif" font-size="11" fill="#8A8578" text-anchor="middle">加载完整 SKILL.md</text>
+  <text x="398" y="766" font-family="system-ui,sans-serif" font-size="11" fill="#8A8578" text-anchor="middle">附带参考文件，一次一个</text>
+
+  <!-- 6 Tools compact listing -->
+  <rect x="24" y="798" width="492" height="126" rx="14" fill="#3A3A3A" stroke="#2D2D2D" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="48" y="826" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFF">6 个 MCP 工具</text>
+
+  <text x="48" y="852" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#8AB4D4">search_skills</text>
+  <text x="48" y="872" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#8AB4D4">read_skill</text>
+  <text x="48" y="892" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#8AB4D4">validate_skills</text>
+  <text x="48" y="912" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#8AB4D4">get_shelf_status</text>
+
+  <text x="270" y="852" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#C8A882">install_skills</text>
+  <text x="270" y="872" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="12" fill="#C8A882">manage_group</text>
+
+  <text x="270" y="900" font-family="system-ui,sans-serif" font-size="10" fill="#6A6A6A">左侧 4 个只读 | 右侧 2 个写入</text>
 
   <!-- Watermark -->
-  <text x="270" y="936" font-family="system-ui,sans-serif" font-size="11" fill="#C4C4C4" text-anchor="middle">Skill Hub</text>
+  <text x="270" y="946" font-family="system-ui,sans-serif" font-size="11" fill="#C4C4C4" text-anchor="middle">Skill Shelf</text>
 </svg>

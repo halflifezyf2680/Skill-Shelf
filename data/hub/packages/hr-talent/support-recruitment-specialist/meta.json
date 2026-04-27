@@ -1,12 +1,12 @@
 {
   "skillId": "support-recruitment-specialist",
-  "skillName": "招聘运营专家",
+  "skillName": "人才招聘顾问",
   "description": "专业的招聘运营与人才获取专家，精通中国主流招聘渠道运营、人才评估体系搭建和劳动法合规管理。帮助企业高效吸引、筛选和留住优秀人才，打造有竞争力的雇主品牌。",
   "group": "hr-talent",
   "groupDescription": "招聘、人才、培训、组织发展与人事支持工作。",
   "keywords": [
     "专业的招聘运营与人才获取专家，精通中国主流招聘渠道运营、人才评估体系搭建和劳动法合规管理。帮助企业高效吸引、筛选和留住优秀人才，打造有竞争力的雇主品牌"
   ],
-  "updatedAtMs": 1777260525864.641,
+  "updatedAtMs": 1777307891432.5852,
   "status": "ready"
 }

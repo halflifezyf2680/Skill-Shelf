@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 
-import type { SkillHubStorageLayout } from "../config.js";
+import type { SkillShelfStorageLayout } from "../config.js";
 import type { ManagedGroupRecord } from "../types.js";
 
 const SPECIALIZED_GROUP_ID = "specialized-domain";
@@ -104,7 +104,7 @@ export const DEFAULT_MANAGED_GROUPS: ManagedGroupRecord[] = [
   ),
 ];
 
-export async function ensureGroupCatalog(layout: SkillHubStorageLayout): Promise<void> {
+export async function ensureGroupCatalog(layout: SkillShelfStorageLayout): Promise<void> {
   try {
     await fs.access(layout.groupCatalogPath);
   } catch {
@@ -112,7 +112,7 @@ export async function ensureGroupCatalog(layout: SkillHubStorageLayout): Promise
   }
 }
 
-export async function loadManagedGroups(layout: SkillHubStorageLayout): Promise<ManagedGroupRecord[]> {
+export async function loadManagedGroups(layout: SkillShelfStorageLayout): Promise<ManagedGroupRecord[]> {
   await ensureGroupCatalog(layout);
   const raw = await fs.readFile(layout.groupCatalogPath, "utf8");
   const parsed = JSON.parse(raw) as unknown;
@@ -128,7 +128,7 @@ export async function loadManagedGroups(layout: SkillHubStorageLayout): Promise<
 }
 
 export async function createManagedGroup(
-  layout: SkillHubStorageLayout,
+  layout: SkillShelfStorageLayout,
   input: {
     group: string;
     groupDescription: string;
@@ -152,7 +152,7 @@ export async function createManagedGroup(
 }
 
 export async function updateManagedGroup(
-  layout: SkillHubStorageLayout,
+  layout: SkillShelfStorageLayout,
   input: {
     group: string;
     newGroup?: string;
@@ -198,7 +198,7 @@ export async function updateManagedGroup(
 }
 
 export async function deleteManagedGroup(
-  layout: SkillHubStorageLayout,
+  layout: SkillShelfStorageLayout,
   input: { group: string },
 ): Promise<ManagedGroupRecord> {
   const groups = await loadManagedGroups(layout);
@@ -280,7 +280,7 @@ function scoreGroupCandidate(source: string, candidate: ManagedGroupRecord): num
 }
 
 async function saveManagedGroups(
-  layout: SkillHubStorageLayout,
+  layout: SkillShelfStorageLayout,
   groups: ManagedGroupRecord[],
 ): Promise<void> {
   const normalized = groups

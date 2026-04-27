@@ -4,7 +4,7 @@ import { z } from "zod/v4";
 
 import { ensureStorageLayout, loadConfig } from "./config.js";
 import { SkillRegistry } from "./registry/registry.js";
-import { getHubStatus } from "./tools/get-hub-status.js";
+import { getShelfStatus } from "./tools/get-shelf-status.js";
 import { installSkills } from "./tools/install-skills.js";
 import { readSkill } from "./tools/read-skill.js";
 import { searchSkillsFlat } from "./tools/search-skills.js";
@@ -29,28 +29,32 @@ async function main() {
         }),
       };
 
-  const server = new McpServer({
-    name: "skill-router-mcp",
-    version: "0.1.0",
-    instructions: [
-      "Local skill library with flat search routing.",
-      "",
-      "ROUTING PROTOCOL:",
-      "1. search_skills(query) — fuzzy search across ALL skills, returns top matches with name + description + score.",
-      "2. read_skill(skill) — load full skill body for the chosen skill.",
-      "",
-      "Do NOT read multiple full skills in one turn — read one, evaluate, then decide.",
-      "",
-      "WHEN TO USE: Tasks requiring specialized workflow, formal process, or high-density domain knowledge.",
-      "WHEN NOT TO USE: Ordinary coding, simple edits, general questions — handle directly.",
-    ].join("\n"),
-  });
+  const server = new McpServer(
+    {
+      name: "skill-router-mcp",
+      version: "0.1.0",
+    },
+    {
+      instructions: [
+        "Local skill library with flat search routing.",
+        "",
+        "ROUTING PROTOCOL:",
+        "1. search_skills(query) — fuzzy search across ALL skills, returns top matches with name + description + score.",
+        "2. read_skill(skill) — load full skill body for the chosen skill.",
+        "",
+        "Do NOT read multiple full skills in one turn — read one, evaluate, then decide.",
+        "",
+        "WHEN TO USE: Tasks requiring specialized workflow, formal process, or high-density domain knowledge.",
+        "WHEN NOT TO USE: Ordinary coding, simple edits, general questions — handle directly.",
+      ].join("\n"),
+    },
+  );
 
   server.registerTool(
     "search_skills",
     {
       description:
-        "Step 1 of the skill-hub routing protocol. Search all skills by query, returns top matches ranked by relevance. IMPORTANT: Always try the user's language first. If no relevant results found, retry with English keywords. For CJK queries, separate words with spaces (e.g. '品牌 视觉 设计', NOT '品牌设计视觉').",
+        "Step 1 of the skill-shelf routing protocol. Search all skills by query, returns top matches ranked by relevance. IMPORTANT: Always try the user's language first. If no relevant results found, retry with English keywords. For CJK queries, separate words with spaces (e.g. '品牌 视觉 设计', NOT '品牌设计视觉').",
       annotations: {
         readOnlyHint: true,
         destructiveHint: false,
@@ -127,7 +131,7 @@ async function main() {
     "install_skills",
     {
       description:
-        "Write tool. Install one skill package directory or a directory containing multiple skill packages into the hub packages store. This mutates the formal packages store, may overwrite existing package ids, and rebuilds hub indexes.",
+        "Write tool. Install one skill package directory or a directory containing multiple skill packages into the shelf packages store. This mutates the formal packages store, may overwrite existing package ids, and rebuilds shelf indexes.",
       annotations: {
         readOnlyHint: false,
         destructiveHint: true,
@@ -184,7 +188,7 @@ async function main() {
         idempotentHint: true,
       },
       inputSchema: {
-        skill: z.string().optional().describe("Optional skill id or skill name. When omitted, validate the whole hub."),
+        skill: z.string().optional().describe("Optional skill id or skill name. When omitted, validate the whole shelf."),
       },
     },
     async ({ skill }) => {
@@ -218,10 +222,10 @@ async function main() {
       inputSchema: {
         mode: z.enum(["create", "update", "delete"]).describe("Operation mode."),
         group: z.string().min(1).describe("Group id (kebab-case). For update/delete, must be an existing group."),
-        groupDescription: z.string().min(1).optional().describe("Group description. Required for create, optional for update."),
-        newGroup: z.string().min(1).optional().describe("New group id for rename (update mode only)."),
-        keywords: z.array(z.string().min(1)).optional().describe("Routing keywords (replaces existing on update)."),
-        aliases: z.array(z.string().min(1)).optional().describe("Alternative names (replaces existing on update)."),
+        groupDescription: z.string().transform(v => v || undefined).optional().describe("Group description. Required for create, optional for update."),
+        newGroup: z.string().transform(v => v || undefined).optional().describe("New group id for rename (update mode only)."),
+        keywords: z.array(z.string()).transform(v => (v && v.length ? v : undefined)).optional().describe("Routing keywords (replaces existing on update)."),
+        aliases: z.array(z.string()).transform(v => (v && v.length ? v : undefined)).optional().describe("Alternative names (replaces existing on update)."),
       },
     },
     async ({ mode, group, groupDescription, newGroup, keywords, aliases }) => {
@@ -246,10 +250,10 @@ async function main() {
   );
 
   server.registerTool(
-    "get_hub_status",
+    "get_shelf_status",
     {
       description:
-        "Return hub counts, index freshness, watcher status.",
+        "Return shelf counts, index freshness, watcher status.",
       annotations: {
         readOnlyHint: true,
         destructiveHint: false,
@@ -259,7 +263,7 @@ async function main() {
       inputSchema: {},
     },
     async () => {
-      const result = await getHubStatus({
+      const result = await getShelfStatus({
         storage: config.storage,
         registry,
         watcherStatus: watcher.getStatus(),
@@ -280,7 +284,7 @@ async function main() {
   await server.connect(transport);
 
   console.error(
-    `skill-router-mcp ready | hubRoot=${config.storage.hubRoot} | packagesRoot=${config.storage.packagesRoot} | loadedSkills=${registry.size()} | issues=${registry.listIssues().length} | watch=${config.watchPolicy.enabled} | searchLimit=${config.indexPolicy.defaultSearchResultLimit}`,
+    `skill-router-mcp ready | shelfRoot=${config.storage.shelfRoot} | packagesRoot=${config.storage.packagesRoot} | loadedSkills=${registry.size()} | issues=${registry.listIssues().length} | watch=${config.watchPolicy.enabled} | searchLimit=${config.indexPolicy.defaultSearchResultLimit}`,
   );
 }
 

@@ -1,4 +1,4 @@
-# Skill Hub
+# Skill Shelf
 
 **用 6 个工具的固定开销，按需访问 230+ 个专业技能，而不需要把任何 skill 正文常驻上下文。**
 
@@ -6,13 +6,13 @@
 
 内置 230+ 个 skill 只是起步。用户可通过 `install_skills` 从目录批量安装，持续扩充自己的 skill 库。
 
-Skill Hub 的做法：skill 全部存放在本地包仓库，context 里只有 6 个轻量工具定义。LLM 需要某个专业能力时，通过搜索按需加载。不需要的时候，零开销。
+Skill Shelf 的做法：skill 全部存放在本地包仓库，context 里只有 6 个轻量工具定义。LLM 需要某个专业能力时，通过搜索按需加载。不需要的时候，零开销。
 
 ### 不是什么
 
 当前 AI skill 系统有一个普遍倾向：把 skill 当成可编程模块，试图构建 skill 图谱、执行链、skill 互相召唤。这是赌徒心态——在 LLM 的非确定性推理上叠加一层复杂的控制流，期望它可靠地按预设路径执行。结果就是：链越长越不可控，图越深越难调试，最终产出质量完全靠运气。
 
-Skill Hub 不做这些事。每个 skill 就是一份自包含的 Markdown 文档，搜索只负责一件事：确定性查找。从 230+ 个 skill 中，精准定位到目标 skill。找到对的文档，读给 LLM 看，结束。
+Skill Shelf 不做这些事。每个 skill 就是一份自包含的 Markdown 文档，搜索只负责一件事：确定性查找。从 230+ 个 skill 中，精准定位到目标 skill。找到对的文档，读给 LLM 看，结束。
 
 搜索层不预设 skill 之间的协作关系，但 LLM 读到多个 skill 后自行判断协作需要——这是 LLM 的主动性，不是基础设施的事。
 
@@ -107,7 +107,7 @@ Skill 正文内容...
 | `search_skills` | 扁平搜索全部 skill，返回 top N 匹配结果（name + description + score） |
 | `read_skill` | 读取 skill 完整正文、资源、参考文件 |
 | `validate_skills` | 校验所有 skill 的完整性和重复情况 |
-| `get_hub_status` | 查看索引和文件监听状态 |
+| `get_shelf_status` | 查看索引和文件监听状态 |
 
 ### 写操作
 
@@ -137,7 +137,7 @@ Skill 正文内容...
 ```json
 {
   "mcpServers": {
-    "skill-hub": {
+    "skill-shelf": {
       "command": "npx",
       "args": ["-y", "skill-router-mcp"]
     }
@@ -164,7 +164,7 @@ npm install
 ```json
 {
   "mcpServers": {
-    "skill-hub": {
+    "skill-shelf": {
       "command": "npx",
       "args": ["-y", "skill-router-mcp"]
     }
@@ -177,9 +177,9 @@ npm install
 ```json
 {
   "mcpServers": {
-    "skill-hub": {
+    "skill-shelf": {
       "command": "npm",
-      "args": ["run", "skill-hub"],
+      "args": ["run", "skill-shelf"],
       "cwd": "/your/path/to/skill-hub"
     }
   }
@@ -193,7 +193,7 @@ npm install
 ```json
 {
   "mcpServers": {
-    "skill-hub": {
+    "skill-shelf": {
       "command": "npx",
       "args": ["-y", "skill-router-mcp"]
     }

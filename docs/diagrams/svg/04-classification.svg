@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="640" height="1138">
+  <defs>
+    <filter id="sh"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.08"/></filter>
+    <filter id="shCard"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/></filter>
+  </defs>
+
+  <!-- Frame -->
+  <rect width="640" height="1138" rx="0" fill="#FAF9F6" stroke="#2D2D2D" stroke-width="3.5"/>
+
+  <!-- Title -->
+  <text x="270" y="50" font-family="system-ui,sans-serif" font-size="26" font-weight="800" fill="#1E2A3A" text-anchor="middle">安装分类</text>
+  <text x="270" y="78" font-family="system-ui,sans-serif" font-size="14" fill="#7A7A7A" text-anchor="middle" font-weight="600">安装时由 LLM 驱动选择分组</text>
+
+  <!-- Flow step 1: Install without group -->
+  <rect x="24" y="108" width="492" height="120" rx="16" fill="#4A6A8A" stroke="#3A5A7A" stroke-width="2" filter="url(#sh)"/>
+  <circle cx="56" cy="142" r="18" fill="#FFF" fill-opacity="0.2"/>
+  <text x="56" y="148" font-family="system-ui,sans-serif" font-size="16" font-weight="900" fill="#4A6A8A" text-anchor="middle">1</text>
+  <text x="86" y="138" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFF">不带分组安装</text>
+  <text x="86" y="158" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">调用 install_skills(sourcePath)，不传 group 参数</text>
+  <text x="86" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.7">工具读取 SKILL.md 并准备分类信息</text>
+
+  <rect x="86" y="192" width="280" height="18" rx="6" fill="#FFF" fill-opacity="0.1"/>
+  <text x="94" y="205" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="10" fill="#FFF" fill-opacity="0.7">install_skills(sourcePath="./my-skill")</text>
+
+  <!-- Arrow -->
+  <line x1="270" y1="228" x2="270" y2="248" stroke="#4A6A8A" stroke-width="2"/>
+  <polygon points="263,244 270,256 277,244" fill="#4A6A8A"/>
+
+  <!-- Flow step 2: Tool returns info -->
+  <rect x="24" y="258" width="492" height="174" rx="16" fill="#5A7A6A" stroke="#4A6A5A" stroke-width="2" filter="url(#sh)"/>
+  <circle cx="56" cy="292" r="18" fill="#FFF" fill-opacity="0.2"/>
+  <text x="56" y="298" font-family="system-ui,sans-serif" font-size="16" font-weight="900" fill="#5A7A6A" text-anchor="middle">2</text>
+  <text x="86" y="288" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFF">工具返回技能信息 + 可用分组</text>
+
+  <text x="48" y="324" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.9">工具返回：</text>
+
+  <rect x="48" y="338" width="444" height="56" rx="8" fill="#2A3A3A"/>
+  <text x="60" y="358" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">  技能描述："一个生成 React 组件的技能..."</text>
+  <text x="60" y="378" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.9">  可用分组：engineering, design, testing-qa, ...</text>
+
+  <text x="48" y="410" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.65">不做程序化分类 —— 工具不会自动选择分组</text>
+
+  <!-- Arrow -->
+  <line x1="270" y1="432" x2="270" y2="452" stroke="#5A7A6A" stroke-width="2"/>
+  <polygon points="263,448 270,460 277,448" fill="#5A7A6A"/>
+
+  <!-- Flow step 3: LLM picks group -->
+  <rect x="24" y="462" width="492" height="150" rx="16" fill="#7A6A5A" stroke="#6A5A4A" stroke-width="2" filter="url(#sh)"/>
+  <circle cx="56" cy="496" r="18" fill="#FFF" fill-opacity="0.2"/>
+  <text x="56" y="502" font-family="system-ui,sans-serif" font-size="16" font-weight="900" fill="#7A6A5A" text-anchor="middle">3</text>
+  <text x="86" y="492" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFF">LLM 选择最合适的分组</text>
+
+  <text x="48" y="528" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.9">基于技能描述和分组列表，LLM</text>
+  <text x="48" y="548" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.9">判断哪个分组最合适。这是人类级别的</text>
+  <text x="48" y="568" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.9">判断 —— 不依赖加权匹配或评分</text>
+
+  <rect x="86" y="576" width="340" height="18" rx="6" fill="#FFF" fill-opacity="0.1"/>
+  <text x="94" y="589" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="10" fill="#FFF" fill-opacity="0.7">LLM 判断：group = "engineering"</text>
+
+  <!-- Arrow -->
+  <line x1="270" y1="612" x2="270" y2="632" stroke="#7A6A5A" stroke-width="2"/>
+  <polygon points="263,628 270,640 277,628" fill="#7A6A5A"/>
+
+  <!-- Flow step 4: Install with group -->
+  <rect x="24" y="642" width="492" height="120" rx="16" fill="#4A6A8A" stroke="#3A5A7A" stroke-width="2" filter="url(#sh)"/>
+  <circle cx="56" cy="676" r="18" fill="#FFF" fill-opacity="0.2"/>
+  <text x="56" y="682" font-family="system-ui,sans-serif" font-size="16" font-weight="900" fill="#4A6A8A" text-anchor="middle">4</text>
+  <text x="86" y="672" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFF">带上分组再次安装</text>
+  <text x="86" y="692" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">再次调用 install_skills，这次传入 group 参数</text>
+  <text x="86" y="712" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.7">技能写入 packages/{group}/{skill-id}/ 并建立索引</text>
+
+  <rect x="86" y="726" width="340" height="18" rx="6" fill="#FFF" fill-opacity="0.1"/>
+  <text x="94" y="739" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="10" fill="#FFF" fill-opacity="0.7">install_skills(sourcePath="./my-skill", group="engineering")</text>
+
+  <!-- Summary note -->
+  <rect x="24" y="792" width="492" height="112" rx="14" fill="#3A3A3A" stroke="#2D2D2D" stroke-width="1.5" filter="url(#shCard)"/>
+  <text x="270" y="820" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" text-anchor="middle" font-weight="700">为什么用 LLM 驱动分类？</text>
+  <text x="48" y="848" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">分组分配需要理解技能用途，</text>
+  <text x="48" y="870" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">不是关键词匹配能做到的。</text>
+  <text x="48" y="892" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">17 个分组，没有评分算法能替代人类判断。</text>
+
+  <!-- Watermark -->
+  <text x="270" y="940" font-family="system-ui,sans-serif" font-size="11" fill="#C4C4C4" text-anchor="middle">Skill Shelf</text>
+</svg>

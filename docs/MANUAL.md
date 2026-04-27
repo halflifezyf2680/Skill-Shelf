@@ -1,8 +1,8 @@
-# Skill Hub Manual
+# Skill Shelf Manual
 
 ## 1. 这是什么
 
-Skill Hub 是一个本地 MCP 服务器，注册 9 个工具到 LLM 的 context，让它能按需访问 230+ 个专业技能——不需要的 skill 不占任何 token。内置 230+ 个 skill 只是起步，用户可通过 `install_skills` 持续扩充自己的 skill 库。
+Skill Shelf 是一个本地 MCP 服务器，注册 9 个工具到 LLM 的 context，让它能按需访问 230+ 个专业技能——不需要的 skill 不占任何 token。内置 230+ 个 skill 只是起步，用户可通过 `install_skills` 持续扩充自己的 skill 库。
 
 ## 2. 路由流程
 
@@ -80,7 +80,7 @@ validate_skills()  ← 检查有没有问题
 | 工具 | 什么时候用 |
 |------|-----------|
 | `validate_skills(skill?)` | 安装后检查完整性，可校验单个或全部 |
-| `get_hub_status()` | 看 skill 总数、组数、issue 数、watcher 状态 |
+| `get_shelf_status()` | 看 skill 总数、组数、issue 数、watcher 状态 |
 
 ### 写操作
 

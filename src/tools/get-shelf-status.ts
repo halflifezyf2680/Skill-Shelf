@@ -1,14 +1,14 @@
 import fs from "node:fs/promises";
 
-import type { SkillHubStorageLayout } from "../config.js";
+import type { SkillShelfStorageLayout } from "../config.js";
 import { SkillRegistry } from "../registry/registry.js";
-import type { HubStatus, WatcherStatus } from "../types.js";
+import type { ShelfStatus, WatcherStatus } from "../types.js";
 
-export async function getHubStatus(params: {
-  storage: SkillHubStorageLayout;
+export async function getShelfStatus(params: {
+  storage: SkillShelfStorageLayout;
   registry: SkillRegistry;
   watcherStatus: WatcherStatus;
-}): Promise<HubStatus> {
+}): Promise<ShelfStatus> {
   const importCount = await countDirectories(params.storage.stagingImportsRoot);
   return {
     groupsCount: params.registry.listGroups().length,

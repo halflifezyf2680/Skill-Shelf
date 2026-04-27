@@ -1,5 +1,66 @@
 [
   {
+    "group": "academic-research",
+    "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+    "keywords": [
+      "academic",
+      "research",
+      "study",
+      "historian",
+      "anthropologist",
+      "psychologist",
+      "geographer",
+      "scholar",
+      "education",
+      "留学",
+      "高考",
+      "志愿",
+      "学习规划",
+      "学术",
+      "研究",
+      "教育",
+      "文化",
+      "地理",
+      "叙事",
+      "文学",
+      "人类学",
+      "社会学",
+      "民族志"
+    ],
+    "aliases": [
+      "research",
+      "education"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "design",
+    "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+    "keywords": [
+      "design",
+      "ui",
+      "ux",
+      "brand",
+      "visual",
+      "creative",
+      "figma",
+      "token",
+      "identity",
+      "banner",
+      "icon",
+      "styling",
+      "设计师",
+      "体验",
+      "交互",
+      "设计"
+    ],
+    "aliases": [
+      "visual-design",
+      "ux-design"
+    ],
+    "source": "builtin"
+  },
+  {
     "group": "engineering",
     "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
     "keywords": [
@@ -60,78 +121,118 @@
     "source": "builtin"
   },
   {
-    "group": "design",
-    "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+    "group": "finance",
+    "groupDescription": "财务、预算、核算、定价、经营分析与资金相关能力。",
     "keywords": [
-      "design",
-      "ui",
-      "ux",
-      "brand",
-      "visual",
-      "creative",
-      "figma",
-      "token",
-      "identity",
-      "banner",
-      "icon",
-      "styling",
-      "设计师",
-      "体验",
-      "交互",
-      "设计"
+      "finance",
+      "financial",
+      "budget",
+      "pricing",
+      "accounting",
+      "forecast",
+      "cost",
+      "revenue",
+      "expense",
+      "财务",
+      "会计",
+      "定价",
+      "成本",
+      "支付",
+      "发票",
+      "账单",
+      "付款"
     ],
     "aliases": [
-      "visual-design",
-      "ux-design"
+      "finops",
+      "accounting"
     ],
     "source": "builtin"
   },
   {
-    "group": "product",
-    "groupDescription": "产品规划、需求分析、用户反馈、优先级、路线图与产品研究。",
+    "group": "game-studios",
+    "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
     "keywords": [
-      "product",
-      "roadmap",
-      "requirement",
-      "feedback",
-      "prioritization",
-      "research",
-      "insight",
-      "discovery",
-      "feature",
-      "产品",
-      "需求",
-      "用户",
-      "路线图",
-      "功能"
+      "game",
+      "gaming",
+      "studio",
+      "playtest",
+      "prototype",
+      "level",
+      "combat",
+      "narrative",
+      "audio",
+      "polish",
+      "retrospective",
+      "sprint",
+      "游戏",
+      "工作室",
+      "原型",
+      "关卡",
+      "战斗",
+      "叙事",
+      "音频",
+      "发布"
     ],
     "aliases": [
-      "product-management"
+      "game-studio",
+      "game-dev-workflow"
     ],
     "source": "builtin"
   },
   {
-    "group": "project-management",
-    "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+    "group": "hr-talent",
+    "groupDescription": "招聘、人才、培训、组织发展与人事支持工作。",
     "keywords": [
-      "project",
-      "program",
-      "delivery",
-      "milestone",
-      "planning",
-      "execution",
-      "coordination",
-      "timeline",
-      "stakeholder",
-      "项目",
-      "统筹",
-      "协调",
-      "资源分配",
-      "跨部门"
+      "hr",
+      "recruitment",
+      "talent",
+      "hiring",
+      "people",
+      "training",
+      "onboarding",
+      "candidate",
+      "organization",
+      "培训",
+      "人才",
+      "招聘",
+      "组织",
+      "内训",
+      "领导力"
     ],
     "aliases": [
-      "pm",
-      "program-management"
+      "human-resources",
+      "talent-acquisition"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "legal-compliance",
+    "groupDescription": "法务、合规、审计、政策、风险治理与监管要求处理。",
+    "keywords": [
+      "legal",
+      "compliance",
+      "audit",
+      "policy",
+      "risk",
+      "regulation",
+      "governance",
+      "contract",
+      "privacy",
+      "合规",
+      "审计",
+      "风险",
+      "监管",
+      "法规",
+      "治理",
+      "隐私",
+      "政策",
+      "风控",
+      "安全"
+    ],
+    "aliases": [
+      "legal",
+      "compliance",
+      "risk"
     ],
     "source": "builtin"
   },
@@ -189,6 +290,55 @@
     "source": "builtin"
   },
   {
+    "group": "product",
+    "groupDescription": "产品规划、需求分析、用户反馈、优先级、路线图与产品研究。",
+    "keywords": [
+      "product",
+      "roadmap",
+      "requirement",
+      "feedback",
+      "prioritization",
+      "research",
+      "insight",
+      "discovery",
+      "feature",
+      "产品",
+      "需求",
+      "用户",
+      "路线图",
+      "功能"
+    ],
+    "aliases": [
+      "product-management"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "project-management",
+    "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+    "keywords": [
+      "project",
+      "program",
+      "delivery",
+      "milestone",
+      "planning",
+      "execution",
+      "coordination",
+      "timeline",
+      "stakeholder",
+      "项目",
+      "统筹",
+      "协调",
+      "资源分配",
+      "跨部门"
+    ],
+    "aliases": [
+      "pm",
+      "program-management"
+    ],
+    "source": "builtin"
+  },
+  {
     "group": "sales",
     "groupDescription": "销售、售前、线索管理、方案支持、成交推进与客户拓展。",
     "keywords": [
@@ -211,199 +361,6 @@
     "aliases": [
       "business-development",
       "presales"
-    ],
-    "source": "builtin"
-  },
-  {
-    "group": "finance",
-    "groupDescription": "财务、预算、核算、定价、经营分析与资金相关能力。",
-    "keywords": [
-      "finance",
-      "financial",
-      "budget",
-      "pricing",
-      "accounting",
-      "forecast",
-      "cost",
-      "revenue",
-      "expense",
-      "财务",
-      "会计",
-      "定价",
-      "成本",
-      "支付",
-      "发票",
-      "账单",
-      "付款"
-    ],
-    "aliases": [
-      "finops",
-      "accounting"
-    ],
-    "source": "builtin"
-  },
-  {
-    "group": "legal-compliance",
-    "groupDescription": "法务、合规、审计、政策、风险治理与监管要求处理。",
-    "keywords": [
-      "legal",
-      "compliance",
-      "audit",
-      "policy",
-      "risk",
-      "regulation",
-      "governance",
-      "contract",
-      "privacy",
-      "合规",
-      "审计",
-      "风险",
-      "监管",
-      "法规",
-      "治理",
-      "隐私",
-      "政策",
-      "风控",
-      "安全"
-    ],
-    "aliases": [
-      "legal",
-      "compliance",
-      "risk"
-    ],
-    "source": "builtin"
-  },
-  {
-    "group": "hr-talent",
-    "groupDescription": "招聘、人才、培训、组织发展与人事支持工作。",
-    "keywords": [
-      "hr",
-      "recruitment",
-      "talent",
-      "hiring",
-      "people",
-      "training",
-      "onboarding",
-      "candidate",
-      "organization",
-      "培训",
-      "人才",
-      "招聘",
-      "组织",
-      "内训",
-      "领导力"
-    ],
-    "aliases": [
-      "human-resources",
-      "talent-acquisition"
-    ],
-    "source": "builtin"
-  },
-  {
-    "group": "support-operations",
-    "groupDescription": "客服、运营支持、行政协助、汇总汇报与后台支持工作。",
-    "keywords": [
-      "support",
-      "operations",
-      "assistant",
-      "reporting",
-      "responder",
-      "summary",
-      "maintainer",
-      "tracker",
-      "coordination",
-      "运营",
-      "行政",
-      "会议",
-      "报告",
-      "汇总",
-      "分发",
-      "助手"
-    ],
-    "aliases": [
-      "ops-support",
-      "backoffice"
-    ],
-    "source": "builtin"
-  },
-  {
-    "group": "supply-chain",
-    "groupDescription": "供应链、采购、物流、库存、履约与上下游协同。",
-    "keywords": [
-      "supply",
-      "procurement",
-      "logistics",
-      "inventory",
-      "fulfillment",
-      "vendor",
-      "warehouse",
-      "operations"
-    ],
-    "aliases": [
-      "sourcing",
-      "supply-chain"
-    ],
-    "source": "builtin"
-  },
-  {
-    "group": "academic-research",
-    "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
-    "keywords": [
-      "academic",
-      "research",
-      "study",
-      "historian",
-      "anthropologist",
-      "psychologist",
-      "geographer",
-      "scholar",
-      "education",
-      "留学",
-      "高考",
-      "志愿",
-      "学习规划",
-      "学术",
-      "研究",
-      "教育",
-      "文化",
-      "地理",
-      "叙事",
-      "文学",
-      "人类学",
-      "社会学",
-      "民族志"
-    ],
-    "aliases": [
-      "research",
-      "education"
-    ],
-    "source": "builtin"
-  },
-  {
-    "group": "testing-qa",
-    "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
-    "keywords": [
-      "testing",
-      "qa",
-      "quality",
-      "review",
-      "audit",
-      "validation",
-      "verification",
-      "benchmark",
-      "eval",
-      "测试",
-      "质量",
-      "校准",
-      "复现",
-      "评估",
-      "验证",
-      "认证",
-      "就绪"
-    ],
-    "aliases": [
-      "quality-assurance",
-      "evaluation"
     ],
     "source": "builtin"
   },
@@ -445,33 +402,76 @@
     "source": "builtin"
   },
   {
-    "group": "game-studios",
-    "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+    "group": "supply-chain",
+    "groupDescription": "供应链、采购、物流、库存、履约与上下游协同。",
     "keywords": [
-      "game",
-      "gaming",
-      "studio",
-      "playtest",
-      "prototype",
-      "level",
-      "combat",
-      "narrative",
-      "audio",
-      "polish",
-      "retrospective",
-      "sprint",
-      "游戏",
-      "工作室",
-      "原型",
-      "关卡",
-      "战斗",
-      "叙事",
-      "音频",
-      "发布"
+      "supply",
+      "procurement",
+      "logistics",
+      "inventory",
+      "fulfillment",
+      "vendor",
+      "warehouse",
+      "operations"
     ],
     "aliases": [
-      "game-studio",
-      "game-dev-workflow"
+      "sourcing",
+      "supply-chain"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "support-operations",
+    "groupDescription": "客服、运营支持、行政协助、汇总汇报与后台支持工作。",
+    "keywords": [
+      "support",
+      "operations",
+      "assistant",
+      "reporting",
+      "responder",
+      "summary",
+      "maintainer",
+      "tracker",
+      "coordination",
+      "运营",
+      "行政",
+      "会议",
+      "报告",
+      "汇总",
+      "分发",
+      "助手"
+    ],
+    "aliases": [
+      "ops-support",
+      "backoffice"
+    ],
+    "source": "builtin"
+  },
+  {
+    "group": "testing-qa",
+    "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+    "keywords": [
+      "testing",
+      "qa",
+      "quality",
+      "review",
+      "audit",
+      "validation",
+      "verification",
+      "benchmark",
+      "eval",
+      "测试",
+      "质量",
+      "校准",
+      "复现",
+      "评估",
+      "验证",
+      "认证",
+      "就绪"
+    ],
+    "aliases": [
+      "quality-assurance",
+      "evaluation"
     ],
     "source": "builtin"
   }
