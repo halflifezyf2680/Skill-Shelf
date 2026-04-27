@@ -1,10 +1,10 @@
 # Skill Shelf
 
-**用 6 个工具的固定开销，按需访问 230+ 个专业技能，而不需要把任何 skill 正文常驻上下文。**
+**用 6 个工具的固定开销，按需访问 500-1000+ 个专业技能，而不需要把任何 description 常驻上下文。**
 
 传统做法：每个 skill 作为本地 skill 加载 → description 全量驻留 context → 230+ 个 skill = 数万 tokens 白白浪费，且每次对话都背着它们跑。
 
-内置 230+ 个 skill 只是起步。用户可通过 `install_skills` 从目录批量安装，持续扩充自己的 skill 库。
+内置 233 个 skill 只是起步。用户可通过 `install_skills` 从目录批量安装，持续扩充自己的 skill 库。
 
 Skill Shelf 的做法：skill 全部存放在本地包仓库，context 里只有 6 个轻量工具定义。LLM 需要某个专业能力时，通过搜索按需加载。不需要的时候，零开销。
 
@@ -185,7 +185,7 @@ npm install
 
 ## 致谢
 
-Skill 内容来源于以下开源项目：
+部分 Skill 内容来源于以下开源项目：
 
 - [agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh)（MIT License）— 211 个中文 AI 专家智能体
 - [awesome-design-md](https://github.com/VoltAgent/awesome-design-md)（MIT License）— 品牌设计系统 markdown 文件
