@@ -16,7 +16,7 @@
   <circle cx="56" cy="136" r="18" fill="#FFF" fill-opacity="0.2"/>
   <text x="56" y="142" font-family="system-ui,sans-serif" font-size="16" font-weight="900" fill="#4A6A8A" text-anchor="middle">1</text>
   <text x="86" y="138" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="15" font-weight="700" fill="#FFF">search_skills(query)</text>
-  <text x="86" y="158" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.8">全量扁平模糊搜索所有技能</text>
+  <text x="86" y="158" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.8">Level 1 — YAML frontmatter（name + description）</text>
 
   <text x="48" y="190" font-family="system-ui,sans-serif" font-size="13" fill="#FFF">搜索范围覆盖技能名称、描述、关键词和别名，</text>
   <text x="48" y="210" font-family="system-ui,sans-serif" font-size="13" fill="#FFF">返回按评分排序的 Top N 结果。</text>
@@ -28,56 +28,57 @@
   <polygon points="263,292 270,304 277,292" fill="#5A7A6A"/>
 
   <!-- Step 2: read_skill -->
-  <rect x="24" y="306" width="492" height="150" rx="16" fill="#5A7A6A" stroke="#4A6A5A" stroke-width="2" filter="url(#sh)"/>
+  <rect x="24" y="306" width="492" height="168" rx="16" fill="#5A7A6A" stroke="#4A6A5A" stroke-width="2" filter="url(#sh)"/>
   <circle cx="56" cy="338" r="18" fill="#FFF" fill-opacity="0.2"/>
   <text x="56" y="344" font-family="system-ui,sans-serif" font-size="16" font-weight="900" fill="#5A7A6A" text-anchor="middle">2</text>
   <text x="86" y="340" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="15" font-weight="700" fill="#FFF">read_skill(skill)</text>
-  <text x="86" y="360" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.8">加载完整技能内容到上下文</text>
+  <text x="86" y="360" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.8">Level 2 — SKILL.md 正文（frontmatter 已剥离）</text>
 
-  <text x="48" y="392" font-family="system-ui,sans-serif" font-size="13" fill="#FFF">加载完整的 SKILL.md 正文及附带的参考文件。</text>
-  <text x="48" y="414" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.7">只读取实际需要的技能 —— 最小上下文开销</text>
+  <text x="48" y="392" font-family="system-ui,sans-serif" font-size="13" fill="#FFF">加载完整 SKILL.md 正文。附带的参考文件以</text>
+  <text x="48" y="412" font-family="system-ui,sans-serif" font-size="13" fill="#FFF">文件名列表形式返回，由 LLM 按需自行读取。</text>
+  <text x="48" y="438" font-family="system-ui,sans-serif" font-size="11" fill="#FFF" fill-opacity="0.7">Level 3: references/ 下的文件由 LLM 用 Read 工具按需加载</text>
 
   <!-- Divider -->
-  <line x1="48" y1="478" x2="492" y2="478" stroke="#8A8578" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="48" y1="496" x2="492" y2="496" stroke="#8A8578" stroke-width="1" stroke-opacity="0.4"/>
 
   <!-- 6 Tools section -->
-  <text x="48" y="504" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#1E2A3A">6 个 MCP 工具</text>
+  <text x="48" y="522" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#1E2A3A">6 个 MCP 工具</text>
 
   <!-- Read-only tools label -->
-  <text x="48" y="534" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#7A7A7A" letter-spacing="1">只读</text>
+  <text x="48" y="552" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#7A7A7A" letter-spacing="1">只读</text>
 
   <!-- search_skills -->
-  <rect x="24" y="546" width="492" height="48" rx="10" fill="#4A6A8A" filter="url(#shCard)"/>
-  <text x="48" y="576" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">search_skills</text>
-  <text x="220" y="576" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">按查询字符串全量模糊搜索</text>
+  <rect x="24" y="564" width="492" height="48" rx="10" fill="#4A6A8A" filter="url(#shCard)"/>
+  <text x="48" y="594" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">search_skills</text>
+  <text x="220" y="594" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">按查询字符串全量模糊搜索</text>
 
   <!-- read_skill -->
-  <rect x="24" y="602" width="492" height="48" rx="10" fill="#4A6A8A" filter="url(#shCard)"/>
-  <text x="48" y="632" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">read_skill</text>
-  <text x="170" y="632" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">按名称或 ID 加载完整技能及参考文件</text>
+  <rect x="24" y="620" width="492" height="48" rx="10" fill="#4A6A8A" filter="url(#shCard)"/>
+  <text x="48" y="650" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">read_skill</text>
+  <text x="170" y="650" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">加载 SKILL.md 正文（去 frontmatter）</text>
 
   <!-- validate_skills -->
-  <rect x="24" y="658" width="492" height="48" rx="10" fill="#4A6A8A" filter="url(#shCard)"/>
-  <text x="48" y="688" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">validate_skills</text>
-  <text x="200" y="688" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">检查技能包完整性</text>
+  <rect x="24" y="676" width="492" height="48" rx="10" fill="#4A6A8A" filter="url(#shCard)"/>
+  <text x="48" y="706" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">validate_skills</text>
+  <text x="200" y="706" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">检查技能包完整性</text>
 
   <!-- get_shelf_status -->
-  <rect x="24" y="714" width="492" height="48" rx="10" fill="#4A6A8A" filter="url(#shCard)"/>
-  <text x="48" y="744" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">get_shelf_status</text>
-  <text x="234" y="744" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">技能库数量、索引新鲜度</text>
+  <rect x="24" y="732" width="492" height="48" rx="10" fill="#4A6A8A" filter="url(#shCard)"/>
+  <text x="48" y="762" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">get_shelf_status</text>
+  <text x="234" y="762" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">技能库数量、索引新鲜度</text>
 
   <!-- Write tools label -->
-  <text x="48" y="790" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#7A7A7A" letter-spacing="1">写入</text>
+  <text x="48" y="808" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#7A7A7A" letter-spacing="1">写入</text>
 
   <!-- install_skills -->
-  <rect x="24" y="802" width="492" height="48" rx="10" fill="#7A6A5A" filter="url(#shCard)"/>
-  <text x="48" y="832" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">install_skills</text>
-  <text x="198" y="832" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">安装技能包到仓库，自动重建索引</text>
+  <rect x="24" y="820" width="492" height="48" rx="10" fill="#7A6A5A" filter="url(#shCard)"/>
+  <text x="48" y="850" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">install_skills</text>
+  <text x="198" y="850" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">安装技能包到仓库，自动重建索引</text>
 
   <!-- manage_group -->
-  <rect x="24" y="858" width="492" height="48" rx="10" fill="#7A6A5A" filter="url(#shCard)"/>
-  <text x="48" y="888" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">manage_group</text>
-  <text x="210" y="888" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">创建、更新或删除技能分组</text>
+  <rect x="24" y="876" width="492" height="48" rx="10" fill="#7A6A5A" filter="url(#shCard)"/>
+  <text x="48" y="906" font-family="SF Mono,Cascadia Code,Consolas,monospace" font-size="13" font-weight="700" fill="#FFF">manage_group</text>
+  <text x="210" y="906" font-family="system-ui,sans-serif" font-size="12" fill="#FFF" fill-opacity="0.85">创建、更新或删除技能分组</text>
 
   <!-- Watermark -->
   <text x="270" y="940" font-family="system-ui,sans-serif" font-size="11" fill="#C4C4C4" text-anchor="middle">Skill Shelf</text>

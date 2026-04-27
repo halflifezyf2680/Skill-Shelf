@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const pngDir = resolve(__dirname, '..', 'png');
-const server = 'http://127.0.0.1:8765';
+const server = 'http://127.0.0.1:8768';
 
 const files = [
   { name: '01-overview',         w: 640, h: 1138 },
