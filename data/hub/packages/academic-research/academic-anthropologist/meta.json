@@ -1,0 +1,12 @@
+{
+  "skillId": "academic-anthropologist",
+  "skillName": "人类学家",
+  "description": "文化体系、仪式、亲属关系、信仰系统和民族志方法专家——构建有生活气息而非凭空捏造的、文化上连贯自洽的社会",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "文化体系、仪式、亲属关系、信仰系统和民族志方法专家——构建有生活气息而非凭空捏造的、文化上连贯自洽的社会"
+  ],
+  "updatedAtMs": 1777260525546.5488,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "team-polish",
+  "skillName": "team-polish",
+  "description": "Orchestrate the polish team: coordinates performance-analyst, technical-artist, sound-designer, and qa-tester to optimize, polish, and harden a feature or area for release quality.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "orchestrate",
+    "the",
+    "polish",
+    "team",
+    "coordinates",
+    "performance-analyst",
+    "technical-artist",
+    "sound-designer",
+    "and",
+    "qa-tester",
+    "optimize",
+    "harden"
+  ],
+  "updatedAtMs": 1777260525934.1228,
+  "status": "ready"
+}

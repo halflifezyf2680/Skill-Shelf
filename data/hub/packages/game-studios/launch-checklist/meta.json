@@ -1,0 +1,23 @@
+{
+  "skillId": "launch-checklist",
+  "skillName": "launch-checklist",
+  "description": "Complete launch readiness validation covering every department: code, content, store, marketing, community, infrastructure, legal, and go/no-go sign-offs.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "complete",
+    "launch",
+    "readiness",
+    "validation",
+    "covering",
+    "every",
+    "department",
+    "code",
+    "content",
+    "store",
+    "marketing",
+    "community"
+  ],
+  "updatedAtMs": 1777260525901.4688,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "team-audio",
+  "skillName": "team-audio",
+  "description": "Orchestrate audio team: audio-director + sound-designer + technical-artist + gameplay-programmer for full audio pipeline from direction to implementation.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "orchestrate",
+    "audio",
+    "team",
+    "audio-director",
+    "sound-designer",
+    "technical-artist",
+    "gameplay-programmer",
+    "for",
+    "full",
+    "pipeline",
+    "from",
+    "direction"
+  ],
+  "updatedAtMs": 1777260525928.0986,
+  "status": "ready"
+}

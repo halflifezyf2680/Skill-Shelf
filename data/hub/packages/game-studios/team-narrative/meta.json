@@ -1,0 +1,23 @@
+{
+  "skillId": "team-narrative",
+  "skillName": "team-narrative",
+  "description": "Orchestrate the narrative team: coordinates narrative-director, writer, world-builder, and level-designer to create cohesive story content, world lore, and narrative-driven level design.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "orchestrate",
+    "the",
+    "narrative",
+    "team",
+    "coordinates",
+    "narrative-director",
+    "writer",
+    "world-builder",
+    "and",
+    "level-designer",
+    "create",
+    "cohesive"
+  ],
+  "updatedAtMs": 1777260525932.1187,
+  "status": "ready"
+}

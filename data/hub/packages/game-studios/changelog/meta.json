@@ -1,0 +1,23 @@
+{
+  "skillId": "changelog",
+  "skillName": "changelog",
+  "description": "Auto-generates a changelog from git commits, sprint data, and design documents. Produces both internal and player-facing versions.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "auto-generates",
+    "changelog",
+    "from",
+    "git",
+    "commits",
+    "sprint",
+    "data",
+    "and",
+    "design",
+    "documents",
+    "produces",
+    "both"
+  ],
+  "updatedAtMs": 1777260525891.422,
+  "status": "ready"
+}

@@ -1,0 +1,12 @@
+{
+  "skillId": "testing-reality-checker",
+  "skillName": "现实检验者",
+  "description": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪",
+  "group": "testing-qa",
+  "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+  "keywords": [
+    "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪"
+  ],
+  "updatedAtMs": 1777260525877.1719,
+  "status": "ready"
+}

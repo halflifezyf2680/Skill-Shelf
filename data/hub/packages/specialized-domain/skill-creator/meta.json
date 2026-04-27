@@ -1,0 +1,23 @@
+{
+  "skillId": "skill-creator",
+  "skillName": "skill-creator",
+  "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "create",
+    "new",
+    "skills",
+    "modify",
+    "and",
+    "improve",
+    "existing",
+    "measure",
+    "skill",
+    "performance",
+    "use",
+    "when"
+  ],
+  "updatedAtMs": 1777295506151.4255,
+  "status": "ready"
+}

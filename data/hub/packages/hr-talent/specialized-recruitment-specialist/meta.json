@@ -1,0 +1,12 @@
+{
+  "skillId": "specialized-recruitment-specialist",
+  "skillName": "招聘专家",
+  "description": "招聘运营与人才获取专家，精通国内主流招聘平台、人才评估体系和劳动法合规，帮助企业高效吸引、筛选和留住优秀人才，打造有竞争力的雇主品牌。",
+  "group": "hr-talent",
+  "groupDescription": "招聘、人才、培训、组织发展与人事支持工作。",
+  "keywords": [
+    "招聘运营与人才获取专家，精通国内主流招聘平台、人才评估体系和劳动法合规，帮助企业高效吸引、筛选和留住优秀人才，打造有竞争力的雇主品牌"
+  ],
+  "updatedAtMs": 1777260525818.2107,
+  "status": "ready"
+}

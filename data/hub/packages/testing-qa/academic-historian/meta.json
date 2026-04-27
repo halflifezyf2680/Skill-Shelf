@@ -1,0 +1,12 @@
+{
+  "skillId": "academic-historian",
+  "skillName": "历史学家",
+  "description": "历史分析、分期、物质文化和史学方法专家——验证历史一致性，以扎根于一手和二手资料的真实时代细节丰富设定",
+  "group": "testing-qa",
+  "groupDescription": "测试、质量保障、评估、验证、审查与质量控制。",
+  "keywords": [
+    "历史分析、分期、物质文化和史学方法专家——验证历史一致性，以扎根于一手和二手资料的真实时代细节丰富设定"
+  ],
+  "updatedAtMs": 1777260525552.566,
+  "status": "ready"
+}

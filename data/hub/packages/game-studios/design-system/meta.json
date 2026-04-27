@@ -1,0 +1,23 @@
+{
+  "skillId": "design-system",
+  "skillName": "design-system",
+  "description": "Guided, section-by-section GDD authoring for a single game system. Gathers context from existing docs, walks through each required section collaboratively, cross-references dependencies, and writes incrementally to file.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "guided",
+    "section-by-section",
+    "gdd",
+    "authoring",
+    "for",
+    "single",
+    "game",
+    "system",
+    "gathers",
+    "context",
+    "from",
+    "existing"
+  ],
+  "updatedAtMs": 1777260525895.428,
+  "status": "ready"
+}

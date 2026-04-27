@@ -1,0 +1,18 @@
+{
+  "skillId": "engineering-embedded-linux-driver-engineer",
+  "skillName": "嵌入式 Linux 驱动工程师",
+  "description": "嵌入式 Linux 内核驱动与 BSP 开发专家——精通 Linux 内核模块、设备树、Platform/I2C/SPI/USB 驱动框架、DMA、中断子系统、Yocto/Buildroot、U-Boot、交叉编译工具链。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "嵌入式",
+    "linux",
+    "内核驱动与",
+    "bsp",
+    "开发专家——精通",
+    "内核模块、设备树、platform/i2c/spi/usb",
+    "驱动框架、dma、中断子系统、yocto/buildroot、u-boot、交叉编译工具链"
+  ],
+  "updatedAtMs": 1777260525600.8804,
+  "status": "ready"
+}

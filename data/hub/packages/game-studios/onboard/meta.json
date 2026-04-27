@@ -1,0 +1,23 @@
+{
+  "skillId": "onboard",
+  "skillName": "onboard",
+  "description": "Generates a contextual onboarding document for a new contributor or agent joining the project. Summarizes project state, architecture, conventions, and current priorities relevant to the specified role or area.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "generates",
+    "contextual",
+    "onboarding",
+    "document",
+    "for",
+    "new",
+    "contributor",
+    "agent",
+    "joining",
+    "the",
+    "project",
+    "summarizes"
+  ],
+  "updatedAtMs": 1777260525907.9866,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "prototype",
+  "skillName": "prototype",
+  "description": "Rapid prototyping workflow. Skips normal standards to quickly validate a game concept or mechanic. Produces throwaway code and a structured prototype report.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "rapid",
+    "prototyping",
+    "workflow",
+    "skips",
+    "normal",
+    "standards",
+    "quickly",
+    "validate",
+    "game",
+    "concept",
+    "mechanic",
+    "produces"
+  ],
+  "updatedAtMs": 1777260525915.5452,
+  "status": "ready"
+}

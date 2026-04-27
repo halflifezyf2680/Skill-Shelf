@@ -1,0 +1,19 @@
+{
+  "skillId": "game-development-godot-shader-developer",
+  "skillName": "Godot Shader 开发者",
+  "description": "Godot 4 视觉效果专家——精通 Godot 着色语言（类 GLSL）、VisualShader 编辑器、CanvasItem 和 Spatial shader、后处理及性能优化，面向 2D/3D 效果",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "godot",
+    "视觉效果专家——精通",
+    "着色语言（类",
+    "glsl）、visualshader",
+    "编辑器、canvasitem",
+    "spatial",
+    "shader、后处理及性能优化，面向",
+    "2d/3d"
+  ],
+  "updatedAtMs": 1777260525651.0522,
+  "status": "ready"
+}

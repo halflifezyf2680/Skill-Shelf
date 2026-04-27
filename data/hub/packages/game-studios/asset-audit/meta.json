@@ -1,0 +1,23 @@
+{
+  "skillId": "asset-audit",
+  "skillName": "asset-audit",
+  "description": "Audits game assets for compliance with naming conventions, file size budgets, format standards, and pipeline requirements. Identifies orphaned assets, missing references, and standard violations.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "audits",
+    "game",
+    "assets",
+    "for",
+    "compliance",
+    "with",
+    "naming",
+    "conventions",
+    "file",
+    "size",
+    "budgets",
+    "format"
+  ],
+  "updatedAtMs": 1777260525884.4036,
+  "status": "ready"
+}

@@ -4,13 +4,10 @@ import { z } from "zod/v4";
 
 import { ensureStorageLayout, loadConfig } from "./config.js";
 import { SkillRegistry } from "./registry/registry.js";
-import { createSkill } from "./tools/create-skill.js";
 import { getHubStatus } from "./tools/get-hub-status.js";
 import { installSkills } from "./tools/install-skills.js";
-import { listGroupSkills } from "./tools/list-group-skills.js";
-import { listSkillGroups } from "./tools/list-groups.js";
 import { readSkill } from "./tools/read-skill.js";
-import { searchSkillGroups } from "./tools/search-skills.js";
+import { searchSkillsFlat } from "./tools/search-skills.js";
 import { validateSkills } from "./tools/validate-skills.js";
 import { startSkillWatcher } from "./watcher/watch.js";
 
@@ -36,19 +33,11 @@ async function main() {
     name: "skill-router-mcp",
     version: "0.1.0",
     instructions: [
-      "Local skill library with progressive disclosure routing.",
+      "Local skill library with flat search routing.",
       "",
       "ROUTING PROTOCOL:",
-      "1. search_skills(query) — returns groups whose description or skill names match query tokens. Each result includes skillNames and optional directMatch.",
-      "",
-      "2. Decision:",
-      "   - If directMatch exists: read that skill first, compare with user intent.",
-      "     - Matches → proceed with read_skill.",
-      "     - Mismatch → fall back to reading group descriptions below.",
-      "   - If no directMatch or intent is vague: read group descriptions, identify the right group.",
-      "",
-      "3. list_group_skills(group) — see skill names in the chosen group.",
-      "4. read_skill(skill) — load full skill body.",
+      "1. search_skills(query) — fuzzy search across ALL skills, returns top matches with name + description + score.",
+      "2. read_skill(skill) — load full skill body for the chosen skill.",
       "",
       "Do NOT read multiple full skills in one turn — read one, evaluate, then decide.",
       "",
@@ -61,7 +50,7 @@ async function main() {
     "search_skills",
     {
       description:
-        "Step 1 of the skill-hub routing protocol. Search groups by query tokens against group descriptions and skill names. Returns matching groups with their skill name lists and optional directMatch hint. Prefer this before list_skill_groups.",
+        "Step 1 of the skill-hub routing protocol. Search all skills by query, returns top matches ranked by relevance. IMPORTANT: Always try the user's language first. If no relevant results found, retry with English keywords. For CJK queries, separate words with spaces (e.g. '品牌 视觉 设计', NOT '品牌设计视觉').",
       annotations: {
         readOnlyHint: true,
         destructiveHint: false,
@@ -74,13 +63,13 @@ async function main() {
           .number()
           .int()
           .min(1)
-          .max(12)
-          .default(config.indexPolicy.defaultSearchResultLimit)
+          .max(20)
+          .default(8)
           .describe("Maximum number of candidate skills to return."),
       },
     },
     async ({ query, limit }) => {
-      const results = searchSkillGroups(registry, query, limit);
+      const results = searchSkillsFlat(registry, query, limit);
       return {
         content: [
           {
@@ -89,7 +78,7 @@ async function main() {
               {
                 query,
                 returned: results.length,
-                groups: results,
+                skills: results,
               },
               null,
               2,
@@ -99,40 +88,8 @@ async function main() {
         structuredContent: {
           query,
           returned: results.length,
-          groups: results,
+          skills: results,
         },
-      };
-    },
-  );
-
-  server.registerTool(
-    "list_group_skills",
-    {
-      description:
-        "Step 2 of the skill-hub routing protocol. After a group is selected, list the skill names, keywords, and paths inside that one group. Use this before read_skill to keep loading progressive and narrow.",
-      annotations: {
-        readOnlyHint: true,
-        destructiveHint: false,
-        openWorldHint: false,
-        idempotentHint: true,
-      },
-      inputSchema: {
-        group: z.string().min(1).describe("Group name returned by search_skills or list_groups."),
-      },
-    },
-    async ({ group }) => {
-      const result = listGroupSkills(registry, group);
-      if (!result) {
-        throw new Error(`unknown group: ${group}`);
-      }
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(result, null, 2),
-          },
-        ],
-        structuredContent: result,
       };
     },
   );
@@ -141,7 +98,7 @@ async function main() {
     "read_skill",
     {
       description:
-        "Step 3 of the skill-hub routing protocol. Read the full skill body only after the model has selected a specific skill name or skill id from list_group_skills. Avoid reading multiple full skills unless one skill is clearly insufficient.",
+        "Read the full skill body. Only call this after search_skills has identified the target skill by name or skill id. Avoid reading multiple full skills unless one skill is clearly insufficient.",
       annotations: {
         readOnlyHint: true,
         destructiveHint: false,
@@ -149,7 +106,7 @@ async function main() {
         idempotentHint: true,
       },
       inputSchema: {
-        skill: z.string().min(1).describe("Skill name or skill id returned by list_group_skills."),
+        skill: z.string().min(1).describe("Skill name or skill id returned by search_skills."),
       },
     },
     async ({ skill }) => {
@@ -179,59 +136,37 @@ async function main() {
       },
       inputSchema: {
         sourcePath: z.string().min(1).describe("Absolute or relative path to a skill package directory or parent directory."),
+        group: z.string().min(1).optional().describe("Target group id. If omitted and SKILL.md has no frontmatter group, the tool returns skill descriptions and available groups for you to classify. Then call again with the chosen group."),
       },
     },
-    async ({ sourcePath }) => {
+    async ({ sourcePath, group }) => {
       const result = await installSkills({
         storage: config.storage,
         registry,
         sourcePath,
+        group,
         policy: config.installPolicy,
       });
+      const parts: Array<{ type: "text"; text: string }> = [];
+      // Summary
+      const summary = [
+        `Installed: ${result.installed.length}`,
+        `Skipped: ${result.skipped.length}`,
+        `Failed: ${result.failed.length}`,
+        `Needs classification: ${result.needsClassification.length}`,
+      ].join("\n");
+      parts.push({ type: "text", text: summary });
+      // Classification hint
+      if (result.classificationHint) {
+        parts.push({ type: "text", text: result.classificationHint });
+      }
+      // Failures
+      if (result.failed.length > 0) {
+        const failures = result.failed.map((f) => `- ${f.sourcePath}: ${f.message}`).join("\n");
+        parts.push({ type: "text", text: `Failures:\n${failures}` });
+      }
       return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(result, null, 2),
-          },
-        ],
-        structuredContent: result,
-      };
-    },
-  );
-
-  server.registerTool(
-    "create_skill",
-    {
-      description:
-        "Write tool. Create a new skill package in the hub packages store, then rebuild indexes and metadata. Use when a new formal skill package should be added to the hub.",
-      annotations: {
-        readOnlyHint: false,
-        destructiveHint: true,
-        openWorldHint: false,
-        idempotentHint: false,
-      },
-      inputSchema: {
-        name: z.string().min(1).describe("Skill display name."),
-        description: z.string().min(1).describe("Skill description used for group and keyword generation."),
-        skillMarkdown: z.string().min(1).describe("Full SKILL.md markdown content. Frontmatter is optional."),
-      },
-    },
-    async ({ name, description, skillMarkdown }) => {
-      const result = await createSkill({
-        storage: config.storage,
-        registry,
-        name,
-        description,
-        skillMarkdown,
-      });
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(result, null, 2),
-          },
-        ],
+        content: parts,
         structuredContent: result,
       };
     },
@@ -265,45 +200,6 @@ async function main() {
           },
         ],
         structuredContent: result,
-      };
-    },
-  );
-
-  server.registerTool(
-    "list_skill_groups",
-    {
-      description: "List top-level skill groups currently indexed by the local skill library. Use when a full group overview is required; otherwise prefer search_skills for the first routing step.",
-      annotations: {
-        readOnlyHint: true,
-        destructiveHint: false,
-        openWorldHint: false,
-        idempotentHint: true,
-      },
-      inputSchema: {},
-    },
-    async () => {
-      const groups = listSkillGroups(registry);
-      const issues = registry.listIssues();
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(
-              {
-                groups,
-                loadedSkills: registry.size(),
-                issueCount: issues.length,
-              },
-              null,
-              2,
-            ),
-          },
-        ],
-        structuredContent: {
-          groups,
-          loadedSkills: registry.size(),
-          issueCount: issues.length,
-        },
       };
     },
   );

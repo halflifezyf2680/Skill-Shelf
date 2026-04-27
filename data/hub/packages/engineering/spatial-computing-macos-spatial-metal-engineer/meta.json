@@ -1,0 +1,18 @@
+{
+  "skillId": "spatial-computing-macos-spatial-metal-engineer",
+  "skillName": "macOS Metal 空间工程师",
+  "description": "原生 Swift 和 Metal 专家，构建高性能 3D 渲染系统和空间计算体验，覆盖 macOS 与 Vision Pro 平台",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "swift",
+    "metal",
+    "专家，构建高性能",
+    "渲染系统和空间计算体验，覆盖",
+    "macos",
+    "vision",
+    "pro"
+  ],
+  "updatedAtMs": 1777260525784.8643,
+  "status": "ready"
+}

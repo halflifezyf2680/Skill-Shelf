@@ -1,0 +1,14 @@
+{
+  "skillId": "design-ux-architect",
+  "skillName": "UX 架构师",
+  "description": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "技术架构与",
+    "专家，给开发者提供扎实的基础设施——css",
+    "体系、布局框架、清晰的实现指引"
+  ],
+  "updatedAtMs": 1777260525568.662,
+  "status": "ready"
+}

@@ -22,6 +22,7 @@ export async function installSkills(params: {
   storage: SkillHubStorageLayout;
   registry: SkillRegistry;
   sourcePath: string;
+  group?: string;
   policy?: InstallPolicy;
 }): Promise<SkillInstallResult> {
   const sourcePath = path.resolve(params.sourcePath);
@@ -35,6 +36,7 @@ export async function installSkills(params: {
     installed: [],
     skipped: [],
     failed: [],
+    needsClassification: [],
   };
 
   const installables = await collectInstallables(sourcePath, policy);
@@ -59,8 +61,29 @@ export async function installSkills(params: {
         continue;
       }
 
-      const destinationDir = path.join(params.storage.packagesRoot, skillId);
+      // Resolve group: explicit param > SKILL.md frontmatter > LLM classification
+      const group = await resolveGroup(params.storage, params.registry, installable, params.group);
+      if (group === null) {
+        // Read description for LLM classification
+        const skillFile =
+          installable.kind === "package"
+            ? path.join(installable.sourcePath, SKILL_FILENAME)
+            : installable.sourcePath;
+        const raw = await fs.readFile(skillFile, "utf8");
+        const parsed = matter(raw);
+        const description =
+          typeof parsed.data.description === "string" ? parsed.data.description.trim() : "";
+        result.needsClassification.push({
+          skillId,
+          sourcePath: installable.sourcePath,
+          description,
+        });
+        continue;
+      }
+
+      const destinationDir = path.join(params.storage.packagesRoot, group, skillId);
       await fs.rm(destinationDir, { recursive: true, force: true });
+      await fs.mkdir(destinationDir, { recursive: true });
       if (installable.kind === "package") {
         await copyDirectory(installable.sourcePath, destinationDir);
       } else {
@@ -87,6 +110,16 @@ export async function installSkills(params: {
     await params.registry.rebuild();
   }
 
+  if (result.needsClassification.length > 0) {
+    const groups = params.registry.listManagedGroups();
+    const prompts = result.needsClassification.map(
+      (nc) => buildClassificationPrompt(nc.skillId, nc.description, groups),
+    );
+    result.classificationHint =
+      prompts.join("\n\n---\n\n") +
+      "\n\nPlease call install_skills again with the `group` parameter for each skill listed above.";
+  }
+
   return result;
 }
 
@@ -101,6 +134,50 @@ type InstallableSource =
       sourcePath: string;
       skillId: string;
     };
+
+async function resolveGroup(
+  storage: SkillHubStorageLayout,
+  registry: SkillRegistry,
+  installable: InstallableSource,
+  explicitGroup?: string,
+): Promise<string | null> {
+  // 1. Explicit MCP parameter
+  if (explicitGroup) {
+    return explicitGroup;
+  }
+
+  // 2. SKILL.md frontmatter `group` field
+  if (installable.kind === "package") {
+    try {
+      const raw = await fs.readFile(path.join(installable.sourcePath, SKILL_FILENAME), "utf8");
+      const parsed = matter(raw);
+      if (typeof parsed.data.group === "string" && parsed.data.group.trim()) {
+        return parsed.data.group.trim();
+      }
+    } catch {
+      // fall through
+    }
+  }
+
+  // 3. No group determined — LLM classification needed
+  return null;
+}
+
+function buildClassificationPrompt(
+  skillId: string,
+  description: string,
+  groups: { group: string; groupDescription: string }[],
+): string {
+  const groupList = groups.map((g) => `- **${g.group}**: ${g.groupDescription}`).join("\n");
+  return [
+    `Skill "${skillId}" needs group classification.`,
+    `Description: ${description}`,
+    "",
+    `Available groups:\n${groupList}`,
+    "",
+    "Please call install_skills again with the most appropriate `group` parameter.",
+  ].join("\n");
+}
 
 async function collectInstallables(
   sourcePath: string,
@@ -172,14 +249,11 @@ async function collectInstallables(
       return;
     }
 
-    const relativeWithoutExt = path
-      .relative(sourcePath, entryPath)
-      .replaceAll("\\", "/")
-      .replace(/\.[^.]+$/, "");
+    const skillId = sanitizeId(path.basename(entryPath, path.extname(entryPath)));
     installables.push({
       kind: "markdown",
       sourcePath: entryPath,
-      skillId: sanitizeId(relativeWithoutExt),
+      skillId,
     });
   });
   return dedupeInstallables(installables, policy);
@@ -203,7 +277,6 @@ async function walk(
 }
 
 async function writeMarkdownCandidateAsPackage(sourceFile: string, destinationDir: string): Promise<void> {
-  await fs.mkdir(destinationDir, { recursive: true });
   const sourceRaw = await fs.readFile(sourceFile, "utf8");
   const parsed = matter(sourceRaw);
   const name = typeof parsed.data.name === "string" ? parsed.data.name.trim() : "";
@@ -229,12 +302,12 @@ async function writeMarkdownCandidateAsPackage(sourceFile: string, destinationDi
 }
 
 async function copyDirectory(sourceDir: string, destinationDir: string): Promise<void> {
-  await fs.mkdir(destinationDir, { recursive: true });
   const entries = await fs.readdir(sourceDir, { withFileTypes: true });
   for (const entry of entries) {
     const sourcePath = path.join(sourceDir, entry.name);
     const destinationPath = path.join(destinationDir, entry.name);
     if (entry.isDirectory()) {
+      await fs.mkdir(destinationPath, { recursive: true });
       await copyDirectory(sourcePath, destinationPath);
     } else if (entry.isFile()) {
       await fs.copyFile(sourcePath, destinationPath);
@@ -299,7 +372,6 @@ async function exists(targetPath: string): Promise<boolean> {
 function sanitizeId(value: string): string {
   return value
     .toLowerCase()
-    .replace(/[\\/]+/g, "-")
     .replace(/[^a-z0-9-_]+/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");

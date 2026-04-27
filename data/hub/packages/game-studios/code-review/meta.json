@@ -1,0 +1,23 @@
+{
+  "skillId": "code-review",
+  "skillName": "code-review",
+  "description": "Performs an architectural and quality code review on a specified file or set of files. Checks for coding standard compliance, architectural pattern adherence, SOLID principles, testability, and performance concerns.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "performs",
+    "architectural",
+    "and",
+    "quality",
+    "code",
+    "review",
+    "specified",
+    "file",
+    "set",
+    "files",
+    "checks",
+    "for"
+  ],
+  "updatedAtMs": 1777260525892.4287,
+  "status": "ready"
+}

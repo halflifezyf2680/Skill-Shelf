@@ -1,0 +1,23 @@
+{
+  "skillId": "team-release",
+  "skillName": "team-release",
+  "description": "Orchestrate the release team: coordinates release-manager, qa-lead, devops-engineer, and producer to execute a release from candidate to deployment.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "orchestrate",
+    "the",
+    "release",
+    "team",
+    "coordinates",
+    "release-manager",
+    "qa-lead",
+    "devops-engineer",
+    "and",
+    "producer",
+    "execute",
+    "from"
+  ],
+  "updatedAtMs": 1777260525935.1235,
+  "status": "ready"
+}

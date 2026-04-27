@@ -1,0 +1,23 @@
+{
+  "skillId": "integrations-backend-architect-with-memory",
+  "skillName": "Backend Architect",
+  "description": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure. Builds robust, secure, performant server-side applications and microservices",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "senior",
+    "backend",
+    "architect",
+    "specializing",
+    "scalable",
+    "system",
+    "design",
+    "database",
+    "architecture",
+    "api",
+    "development",
+    "and"
+  ],
+  "updatedAtMs": 1777260525683.0625,
+  "status": "ready"
+}

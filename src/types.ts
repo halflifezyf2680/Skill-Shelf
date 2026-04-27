@@ -12,6 +12,7 @@ export type ManagedGroupRecord = SkillGroupRecord & {
 export type GroupSkillIndexEntry = {
   skillId: string;
   skillName: string;
+  description: string;
   keywords: string[];
   skillPath: string;
 };
@@ -57,7 +58,7 @@ export type RegistryIssue = {
 };
 
 export type GroupSearchResult = SkillGroupRecord & {
-  skillNames: string[];
+  skills: Array<{ skillId: string; skillName: string; description: string }>;
   directMatch: {
     skillId: string;
     skillName: string;
@@ -92,10 +93,18 @@ export type SkillInstallFailure = {
   message: string;
 };
 
+export type SkillNeedsClassification = {
+  skillId: string;
+  sourcePath: string;
+  description: string;
+};
+
 export type SkillInstallResult = {
   installed: SkillInstallEntry[];
   skipped: Array<{ sourcePath: string; status: "skipped"; reason: string }>;
   failed: SkillInstallFailure[];
+  needsClassification: SkillNeedsClassification[];
+  classificationHint?: string;
 };
 
 export type SkillCreateResult = {

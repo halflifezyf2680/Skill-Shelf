@@ -85,10 +85,24 @@ export function normalize(value: string): string {
 }
 
 function tokenize(value: string): string[] {
-  return value
-    .split(/[^a-z0-9\u4e00-\u9fff]+/u)
-    .map((part) => part.trim())
-    .filter((part) => part.length >= 2);
+  const tokens: string[] = [];
+  const segments = value.split(/[^a-z0-9\u4e00-\u9fff]+/u);
+  for (const segment of segments) {
+    if (!segment) continue;
+    // Latin/number tokens
+    if (/^[a-z0-9]+$/u.test(segment)) {
+      if (segment.length >= 2) tokens.push(segment);
+      continue;
+    }
+    // CJK sequence: generate overlapping bigrams
+    const cjk = segment.replace(/[^\u4e00-\u9fff]/gu, "");
+    for (let i = 0; i < cjk.length - 1; i++) {
+      tokens.push(cjk.substring(i, i + 2));
+    }
+    // Keep full CJK segment as a token for exact phrase match
+    if (cjk.length >= 2) tokens.push(cjk);
+  }
+  return tokens;
 }
 
 export function normalizedLevenshteinScore(a: string, b: string): number {

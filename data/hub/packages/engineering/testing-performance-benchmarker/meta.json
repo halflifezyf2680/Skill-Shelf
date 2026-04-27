@@ -1,0 +1,12 @@
+{
+  "skillId": "testing-performance-benchmarker",
+  "skillName": "性能基准师",
+  "description": "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果"
+  ],
+  "updatedAtMs": 1777260525875.178,
+  "status": "ready"
+}

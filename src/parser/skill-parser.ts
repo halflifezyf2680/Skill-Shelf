@@ -15,6 +15,7 @@ export async function parseSkillFile(
   skillFilePath: string,
   managedGroups: ManagedGroupRecord[],
   maxKeywords: number,
+  groupFromPath?: string,
 ): Promise<ParsedSkill> {
   const raw = await fs.readFile(skillFilePath, "utf8");
   const parsed = matter(raw);
@@ -24,12 +25,22 @@ export async function parseSkillFile(
   const normalizedDescription = normalizeDescription(frontmatter.description);
   const keywords = deriveKeywords(normalizedDescription, maxKeywords);
   const skillName = frontmatter.name.trim();
-  const { group, groupDescription } = matchManagedGroup({
-    skillName,
-    description: normalizedDescription,
-    keywords,
-    groups: managedGroups,
-  });
+
+  let group: string;
+  let groupDescription: string;
+
+  if (groupFromPath) {
+    group = groupFromPath;
+    const managed = managedGroups.find((g) => g.group === group);
+    groupDescription = managed?.groupDescription ?? group;
+  } else {
+    ({ group, groupDescription } = matchManagedGroup({
+      skillName,
+      description: normalizedDescription,
+      keywords,
+      groups: managedGroups,
+    }));
+  }
 
   return {
     skillName,

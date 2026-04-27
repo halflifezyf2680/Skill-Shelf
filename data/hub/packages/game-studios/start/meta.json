@@ -1,0 +1,23 @@
+{
+  "skillId": "start",
+  "skillName": "start",
+  "description": "First-time onboarding — asks where you are, then guides you to the right workflow. No assumptions.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "first-time",
+    "onboarding",
+    "asks",
+    "where",
+    "you",
+    "are",
+    "then",
+    "guides",
+    "the",
+    "right",
+    "workflow",
+    "assumptions"
+  ],
+  "updatedAtMs": 1777260525926.5935,
+  "status": "ready"
+}

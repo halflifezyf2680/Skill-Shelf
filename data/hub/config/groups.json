@@ -443,5 +443,36 @@
       "misc"
     ],
     "source": "builtin"
+  },
+  {
+    "group": "game-studios",
+    "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+    "keywords": [
+      "game",
+      "gaming",
+      "studio",
+      "playtest",
+      "prototype",
+      "level",
+      "combat",
+      "narrative",
+      "audio",
+      "polish",
+      "retrospective",
+      "sprint",
+      "游戏",
+      "工作室",
+      "原型",
+      "关卡",
+      "战斗",
+      "叙事",
+      "音频",
+      "发布"
+    ],
+    "aliases": [
+      "game-studio",
+      "game-dev-workflow"
+    ],
+    "source": "builtin"
   }
 ]

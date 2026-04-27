@@ -1,0 +1,13 @@
+{
+  "skillId": "specialized-agentic-identity-trust",
+  "skillName": "身份信任架构师",
+  "description": "为自主运行的 AI 智能体设计身份认证和信任验证体系，确保智能体能证明自己是谁、被授权做什么、实际做了什么。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "为自主运行的",
+    "智能体设计身份认证和信任验证体系，确保智能体能证明自己是谁、被授权做什么、实际做了什么"
+  ],
+  "updatedAtMs": 1777260525796.145,
+  "status": "ready"
+}

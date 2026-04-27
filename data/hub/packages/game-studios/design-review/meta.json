@@ -1,0 +1,23 @@
+{
+  "skillId": "design-review",
+  "skillName": "design-review",
+  "description": "Reviews a game design document for completeness, internal consistency, implementability, and adherence to project design standards. Run this before handing a design document to programmers.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "reviews",
+    "game",
+    "design",
+    "document",
+    "for",
+    "completeness",
+    "internal",
+    "consistency",
+    "implementability",
+    "and",
+    "adherence",
+    "project"
+  ],
+  "updatedAtMs": 1777260525894.428,
+  "status": "ready"
+}

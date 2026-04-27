@@ -1,0 +1,17 @@
+{
+  "skillId": "game-development-unity-shader-graph-artist",
+  "skillName": "Unity Shader Graph 美术师",
+  "description": "视觉效果与材质专家——精通 Unity Shader Graph、HLSL、URP/HDRP 渲染管线和自定义渲染 Pass，打造实时视觉效果",
+  "group": "sales",
+  "groupDescription": "销售、售前、线索管理、方案支持、成交推进与客户拓展。",
+  "keywords": [
+    "视觉效果与材质专家——精通",
+    "unity",
+    "shader",
+    "graph、hlsl、urp/hdrp",
+    "渲染管线和自定义渲染",
+    "pass，打造实时视觉效果"
+  ],
+  "updatedAtMs": 1777260525670.6157,
+  "status": "ready"
+}

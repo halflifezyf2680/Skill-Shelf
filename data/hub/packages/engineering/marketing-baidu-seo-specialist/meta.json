@@ -1,0 +1,12 @@
+{
+  "skillId": "marketing-baidu-seo-specialist",
+  "skillName": "百度 SEO 专家",
+  "description": "专注百度搜索生态的SEO优化专家，精通百度算法规则、百度生态产品矩阵（百科、知道、贴吧、文库）、中文关键词研究、ICP备案规范、以及移动端搜索优化策略。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专注百度搜索生态的seo优化专家，精通百度算法规则、百度生态产品矩阵（百科、知道、贴吧、文库）、中文关键词研究、icp备案规范、以及移动端搜索优化策略"
+  ],
+  "updatedAtMs": 1777260525691.1982,
+  "status": "ready"
+}

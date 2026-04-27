@@ -1,0 +1,23 @@
+{
+  "skillId": "reverse-document",
+  "skillName": "reverse-document",
+  "description": "Generate design or architecture documents from existing implementation. Works backwards from code/prototypes to create missing planning docs.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "generate",
+    "design",
+    "architecture",
+    "documents",
+    "from",
+    "existing",
+    "implementation",
+    "works",
+    "backwards",
+    "code/prototypes",
+    "create",
+    "missing"
+  ],
+  "updatedAtMs": 1777260525920.0557,
+  "status": "ready"
+}

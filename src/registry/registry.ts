@@ -58,10 +58,12 @@ export class SkillRegistry {
     const skillFiles = await collectSkillFiles(this.storage.packagesRoot);
     for (const skillFilePath of skillFiles) {
       try {
+        const groupFromPath = deriveGroupFromPath(skillFilePath, this.storage.packagesRoot);
         const parsed = await parseSkillFile(
           skillFilePath,
           this.managedGroups,
           this.indexPolicy.maxKeywordsPerSkill,
+          groupFromPath,
         );
         this.upsertInMemory(parsed);
       } catch (error) {
@@ -79,10 +81,12 @@ export class SkillRegistry {
 
   async refreshSkillByPath(skillFilePath: string): Promise<void> {
     try {
+      const groupFromPath = deriveGroupFromPath(skillFilePath, this.storage.packagesRoot);
       const parsed = await parseSkillFile(
         skillFilePath,
         this.managedGroups,
         this.indexPolicy.maxKeywordsPerSkill,
+        groupFromPath,
       );
       this.upsertInMemory(parsed);
     } catch (error) {
@@ -104,6 +108,7 @@ export class SkillRegistry {
     keywords?: string[];
     aliases?: string[];
   }): Promise<GroupCreateResult> {
+    await fs.mkdir(path.join(this.storage.packagesRoot, input.group), { recursive: true });
     const group = await createManagedGroup(this.storage, input);
     await this.rebuild();
     return {
@@ -119,6 +124,11 @@ export class SkillRegistry {
     keywords?: string[];
     aliases?: string[];
   }): Promise<GroupUpdateResult> {
+    if (input.newGroup) {
+      const oldDir = path.join(this.storage.packagesRoot, input.group);
+      const newDir = path.join(this.storage.packagesRoot, input.newGroup);
+      await fs.rename(oldDir, newDir);
+    }
     const result = await updateManagedGroup(this.storage, input);
     await this.rebuild();
     return {
@@ -139,6 +149,8 @@ export class SkillRegistry {
     }
 
     await deleteManagedGroup(this.storage, input);
+    const groupDir = path.join(this.storage.packagesRoot, target.group);
+    await fs.rm(groupDir, { recursive: true, force: true });
     await this.rebuild();
     return {
       action: "deleted",
@@ -147,11 +159,18 @@ export class SkillRegistry {
   }
 
   removeByPath(skillFilePath: string): void {
-    const match = Array.from(this.skillRecords.values()).find((record) => record.skillPath === skillFilePath);
+    let match: SkillRecord | undefined;
+    for (const record of this.skillRecords.values()) {
+      if (record.skillPath === skillFilePath) {
+        match = record;
+        break;
+      }
+    }
     if (!match) {
       return;
     }
-    this.skillRecords.delete(match.skillId);
+    const compositeKey = `${match.group}/${match.skillId}`;
+    this.skillRecords.delete(compositeKey);
     this.rebuildGroupsFromSkills();
   }
 
@@ -163,7 +182,11 @@ export class SkillRegistry {
     if (!normalized || queryTokens.length === 0) {
       return records.slice(0, limit).map((record) => ({
         ...record,
-        skillNames: (this.groupSkills.get(record.group) ?? []).map((s) => s.skillName),
+        skills: (this.groupSkills.get(record.group) ?? []).map((s) => ({
+          skillId: s.skillId,
+          skillName: s.skillName,
+          description: s.description,
+        })),
         directMatch: null,
       }));
     }
@@ -178,6 +201,7 @@ export class SkillRegistry {
         record.groupDescription,
         groupMeta?.keywords.join(" ") ?? "",
         groupMeta?.aliases.join(" ") ?? "",
+        ...skills.map((s) => `${s.skillName} ${s.description}`),
       ].join(" ").toLowerCase();
 
       // Check if any query token matches group description or any skill name
@@ -209,7 +233,8 @@ export class SkillRegistry {
               || normalizedLevenshteinScore(idNorm, normalized) <= 0.3);
 
           if (isExactOrSubstring || isFuzzy) {
-            const skillRecord = this.skillRecords.get(s.skillId);
+            const compositeKey = `${record.group}/${s.skillId}`;
+            const skillRecord = this.skillRecords.get(compositeKey);
             directMatch = {
               skillId: s.skillId,
               skillName: s.skillName,
@@ -221,7 +246,11 @@ export class SkillRegistry {
 
         results.push({
           ...record,
-          skillNames: skills.map((s) => s.skillName),
+          skills: skills.map((s) => ({
+            skillId: s.skillId,
+            skillName: s.skillName,
+            description: s.description,
+          })),
           directMatch,
         });
       }
@@ -240,20 +269,49 @@ export class SkillRegistry {
     return [...this.managedGroups].sort((a, b) => a.group.localeCompare(b.group));
   }
 
-  listGroupSkills(group: string): GroupSkillsResult | null {
+  listGroupSkills(group: string, query?: string): GroupSkillsResult | null {
     const groupRecord = this.groupList.get(group);
     if (!groupRecord) {
       return null;
     }
+
+    let skills = [...(this.groupSkills.get(group) ?? [])];
+
+    if (query && query.trim()) {
+      const normalized = normalize(query.trim());
+      const queryTokens = normalized
+        .split(/[^a-z0-9\u4e00-\u9fff]+/u)
+        .filter((t) => t.length >= 2);
+
+      skills = skills.filter((s) => {
+        const text = `${s.skillName} ${s.description}`.toLowerCase();
+        if (text.includes(normalized)) return true;
+        if (queryTokens.some((t) => text.includes(t))) return true;
+        if (normalizedLevenshteinScore(normalize(s.skillName), normalized) <= 0.3) return true;
+        return false;
+      });
+    }
+
     return {
       group: groupRecord.group,
       groupDescription: groupRecord.groupDescription,
-      skills: [...(this.groupSkills.get(group) ?? [])].sort((a, b) => a.skillName.localeCompare(b.skillName)),
+      skills: skills.sort((a, b) => a.skillName.localeCompare(b.skillName)),
     };
   }
 
   getById(id: string): SkillRecord | null {
-    return this.skillRecords.get(id) ?? null;
+    // Try composite key first (group/skillId)
+    const direct = this.skillRecords.get(id);
+    if (direct) return direct;
+
+    // Try bare skillId (linear scan, return first match)
+    const bareId = id.includes("/") ? id.split("/").pop()! : id;
+    for (const record of this.skillRecords.values()) {
+      if (record.skillId === bareId) {
+        return record;
+      }
+    }
+    return null;
   }
 
   getByName(skillName: string): SkillRecord | null {
@@ -266,12 +324,21 @@ export class SkillRegistry {
   }
 
   listRelatedSkills(skillId: string, limit = 5): GroupSkillIndexEntry[] {
-    const record = this.skillRecords.get(skillId);
+    // Try to find by composite key first, then bare skillId
+    let record = this.skillRecords.get(skillId);
+    if (!record) {
+      for (const r of this.skillRecords.values()) {
+        if (r.skillId === skillId) {
+          record = r;
+          break;
+        }
+      }
+    }
     if (!record) {
       return [];
     }
     return (this.groupSkills.get(record.group) ?? [])
-      .filter((entry) => entry.skillId !== skillId)
+      .filter((entry) => entry.skillId !== record.skillId)
       .sort((a, b) => a.skillName.localeCompare(b.skillName))
       .slice(0, limit);
   }
@@ -285,7 +352,10 @@ export class SkillRegistry {
   }
 
   listSkillRecords(): SkillRecord[] {
-    return Array.from(this.skillRecords.values()).sort((a, b) => a.skillId.localeCompare(b.skillId));
+    return Array.from(this.skillRecords.values()).sort((a, b) => {
+      const cmp = a.group.localeCompare(b.group);
+      return cmp !== 0 ? cmp : a.skillId.localeCompare(b.skillId);
+    });
   }
 
   getIndexUpdatedAt(): number | null {
@@ -312,7 +382,8 @@ export class SkillRegistry {
 
     await clearDirectoryJsonFiles(this.storage.skillsRoot);
     for (const record of this.skillRecords.values()) {
-      const filePath = path.join(this.storage.skillsRoot, `${record.skillId}.json`);
+      const indexKey = `${record.group}--${record.skillId}`;
+      const filePath = path.join(this.storage.skillsRoot, `${indexKey}.json`);
       await fs.writeFile(filePath, JSON.stringify(record, null, 2) + "\n", "utf8");
     }
   }
@@ -336,11 +407,13 @@ export class SkillRegistry {
 
   private upsertInMemory(parsed: ParsedSkill): void {
     const skillId = path.basename(path.dirname(parsed.skillPath));
-    this.skillRecords.set(skillId, {
+    const group = parsed.group;
+    const compositeKey = `${group}/${skillId}`;
+    this.skillRecords.set(compositeKey, {
       skillId,
       skillName: parsed.skillName,
       description: parsed.description,
-      group: parsed.group,
+      group,
       groupDescription: parsed.groupDescription,
       keywords: parsed.keywords,
       skillPath: parsed.skillPath,
@@ -354,6 +427,7 @@ export class SkillRegistry {
     this.groupList.clear();
     this.groupSkills.clear();
 
+    // Seed from managedGroups (provides metadata even for empty groups)
     for (const group of this.managedGroups) {
       this.groupList.set(group.group, {
         group: group.group,
@@ -362,8 +436,10 @@ export class SkillRegistry {
       this.groupSkills.set(group.group, []);
     }
 
+    // Populate from actual skill records (directory structure is truth)
     for (const record of this.skillRecords.values()) {
       if (!this.groupList.has(record.group)) {
+        // Group exists in directory but not in groups.json — add with description from record
         this.groupList.set(record.group, {
           group: record.group,
           groupDescription: record.groupDescription,
@@ -374,12 +450,31 @@ export class SkillRegistry {
       groupSkills.push({
         skillId: record.skillId,
         skillName: record.skillName,
+        description: record.description,
         keywords: record.keywords,
         skillPath: record.skillPath,
       });
       this.groupSkills.set(record.group, groupSkills);
     }
   }
+}
+
+/**
+ * Derive group from file path: the immediate parent directory of SKILL.md
+ * under packagesRoot is the group, and the SKILL.md's own directory is the skill.
+ *
+ * packagesRoot/{group}/{skill}/SKILL.md → group
+ * packagesRoot/{skill}/SKILL.md         → undefined (flat structure, caller falls back)
+ */
+function deriveGroupFromPath(skillFilePath: string, packagesRoot: string): string | undefined {
+  const skillDir = path.dirname(skillFilePath);
+  const parentDir = path.dirname(skillDir);
+  // Check if parentDir is packagesRoot (flat structure — no group layer)
+  if (path.resolve(parentDir) === path.resolve(packagesRoot)) {
+    return undefined;
+  }
+  // parentDir is the group directory
+  return path.basename(parentDir);
 }
 
 async function collectSkillFiles(root: string): Promise<string[]> {

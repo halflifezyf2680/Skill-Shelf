@@ -1,0 +1,23 @@
+{
+  "skillId": "scope-check",
+  "skillName": "scope-check",
+  "description": "Analyze a feature or sprint for scope creep by comparing current scope against the original plan. Flags additions, quantifies bloat, and recommends cuts.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "analyze",
+    "feature",
+    "sprint",
+    "for",
+    "scope",
+    "creep",
+    "comparing",
+    "current",
+    "against",
+    "the",
+    "original",
+    "plan"
+  ],
+  "updatedAtMs": 1777260525921.5613,
+  "status": "ready"
+}

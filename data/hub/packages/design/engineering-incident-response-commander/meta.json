@@ -1,0 +1,15 @@
+{
+  "skillId": "engineering-incident-response-commander",
+  "skillName": "故障响应指挥官",
+  "description": "专精于生产环境故障管理、结构化响应协调、事后复盘、SLO/SLI 跟踪和 on-call 流程设计的事故指挥专家，为工程组织的可靠性保驾护航。",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "专精于生产环境故障管理、结构化响应协调、事后复盘、slo/sli",
+    "跟踪和",
+    "on-call",
+    "流程设计的事故指挥专家，为工程组织的可靠性保驾护航"
+  ],
+  "updatedAtMs": 1777260525611.8474,
+  "status": "ready"
+}

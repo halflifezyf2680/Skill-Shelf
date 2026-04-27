@@ -1,0 +1,12 @@
+{
+  "skillId": "specialized-technical-translator-agent",
+  "skillName": "技术翻译专家",
+  "description": "专注于技术领域的中英文双向翻译，精通编程、AI、云计算等技术术语，确保技术文档的准确性和专业性",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专注于技术领域的中英文双向翻译，精通编程、ai、云计算等技术术语，确保技术文档的准确性和专业性"
+  ],
+  "updatedAtMs": 1777260525848.13,
+  "status": "ready"
+}

@@ -1,0 +1,15 @@
+{
+  "skillId": "sales-engineer",
+  "skillName": "售前工程师",
+  "description": "资深售前工程师，专精技术 Discovery、Demo 设计、POC 执行、竞争技术定位，擅长将产品能力转化为业务成果。在单子进入采购流程之前，先赢下技术决策。",
+  "group": "product",
+  "groupDescription": "产品规划、需求分析、用户反馈、优先级、路线图与产品研究。",
+  "keywords": [
+    "资深售前工程师，专精技术",
+    "discovery、demo",
+    "设计、poc",
+    "执行、竞争技术定位，擅长将产品能力转化为业务成果。在单子进入采购流程之前，先赢下技术决策"
+  ],
+  "updatedAtMs": 1777260525775.7783,
+  "status": "ready"
+}

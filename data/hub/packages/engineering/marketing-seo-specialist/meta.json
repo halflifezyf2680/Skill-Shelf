@@ -1,0 +1,12 @@
+{
+  "skillId": "marketing-seo-specialist",
+  "skillName": "SEO专家",
+  "description": "搜索引擎优化策略师，精通技术SEO、内容优化、外链权重建设和自然搜索增长，通过数据驱动的搜索策略实现可持续的流量增长。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "搜索引擎优化策略师，精通技术seo、内容优化、外链权重建设和自然搜索增长，通过数据驱动的搜索策略实现可持续的流量增长"
+  ],
+  "updatedAtMs": 1777260525721.572,
+  "status": "ready"
+}
