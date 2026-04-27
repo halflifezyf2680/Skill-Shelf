@@ -102,7 +102,7 @@ async function main() {
     "read_skill",
     {
       description:
-        "Read the full skill body. Only call this after search_skills has identified the target skill by name or skill id. Avoid reading multiple full skills unless one skill is clearly insufficient.",
+        "Read a skill's content. Only call this after search_skills has identified the target skill by name or skill id. Avoid reading multiple skills unless one is clearly insufficient.",
       annotations: {
         readOnlyHint: true,
         destructiveHint: false,

@@ -3,6 +3,11 @@ import path from "node:path";
 
 import type { SkillRegistry } from "../registry/registry.js";
 
+function stripFrontmatter(body: string): string {
+  const match = body.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/);
+  return match ? body.slice(match[0].length) : body;
+}
+
 export async function readSkill(
   registry: SkillRegistry,
   idOrName: string,
@@ -13,7 +18,9 @@ export async function readSkill(
     throw new Error(`unknown skill: ${idOrName}`);
   }
 
-  const contents = await fs.readFile(record.skillPath, "utf8");
+  const raw = await fs.readFile(record.skillPath, "utf8");
+  const contents = stripFrontmatter(raw);
+
   const skillDir = path.dirname(record.skillPath);
   const assets = await listRelativeFiles(path.join(skillDir, "assets"));
   const references = await listRelativeFiles(path.join(skillDir, "references"));

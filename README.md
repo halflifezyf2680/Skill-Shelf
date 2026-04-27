@@ -12,21 +12,23 @@ Skill Shelf 的做法：skill 全部存放在本地包仓库，context 里只有
 
 当前 AI skill 系统有一个普遍倾向：把 skill 当成可编程模块，试图构建 skill 图谱、执行链、skill 互相召唤。这是赌徒心态——在 LLM 的非确定性推理上叠加一层复杂的控制流，期望它可靠地按预设路径执行。结果就是：链越长越不可控，图越深越难调试，最终产出质量完全靠运气。
 
-Skill Shelf 不做这些事。每个 skill 就是一份自包含的 Markdown 文档，搜索只负责一件事：确定性查找。从 230+ 个 skill 中，精准定位到目标 skill。找到对的文档，读给 LLM 看，结束。
+Skill Shelf 不做这些事。每个 skill 就是一份自包含的 Markdown 文档，搜索只负责一件事：确定性查找。从成百上千个 skill 中，精准定位到目标 skill。
 
 搜索层不预设 skill 之间的协作关系，但 LLM 读到多个 skill 后自行判断协作需要——这是 LLM 的主动性，不是基础设施的事。
 
 ## 路由协议
 
 ```
-search_skills(query)
+search_skills(query)          ← Level 1: YAML frontmatter（name + description）
   │
   ├─ 命中 → 返回匹配的 skills（skillId + skillName + description + score）
   │
   └─ 没命中 → 空结果，LLM 换词重试
        │
        ▼
-  read_skill(skill) → 加载完整 skill 正文
+read_skill(skill)             ← Level 2: SKILL.md 正文（去 frontmatter）
+       │
+       └─ 需要更多 → Read references/ 目录下的文件  ← Level 3: 关联资源按需加载
 ```
 
 两步完成。扁平搜索，不分层级，不依赖分组。
