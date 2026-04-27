@@ -139,7 +139,7 @@ Skill 正文内容...
   "mcpServers": {
     "skill-shelf": {
       "command": "npx",
-      "args": ["-y", "skill-router-mcp"]
+      "args": ["-y", "skill-shelf"]
     }
   }
 }
@@ -166,7 +166,7 @@ npm install
   "mcpServers": {
     "skill-shelf": {
       "command": "npx",
-      "args": ["-y", "skill-router-mcp"]
+      "args": ["-y", "skill-shelf"]
     }
   }
 }
@@ -195,7 +195,7 @@ npm install
   "mcpServers": {
     "skill-shelf": {
       "command": "npx",
-      "args": ["-y", "skill-router-mcp"]
+      "args": ["-y", "skill-shelf"]
     }
   }
 }

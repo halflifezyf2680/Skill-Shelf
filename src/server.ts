@@ -31,7 +31,7 @@ async function main() {
 
   const server = new McpServer(
     {
-      name: "skill-router-mcp",
+      name: "skill-shelf",
       version: "0.1.0",
     },
     {
@@ -284,7 +284,7 @@ async function main() {
   await server.connect(transport);
 
   console.error(
-    `skill-router-mcp ready | shelfRoot=${config.storage.shelfRoot} | packagesRoot=${config.storage.packagesRoot} | loadedSkills=${registry.size()} | issues=${registry.listIssues().length} | watch=${config.watchPolicy.enabled} | searchLimit=${config.indexPolicy.defaultSearchResultLimit}`,
+    `skill-shelf ready | shelfRoot=${config.storage.shelfRoot} | packagesRoot=${config.storage.packagesRoot} | loadedSkills=${registry.size()} | issues=${registry.listIssues().length} | watch=${config.watchPolicy.enabled} | searchLimit=${config.indexPolicy.defaultSearchResultLimit}`,
   );
 }
 

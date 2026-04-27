@@ -1,19 +1,19 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.halflifezyf2680/skill-hub",
-  "title": "Skill Hub",
-  "description": "Progressive-disclosure routing for 200+ professional skills. On-demand loading via token search and group browsing.",
+  "name": "io.github.halflifezyf2680/skill-shelf",
+  "title": "Skill Shelf",
+  "description": "Flat search routing for 200+ professional skills. Fuzzy search across all skills, load full skill body on demand.",
   "version": "0.1.0",
   "repository": {
-    "url": "https://github.com/halflifezyf2680/skill-hub",
+    "url": "https://github.com/halflifezyf2680/skill-shelf",
     "source": "github",
     "id": "1209571993"
   },
-  "websiteUrl": "https://github.com/halflifezyf2680/skill-hub#readme",
+  "websiteUrl": "https://github.com/halflifezyf2680/skill-shelf#readme",
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "skill-router-mcp",
+      "identifier": "skill-shelf",
       "registryBaseUrl": "https://registry.npmjs.org",
       "version": "0.1.0",
       "runtimeHint": "npx",
