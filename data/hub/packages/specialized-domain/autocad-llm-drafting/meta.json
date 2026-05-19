@@ -1,0 +1,23 @@
+{
+  "skillId": "autocad-llm-drafting",
+  "skillName": "autocad-llm-drafting",
+  "description": "Use LLM to generate AutoCAD drawing scripts (AutoLISP / .NET API / SCR) from natural language descriptions. AutoCAD executes the scripts to produce drawings. Use when the user needs to programmatically create or modify AutoCAD drawings, draft floor plans, generate mechanical parts, batch-process DWG files, or automate repetitive CAD tasks.",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "use",
+    "llm",
+    "generate",
+    "autocad",
+    "drawing",
+    "scripts",
+    "autolisp",
+    "net",
+    "api",
+    "scr",
+    "from",
+    "natural"
+  ],
+  "updatedAtMs": 1778601744561.7634,
+  "status": "ready"
+}

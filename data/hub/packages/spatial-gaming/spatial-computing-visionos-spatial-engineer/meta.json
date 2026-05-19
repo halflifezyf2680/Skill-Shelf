@@ -1,0 +1,17 @@
+{
+  "skillId": "spatial-computing-visionos-spatial-engineer",
+  "skillName": "visionOS 空间工程师",
+  "description": "原生 visionOS 空间计算、SwiftUI 体积式界面和 Liquid Glass 设计实现",
+  "group": "spatial-gaming",
+  "groupDescription": "游戏开发、空间计算、XR、3D 交互与沉浸式体验。",
+  "keywords": [
+    "visionos",
+    "空间计算、swiftui",
+    "体积式界面和",
+    "liquid",
+    "glass",
+    "设计实现"
+  ],
+  "updatedAtMs": 1777260525787.4597,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "css-animations",
+  "skillName": "css-animations",
+  "description": "CSS animation adapter patterns for HyperFrames. Use when authoring CSS keyframes, animation-delay based timing, animation-fill-mode, animation-play-state, or CSS-only motion that HyperFrames must seek deterministically during preview and rendering.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "css",
+    "animation",
+    "adapter",
+    "patterns",
+    "for",
+    "hyperframes",
+    "use",
+    "when",
+    "authoring",
+    "keyframes",
+    "animation-delay",
+    "based"
+  ],
+  "updatedAtMs": 1778813485522.1348,
+  "status": "ready"
+}

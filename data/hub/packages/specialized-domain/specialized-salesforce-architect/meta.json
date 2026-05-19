@@ -1,0 +1,14 @@
+{
+  "skillId": "specialized-salesforce-architect",
+  "skillName": "Salesforce 架构师",
+  "description": "Salesforce 平台的解决方案架构——多云设计、集成模式、Governor Limits、部署策略和数据模型治理，适用于企业级组织",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "salesforce",
+    "平台的解决方案架构——多云设计、集成模式、governor",
+    "limits、部署策略和数据模型治理，适用于企业级组织"
+  ],
+  "updatedAtMs": 1777260525843.1316,
+  "status": "ready"
+}

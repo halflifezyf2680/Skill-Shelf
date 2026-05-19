@@ -1,0 +1,23 @@
+{
+  "skillId": "typegpu",
+  "skillName": "typegpu",
+  "description": "TypeGPU and raw WebGPU adapter patterns for HyperFrames. Use when creating GPU-rendered compositions with TypeGPU, raw WebGPU, WGSL fragment shaders, compute pipelines, liquid glass effects, particle systems, or any canvas layer driven by navigator.gpu that responds to HyperFrames hf-seek events.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "typegpu",
+    "and",
+    "raw",
+    "webgpu",
+    "adapter",
+    "patterns",
+    "for",
+    "hyperframes",
+    "use",
+    "when",
+    "creating",
+    "gpu-rendered"
+  ],
+  "updatedAtMs": 1778813485642.8381,
+  "status": "ready"
+}

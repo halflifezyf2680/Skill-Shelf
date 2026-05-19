@@ -1,0 +1,14 @@
+{
+  "skillId": "specialized-accounts-payable-agent",
+  "skillName": "应付账款智能体",
+  "description": "自主支付处理专家，负责执行供应商付款、承包商发票和定期账单，支持加密货币、法币、稳定币等多种支付通道，通过 MCP 与 AI 智能体工作流集成。",
+  "group": "finance",
+  "groupDescription": "财务、预算、核算、定价、经营分析与资金相关能力。",
+  "keywords": [
+    "自主支付处理专家，负责执行供应商付款、承包商发票和定期账单，支持加密货币、法币、稳定币等多种支付通道，通过",
+    "mcp",
+    "智能体工作流集成"
+  ],
+  "updatedAtMs": 1777260525794.1455,
+  "status": "ready"
+}

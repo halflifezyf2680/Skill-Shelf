@@ -1,0 +1,23 @@
+{
+  "skillId": "contribute-catalog",
+  "skillName": "contribute-catalog",
+  "description": "Author a new HyperFrames registry block (caption style, VFX block, transition, lower third) or component (text effect, overlay, snippet) and ship it as an upstream PR to the hyperframes repo. Use ONLY when the user wants to CONTRIBUTE to the public catalog — for in-project caption/transition authoring use the `hyperframes` skill, for installing existing registry items use the `hyperframes-registry` skill.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "author",
+    "new",
+    "hyperframes",
+    "registry",
+    "block",
+    "caption",
+    "style",
+    "vfx",
+    "transition",
+    "lower",
+    "third",
+    "component"
+  ],
+  "updatedAtMs": 1778813485520.13,
+  "status": "ready"
+}

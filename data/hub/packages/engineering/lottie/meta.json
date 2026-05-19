@@ -1,0 +1,23 @@
+{
+  "skillId": "lottie",
+  "skillName": "lottie",
+  "description": "Lottie and dotLottie adapter patterns for HyperFrames. Use when embedding lottie-web JSON animations, .lottie files, @lottiefiles/dotlottie-web players, registering instances on window.__hfLottie, or making After Effects exports deterministic in HyperFrames.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "lottie",
+    "and",
+    "dotlottie",
+    "adapter",
+    "patterns",
+    "for",
+    "hyperframes",
+    "use",
+    "when",
+    "embedding",
+    "lottie-web",
+    "json"
+  ],
+  "updatedAtMs": 1778813485575.869,
+  "status": "ready"
+}

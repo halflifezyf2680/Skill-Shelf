@@ -29,6 +29,21 @@ async function main() {
         }),
       };
 
+  // Build static group catalog for tool description (Level 1 — always in context)
+  const groupCatalogLines = registry.listGroups().map((g) => {
+    const skills = registry.listGroupSkills(g.group);
+    const count = skills?.skills.length ?? 0;
+    return `${g.group} (${count}): ${g.groupDescription}`;
+  });
+  const groupCatalog = groupCatalogLines.join("\n");
+
+  const browseDescription = [
+    "Entry point to discover available skill groups. Call this to see what domains the shelf covers, then use search_skills to find specific skills within a group.",
+    "",
+    "CURRENT SHELF CATALOG:",
+    groupCatalog,
+  ].join("\n");
+
   const server = new McpServer(
     {
       name: "skill-shelf",
@@ -39,14 +54,41 @@ async function main() {
         "Local skill library with flat search routing.",
         "",
         "ROUTING PROTOCOL:",
-        "1. search_skills(query) — fuzzy search across ALL skills, returns top matches with name + description + score.",
-        "2. read_skill(skill) — load full skill body for the chosen skill.",
+        "1. browse_shelf() — see all groups and their coverage to decide where to search.",
+        "2. search_skills(query) — fuzzy search across ALL skills, returns top matches with name + description + score.",
+        "3. read_skill(skill) — load full skill body for the chosen skill.",
         "",
         "Do NOT read multiple full skills in one turn — read one, evaluate, then decide.",
-        "",
-        "WHEN TO USE: Tasks requiring specialized workflow, formal process, or high-density domain knowledge.",
-        "WHEN NOT TO USE: Ordinary coding, simple edits, general questions — handle directly.",
       ].join("\n"),
+    },
+  );
+
+  server.registerTool(
+    "browse_shelf",
+    {
+      description: browseDescription,
+      annotations: {
+        readOnlyHint: true,
+        destructiveHint: false,
+        openWorldHint: false,
+        idempotentHint: true,
+      },
+      inputSchema: {},
+    },
+    async () => {
+      const groups = registry.listGroups().map((g) => {
+        const entry = registry.listGroupSkills(g.group);
+        return {
+          group: g.group,
+          description: g.groupDescription,
+          skillCount: entry?.skills.length ?? 0,
+          skills: entry?.skills.map((s) => ({ id: s.skillId, name: s.skillName })) ?? [],
+        };
+      });
+      return {
+        content: [{ type: "text", text: JSON.stringify({ totalSkills: registry.size(), groups }, null, 2) }],
+        structuredContent: { totalSkills: registry.size(), groups },
+      };
     },
   );
 

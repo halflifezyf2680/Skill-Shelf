@@ -1,0 +1,15 @@
+{
+  "skillId": "marketing-ai-citation-strategist",
+  "skillName": "AI 引文策略师",
+  "description": "AI 推荐引擎优化（AEO/GEO）专家，审计品牌在 ChatGPT、Claude、Gemini、Perplexity 等平台的可见性，分析竞品被引用的原因，提供提升 AI 引用率的内容优化方案。",
+  "group": "marketing",
+  "groupDescription": "品牌营销、内容营销、市场传播、增长叙事与活动策略。",
+  "keywords": [
+    "推荐引擎优化（aeo/geo）专家，审计品牌在",
+    "chatgpt、claude、gemini、perplexity",
+    "等平台的可见性，分析竞品被引用的原因，提供提升",
+    "引用率的内容优化方案"
+  ],
+  "updatedAtMs": 1777260525687.572,
+  "status": "ready"
+}

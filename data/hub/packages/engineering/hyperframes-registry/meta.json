@@ -1,0 +1,23 @@
+{
+  "skillId": "hyperframes-registry",
+  "skillName": "hyperframes-registry",
+  "description": "Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "install",
+    "and",
+    "wire",
+    "registry",
+    "blocks",
+    "components",
+    "into",
+    "hyperframes",
+    "compositions",
+    "use",
+    "when",
+    "running"
+  ],
+  "updatedAtMs": 1778813485529.8445,
+  "status": "ready"
+}

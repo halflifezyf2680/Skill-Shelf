@@ -1,0 +1,23 @@
+{
+  "skillId": "hyperframes-media",
+  "skillName": "hyperframes-media",
+  "description": "Asset preprocessing for HyperFrames compositions — text-to-speech narration (Kokoro), audio/video transcription (Whisper), and background removal for transparent overlays (u2net). Use when generating voiceover from text, transcribing speech for captions, removing the background from a video or image to use as a transparent overlay, choosing a TTS voice or whisper model, or chaining these (TTS → transcribe → captions). Each command downloads its own model on first run.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "asset",
+    "preprocessing",
+    "for",
+    "hyperframes",
+    "compositions",
+    "text-to-speech",
+    "narration",
+    "kokoro",
+    "audio/video",
+    "transcription",
+    "whisper",
+    "and"
+  ],
+  "updatedAtMs": 1778813485528.8445,
+  "status": "ready"
+}

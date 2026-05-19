@@ -1,0 +1,15 @@
+{
+  "skillId": "ai-native-app-architecture",
+  "skillName": "ai-native-app-architecture",
+  "description": "用于 AI 原生应用开发方法的设计、重构与评审，尤其适合需要以自然交互和用户可读产物为主，同时在 Context Window Framework、工作文档和严格结构化边界之间做架构取舍的场景。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "原生应用开发方法的设计、重构与评审，尤其适合需要以自然交互和用户可读产物为主，同时在",
+    "context",
+    "window",
+    "framework、工作文档和严格结构化边界之间做架构取舍的场景"
+  ],
+  "updatedAtMs": 1779039368137.0615,
+  "status": "ready"
+}

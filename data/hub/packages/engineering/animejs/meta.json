@@ -1,0 +1,23 @@
+{
+  "skillId": "animejs",
+  "skillName": "animejs",
+  "description": "Anime.js adapter patterns for HyperFrames. Use when writing Anime.js animations or timelines inside HyperFrames compositions, registering animations on window.__hfAnime, making Anime.js seek-driven and deterministic, or translating Anime.js examples into render-safe HyperFrames HTML.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "anime.js",
+    "adapter",
+    "patterns",
+    "for",
+    "hyperframes",
+    "use",
+    "when",
+    "writing",
+    "animations",
+    "timelines",
+    "inside",
+    "compositions"
+  ],
+  "updatedAtMs": 1778813485519.574,
+  "status": "ready"
+}

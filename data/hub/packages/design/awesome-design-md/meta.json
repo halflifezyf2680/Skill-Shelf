@@ -1,0 +1,23 @@
+{
+  "skillId": "awesome-design-md",
+  "skillName": "awesome-design-md",
+  "description": "Brand design system reference library with 58 company design templates (Airbnb, Stripe, Vercel, Apple, Tesla, etc.). Use this skill whenever the user asks about brand design, design systems, visual identity, color palettes, typography, UI components, or wants to replicate/reference a specific company's design language. Also use when the user mentions 'design system', 'brand guide', 'design tokens', 'visual language', 'company style', or wants to build something that looks like a known product's website.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "brand",
+    "design",
+    "system",
+    "reference",
+    "library",
+    "with",
+    "company",
+    "templates",
+    "airbnb",
+    "stripe",
+    "vercel",
+    "apple"
+  ],
+  "updatedAtMs": 1777312241162.2163,
+  "status": "ready"
+}
