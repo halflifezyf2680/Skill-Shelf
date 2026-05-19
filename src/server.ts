@@ -110,7 +110,7 @@ async function main() {
           .int()
           .min(1)
           .max(20)
-          .default(8)
+          .default(4)
           .describe("Maximum number of candidate skills to return."),
       },
     },
