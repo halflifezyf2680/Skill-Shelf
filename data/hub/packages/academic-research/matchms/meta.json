@@ -1,0 +1,23 @@
+{
+  "skillId": "matchms",
+  "skillName": "matchms",
+  "description": "Spectral similarity and compound identification for metabolomics. Use for comparing mass spectra, computing similarity scores (cosine, modified cosine), and identifying unknown compounds from spectral libraries. Best for metabolite identification, spectral matching, library searching. For full LC-MS/MS proteomics pipelines use pyopenms.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "spectral",
+    "similarity",
+    "and",
+    "compound",
+    "identification",
+    "for",
+    "metabolomics",
+    "use",
+    "comparing",
+    "mass",
+    "spectra",
+    "computing"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "statistical-analysis",
+  "skillName": "statistical-analysis",
+  "description": "Guided statistical analysis with test selection and reporting. Use when you need help choosing appropriate tests for your data, assumption checking, power analysis, and APA-formatted results. Best for academic research reporting, test selection guidance. For implementing specific models programmatically use statsmodels.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "guided",
+    "statistical",
+    "analysis",
+    "with",
+    "test",
+    "selection",
+    "and",
+    "reporting",
+    "use",
+    "when",
+    "you",
+    "need"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

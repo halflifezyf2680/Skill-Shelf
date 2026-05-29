@@ -1,0 +1,23 @@
+{
+  "skillId": "tiledbvcf",
+  "skillName": "tiledbvcf",
+  "description": "Efficient storage and retrieval of genomic variant data using TileDB. Scalable VCF/BCF ingestion, incremental sample addition, compressed storage, parallel queries, and export capabilities for population genomics.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "efficient",
+    "storage",
+    "and",
+    "retrieval",
+    "genomic",
+    "variant",
+    "data",
+    "using",
+    "tiledb",
+    "scalable",
+    "vcf/bcf",
+    "ingestion"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

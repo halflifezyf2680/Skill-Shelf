@@ -1,0 +1,23 @@
+{
+  "skillId": "statsmodels",
+  "skillName": "statsmodels",
+  "description": "Statistical models library for Python. Use when you need specific model classes (OLS, GLM, mixed models, ARIMA) with detailed diagnostics, residuals, and inference. Best for econometrics, time series, rigorous inference with coefficient tables. For guided statistical test selection with APA reporting use statistical-analysis.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "statistical",
+    "models",
+    "library",
+    "for",
+    "python",
+    "use",
+    "when",
+    "you",
+    "need",
+    "specific",
+    "model",
+    "classes"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,14 @@
+{
+  "skillId": "engineering-devops-automator",
+  "skillName": "DevOps 自动化师",
+  "description": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "精通基础设施自动化、ci/cd",
+    "流水线开发和云运维的",
+    "devops"
+  ],
+  "updatedAtMs": 1777260525593.3564,
+  "status": "ready"
+}

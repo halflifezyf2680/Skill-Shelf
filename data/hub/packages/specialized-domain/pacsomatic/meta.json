@@ -1,0 +1,23 @@
+{
+  "skillId": "pacsomatic",
+  "skillName": "pacsomatic",
+  "description": "Operator toolkit for nf-core/pacsomatic matched tumor-normal workflows from BAM inputs. Use this skill when the user needs to validate run inputs, generate pacsomatic-compliant samplesheets, prepare reproducible Nextflow launch artifacts, run locally or submit to schedulers (LSF/Slurm/PBS/SGE), and triage execution failures. Triggers on requests to run pacsomatic, prepare launch commands/scripts, perform dry-run checks, or troubleshoot pipeline startup and scheduler submission errors.",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "operator",
+    "toolkit",
+    "for",
+    "nf-core/pacsomatic",
+    "matched",
+    "tumor-normal",
+    "workflows",
+    "from",
+    "bam",
+    "inputs",
+    "use",
+    "this"
+  ],
+  "updatedAtMs": 1780043421552.1296,
+  "status": "ready"
+}

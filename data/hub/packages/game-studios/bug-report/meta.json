@@ -1,0 +1,23 @@
+{
+  "skillId": "bug-report",
+  "skillName": "bug-report",
+  "description": "Creates a structured bug report from a description, or analyzes code to identify potential bugs. Ensures every bug report has full reproduction steps, severity assessment, and context.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "creates",
+    "structured",
+    "bug",
+    "report",
+    "from",
+    "description",
+    "analyzes",
+    "code",
+    "identify",
+    "potential",
+    "bugs",
+    "ensures"
+  ],
+  "updatedAtMs": 1777260525888.912,
+  "status": "ready"
+}

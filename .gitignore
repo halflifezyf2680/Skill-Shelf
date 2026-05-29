@@ -1,5 +1,9 @@
 node_modules/
 
+# Rust build artifacts
+target/
+rust/**/target/
+
 # Runtime artifacts (auto-generated)
 data/hub/index/
 data/hub/logs/
@@ -8,10 +12,26 @@ data/hub/staging/
 # MPM local data
 .mpm-data/
 
+# Playwright MCP runtime
+.playwright-mcp/
+
+# Backup archives
+*.zip
+
+# Local-only scripts
+scripts/copy-to-claude.mjs
+
 # Dev logs
 dev-log.md
 dev-log-archive/
 
+# Local planning / internal docs not for publish
+docs/superpowers/
+docs/diagrams/
+
 # OS
 .DS_Store
 Thumbs.db
+
+# MCP Registry publisher binary
+mcp-publisher*

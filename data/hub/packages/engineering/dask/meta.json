@@ -1,0 +1,23 @@
+{
+  "skillId": "dask",
+  "skillName": "dask",
+  "description": "Distributed computing for larger-than-RAM pandas/NumPy workflows. Use when you need to scale existing pandas/NumPy code beyond memory or across clusters. Best for parallel file processing, distributed ML, integration with existing pandas code. For out-of-core analytics on single machine use vaex; for in-memory speed use polars.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "distributed",
+    "computing",
+    "for",
+    "larger-than-ram",
+    "pandas/numpy",
+    "workflows",
+    "use",
+    "when",
+    "you",
+    "need",
+    "scale",
+    "existing"
+  ],
+  "updatedAtMs": 1780043052451.701,
+  "status": "ready"
+}

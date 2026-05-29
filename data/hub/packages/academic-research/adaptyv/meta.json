@@ -1,0 +1,23 @@
+{
+  "skillId": "adaptyv",
+  "skillName": "adaptyv",
+  "description": "How to use the Adaptyv Bio Foundry API and Python SDK for protein experiment design, submission, and results retrieval. Use this skill whenever the user mentions Adaptyv, Foundry API, protein binding assays, protein screening experiments, BLI/SPR assays, thermostability assays, or wants to submit protein sequences for experimental characterization. Also trigger when code imports `adaptyv`, `adaptyv_sdk`, or `FoundryClient`, or references `foundry-api-public.adaptyvbio.com`.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "how",
+    "use",
+    "the",
+    "adaptyv",
+    "bio",
+    "foundry",
+    "api",
+    "and",
+    "python",
+    "sdk",
+    "for",
+    "protein"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

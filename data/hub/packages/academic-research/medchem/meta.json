@@ -1,0 +1,23 @@
+{
+  "skillId": "medchem",
+  "skillName": "medchem",
+  "description": "Medicinal chemistry filters. Apply drug-likeness rules (Lipinski, Veber), PAINS filters, structural alerts, complexity metrics, for compound prioritization and library filtering.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "medicinal",
+    "chemistry",
+    "filters",
+    "apply",
+    "drug-likeness",
+    "rules",
+    "lipinski",
+    "veber",
+    "pains",
+    "structural",
+    "alerts",
+    "complexity"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

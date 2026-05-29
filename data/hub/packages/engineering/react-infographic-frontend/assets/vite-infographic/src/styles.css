@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #14213d;
+  background:
+    linear-gradient(90deg, rgba(15, 139, 141, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(20, 33, 61, 0.06) 1px, transparent 1px),
+    #f7f3ea;
+  background-size: 72px 72px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+section {
+  padding: 72px max(28px, calc((100vw - 1500px) / 2));
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 72px;
+  align-items: center;
+  min-height: 92vh;
+}
+
+.eyebrow,
+.section-heading span {
+  color: #0f8b8d;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 18px;
+  color: #141414;
+  font-size: 76px;
+  font-weight: 950;
+  line-height: 1.04;
+}
+
+h2 {
+  margin-top: 12px;
+  color: #141414;
+  font-size: 46px;
+  font-weight: 950;
+  line-height: 1.08;
+}
+
+.hero p {
+  max-width: 780px;
+  margin-top: 28px;
+  color: #536071;
+  font-size: 26px;
+  font-weight: 720;
+  line-height: 1.4;
+}
+
+.system-ring {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ring-node,
+.flow-card,
+.candidate-panel,
+.strict-panel {
+  border: 3px solid rgba(20, 33, 61, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 253, 247, 0.94);
+  box-shadow: 0 18px 48px rgba(20, 33, 61, 0.12);
+}
+
+.ring-node {
+  display: grid;
+  gap: 18px;
+  min-height: 160px;
+  padding: 24px;
+  color: #0f8b8d;
+}
+
+.ring-node strong,
+.flow-card strong,
+.panel-title strong {
+  color: #141414;
+  font-size: 28px;
+  font-weight: 950;
+}
+
+.flow-grid,
+.evidence-grid {
+  display: grid;
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.flow-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.flow-card {
+  display: grid;
+  gap: 18px;
+  min-height: 240px;
+  padding: 28px;
+  color: #0f8b8d;
+}
+
+.flow-card span,
+.evidence-row span {
+  color: #536071;
+  font-size: 20px;
+  font-weight: 760;
+  line-height: 1.32;
+}
+
+.query-bar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 24px 30px;
+  border-radius: 8px;
+  background: #141414;
+  color: #fffdf7;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.evidence-grid {
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+}
+
+.candidate-panel,
+.strict-panel {
+  min-height: 380px;
+  padding: 28px;
+}
+
+.panel-title {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: #0f8b8d;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.chip {
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 2px solid rgba(20, 33, 61, 0.16);
+  border-radius: 8px;
+  background: #fffdf7;
+  color: rgba(64, 80, 103, 0.64);
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+}
+
+.chip.kept {
+  border-color: rgba(15, 139, 141, 0.42);
+  background: rgba(15, 139, 141, 0.1);
+  color: #141414;
+}
+
+.evidence-row {
+  display: grid;
+  grid-template-columns: 30px minmax(180px, 0.4fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 8px;
+  background: #f1eadc;
+  color: #0f8b8d;
+}
+
+.evidence-row code {
+  color: #14213d;
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-size: 19px;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-grid,
+  .system-ring {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  h1 {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 48px 20px;
+  }
+
+  .flow-grid,
+  .system-ring {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .query-bar {
+    font-size: 22px;
+  }
+}

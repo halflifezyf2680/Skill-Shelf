@@ -1,0 +1,13 @@
+{
+  "skillId": "support-analytics-reporter",
+  "skillName": "数据分析师",
+  "description": "专业数据分析师，擅长将原始数据转化为可操作的业务洞察。创建仪表盘、执行统计分析、跟踪 KPI，并通过数据可视化和报告提供战略决策支持。",
+  "group": "support-operations",
+  "groupDescription": "客服、运营支持、行政协助、汇总汇报与后台支持工作。",
+  "keywords": [
+    "专业数据分析师，擅长将原始数据转化为可操作的业务洞察。创建仪表盘、执行统计分析、跟踪",
+    "kpi，并通过数据可视化和报告提供战略决策支持"
+  ],
+  "updatedAtMs": 1777260525855.6084,
+  "status": "ready"
+}

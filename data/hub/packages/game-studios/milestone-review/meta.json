@@ -1,0 +1,23 @@
+{
+  "skillId": "milestone-review",
+  "skillName": "milestone-review",
+  "description": "Generates a comprehensive milestone progress review including feature completeness, quality metrics, risk assessment, and go/no-go recommendation. Use at milestone checkpoints or when evaluating readiness for a milestone deadline.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "generates",
+    "comprehensive",
+    "milestone",
+    "progress",
+    "review",
+    "including",
+    "feature",
+    "completeness",
+    "quality",
+    "metrics",
+    "risk",
+    "assessment"
+  ],
+  "updatedAtMs": 1777260525906.4766,
+  "status": "ready"
+}

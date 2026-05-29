@@ -1,0 +1,23 @@
+{
+  "skillId": "pyzotero",
+  "skillName": "pyzotero",
+  "description": "Interact with Zotero reference management libraries using the pyzotero Python client. Retrieve, create, update, and delete items, collections, tags, and attachments via the Zotero Web API v3. Use this skill when working with Zotero libraries programmatically, managing bibliographic references, exporting citations, searching library contents, uploading PDF attachments, or building research automation workflows that integrate with Zotero.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "interact",
+    "with",
+    "zotero",
+    "reference",
+    "management",
+    "libraries",
+    "using",
+    "the",
+    "pyzotero",
+    "python",
+    "client",
+    "retrieve"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "markdown-mermaid-writing",
+  "skillName": "markdown-mermaid-writing",
+  "description": "Comprehensive markdown and Mermaid diagram writing skill. Use when creating any scientific document, report, analysis, or visualization. Establishes text-based diagrams as the default documentation standard with full style guides (markdown + mermaid), 24 diagram type references, and 9 document templates.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "comprehensive",
+    "markdown",
+    "and",
+    "mermaid",
+    "diagram",
+    "writing",
+    "skill",
+    "use",
+    "when",
+    "creating",
+    "any",
+    "scientific"
+  ],
+  "updatedAtMs": 1780043418977.4446,
+  "status": "ready"
+}

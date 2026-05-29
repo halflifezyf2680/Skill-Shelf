@@ -1,0 +1,14 @@
+{
+  "skillId": "specialized-blockchain-security-auditor",
+  "skillName": "区块链安全审计师",
+  "description": "专注智能合约漏洞检测、形式化验证、漏洞利用分析和审计报告编写的安全审计专家，服务于 DeFi 协议和区块链应用。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专注智能合约漏洞检测、形式化验证、漏洞利用分析和审计报告编写的安全审计专家，服务于",
+    "defi",
+    "协议和区块链应用"
+  ],
+  "updatedAtMs": 1777260525801.6707,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "consciousness-council",
+  "skillName": "consciousness-council",
+  "description": "Run a multi-perspective Mind Council deliberation on any question, decision, or creative challenge. Use this skill whenever the user wants diverse viewpoints, needs help making a tough decision, asks for a council/panel/board discussion, wants to explore a problem from multiple angles, requests devil's advocate analysis, or says things like \"what would different experts think about this\", \"help me think through this from all sides\", \"council mode\", \"mind council\", or \"deliberate on this\". Also trigger when the user faces a dilemma, trade-off, or complex choice with no obvious answer.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "run",
+    "multi-perspective",
+    "mind",
+    "council",
+    "deliberation",
+    "any",
+    "question",
+    "decision",
+    "creative",
+    "challenge",
+    "use",
+    "this"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

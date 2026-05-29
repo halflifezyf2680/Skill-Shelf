@@ -1,0 +1,23 @@
+{
+  "skillId": "balance-check",
+  "skillName": "balance-check",
+  "description": "Analyzes game balance data files, formulas, and configuration to identify outliers, broken progressions, degenerate strategies, and economy imbalances. Use after modifying any balance-related data or design.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "analyzes",
+    "game",
+    "balance",
+    "data",
+    "files",
+    "formulas",
+    "and",
+    "configuration",
+    "identify",
+    "outliers",
+    "broken",
+    "progressions"
+  ],
+  "updatedAtMs": 1777260525885.4038,
+  "status": "ready"
+}

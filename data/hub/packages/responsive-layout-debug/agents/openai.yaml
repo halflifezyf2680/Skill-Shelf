@@ -1,4 +1,0 @@
-interface:
-  display_name: "Responsive Layout Debug"
-  short_description: "Debug breakpoints, ratios, and responsive failures"
-  default_prompt: "Use responsive-layout-debug to compare this page across viewports before changing the code."

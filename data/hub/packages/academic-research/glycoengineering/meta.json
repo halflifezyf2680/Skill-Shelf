@@ -1,0 +1,23 @@
+{
+  "skillId": "glycoengineering",
+  "skillName": "glycoengineering",
+  "description": "Analyze and engineer protein glycosylation. Scan sequences for N-glycosylation sequons (N-X-S/T), predict O-glycosylation hotspots, and access curated glycoengineering tools (NetOGlyc, GlycoShield, GlycoWorkbench). For glycoprotein engineering, therapeutic antibody optimization, and vaccine design.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "analyze",
+    "and",
+    "engineer",
+    "protein",
+    "glycosylation",
+    "scan",
+    "sequences",
+    "for",
+    "n-glycosylation",
+    "sequons",
+    "n-x-s/t",
+    "predict"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

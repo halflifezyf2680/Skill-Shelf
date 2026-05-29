@@ -1,24 +1,32 @@
 {
-  "name": "skill-router-mcp",
-  "version": "0.1.0",
-  "private": true,
+  "name": "skill-shelf",
+  "version": "2.0.0",
+  "license": "MIT",
+  "mcpName": "io.github.halflifezyf2680/skill-shelf",
   "type": "module",
-  "description": "Skill router MCP for dynamic skill discovery, hot reload, and on-demand skill reading.",
-  "scripts": {
-    "dev": "tsx src/server.ts",
-    "skill-hub": "node --import tsx ./src/server.ts",
-    "typecheck": "tsc --noEmit",
-    "e2e": "node --import tsx ./src/e2e-suite.ts"
+  "description": "Local MCP server using a Rust singleton daemon and a lightweight npm stdio shim with progressive group routing.",
+  "bin": {
+    "skill-shelf": "bin/skill-shelf.js"
   },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.4",
-    "chokidar": "^4.0.3",
-    "gray-matter": "^4.0.3",
-    "zod": "^3.24.1"
+  "files": [
+    "bin/",
+    "server.json",
+    "data/hub/config/",
+    "data/hub/packages/",
+    "rust/skill-shelf/target/release/skill-shelf*"
+  ],
+  "scripts": {
+    "skill-shelf": "node ./bin/skill-shelf.js",
+    "mcp": "node ./bin/skill-shelf.js mcp",
+    "daemon": "node ./bin/skill-shelf.js daemon",
+    "status": "node ./bin/skill-shelf.js status",
+    "stop": "node ./bin/skill-shelf.js stop",
+    "rust:build": "cargo build --release --manifest-path rust/skill-shelf/Cargo.toml",
+    "rust:build:debug": "cargo build --manifest-path rust/skill-shelf/Cargo.toml",
+    "rust:test": "cargo test --manifest-path rust/skill-shelf/Cargo.toml"
   },
   "devDependencies": {
-    "@types/node": "^24.3.0",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "@resvg/resvg-js": "^2.6.2",
+    "gray-matter": "^4.0.3"
   }
 }

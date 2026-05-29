@@ -1,0 +1,23 @@
+{
+  "skillId": "cirq",
+  "skillName": "cirq",
+  "description": "Google quantum computing framework. Use when targeting Google Quantum AI hardware, designing noise-aware circuits, or running quantum characterization experiments. Best for Google hardware, noise modeling, and low-level circuit design. For IBM hardware use qiskit; for quantum ML with autodiff use pennylane; for physics simulations use qutip.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "google",
+    "quantum",
+    "computing",
+    "framework",
+    "use",
+    "when",
+    "targeting",
+    "hardware",
+    "designing",
+    "noise-aware",
+    "circuits",
+    "running"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

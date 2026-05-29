@@ -1,0 +1,23 @@
+{
+  "skillId": "latex-posters",
+  "skillName": "latex-posters",
+  "description": "Create professional research posters in LaTeX using beamerposter, tikzposter, or baposter. Support for conference presentations, academic posters, and scientific communication. Includes layout design, color schemes, multi-column formats, figure integration, and poster-specific best practices for visual communication.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "create",
+    "professional",
+    "research",
+    "posters",
+    "latex",
+    "using",
+    "beamerposter",
+    "tikzposter",
+    "baposter",
+    "support",
+    "for",
+    "conference"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

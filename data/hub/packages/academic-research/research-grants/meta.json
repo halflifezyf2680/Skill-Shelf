@@ -1,0 +1,23 @@
+{
+  "skillId": "research-grants",
+  "skillName": "research-grants",
+  "description": "Write competitive research proposals for NSF, NIH, DOE, DARPA, and Taiwan NSTC. Agency-specific formatting, review criteria, budget preparation, broader impacts, significance statements, innovation narratives, and compliance with submission requirements.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "write",
+    "competitive",
+    "research",
+    "proposals",
+    "for",
+    "nsf",
+    "nih",
+    "doe",
+    "darpa",
+    "and",
+    "taiwan",
+    "nstc"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "generate-image",
+  "skillName": "generate-image",
+  "description": "Generate or edit images using AI models (FLUX, Nano Banana 2). Use for general-purpose image generation including photos, illustrations, artwork, visual assets, concept art, and any image that is not a technical diagram or schematic. For flowcharts, circuits, pathways, and technical diagrams, use the scientific-schematics skill instead.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "generate",
+    "edit",
+    "images",
+    "using",
+    "models",
+    "flux",
+    "nano",
+    "banana",
+    "use",
+    "for",
+    "general-purpose",
+    "image"
+  ],
+  "updatedAtMs": 1780043422563.737,
+  "status": "ready"
+}

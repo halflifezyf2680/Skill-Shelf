@@ -1,0 +1,23 @@
+{
+  "skillId": "scikit-learn",
+  "skillName": "scikit-learn",
+  "description": "Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction), model evaluation, hyperparameter tuning, preprocessing, or building ML pipelines. Provides comprehensive reference documentation for algorithms, preprocessing techniques, pipelines, and best practices.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "machine",
+    "learning",
+    "python",
+    "with",
+    "scikit-learn",
+    "use",
+    "when",
+    "working",
+    "supervised",
+    "classification",
+    "regression",
+    "unsupervised"
+  ],
+  "updatedAtMs": 1780043416986.772,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "molecular-dynamics",
+  "skillName": "molecular-dynamics",
+  "description": "Run and analyze molecular dynamics simulations with OpenMM and MDAnalysis. Set up protein/small molecule systems, define force fields, run energy minimization and production MD, analyze trajectories (RMSD, RMSF, contact maps, free energy surfaces). For structural biology, drug binding, and biophysics.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "run",
+    "and",
+    "analyze",
+    "molecular",
+    "dynamics",
+    "simulations",
+    "with",
+    "openmm",
+    "mdanalysis",
+    "set",
+    "protein/small",
+    "molecule"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "bids",
+  "skillName": "bids",
+  "description": "Use this skill when working with Brain Imaging Data Structure (BIDS) datasets: organizing neuroscience and biomedical data (MRI, EEG, MEG, iEEG, PET, microscopy, NIRS, motion capture, EMG, MR spectroscopy, behavioral), querying BIDS layouts, validating compliance, converting DICOM to BIDS, writing metadata sidecars, or creating BIDS derivatives.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "use",
+    "this",
+    "skill",
+    "when",
+    "working",
+    "with",
+    "brain",
+    "imaging",
+    "data",
+    "structure",
+    "bids",
+    "datasets"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

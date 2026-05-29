@@ -1,0 +1,23 @@
+{
+  "skillId": "polars-bio",
+  "skillName": "polars-bio",
+  "description": "High-performance genomic interval operations and bioinformatics file I/O on Polars DataFrames. Overlap, nearest, merge, coverage, complement, subtract for BED/VCF/BAM/GFF intervals. Streaming, cloud-native, faster bioframe alternative.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "high-performance",
+    "genomic",
+    "interval",
+    "operations",
+    "and",
+    "bioinformatics",
+    "file",
+    "i/o",
+    "polars",
+    "dataframes",
+    "overlap",
+    "nearest"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "scvelo",
+  "skillName": "scvelo",
+  "description": "RNA velocity analysis with scVelo. Estimate cell state transitions from unspliced/spliced mRNA dynamics, infer trajectory directions, compute latent time, and identify driver genes in single-cell RNA-seq data. Complements Scanpy/scVI-tools for trajectory inference.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "rna",
+    "velocity",
+    "analysis",
+    "with",
+    "scvelo",
+    "estimate",
+    "cell",
+    "state",
+    "transitions",
+    "from",
+    "unspliced/spliced",
+    "mrna"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

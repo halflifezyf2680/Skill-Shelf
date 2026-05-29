@@ -1,0 +1,23 @@
+{
+  "skillId": "bioservices",
+  "skillName": "bioservices",
+  "description": "Unified Python interface to 40+ bioinformatics services. Use when querying multiple databases (UniProt, KEGG, ChEMBL, Reactome) in a single workflow with consistent API. Best for cross-database analysis, ID mapping across services. For quick single-database lookups use gget; for sequence/file manipulation use biopython.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "unified",
+    "python",
+    "interface",
+    "bioinformatics",
+    "services",
+    "use",
+    "when",
+    "querying",
+    "multiple",
+    "databases",
+    "uniprot",
+    "kegg"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

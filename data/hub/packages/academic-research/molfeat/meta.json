@@ -1,0 +1,23 @@
+{
+  "skillId": "molfeat",
+  "skillName": "molfeat",
+  "description": "Molecular featurization for ML (100+ featurizers). ECFP, MACCS, descriptors, pretrained models (ChemBERTa), convert SMILES to features, for QSAR and molecular ML.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "molecular",
+    "featurization",
+    "for",
+    "100",
+    "featurizers",
+    "ecfp",
+    "maccs",
+    "descriptors",
+    "pretrained",
+    "models",
+    "chemberta",
+    "convert"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

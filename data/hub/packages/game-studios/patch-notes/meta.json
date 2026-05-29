@@ -1,0 +1,23 @@
+{
+  "skillId": "patch-notes",
+  "skillName": "patch-notes",
+  "description": "Generate player-facing patch notes from git history, sprint data, and internal changelogs. Translates developer language into clear, engaging player communication.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "generate",
+    "player-facing",
+    "patch",
+    "notes",
+    "from",
+    "git",
+    "history",
+    "sprint",
+    "data",
+    "and",
+    "internal",
+    "changelogs"
+  ],
+  "updatedAtMs": 1777260525908.9946,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "flowio",
+  "skillName": "flowio",
+  "description": "Parse FCS (Flow Cytometry Standard) files v2.0-3.1. Extract events as NumPy arrays, read metadata/channels, convert to CSV/DataFrame, for flow cytometry data preprocessing.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "parse",
+    "fcs",
+    "flow",
+    "cytometry",
+    "standard",
+    "files",
+    "v2.0-3.1",
+    "extract",
+    "events",
+    "numpy",
+    "arrays",
+    "read"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

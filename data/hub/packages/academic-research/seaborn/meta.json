@@ -1,0 +1,23 @@
+{
+  "skillId": "seaborn",
+  "skillName": "seaborn",
+  "description": "Statistical visualization with pandas integration. Use for quick exploration of distributions, relationships, and categorical comparisons with attractive defaults. Best for box plots, violin plots, pair plots, heatmaps. Built on matplotlib. For interactive plots use plotly; for publication styling use scientific-visualization.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "statistical",
+    "visualization",
+    "with",
+    "pandas",
+    "integration",
+    "use",
+    "for",
+    "quick",
+    "exploration",
+    "distributions",
+    "relationships",
+    "and"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "markitdown",
+  "skillName": "markitdown",
+  "description": "Convert files and office documents to Markdown. Supports PDF, DOCX, PPTX, XLSX, images (with OCR), audio (with transcription), HTML, CSV, JSON, XML, ZIP, YouTube URLs, EPubs and more.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "convert",
+    "files",
+    "and",
+    "office",
+    "documents",
+    "markdown",
+    "supports",
+    "pdf",
+    "docx",
+    "pptx",
+    "xlsx",
+    "images"
+  ],
+  "updatedAtMs": 1780043415805.256,
+  "status": "ready"
+}

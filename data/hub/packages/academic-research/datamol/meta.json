@@ -1,0 +1,23 @@
+{
+  "skillId": "datamol",
+  "skillName": "datamol",
+  "description": "Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery including SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "pythonic",
+    "wrapper",
+    "around",
+    "rdkit",
+    "with",
+    "simplified",
+    "interface",
+    "and",
+    "sensible",
+    "defaults",
+    "preferred",
+    "for"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

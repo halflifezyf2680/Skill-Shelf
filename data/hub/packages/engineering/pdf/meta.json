@@ -1,0 +1,23 @@
+{
+  "skillId": "pdf",
+  "skillName": "pdf",
+  "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "use",
+    "this",
+    "skill",
+    "whenever",
+    "the",
+    "user",
+    "wants",
+    "anything",
+    "with",
+    "pdf",
+    "files",
+    "includes"
+  ],
+  "updatedAtMs": 1780043415092.361,
+  "status": "ready"
+}

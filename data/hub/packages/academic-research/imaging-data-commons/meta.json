@@ -1,0 +1,23 @@
+{
+  "skillId": "imaging-data-commons",
+  "skillName": "imaging-data-commons",
+  "description": "Query and download public cancer imaging data from NCI Imaging Data Commons using idc-index. Use for accessing large-scale radiology (CT, MR, PET) and pathology datasets for AI training or research. No authentication required. Query by metadata, visualize in browser, check licenses.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "query",
+    "and",
+    "download",
+    "public",
+    "cancer",
+    "imaging",
+    "data",
+    "from",
+    "nci",
+    "commons",
+    "using",
+    "idc-index"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

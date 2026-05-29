@@ -1,0 +1,23 @@
+{
+  "skillId": "scientific-slides",
+  "skillName": "scientific-slides",
+  "description": "Build slide decks and presentations for research talks. Use this for making PowerPoint slides, conference presentations, seminar talks, research presentations, thesis defense slides, or any scientific talk. Provides slide structure, design templates, timing guidance, and visual validation. Works with PowerPoint and LaTeX Beamer.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "build",
+    "slide",
+    "decks",
+    "and",
+    "presentations",
+    "for",
+    "research",
+    "talks",
+    "use",
+    "this",
+    "making",
+    "powerpoint"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

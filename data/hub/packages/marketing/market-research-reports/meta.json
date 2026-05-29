@@ -1,0 +1,23 @@
+{
+  "skillId": "market-research-reports",
+  "skillName": "market-research-reports",
+  "description": "Generate comprehensive market research reports (50+ pages) in the style of top consulting firms (McKinsey, BCG, Gartner). Features professional LaTeX formatting, extensive visual generation with scientific-schematics and generate-image, deep integration with research-lookup for data gathering, and multi-framework strategic analysis including Porter Five Forces, PESTLE, SWOT, TAM/SAM/SOM, and BCG Matrix.",
+  "group": "marketing",
+  "groupDescription": "品牌营销、内容营销、市场传播、增长叙事与活动策略。",
+  "keywords": [
+    "generate",
+    "comprehensive",
+    "market",
+    "research",
+    "reports",
+    "pages",
+    "the",
+    "style",
+    "top",
+    "consulting",
+    "firms",
+    "mckinsey"
+  ],
+  "updatedAtMs": 1780043422907.8076,
+  "status": "ready"
+}

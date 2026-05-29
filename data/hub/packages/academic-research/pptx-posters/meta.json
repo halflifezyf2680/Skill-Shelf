@@ -1,0 +1,23 @@
+{
+  "skillId": "pptx-posters",
+  "skillName": "pptx-posters",
+  "description": "Create research posters using HTML/CSS that can be exported to PDF or PPTX. Use this skill ONLY when the user explicitly requests PowerPoint/PPTX poster format. For standard research posters, use latex-posters instead. This skill provides modern web-based poster design with responsive layouts and easy visual integration.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "create",
+    "research",
+    "posters",
+    "using",
+    "html/css",
+    "that",
+    "can",
+    "exported",
+    "pdf",
+    "pptx",
+    "use",
+    "this"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

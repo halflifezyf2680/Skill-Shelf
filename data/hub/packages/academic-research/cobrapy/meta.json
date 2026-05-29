@@ -1,0 +1,23 @@
+{
+  "skillId": "cobrapy",
+  "skillName": "cobrapy",
+  "description": "Constraint-based metabolic modeling (COBRA). FBA, FVA, gene knockouts, flux sampling, SBML models, for systems biology and metabolic engineering analysis.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "constraint-based",
+    "metabolic",
+    "modeling",
+    "cobra",
+    "fba",
+    "fva",
+    "gene",
+    "knockouts",
+    "flux",
+    "sampling",
+    "sbml",
+    "models"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

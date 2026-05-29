@@ -1,0 +1,23 @@
+{
+  "skillId": "arboreto",
+  "skillName": "arboreto",
+  "description": "Infer gene regulatory networks (GRNs) from gene expression data using scalable algorithms (GRNBoost2, GENIE3). Use when analyzing transcriptomics data (bulk RNA-seq, single-cell RNA-seq) to identify transcription factor-target gene relationships and regulatory interactions. Supports distributed computation for large-scale datasets.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "infer",
+    "gene",
+    "regulatory",
+    "networks",
+    "grns",
+    "from",
+    "expression",
+    "data",
+    "using",
+    "scalable",
+    "algorithms",
+    "grnboost2"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

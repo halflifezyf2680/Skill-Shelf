@@ -1,0 +1,23 @@
+{
+  "skillId": "phylogenetics",
+  "skillName": "phylogenetics",
+  "description": "Build and analyze phylogenetic trees using MAFFT (multiple alignment), IQ-TREE 2 (maximum likelihood), and FastTree (fast NJ/ML). Visualize with ETE3 or FigTree. For evolutionary analysis, microbial genomics, viral phylodynamics, protein family analysis, and molecular clock studies.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "build",
+    "and",
+    "analyze",
+    "phylogenetic",
+    "trees",
+    "using",
+    "mafft",
+    "multiple",
+    "alignment",
+    "iq-tree",
+    "maximum",
+    "likelihood"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

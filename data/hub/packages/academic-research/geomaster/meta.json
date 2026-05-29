@@ -1,0 +1,23 @@
+{
+  "skillId": "geomaster",
+  "skillName": "geomaster",
+  "description": "Comprehensive geospatial science skill covering remote sensing, GIS, spatial analysis, machine learning for earth observation, and 30+ scientific domains. Supports satellite imagery processing (Sentinel, Landsat, MODIS, SAR, hyperspectral), vector and raster data operations, spatial statistics, point cloud processing, network analysis, cloud-native workflows (STAC, COG, Planetary Computer), and 8 programming languages (Python, R, Julia, JavaScript, C++, Java, Go, Rust) with 500+ code examples. Use for remote sensing workflows, GIS analysis, spatial ML, Earth observation data processing, terrain analysis, hydrological modeling, marine spatial analysis, atmospheric science, and any geospatial computation task.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "comprehensive",
+    "geospatial",
+    "science",
+    "skill",
+    "covering",
+    "remote",
+    "sensing",
+    "gis",
+    "spatial",
+    "analysis",
+    "machine",
+    "learning"
+  ],
+  "updatedAtMs": 1780040730815.2783,
+  "status": "ready"
+}

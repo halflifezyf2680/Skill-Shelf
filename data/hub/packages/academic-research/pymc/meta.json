@@ -1,0 +1,23 @@
+{
+  "skillId": "pymc",
+  "skillName": "pymc",
+  "description": "Bayesian modeling with PyMC. Build hierarchical models, MCMC (NUTS), variational inference, LOO/WAIC comparison, posterior checks, for probabilistic programming and inference.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "bayesian",
+    "modeling",
+    "with",
+    "pymc",
+    "build",
+    "hierarchical",
+    "models",
+    "mcmc",
+    "nuts",
+    "variational",
+    "inference",
+    "loo/waic"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "biopython",
+  "skillName": "biopython",
+  "description": "Comprehensive molecular biology toolkit. Use for sequence manipulation, file parsing (FASTA/GenBank/PDB), phylogenetics, and programmatic NCBI/PubMed access (Bio.Entrez). Best for batch processing, custom bioinformatics pipelines, BLAST automation. For quick lookups use gget; for multi-service integration use bioservices.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "comprehensive",
+    "molecular",
+    "biology",
+    "toolkit",
+    "use",
+    "for",
+    "sequence",
+    "manipulation",
+    "file",
+    "parsing",
+    "fasta/genbank/pdb",
+    "phylogenetics"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

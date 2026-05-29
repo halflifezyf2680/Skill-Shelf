@@ -1,0 +1,23 @@
+{
+  "skillId": "diffdock",
+  "skillName": "diffdock",
+  "description": "Diffusion-based molecular docking. Predict protein-ligand binding poses from PDB/SMILES, confidence scores, virtual screening, for structure-based drug design. Not for affinity prediction.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "diffusion-based",
+    "molecular",
+    "docking",
+    "predict",
+    "protein-ligand",
+    "binding",
+    "poses",
+    "from",
+    "pdb/smiles",
+    "confidence",
+    "scores",
+    "virtual"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

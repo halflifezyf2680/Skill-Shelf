@@ -1,0 +1,23 @@
+{
+  "skillId": "waapi",
+  "skillName": "waapi",
+  "description": "Web Animations API adapter patterns for HyperFrames. Use when authoring element.animate() motion, Animation currentTime seeking, document.getAnimations(), KeyframeEffect timing, fill modes, or native browser animations that must render deterministically in HyperFrames.",
+  "group": "creative-media",
+  "groupDescription": "creative-media",
+  "keywords": [
+    "web",
+    "animations",
+    "api",
+    "adapter",
+    "patterns",
+    "for",
+    "hyperframes",
+    "use",
+    "when",
+    "authoring",
+    "element.animate",
+    "motion"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

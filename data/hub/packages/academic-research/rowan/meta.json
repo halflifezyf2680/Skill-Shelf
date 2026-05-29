@@ -1,0 +1,23 @@
+{
+  "skillId": "rowan",
+  "skillName": "rowan",
+  "description": "Rowan is a cloud-native molecular modeling and medicinal-chemistry workflow platform with a Python API. Use for pKa and macropKa prediction, conformer and tautomer ensembles, docking and analogue docking, protein-ligand cofolding, MSA generation, molecular dynamics, permeability, descriptor workflows, and related small-molecule or protein modeling tasks. Ideal for programmatic batch screening, multi-step chemistry pipelines, and workflows that would otherwise require maintaining local HPC/GPU infrastructure.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "rowan",
+    "cloud-native",
+    "molecular",
+    "modeling",
+    "and",
+    "medicinal-chemistry",
+    "workflow",
+    "platform",
+    "with",
+    "python",
+    "api",
+    "use"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "release-checklist",
+  "skillName": "release-checklist",
+  "description": "Generates a comprehensive pre-release validation checklist covering build verification, certification requirements, store metadata, and launch readiness.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "generates",
+    "comprehensive",
+    "pre-release",
+    "validation",
+    "checklist",
+    "covering",
+    "build",
+    "verification",
+    "certification",
+    "requirements",
+    "store",
+    "metadata"
+  ],
+  "updatedAtMs": 1777260525916.545,
+  "status": "ready"
+}

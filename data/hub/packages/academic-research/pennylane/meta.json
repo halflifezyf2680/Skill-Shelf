@@ -1,0 +1,23 @@
+{
+  "skillId": "pennylane",
+  "skillName": "pennylane",
+  "description": "Hardware-agnostic quantum ML framework with automatic differentiation. Use when training quantum circuits via gradients, building hybrid quantum-classical models, or needing device portability across IBM/Google/Rigetti/IonQ. Best for variational algorithms (VQE, QAOA), quantum neural networks, and integration with PyTorch/JAX/TensorFlow. For hardware-specific optimizations use qiskit (IBM) or cirq (Google); for open quantum systems use qutip.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "hardware-agnostic",
+    "quantum",
+    "framework",
+    "with",
+    "automatic",
+    "differentiation",
+    "use",
+    "when",
+    "training",
+    "circuits",
+    "via",
+    "gradients"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

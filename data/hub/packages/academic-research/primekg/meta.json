@@ -1,0 +1,23 @@
+{
+  "skillId": "primekg",
+  "skillName": "primekg",
+  "description": "Query the Precision Medicine Knowledge Graph (PrimeKG) for multiscale biological data including genes, drugs, diseases, phenotypes, and more.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "query",
+    "the",
+    "precision",
+    "medicine",
+    "knowledge",
+    "graph",
+    "primekg",
+    "for",
+    "multiscale",
+    "biological",
+    "data",
+    "including"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

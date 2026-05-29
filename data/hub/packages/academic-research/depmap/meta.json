@@ -1,0 +1,23 @@
+{
+  "skillId": "depmap",
+  "skillName": "depmap",
+  "description": "Query the Cancer Dependency Map (DepMap) for cancer cell line gene dependency scores (CRISPR Chronos), drug sensitivity data, and gene effect profiles. Use for identifying cancer-specific vulnerabilities, synthetic lethal interactions, and validating oncology drug targets.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "query",
+    "the",
+    "cancer",
+    "dependency",
+    "map",
+    "depmap",
+    "for",
+    "cell",
+    "line",
+    "gene",
+    "scores",
+    "crispr"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

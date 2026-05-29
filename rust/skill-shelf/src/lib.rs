@@ -1,0 +1,11 @@
+pub mod config;
+pub mod daemon;
+pub mod ipc;
+pub mod lifecycle;
+pub mod lock;
+pub mod mcp_shim;
+pub mod model;
+pub mod parser;
+pub mod registry;
+pub mod search;
+pub mod workspace;

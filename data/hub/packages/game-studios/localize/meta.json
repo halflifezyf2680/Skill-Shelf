@@ -1,0 +1,23 @@
+{
+  "skillId": "localize",
+  "skillName": "localize",
+  "description": "Run the localization workflow: extract strings, validate localization readiness, check for hardcoded text, and generate translation-ready string tables.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "run",
+    "the",
+    "localization",
+    "workflow",
+    "extract",
+    "strings",
+    "validate",
+    "readiness",
+    "check",
+    "for",
+    "hardcoded",
+    "text"
+  ],
+  "updatedAtMs": 1777260525903.4749,
+  "status": "ready"
+}

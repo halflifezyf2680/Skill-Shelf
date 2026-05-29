@@ -1,0 +1,23 @@
+{
+  "skillId": "pufferlib",
+  "skillName": "pufferlib",
+  "description": "High-performance reinforcement learning framework optimized for speed and scale. Use when you need fast parallel training, vectorized environments, multi-agent systems, or integration with game environments (Atari, Procgen, NetHack). Achieves 2-10x speedups over standard implementations. For quick prototyping or standard algorithm implementations with extensive documentation, use stable-baselines3 instead.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "high-performance",
+    "reinforcement",
+    "learning",
+    "framework",
+    "optimized",
+    "for",
+    "speed",
+    "and",
+    "scale",
+    "use",
+    "when",
+    "you"
+  ],
+  "updatedAtMs": 1780043417869.6404,
+  "status": "ready"
+}

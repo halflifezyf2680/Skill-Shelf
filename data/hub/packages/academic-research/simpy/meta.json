@@ -1,0 +1,23 @@
+{
+  "skillId": "simpy",
+  "skillName": "simpy",
+  "description": "Process-based discrete-event simulation framework in Python. Use this skill when building simulations of systems with processes, queues, resources, and time-based events such as manufacturing systems, service operations, network traffic, logistics, or any system where entities interact with shared resources over time.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "process-based",
+    "discrete-event",
+    "simulation",
+    "framework",
+    "python",
+    "use",
+    "this",
+    "skill",
+    "when",
+    "building",
+    "simulations",
+    "systems"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

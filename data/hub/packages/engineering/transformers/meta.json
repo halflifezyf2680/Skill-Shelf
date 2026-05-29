@@ -1,0 +1,23 @@
+{
+  "skillId": "transformers",
+  "skillName": "transformers",
+  "description": "This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, classification, question answering, translation, summarization, image classification, object detection, speech recognition, and fine-tuning models on custom datasets.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "this",
+    "skill",
+    "should",
+    "used",
+    "when",
+    "working",
+    "with",
+    "pre-trained",
+    "transformer",
+    "models",
+    "for",
+    "natural"
+  ],
+  "updatedAtMs": 1780043417190.6902,
+  "status": "ready"
+}

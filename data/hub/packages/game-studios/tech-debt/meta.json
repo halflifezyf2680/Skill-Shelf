@@ -1,0 +1,23 @@
+{
+  "skillId": "tech-debt",
+  "skillName": "tech-debt",
+  "description": "Track, categorize, and prioritize technical debt across the codebase. Scans for debt indicators, maintains a debt register, and recommends repayment scheduling.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "track",
+    "categorize",
+    "and",
+    "prioritize",
+    "technical",
+    "debt",
+    "across",
+    "the",
+    "codebase",
+    "scans",
+    "for",
+    "indicators"
+  ],
+  "updatedAtMs": 1777260525938.6287,
+  "status": "ready"
+}

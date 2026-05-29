@@ -1,0 +1,23 @@
+{
+  "skillId": "gate-check",
+  "skillName": "gate-check",
+  "description": "Validate readiness to advance between development phases. Produces a PASS/CONCERNS/FAIL verdict with specific blockers and required artifacts.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "validate",
+    "readiness",
+    "advance",
+    "between",
+    "development",
+    "phases",
+    "produces",
+    "pass/concerns/fail",
+    "verdict",
+    "with",
+    "specific",
+    "blockers"
+  ],
+  "updatedAtMs": 1777260525898.447,
+  "status": "ready"
+}

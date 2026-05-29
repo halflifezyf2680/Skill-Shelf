@@ -1,0 +1,23 @@
+{
+  "skillId": "hyperframes-cli",
+  "skillName": "hyperframes-cli",
+  "description": "HyperFrames CLI dev loop — `npx hyperframes` for scaffolding (init), validation (lint, inspect), preview, render, and environment troubleshooting (doctor, browser, info, upgrade). Use when running any of these commands or troubleshooting the HyperFrames build/render environment. For asset preprocessing commands (`tts`, `transcribe`, `remove-background`), invoke the `hyperframes-media` skill instead.",
+  "group": "creative-media",
+  "groupDescription": "creative-media",
+  "keywords": [
+    "hyperframes",
+    "cli",
+    "dev",
+    "loop",
+    "npx",
+    "for",
+    "scaffolding",
+    "init",
+    "validation",
+    "lint",
+    "inspect",
+    "preview"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

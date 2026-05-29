@@ -1,0 +1,23 @@
+{
+  "skillId": "paper-lookup",
+  "skillName": "paper-lookup",
+  "description": "Search 10 academic paper databases via REST APIs for research papers, preprints, and scholarly articles. Covers PubMed, PMC (full text), bioRxiv, medRxiv, arXiv, OpenAlex, Crossref, Semantic Scholar, CORE, Unpaywall. Use when searching for papers, citations, DOI/PMID lookups, abstracts, full text, open access, preprints, citation graphs, author search, or any scholarly literature query. Triggers on mentions of any supported database or requests like \"find papers on X\" or \"look up this DOI\".",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "search",
+    "academic",
+    "paper",
+    "databases",
+    "via",
+    "rest",
+    "apis",
+    "for",
+    "research",
+    "papers",
+    "preprints",
+    "and"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

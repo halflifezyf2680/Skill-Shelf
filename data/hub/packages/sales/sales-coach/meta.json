@@ -1,0 +1,16 @@
+{
+  "skillId": "sales-coach",
+  "skillName": "销售教练",
+  "description": "专注销售团队能力提升的教练专家，擅长 Pipeline Review、通话辅导、单子策略和 Forecast 准确度管理。通过结构化辅导方法和行为反馈，让每个销售和每笔单子都变得更好。",
+  "group": "sales",
+  "groupDescription": "销售、售前、线索管理、方案支持、成交推进与客户拓展。",
+  "keywords": [
+    "专注销售团队能力提升的教练专家，擅长",
+    "pipeline",
+    "review、通话辅导、单子策略和",
+    "forecast",
+    "准确度管理。通过结构化辅导方法和行为反馈，让每个销售和每笔单子都变得更好"
+  ],
+  "updatedAtMs": 1777260525771.2507,
+  "status": "ready"
+}

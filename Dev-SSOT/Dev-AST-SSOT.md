@@ -1,0 +1,97 @@
+# Dev-AST-SSOT
+
+- ✅ Skill Shelf
+  - ✅ Skill Resource Catalog
+    - ✅ managed group catalog
+    - ✅ migrated package corpus
+    - ✅ duplicate cleanup
+    - ✅ catalog document
+  - ✅ MCP Runtime
+    - ✅ `skill-shelf mcp`
+      - ✅ stdio shim
+      - ✅ daemon discovery
+      - ✅ session registration
+      - ✅ request forwarding
+      - ✅ stdin EOF exit
+      - ✅ parent death exit
+      - ✅ MCP JSON-RPC loop
+      - ✅ tool schema contract
+    - ✅ `skill-shelf daemon`
+      - ✅ global singleton
+      - ✅ daemon state file
+      - ✅ daemon lock
+      - ✅ local IPC server
+      - ✅ framed IPC request handling
+      - ✅ workspace request routing
+      - ✅ graceful shutdown
+      - ✅ idle timeout
+    - ✅ `skill-shelf status`
+    - ✅ `skill-shelf stop`
+    - ✅ migration metadata
+      - ✅ README migration section
+      - ✅ MANUAL migration section
+      - ✅ package Rust helper scripts
+      - ✅ server metadata Rust-only recommendation
+      - ✅ Rust binary as published default MCP entry
+      - ✅ TypeScript legacy removal
+  - ✅ Shelf Workspace
+    - ✅ workspace key
+      - ✅ shelfRoot
+      - ✅ configHash
+    - ✅ registry snapshot
+    - ✅ skill watcher
+    - ✅ write queue
+    - ✅ shelf disk lock
+    - ✅ workspace unload
+  - ✅ Skill Routing
+    - ✅ `browse_shelf`
+      - ✅ group catalog
+      - ✅ group skill counts
+      - ✅ tool description group exposure
+    - ✅ `list_group_skills`
+      - ✅ group skill summaries
+      - ✅ optional query filter
+    - ✅ `search_skills`
+    - ✅ `read_skill`
+      - ✅ summary mode
+      - ✅ full mode
+    - ✅ `get_shelf_status`
+  - ✅ Skill Governance
+    - ✅ `install_skills`
+      - ✅ full tool contract
+      - ✅ package directory install
+      - ✅ raw markdown install
+      - ✅ managed group validation
+      - ✅ classification hint
+      - ✅ needs classification fallback
+      - ✅ overwrite and rebuild
+      - ✅ daemon dispatch
+    - ✅ `validate_skills`
+      - ✅ full tool contract
+      - ✅ missing skill file
+      - ✅ invalid frontmatter
+      - ✅ duplicate skill name
+      - ✅ generic group review
+      - ✅ daemon dispatch
+    - ✅ `manage_group`
+      - ✅ full tool contract
+      - ✅ create
+      - ✅ update
+      - ✅ rename
+      - ✅ delete empty custom group
+      - ✅ daemon dispatch
+  - ✅ Persistence
+    - ✅ package storage
+    - ✅ group catalog
+    - ✅ skill metadata
+    - ✅ group index
+    - ✅ skill index
+    - ✅ atomic writes
+  - ✅ Process Lifecycle
+    - ✅ multi-session reuse
+    - ✅ stale state cleanup
+    - ✅ daemon crash recovery
+    - ✅ shim orphan cleanup
+      - ✅ shutdown poller
+      - ✅ MCP loop integration
+    - ✅ workspace write serialization

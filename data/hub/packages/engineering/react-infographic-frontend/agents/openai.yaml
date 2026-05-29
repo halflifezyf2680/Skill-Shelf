@@ -1,0 +1,4 @@
+interface:
+  display_name: "React Infographic Frontend"
+  short_description: "Interactive React infographic sites."
+  default_prompt: "Create an interactive React infographic website from my content brief."

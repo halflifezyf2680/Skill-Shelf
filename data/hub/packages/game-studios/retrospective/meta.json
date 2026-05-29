@@ -1,0 +1,23 @@
+{
+  "skillId": "retrospective",
+  "skillName": "retrospective",
+  "description": "Generates a sprint or milestone retrospective by analyzing completed work, velocity, blockers, and patterns. Produces actionable insights for the next iteration.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "generates",
+    "sprint",
+    "milestone",
+    "retrospective",
+    "analyzing",
+    "completed",
+    "work",
+    "velocity",
+    "blockers",
+    "and",
+    "patterns",
+    "produces"
+  ],
+  "updatedAtMs": 1777260525918.0498,
+  "status": "ready"
+}

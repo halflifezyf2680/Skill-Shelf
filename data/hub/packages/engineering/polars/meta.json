@@ -1,0 +1,23 @@
+{
+  "skillId": "polars",
+  "skillName": "polars",
+  "description": "Fast in-memory DataFrame library for datasets that fit in RAM. Use when pandas is too slow but data still fits in memory. Lazy evaluation, parallel execution, Apache Arrow backend. Best for 1-100GB datasets, ETL pipelines, faster pandas replacement. For larger-than-RAM data use dask or vaex.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "fast",
+    "in-memory",
+    "dataframe",
+    "library",
+    "for",
+    "datasets",
+    "that",
+    "fit",
+    "ram",
+    "use",
+    "when",
+    "pandas"
+  ],
+  "updatedAtMs": 1780043416045.633,
+  "status": "ready"
+}

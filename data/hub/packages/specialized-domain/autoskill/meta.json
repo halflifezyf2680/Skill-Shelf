@@ -1,0 +1,23 @@
+{
+  "skillId": "autoskill",
+  "skillName": "autoskill",
+  "description": "Observe the user's screen via screenpipe, detect repeated research workflows, match them against existing scientific-agent-skills, and draft new skills (or composition recipes that chain existing ones) for the patterns not yet covered. Use when the user asks to analyze their recent work and propose skills based on what they actually do. Requires the screenpipe daemon (https://github.com/screenpipe/screenpipe) running locally on port 3030 — the skill has no other data source and will refuse to run if screenpipe is unreachable. All detection runs locally; only redacted cluster summaries reach the LLM.",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "observe",
+    "the",
+    "user's",
+    "screen",
+    "via",
+    "screenpipe",
+    "detect",
+    "repeated",
+    "research",
+    "workflows",
+    "match",
+    "them"
+  ],
+  "updatedAtMs": 1780043419519.9868,
+  "status": "ready"
+}

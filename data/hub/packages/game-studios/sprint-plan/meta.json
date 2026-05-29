@@ -1,0 +1,23 @@
+{
+  "skillId": "sprint-plan",
+  "skillName": "sprint-plan",
+  "description": "Generates a new sprint plan or updates an existing one based on the current milestone, completed work, and available capacity. Pulls context from production documents and design backlogs.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "generates",
+    "new",
+    "sprint",
+    "plan",
+    "updates",
+    "existing",
+    "one",
+    "based",
+    "the",
+    "current",
+    "milestone",
+    "completed"
+  ],
+  "updatedAtMs": 1777260525924.5957,
+  "status": "ready"
+}

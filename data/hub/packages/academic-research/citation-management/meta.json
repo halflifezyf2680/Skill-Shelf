@@ -1,0 +1,23 @@
+{
+  "skillId": "citation-management",
+  "skillName": "citation-management",
+  "description": "Comprehensive citation management for academic research. Search Google Scholar and PubMed for papers, extract accurate metadata, validate citations, and generate properly formatted BibTeX entries. This skill should be used when you need to find papers, verify citation information, convert DOIs to BibTeX, or ensure reference accuracy in scientific writing.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "comprehensive",
+    "citation",
+    "management",
+    "for",
+    "academic",
+    "research",
+    "search",
+    "google",
+    "scholar",
+    "and",
+    "pubmed",
+    "papers"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

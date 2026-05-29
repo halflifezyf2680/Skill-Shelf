@@ -1,69 +1,97 @@
-# Skill Hub
+# Skill Shelf
 
-**用 14 个工具的固定开销，按需访问 200+ 个专业技能，而不需要把任何 skill 正文常驻上下文。**
+**上千个专业技能，只占 context 9 个工具定义。**
 
-传统做法：每个 skill 作为本地 skill 加载 → description 全量驻留 context → 200 个 skill = 数万 tokens 白白浪费，且每次对话都背着它们跑。
+给 AI agent 装 skill，最痛的问题是：skill 越多，context 越胖。每个 skill 的 description 常驻上下文，几百个 skill 就是几万 tokens 白白浪费，每次对话都背着跑。开多个客户端还各跑各的进程，内存翻倍。
 
-Skill Hub 的做法：skill 全部存放在本地包仓库，context 里只有 14 个轻量工具定义。LLM 需要某个专业能力时，通过路由按需加载。不需要的时候，零开销。
+Skill Shelf 的解法：skill 全部存本地仓库，context 里只有 9 个工具定义。需要时搜索加载，不需要时零开销。Rust 单例 daemon，一个进程服务所有 MCP 客户端——Claude Code、Codex、Cursor、Windsurf 同时开也只有一个后台进程。
+
+不只是用内置的几百个 skill 和 group。工作中积累的经验、踩过的坑、反复用的工作流，都可以整理成 skill 入库——一份 Markdown 文件就是一个 skill。内置的 18 个组不够用就自己建，`manage_group` 创建自定义分组，`install_skills` 批量入库。把自己团队的 know-how 变成可复用的 skill 库。
+
+## 架构
+
+```
+Claude Code (stdio shim) ─┐
+Claude Desktop (stdio)    ├─→ Rust daemon (单进程, 单端口) → 本地 skill 仓库
+Cursor / Windsurf / ...  ─┘
+```
+
+- **单进程**: 整个仓库只有一个 Rust daemon 在跑，不会因为开多个客户端就跑出几十个 Node 进程
+- **stdio shim**: 每个 MCP 客户端启动一个极轻量的 shim 进程（只做 stdin↔IPC 转发），真正的业务逻辑全在 daemon 里
+- **共享状态**: 所有客户端共享同一个 skill 索引和缓存，热重载一次全局生效
+- **workspace 隔离**: 不同 `SKILL_SHELF_ROOT` 的配置各自独立，互不干扰
 
 ## 路由协议
 
 ```
-search_skills(query)
+browse_shelf()                ← Level 1: group catalog（name + description + count）
   │
-  ├─ 命中了 → 返回匹配的 groups（带 groupDescription + skillNames + directMatch）
+  ├─ 选定 group → list_group_skills(group) → skill summaries
   │
-  └─ 没命中 → 空结果
+  ├─ 选定 skill → read_skill(skill) → 默认返回 summary
+  │                  └─ 需要全文 → read_skill(skill, full=true)
+  │
+  └─ 组路由不足时 → search_skills(query) 作为兜底
        │
        ▼
-  list_skill_groups()
-       │
-       ▼
-  LLM 阅读所有 groupDescription，选定最相关的 group
-       │
-       ▼
-  list_group_skills(group)
-       │
-       ▼
-  LLM 看 skill 名称，选定目标
-       │
-       ▼
-  read_skill(skill) → 加载完整 skill 正文
+search_skills(query)          ← fallback: 直接按关键字兜底定位
 ```
 
-search_skills 是辅助过滤，不是必须入口。搜不到就去 list_skill_groups 看所有组描述，这是标准路径。
+先看组，再看组内 skill，最后才用 search_skills 兜底。
 
-### search_skills 搜索机制
+### 语言策略
 
-纯 token 匹配，不评分不排序。对每个 group，检查 query token 是否命中：
-- group 的 `groupDescription` 中的词
-- 该 group 内任何 skill 的 `skillName`
+搜索会先用用户语言尝试，没结果时再换英文重试。skill 作者无需为每个 skill 写多语言 description。
 
-命中则返回该 group（带组内所有 skill 名称列表）。语义判断由 LLM 完成，不由算法代劳。
+### 中文搜索
 
-### directMatch
+`search_skills` 支持两种输入方式：
 
-当 query 精确匹配某个 skill 的 `skillName` 或 `skillId` 时，搜索结果会额外附带 `directMatch`，包含 skill 的 `description`。LLM 可以在搜索结果内直接评估是否对路，防止盲目跳步。
+1. **空格分词（推荐）**：`品牌 视觉 设计`
+2. **连续输入（兜底）**：`品牌设计视觉` — 自动切分为 CJK bigram，匹配精度略低于手动分词
+
+## 工具清单（9 个）
+
+### 只读
+
+| 工具 | 用途 |
+|------|------|
+| `browse_shelf` | 查看 group catalog（name + description + count） |
+| `list_group_skills` | 查看某个 group 内的 skill summaries |
+| `search_skills` | 兜底搜索全部 skill，返回 top N 匹配结果 |
+| `read_skill` | 默认读取 skill summary；`full=true` 时读取完整正文、资源、参考文件 |
+| `validate_skills` | 校验所有 skill 的完整性和重复情况 |
+| `get_shelf_status` | 查看索引和文件监听状态 |
+
+### 写操作
+
+| 工具 | 用途 |
+|------|------|
+| `install_skills` | 从目录安装 skill 包（支持新建和 LLM 辅助分组） |
+| `manage_group` | 创建/更新/删除存储组（mode: create/update/delete） |
+| `reclassify_skill` | 将 skill 移至新的组（更新 frontmatter + 移动目录 + 重建索引） |
+
+## 组体系
+
+18 个内置组：
+
+`engineering` · `design` · `product` · `project-management` · `marketing` · `paid-media` · `sales` · `finance` · `legal-compliance` · `hr-talent` · `support-operations` · `supply-chain` · `academic-research` · `testing-qa` · `spatial-gaming` · `specialized-domain` · `game-studios` · `creative-media`
+
+安装 skill 时，如果 SKILL.md frontmatter 未指定 `group`，工具会返回 skill 描述和可用组列表，由 LLM 选择最合适的组。
 
 ## 存储结构
 
 ```
 data/hub/
-  config/groups.json           # 组目录（16 个内置组 + 自定义组）
-  packages/{skill-id}/SKILL.md    # skill 正文（必须）
-  packages/{skill-id}/meta.json   # 自动生成的元数据
-  packages/{skill-id}/references/    # 可选参考文件
-  packages/{skill-id}/assets/        # 可选资源文件
-  staging/imports/            # 待审查的导入候选（运行时）
-  staging/repaired/           # 已修复的候选（运行时）
-  index/                       # 索引文件（运行时自动维护）
-  logs/                        # 运行时日志
-```
-
-可通过环境变量覆盖根目录：
-
-```bash
-SKILL_HUB_ROOT=/your/custom/path
+  config/groups.json              # 组定义（18 个内置组 + 自定义组）
+  packages/{group}/{skill-id}/
+    SKILL.md                      # skill 正文（必须）
+    meta.json                     # 自动生成的元数据
+    references/                   # 可选参考文件
+    scripts/                      # 可选辅助脚本
+    assets/                       # 可选资源文件
+  staging/imports/                # 待审查的导入候选
+  index/                          # 索引文件（运行时自动维护）
 ```
 
 ## Skill 包格式
@@ -74,6 +102,7 @@ SKILL_HUB_ROOT=/your/custom/path
 ---
 name: my-skill
 description: 这个 skill 做什么
+group: engineering
 ---
 
 # My Skill
@@ -81,101 +110,61 @@ description: 这个 skill 做什么
 Skill 正文内容...
 ```
 
-`name` 和 `description` 是必填的 frontmatter 字段，用于搜索索引和组分类。
-
-## 工具清单
-
-### 路由（只读）
-
-| 工具 | 用途 |
-|------|------|
-| `search_skills` | 按关键词搜索 group（同时匹配组描述和 skill 名称） |
-| `list_skill_groups` | 列出所有组及描述 |
-| `list_group_skills` | 列出组内所有 skill 名称和关键词 |
-| `read_skill` | 读取 skill 完整正文、资源、参考文件 |
-| `validate_skills` | 校验所有 skill 的完整性和重复情况 |
-| `get_hub_status` | 查看索引和文件监听状态 |
-
-### 导入审查
-
-| 工具 | 用途 |
-|------|------|
-| `list_import_candidates` | 列出待审查的导入候选 |
-| `read_import_candidate` | 查看候选详情 |
-| `write_repaired_import` | 提交修复后的候选 |
-
-### 写操作
-
-| 工具 | 用途 |
-|------|------|
-| `install_skills` | 从目录批量安装 skill 包 |
-| `create_skill` | 创建新 skill |
-| `create_group` | 创建新组 |
-| `update_group` | 更新组定义 |
-| `delete_group` | 删除空组 |
-
-## 组体系
-
-内置 16 个组，覆盖主要专业领域：
-
-`engineering` · `design` · `product` · `project-management` · `marketing` · `paid-media` · `sales` · `finance` · `legal-compliance` · `hr-talent` · `support-operations` · `supply-chain` · `academic-research` · `testing-qa` · `spatial-gaming` · `specialized-domain`
-
-skill 在索引时按关键词加权匹配自动分配到最相关的组。无法匹配任何组的 skill 归入 `specialized-domain`。
+`name` 和 `description` 是必填 frontmatter 字段。`group` 可选，不填时由 LLM 在安装时分类。
 
 ## 热重载
 
-启动时自动监听 `packages/` 目录变更，新增、修改、删除 skill 后索引自动更新，无需重启。
+daemon 启动时自动监听 `packages/` 目录变更，新增、修改、删除 skill 后索引自动更新，无需重启。
 
 ## 安装
 
 ```bash
-git clone https://github.com/halflifezyf2680/skill-hub.git
-cd skill-hub
+git clone https://github.com/halflifezyf2680/Skill-Shelf.git
+cd Skill-Shelf
 npm install
+npm run rust:build
 ```
 
-## 配置 MCP Server
+## 配置
 
-### Claude Code
-
-在 `~/.claude.json` 的 `mcpServers` 中添加：
+在任意 MCP 客户端的配置中添加：
 
 ```json
 {
   "mcpServers": {
-    "skill-hub": {
-      "command": "npm",
-      "args": ["run", "skill-hub"],
-      "cwd": "/your/path/to/skill-hub"
+    "skill-shelf": {
+      "command": "skill-shelf",
+      "args": ["mcp"],
+      "cwd": "/your/path/to/Skill-Shelf"
     }
   }
 }
 ```
 
-### Claude Desktop
+支持 Claude Code（`~/.claude.json`）、Claude Desktop（`claude_desktop_config.json`）、Cursor、Windsurf 等所有 MCP 兼容客户端。每个客户端各自启动一个 stdio shim，共享同一个 daemon 进程。
 
-在 Claude Desktop 的 `claude_desktop_config.json` 中添加：
+## CLI 命令
 
-```json
-{
-  "mcpServers": {
-    "skill-hub": {
-      "command": "npm",
-      "args": ["run", "skill-hub"],
-      "cwd": "/your/path/to/skill-hub"
-    }
-  }
-}
+```bash
+skill-shelf mcp      # 启动 stdio shim（MCP 客户端调用）
+skill-shelf daemon    # 启动/连接 daemon
+skill-shelf status    # 查看 daemon 状态
+skill-shelf stop      # 停止 daemon
 ```
-
-> `cwd` 替换为你实际的 skill-hub 目录路径。配置完成后重启客户端即可。
 
 ## 环境变量
 
 | 变量 | 默认值 | 说明 |
 |------|--------|------|
-| `SKILL_HUB_ROOT` | `<package>/data/hub` | 数据根目录 |
-| `SKILL_ROUTER_SEARCH_LIMIT` | `8` | search_skills 默认返回上限 |
-| `SKILL_ROUTER_MAX_KEYWORDS` | `12` | 每个 skill 自动提取的最大关键词数 |
-| `SKILL_ROUTER_MAX_RELATED_SKILLS` | `5` | read_skill 返回的最大关联 skill 数 |
-| `SKILL_ROUTER_WATCH` | `1` | 是否启用文件监听 |
+| `SKILL_SHELF_ROOT` | `<package>/data/hub` | 数据根目录 |
+| `SKILL_SHELF_SEARCH_LIMIT` | `8` | search_skills 默认返回上限 |
+| `SKILL_SHELF_MAX_RELATED_SKILLS` | `5` | read_skill 返回的最大关联 skill 数 |
+| `SKILL_SHELF_WATCH` | `1` | 是否启用文件监听 |
+
+## 致谢
+
+部分 Skill 内容来源于以下开源项目：
+
+- [agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh)（MIT License）— 211 个中文 AI 专家智能体
+- [awesome-design-md](https://github.com/VoltAgent/awesome-design-md)（MIT License）— 品牌设计系统 markdown 文件
+- [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)（MIT License）— 139 个科学研究技能（生物信息、药物发现、量子计算等）

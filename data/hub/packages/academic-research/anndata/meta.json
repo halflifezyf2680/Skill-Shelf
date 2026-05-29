@@ -1,0 +1,23 @@
+{
+  "skillId": "anndata",
+  "skillName": "anndata",
+  "description": "Data structure for annotated matrices in single-cell analysis. Use when working with .h5ad files or integrating with the scverse ecosystem. This is the data format skill—for analysis workflows use scanpy; for probabilistic models use scvi-tools; for population-scale queries use cellxgene-census.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "data",
+    "structure",
+    "for",
+    "annotated",
+    "matrices",
+    "single-cell",
+    "analysis",
+    "use",
+    "when",
+    "working",
+    "with",
+    "h5ad"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "scientific-critical-thinking",
+  "skillName": "scientific-critical-thinking",
+  "description": "Evaluate scientific claims and evidence quality. Use for assessing experimental design validity, identifying biases and confounders, applying evidence grading frameworks (GRADE, Cochrane Risk of Bias), or teaching critical analysis. Best for understanding evidence quality, identifying flaws. For formal peer review writing use peer-review.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "evaluate",
+    "scientific",
+    "claims",
+    "and",
+    "evidence",
+    "quality",
+    "use",
+    "for",
+    "assessing",
+    "experimental",
+    "design",
+    "validity"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

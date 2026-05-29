@@ -1,0 +1,23 @@
+{
+  "skillId": "playtest-report",
+  "skillName": "playtest-report",
+  "description": "Generates a structured playtest report template or analyzes existing playtest notes into a structured format. Use this to standardize playtest feedback collection and analysis.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "generates",
+    "structured",
+    "playtest",
+    "report",
+    "template",
+    "analyzes",
+    "existing",
+    "notes",
+    "into",
+    "format",
+    "use",
+    "this"
+  ],
+  "updatedAtMs": 1777260525912.546,
+  "status": "ready"
+}

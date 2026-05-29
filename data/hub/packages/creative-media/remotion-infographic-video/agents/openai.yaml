@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remotion Infographic Video"
+  short_description: "Animated Remotion infographic videos."
+  default_prompt: "Create a Remotion technical infographic video from my content brief."

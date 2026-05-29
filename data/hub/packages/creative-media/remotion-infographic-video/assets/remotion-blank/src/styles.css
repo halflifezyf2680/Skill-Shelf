@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.scene {
+  display: grid;
+  place-items: center;
+  background: #f7f3ea;
+  color: #141414;
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "pymoo",
+  "skillName": "pymoo",
+  "description": "Multi-objective optimization framework. NSGA-II, NSGA-III, MOEA/D, Pareto fronts, constraint handling, benchmarks (ZDT, DTLZ), for engineering design and optimization problems.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "multi-objective",
+    "optimization",
+    "framework",
+    "nsga-ii",
+    "nsga-iii",
+    "moea/d",
+    "pareto",
+    "fronts",
+    "constraint",
+    "handling",
+    "benchmarks",
+    "zdt"
+  ],
+  "updatedAtMs": 1780043419143.009,
+  "status": "ready"
+}

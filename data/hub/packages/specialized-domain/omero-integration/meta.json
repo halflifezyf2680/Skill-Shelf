@@ -1,0 +1,23 @@
+{
+  "skillId": "omero-integration",
+  "skillName": "omero-integration",
+  "description": "Microscopy data management platform. Access images via Python, retrieve datasets, analyze pixels, manage ROIs/annotations, batch processing, for high-content screening and microscopy workflows.",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "microscopy",
+    "data",
+    "management",
+    "platform",
+    "access",
+    "images",
+    "via",
+    "python",
+    "retrieve",
+    "datasets",
+    "analyze",
+    "pixels"
+  ],
+  "updatedAtMs": 1780043421198.4358,
+  "status": "ready"
+}

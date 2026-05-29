@@ -1,0 +1,23 @@
+{
+  "skillId": "timesfm-forecasting",
+  "skillName": "timesfm-forecasting",
+  "description": "Zero-shot time series forecasting with Google's TimesFM foundation model. Use for any univariate time series (sales, sensors, energy, vitals, weather) without training a custom model. Supports CSV/DataFrame/array inputs with point forecasts and prediction intervals. Includes a preflight system checker script to verify RAM/GPU before first use.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "zero-shot",
+    "time",
+    "series",
+    "forecasting",
+    "with",
+    "google's",
+    "timesfm",
+    "foundation",
+    "model",
+    "use",
+    "for",
+    "any"
+  ],
+  "updatedAtMs": 1780043419304.4546,
+  "status": "ready"
+}

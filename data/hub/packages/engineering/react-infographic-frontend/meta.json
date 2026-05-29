@@ -1,0 +1,23 @@
+{
+  "skillId": "react-infographic-frontend",
+  "skillName": "react-infographic-frontend",
+  "description": "Build interactive technical infographic websites with React. Use when Codex needs to create or iterate on Vite or React frontends for architecture explainers, product method pages, interactive diagrams, evidence filters, timelines, dashboards, or motion-infographic style web pages. Includes a Vite infographic template and responsive layout guidance.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "build",
+    "interactive",
+    "technical",
+    "infographic",
+    "websites",
+    "with",
+    "react",
+    "use",
+    "when",
+    "codex",
+    "needs",
+    "create"
+  ],
+  "updatedAtMs": 1780040701998.0107,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "team-combat",
+  "skillName": "team-combat",
+  "description": "Orchestrate the combat team: coordinates game-designer, gameplay-programmer, ai-programmer, technical-artist, sound-designer, and qa-tester to design, implement, and validate a combat feature end-to-end.",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "orchestrate",
+    "the",
+    "combat",
+    "team",
+    "coordinates",
+    "game-designer",
+    "gameplay-programmer",
+    "ai-programmer",
+    "technical-artist",
+    "sound-designer",
+    "and",
+    "qa-tester"
+  ],
+  "updatedAtMs": 1777260525929.609,
+  "status": "ready"
+}

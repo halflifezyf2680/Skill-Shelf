@@ -1,0 +1,23 @@
+{
+  "skillId": "cellxgene-census",
+  "skillName": "cellxgene-census",
+  "description": "Query the CELLxGENE Census (61M+ cells) programmatically. Use when you need expression data across tissues, diseases, or cell types from the largest curated single-cell atlas. Best for population-scale queries, reference atlas comparisons. For analyzing your own data use scanpy or scvi-tools.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "query",
+    "the",
+    "cellxgene",
+    "census",
+    "61m",
+    "cells",
+    "programmatically",
+    "use",
+    "when",
+    "you",
+    "need",
+    "expression"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

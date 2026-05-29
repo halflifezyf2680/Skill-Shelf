@@ -1,0 +1,23 @@
+{
+  "skillId": "peer-review",
+  "skillName": "peer-review",
+  "description": "Structured manuscript/grant review with checklist-based evaluation. Use when writing formal peer reviews with specific criteria methodology assessment, statistical validity, reporting standards compliance (CONSORT/STROBE), and constructive feedback. Best for actual review writing, manuscript revision. For evaluating claims/evidence quality use scientific-critical-thinking; for quantitative scoring frameworks use scholar-evaluation.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "structured",
+    "manuscript/grant",
+    "review",
+    "with",
+    "checklist-based",
+    "evaluation",
+    "use",
+    "when",
+    "writing",
+    "formal",
+    "peer",
+    "reviews"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

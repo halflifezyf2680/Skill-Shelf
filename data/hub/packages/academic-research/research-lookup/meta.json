@@ -1,0 +1,23 @@
+{
+  "skillId": "research-lookup",
+  "skillName": "research-lookup",
+  "description": "Look up current research information using parallel-cli search (primary, fast web search), the Parallel Chat API (deep research), or Perplexity sonar-pro-search (academic paper searches). Automatically routes queries to the best backend. Use for finding papers, gathering research data, and verifying scientific information. Note: query text is transmitted to api.parallel.ai (PARALLEL_API_KEY) and, for academic searches, to openrouter.ai (OPENROUTER_API_KEY).",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "look",
+    "current",
+    "research",
+    "information",
+    "using",
+    "parallel-cli",
+    "search",
+    "primary",
+    "fast",
+    "web",
+    "the",
+    "parallel"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

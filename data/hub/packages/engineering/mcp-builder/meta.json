@@ -1,0 +1,23 @@
+{
+  "skillId": "mcp-builder",
+  "skillName": "mcp-builder",
+  "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "guide",
+    "for",
+    "creating",
+    "high-quality",
+    "mcp",
+    "model",
+    "context",
+    "protocol",
+    "servers",
+    "that",
+    "enable",
+    "llms"
+  ],
+  "updatedAtMs": 1774433697682.6023,
+  "status": "ready"
+}

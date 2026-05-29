@@ -1,0 +1,23 @@
+{
+  "skillId": "animejs",
+  "skillName": "animejs",
+  "description": "Anime.js adapter patterns for HyperFrames. Use when writing Anime.js animations or timelines inside HyperFrames compositions, registering animations on window.__hfAnime, making Anime.js seek-driven and deterministic, or translating Anime.js examples into render-safe HyperFrames HTML.",
+  "group": "creative-media",
+  "groupDescription": "creative-media",
+  "keywords": [
+    "anime.js",
+    "adapter",
+    "patterns",
+    "for",
+    "hyperframes",
+    "use",
+    "when",
+    "writing",
+    "animations",
+    "timelines",
+    "inside",
+    "compositions"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

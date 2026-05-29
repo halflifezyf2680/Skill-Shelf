@@ -1,0 +1,23 @@
+{
+  "skillId": "hypogenic",
+  "skillName": "hypogenic",
+  "description": "Automated LLM-driven hypothesis generation and testing on tabular datasets. Use when you want to systematically explore hypotheses about patterns in empirical data (e.g., deception detection, content analysis). Combines literature insights with data-driven hypothesis testing. For manual hypothesis formulation use hypothesis-generation; for creative ideation use scientific-brainstorming.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "automated",
+    "llm-driven",
+    "hypothesis",
+    "generation",
+    "and",
+    "testing",
+    "tabular",
+    "datasets",
+    "use",
+    "when",
+    "you",
+    "want"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

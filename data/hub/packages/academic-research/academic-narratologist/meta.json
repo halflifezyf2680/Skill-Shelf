@@ -1,0 +1,12 @@
+{
+  "skillId": "academic-narratologist",
+  "skillName": "叙事学家",
+  "description": "叙事理论、故事结构、人物弧线和文学分析专家——基于从普罗普到坎贝尔再到现代叙事学的成熟框架提供建议",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "叙事理论、故事结构、人物弧线和文学分析专家——基于从普罗普到坎贝尔再到现代叙事学的成熟框架提供建议"
+  ],
+  "updatedAtMs": 1777260525554.0825,
+  "status": "ready"
+}

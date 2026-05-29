@@ -1,0 +1,23 @@
+{
+  "skillId": "scientific-brainstorming",
+  "skillName": "scientific-brainstorming",
+  "description": "Creative research ideation and exploration. Use for open-ended brainstorming sessions, exploring interdisciplinary connections, challenging assumptions, or identifying research gaps. Best for early-stage research planning when you do not have specific observations yet. For formulating testable hypotheses from data use hypothesis-generation.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "creative",
+    "research",
+    "ideation",
+    "and",
+    "exploration",
+    "use",
+    "for",
+    "open-ended",
+    "brainstorming",
+    "sessions",
+    "exploring",
+    "interdisciplinary"
+  ],
+  "updatedAtMs": 1779385161000,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "frontend-page-fix-orchestrator",
+  "skillName": "frontend-page-fix-orchestrator",
+  "description": "Orchestrate diagnosis and repair of problematic frontend pages by deciding whether the real issue is layout geometry, responsive behavior, information architecture, or a combination. Use when the user gives a screenshot or page and says you yourself judge the problem, this page looks weird, analyze before fixing, or wants the agent to choose the right workflow before changing code.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "orchestrate",
+    "diagnosis",
+    "and",
+    "repair",
+    "problematic",
+    "frontend",
+    "pages",
+    "deciding",
+    "whether",
+    "the",
+    "real",
+    "issue"
+  ],
+  "updatedAtMs": 1777296457219.1738,
+  "status": "ready"
+}
