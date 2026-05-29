@@ -3,7 +3,7 @@
   "skillName": "gsap",
   "description": "GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions.",
   "group": "creative-media",
-  "groupDescription": "creative-media",
+  "groupDescription": "艺术设计、视频制作、动画创作、媒体内容生产与视觉表达。",
   "keywords": [
     "gsap",
     "animation",
@@ -18,6 +18,6 @@
     "stagger",
     "defaults"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1779385161000.0,
   "status": "ready"
 }

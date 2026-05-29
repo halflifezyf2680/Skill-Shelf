@@ -51,47 +51,31 @@ fn build_tools() -> Vec<ToolDefinition> {
         },
         input_schema: json!({
             "type": "object",
-            "properties": {},
-            "additionalProperties": false
-        }),
-        },
-        ToolDefinition {
-            name: "list_group_skills",
-            description: "Step 2 of the skill-shelf routing protocol. After browse_shelf identifies a promising group, use this tool to inspect the skills inside that group before falling back to search_skills. Returns only skill summaries, not full SKILL.md content.".to_string(),
-        annotations: ToolAnnotations {
-            read_only_hint: true,
-            destructive_hint: false,
-            open_world_hint: false,
-            idempotent_hint: true,
-        },
-        input_schema: json!({
-            "type": "object",
             "properties": {
                 "group": {
                     "type": "string",
                     "minLength": 1,
-                    "description": "Group id to inspect."
+                    "description": "Optional group id. When provided, returns skills inside that group instead of the group catalog."
                 },
                 "query": {
                     "type": "string",
                     "minLength": 1,
-                    "description": "Optional filter within the selected group."
+                    "description": "Optional filter within the selected group (only used when group is set)."
                 },
                 "limit": {
                     "type": "integer",
                     "minimum": 1,
                     "maximum": 50,
                     "default": 20,
-                    "description": "Maximum number of skill summaries to return."
+                    "description": "Maximum number of skill summaries to return (only used when group is set)."
                 }
             },
-            "required": ["group"],
             "additionalProperties": false
         }),
         },
         ToolDefinition {
             name: "search_skills",
-            description: "Step 3 of the skill-shelf routing protocol. Search all skills by query when browse_shelf and list_group_skills do not fully narrow the target. Returns top matches ranked by relevance. IMPORTANT: Always try the user's language first. If no relevant results found, retry with English keywords. For CJK queries, separate words with spaces (e.g. '品牌 视觉 设计', NOT '品牌设计视觉').".to_string(),
+            description: "Step 2 of the skill-shelf routing protocol. Search all skills by query when browse_shelf does not fully narrow the target. Returns top matches ranked by relevance. IMPORTANT: Always try the user's language first. If no relevant results found, retry with English keywords. For CJK queries, separate words with spaces (e.g. '品牌 视觉 设计', NOT '品牌设计视觉').".to_string(),
         annotations: ToolAnnotations {
             read_only_hint: true,
             destructive_hint: false,
@@ -120,7 +104,7 @@ fn build_tools() -> Vec<ToolDefinition> {
         },
         ToolDefinition {
             name: "read_skill",
-            description: "Step 4 of the skill-shelf routing protocol. Read a skill after browse_shelf, list_group_skills, or search_skills has identified the target skill by name or skill id. Returns a 80-line summary by default; pass full=true to load the complete body. Avoid reading multiple full skills unless one is clearly insufficient.".to_string(),
+            description: "Step 3 of the skill-shelf routing protocol. Read a skill after browse_shelf or search_skills has identified the target skill by name or skill id. Returns a 80-line summary by default; pass full=true to load the complete body. Avoid reading multiple full skills unless one is clearly insufficient.".to_string(),
         annotations: ToolAnnotations {
             read_only_hint: true,
             destructive_hint: false,
@@ -133,7 +117,7 @@ fn build_tools() -> Vec<ToolDefinition> {
                 "skill": {
                     "type": "string",
                     "minLength": 1,
-                    "description": "Skill name or skill id returned by browse_shelf, list_group_skills, or search_skills."
+                    "description": "Skill name or skill id returned by browse_shelf or search_skills."
                 },
                 "full": {
                     "type": "boolean",
@@ -174,12 +158,12 @@ fn build_tools() -> Vec<ToolDefinition> {
         },
         ToolDefinition {
             name: "validate_skills",
-            description: "Read-only governance tool. Validate installed skills for missing SKILL.md, invalid frontmatter, duplicate names, and generic-group review cases. Use this before group cleanup or import promotion.".to_string(),
+            description: "Governance tool. Validate installed skills for missing SKILL.md, invalid frontmatter, duplicate names, and generic-group review cases. Pass clean=true to automatically delete skills with blocked severity (missing files, broken frontmatter).".to_string(),
         annotations: ToolAnnotations {
-            read_only_hint: true,
-            destructive_hint: false,
+            read_only_hint: false,
+            destructive_hint: true,
             open_world_hint: false,
-            idempotent_hint: true,
+            idempotent_hint: false,
         },
         input_schema: json!({
             "type": "object",
@@ -187,6 +171,11 @@ fn build_tools() -> Vec<ToolDefinition> {
                 "skill": {
                     "type": "string",
                     "description": "Optional skill id or skill name. When omitted, validate the whole shelf."
+                },
+                "clean": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "When true, automatically delete skills with blocked severity issues."
                 }
             },
             "additionalProperties": false
@@ -264,34 +253,17 @@ fn build_tools() -> Vec<ToolDefinition> {
             "additionalProperties": false
         }),
         },
-        ToolDefinition {
-            name: "get_shelf_status",
-            description: "Return shelf counts, index freshness, watcher status.".to_string(),
-        annotations: ToolAnnotations {
-            read_only_hint: true,
-            destructive_hint: false,
-            open_world_hint: false,
-            idempotent_hint: true,
-        },
-        input_schema: json!({
-            "type": "object",
-            "properties": {},
-            "additionalProperties": false
-        }),
-        },
     ]
 }
 
-const TOOL_NAMES: [&str; 9] = [
+const TOOL_NAMES: [&str; 7] = [
     "browse_shelf",
-    "list_group_skills",
     "search_skills",
     "read_skill",
     "install_skills",
     "validate_skills",
     "manage_group",
     "reclassify_skill",
-    "get_shelf_status",
 ];
 
 pub fn tools() -> &'static [ToolDefinition] {
@@ -313,7 +285,7 @@ fn build_browse_shelf_description() -> String {
 
 fn build_browse_shelf_description_for_layout(layout: &SkillShelfStorageLayout) -> String {
     let mut lines = vec![
-        "Entry point to discover available skill groups. Call this first to see what domains the shelf covers, then use list_group_skills or search_skills.",
+        "Entry point to discover available skill groups. Call this first to see what domains the shelf covers, then drill into a group or use search_skills.",
         "",
         "CURRENT SHELF CATALOG:",
     ]

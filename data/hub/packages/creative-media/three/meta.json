@@ -3,7 +3,7 @@
   "skillName": "three",
   "description": "Three.js and WebGL adapter patterns for HyperFrames. Use when creating deterministic Three.js scenes, WebGL canvas layers, AnimationMixer timelines, camera motion, shader-driven visuals, or canvas renders that respond to HyperFrames hf-seek events.",
   "group": "creative-media",
-  "groupDescription": "creative-media",
+  "groupDescription": "艺术设计、视频制作、动画创作、媒体内容生产与视觉表达。",
   "keywords": [
     "three.js",
     "and",
@@ -18,6 +18,6 @@
     "deterministic",
     "scenes"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1779385161000.0,
   "status": "ready"
 }

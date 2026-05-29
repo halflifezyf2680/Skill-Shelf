@@ -3,7 +3,7 @@
   "skillName": "remotion-infographic-video",
   "description": "Build animated technical infographic videos with Remotion. Use when Codex needs to create or iterate on Remotion-based explainer videos, architecture videos, methodology videos, narrated technical videos, motion infographic scenes, audio-timed compositions, or still-frame checks for video scenes. Includes blank and infographic Remotion templates plus validation guidance.",
   "group": "creative-media",
-  "groupDescription": "creative-media",
+  "groupDescription": "艺术设计、视频制作、动画创作、媒体内容生产与视觉表达。",
   "keywords": [
     "build",
     "animated",
@@ -18,6 +18,6 @@
     "needs",
     "create"
   ],
-  "updatedAtMs": 1780040701960.7195,
+  "updatedAtMs": 1780040701960.7192,
   "status": "ready"
 }

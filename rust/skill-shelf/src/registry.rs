@@ -12,10 +12,10 @@ use crate::config::{
 };
 use crate::model::{
     GroupCreateResult, GroupDeleteResult, GroupListItem, GroupSkillIndexEntry, GroupSkillsResult,
-    GroupUpdateResult, ManagedGroupRecord, ReclassifyResult, RegistryIssue, SkillInstallEntry,
-    SkillInstallFailure, SkillInstallResult, SkillInstallSkipped, SkillMeta,
-    SkillNeedsClassification, SkillRecord, SkillValidationIssue, SkillValidationPassed,
-    SkillValidationResult,
+    GroupUpdateResult, ManagedGroupRecord, ReclassifyResult, RegistryIssue, SkillCleanEntry,
+    SkillCleanResult, SkillInstallEntry, SkillInstallFailure, SkillInstallResult,
+    SkillInstallSkipped, SkillMeta, SkillNeedsClassification, SkillRecord, SkillValidationIssue,
+    SkillValidationPassed, SkillValidationResult,
 };
 use crate::parser::parse_skill_file;
 
@@ -380,6 +380,50 @@ impl SkillRegistry {
             review_required,
             blocked,
             issues,
+        })
+    }
+
+    pub fn validate_and_clean(&mut self, skill: Option<&str>) -> Result<SkillCleanResult> {
+        let validation = self.validate_skills(skill)?;
+        let blocked_ids: Vec<String> = validation
+            .blocked
+            .iter()
+            .filter_map(|issue| issue.skill_id.clone())
+            .collect();
+
+        let mut deleted = Vec::new();
+        for skill_id in &blocked_ids {
+            if let Some(record) = self.skill_records.get(skill_id).cloned() {
+                let skill_dir = Path::new(&record.skill_path)
+                    .parent()
+                    .ok_or_else(|| anyhow!("skill path has no parent: {}", record.skill_path))?;
+                let issue = validation
+                    .blocked
+                    .iter()
+                    .find(|i| i.skill_id.as_deref() == Some(skill_id.as_str()));
+                if skill_dir.exists() {
+                    fs::remove_dir_all(skill_dir).with_context(|| {
+                        format!("failed to remove {}", skill_dir.display())
+                    })?;
+                }
+                deleted.push(SkillCleanEntry {
+                    skill_id: skill_id.clone(),
+                    path: record.skill_path.clone(),
+                    code: issue
+                        .map(|i| i.code.clone())
+                        .unwrap_or_default(),
+                    message: issue
+                        .map(|i| i.message.clone())
+                        .unwrap_or_default(),
+                });
+            }
+        }
+
+        self.rebuild()?;
+
+        Ok(SkillCleanResult {
+            remaining: validation.review_required,
+            deleted,
         })
     }
 

@@ -53,72 +53,82 @@ impl DaemonState {
 
         match request.method.as_str() {
             "browse_shelf" => {
-                let result = self
-                    .with_registry_read(&workspace, runtime_config.as_ref(), |registry| {
-                        let groups = registry
-                            .list_groups()
-                            .into_iter()
-                            .map(|group| {
-                                let group_skills =
-                                    registry
-                                        .list_group_skills(&group.group, None)
-                                        .ok_or_else(|| anyhow!("unknown group: {}", group.group))?;
-                                Ok(json!({
-                                    "group": group_skills.group,
-                                    "description": group_skills.group_description,
-                                    "skillCount": group_skills.skills.len(),
-                                }))
-                            })
-                            .collect::<Result<Vec<_>>>()?;
-                        Ok(json!({
-                            "totalSkills": registry.size(),
-                            "groups": groups,
-                        }))
-                    })
-                    .await?;
-                Ok(DaemonResponse::tool_result(result))
-            }
-            "list_group_skills" => {
-                let group = request
+                let group_param = request
                     .params
                     .get("group")
                     .and_then(Value::as_str)
-                    .ok_or_else(|| anyhow!("list_group_skills requires string group"))?;
-                let query = request
-                    .params
-                    .get("query")
-                    .and_then(Value::as_str)
                     .map(str::to_string);
-                let limit = request
-                    .params
-                    .get("limit")
-                    .and_then(Value::as_u64)
-                    .unwrap_or(20) as usize;
-                let result = self
-                    .with_registry_read(&workspace, runtime_config.as_ref(), move |registry| {
-                        let group_result = registry
-                            .list_group_skills(group, query.as_deref())
-                            .ok_or_else(|| anyhow!("unknown group: {group}"))?;
-                        let skills = group_result
-                            .skills
-                            .into_iter()
-                            .take(limit)
-                            .map(|skill| {
-                                json!({
-                                    "skillId": skill.skill_id,
-                                    "skillName": skill.skill_name,
-                                    "description": skill.description,
+                if let Some(group) = group_param {
+                    let query = request
+                        .params
+                        .get("query")
+                        .and_then(Value::as_str)
+                        .map(str::to_string);
+                    let limit = request
+                        .params
+                        .get("limit")
+                        .and_then(Value::as_u64)
+                        .unwrap_or(20) as usize;
+                    let result = self
+                        .with_registry_read(&workspace, runtime_config.as_ref(), move |registry| {
+                            let group_result = registry
+                                .list_group_skills(&group, query.as_deref())
+                                .ok_or_else(|| anyhow!("unknown group: {group}"))?;
+                            let skills = group_result
+                                .skills
+                                .into_iter()
+                                .take(limit)
+                                .map(|skill| {
+                                    json!({
+                                        "skillId": skill.skill_id,
+                                        "skillName": skill.skill_name,
+                                        "description": skill.description,
+                                    })
                                 })
-                            })
-                            .collect::<Vec<_>>();
-                        Ok(json!({
-                            "group": group_result.group,
-                            "description": group_result.group_description,
-                            "skills": skills,
-                        }))
-                    })
-                    .await?;
-                Ok(DaemonResponse::tool_result(result))
+                                .collect::<Vec<_>>();
+                            Ok(json!({
+                                "group": group_result.group,
+                                "description": group_result.group_description,
+                                "skills": skills,
+                            }))
+                        })
+                        .await?;
+                    Ok(DaemonResponse::tool_result(result))
+                } else {
+                    self.ensure_snapshot_loaded(&workspace, runtime_config.as_ref())
+                        .await?;
+                    workspace.mark_used();
+                    let state = workspace.read_state();
+                    let watcher_status = workspace.watcher_status();
+                    let result = self
+                        .with_registry_read(&workspace, runtime_config.as_ref(), |registry| {
+                            let groups = registry
+                                .list_groups()
+                                .into_iter()
+                                .map(|group| {
+                                    let group_skills =
+                                        registry
+                                            .list_group_skills(&group.group, None)
+                                            .ok_or_else(|| anyhow!("unknown group: {}", group.group))?;
+                                    Ok(json!({
+                                        "group": group_skills.group,
+                                        "description": group_skills.group_description,
+                                        "skillCount": group_skills.skills.len(),
+                                    }))
+                                })
+                                .collect::<Result<Vec<_>>>()?;
+                            Ok(json!({
+                                "totalSkills": registry.size(),
+                                "groupsCount": state.groups_count,
+                                "groups": groups,
+                                "indexUpdatedAt": state.index_updated_at,
+                                "watcherStatus": watcher_status,
+                                "issueCount": state.issue_count,
+                            }))
+                        })
+                        .await?;
+                    Ok(DaemonResponse::tool_result(result))
+                }
             }
             "search_skills" => {
                 self.ensure_snapshot_loaded(&workspace, runtime_config.as_ref())
@@ -188,19 +198,33 @@ impl DaemonState {
                 Ok(DaemonResponse::tool_result(serde_json::to_value(result)?))
             }
             "validate_skills" => {
-                self.ensure_snapshot_loaded(&workspace, runtime_config.as_ref())
-                    .await?;
                 let skill = request
                     .params
                     .get("skill")
                     .and_then(Value::as_str)
                     .map(str::to_string);
-                let result = self
-                    .with_registry_read(&workspace, runtime_config.as_ref(), move |registry| {
-                        registry.validate_skills(skill.as_deref())
-                    })
-                    .await?;
-                Ok(DaemonResponse::tool_result(serde_json::to_value(result)?))
+                let clean = request
+                    .params
+                    .get("clean")
+                    .and_then(Value::as_bool)
+                    .unwrap_or(false);
+                if clean {
+                    let result = self
+                        .with_registry_write(&workspace, runtime_config.as_ref(), move |registry| {
+                            registry.validate_and_clean(skill.as_deref())
+                        })
+                        .await?;
+                    Ok(DaemonResponse::tool_result(serde_json::to_value(result)?))
+                } else {
+                    self.ensure_snapshot_loaded(&workspace, runtime_config.as_ref())
+                        .await?;
+                    let result = self
+                        .with_registry_read(&workspace, runtime_config.as_ref(), move |registry| {
+                            registry.validate_skills(skill.as_deref())
+                        })
+                        .await?;
+                    Ok(DaemonResponse::tool_result(serde_json::to_value(result)?))
+                }
             }
             "manage_group" => {
                 let mode = request
@@ -259,21 +283,6 @@ impl DaemonState {
                     })
                     .await?;
                 Ok(DaemonResponse::tool_result(result))
-            }
-            "get_shelf_status" => {
-                self.ensure_snapshot_loaded(&workspace, runtime_config.as_ref())
-                    .await?;
-                workspace.mark_used();
-                let state = workspace.read_state();
-                let watcher_status = workspace.watcher_status();
-                Ok(DaemonResponse::tool_result(json!({
-                    "groupsCount": state.groups_count,
-                    "skillsCount": state.skills_count,
-                    "importCount": state.import_count,
-                    "indexUpdatedAt": state.index_updated_at,
-                    "watcherStatus": watcher_status,
-                    "issueCount": state.issue_count,
-                })))
             }
             "reclassify_skill" => {
                 let skill = request

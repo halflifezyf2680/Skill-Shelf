@@ -226,3 +226,19 @@ pub struct ReclassifyResult {
     pub status: String,
     pub message: String,
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
+pub struct SkillCleanEntry {
+    pub skill_id: String,
+    pub path: String,
+    pub code: String,
+    pub message: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
+pub struct SkillCleanResult {
+    pub deleted: Vec<SkillCleanEntry>,
+    pub remaining: Vec<SkillValidationIssue>,
+}

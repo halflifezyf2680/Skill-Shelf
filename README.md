@@ -1,10 +1,12 @@
 # Skill Shelf
 
-**上千个专业技能，只占 context 9 个工具定义。**
+**上千个专业技能，只占 context 7 个工具定义。**
 
-给 AI agent 装 skill，最痛的问题是：skill 越多，context 越胖。每个 skill 的 description 常驻上下文，几百个 skill 就是几万 tokens 白白浪费，每次对话都背着跑。开多个客户端还各跑各的进程，内存翻倍。
+给 AI agent 装 skill，最痛的问题是：skill 越多，context 越胖。每个 skill 的 description 常驻上下文，几百个 skill 就是几万 tokens 白白浪费，每次对话都背着跑。开多个客户端还各跑各的进程，内存翻倍。更烦的是，装了一堆 skill 自己都记不住哪个是干嘛的、哪些真的好用哪些是花架子，最后还是全靠人去翻文档。
 
-Skill Shelf 的解法：skill 全部存本地仓库，context 里只有 9 个工具定义。需要时搜索加载，不需要时零开销。Rust 单例 daemon，一个进程服务所有 MCP 客户端——Claude Code、Codex、Cursor、Windsurf 同时开也只有一个后台进程。
+Skill Shelf 连这个问题一起解决了：LLM 看见 MCP 工具就会自己去查、自己去用。你不需要记住每个 skill 的内容，也不需要判断什么时候该用——LLM 遇到合适的场景自己会去搜索和加载。
+
+Skill Shelf 的解法：skill 全部存本地仓库，context 里只有 7 个工具定义。需要时搜索加载，不需要时零开销。Rust 单例 daemon，一个进程服务所有 MCP 客户端——Claude Code、Codex、Cursor、Windsurf 同时开也只有一个后台进程。
 
 不只是用内置的几百个 skill 和 group。工作中积累的经验、踩过的坑、反复用的工作流，都可以整理成 skill 入库——一份 Markdown 文件就是一个 skill。内置的 18 个组不够用就自己建，`manage_group` 创建自定义分组，`install_skills` 批量入库。把自己团队的 know-how 变成可复用的 skill 库。
 
@@ -50,24 +52,22 @@ search_skills(query)          ← fallback: 直接按关键字兜底定位
 1. **空格分词（推荐）**：`品牌 视觉 设计`
 2. **连续输入（兜底）**：`品牌设计视觉` — 自动切分为 CJK bigram，匹配精度略低于手动分词
 
-## 工具清单（9 个）
+## 工具清单（7 个）
 
 ### 只读
 
 | 工具 | 用途 |
 |------|------|
-| `browse_shelf` | 查看 group catalog（name + description + count） |
-| `list_group_skills` | 查看某个 group 内的 skill summaries |
+| `browse_shelf` | 不传参返回 group catalog + 状态信息；传 `group` 返回组内 skill summaries |
 | `search_skills` | 兜底搜索全部 skill，返回 top N 匹配结果 |
 | `read_skill` | 默认读取 skill summary；`full=true` 时读取完整正文、资源、参考文件 |
-| `validate_skills` | 校验所有 skill 的完整性和重复情况 |
-| `get_shelf_status` | 查看索引和文件监听状态 |
 
 ### 写操作
 
 | 工具 | 用途 |
 |------|------|
 | `install_skills` | 从目录安装 skill 包（支持新建和 LLM 辅助分组） |
+| `validate_skills` | 校验完整性；`clean=true` 时自动删除有问题的 skill |
 | `manage_group` | 创建/更新/删除存储组（mode: create/update/delete） |
 | `reclassify_skill` | 将 skill 移至新的组（更新 frontmatter + 移动目录 + 重建索引） |
 
