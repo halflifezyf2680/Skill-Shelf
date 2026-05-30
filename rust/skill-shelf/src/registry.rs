@@ -96,6 +96,52 @@ impl SkillRegistry {
         Ok(())
     }
 
+    pub fn load_from_cache(&mut self) -> Result<bool> {
+        let group_list_path = &self.layout.group_list_path;
+        if !group_list_path.exists() {
+            return Ok(false);
+        }
+
+        self.managed_groups = load_managed_groups(&self.layout)?;
+        self.skill_records.clear();
+        self.group_list.clear();
+        self.group_skills.clear();
+        self.issues.clear();
+
+        let groups: Vec<GroupListItem> = fs::read_to_string(group_list_path)
+            .ok()
+            .and_then(|raw| serde_json::from_str(&raw).ok())
+            .unwrap_or_default();
+
+        for group in &groups {
+            self.group_list
+                .insert(group.group.clone(), group.clone());
+
+            let group_path = self.layout.groups_root.join(format!("{}.json", group.group));
+            if let Ok(raw) = fs::read_to_string(&group_path) {
+                if let Ok(payload) = serde_json::from_str::<GroupSkillsResult>(&raw) {
+                    self.group_skills
+                        .insert(group.group.clone(), payload.skills);
+                }
+            }
+        }
+
+        if self.layout.skills_root.exists() {
+            if let Ok(entries) = fs::read_dir(&self.layout.skills_root) {
+                for entry in entries.flatten() {
+                    let path = entry.path();
+                    if let Ok(raw) = fs::read_to_string(&path) {
+                        if let Ok(record) = serde_json::from_str::<SkillRecord>(&raw) {
+                            self.skill_records.insert(record.skill_id.clone(), record);
+                        }
+                    }
+                }
+            }
+        }
+
+        Ok(!self.skill_records.is_empty())
+    }
+
     pub fn size(&self) -> usize {
         self.skill_records.len()
     }

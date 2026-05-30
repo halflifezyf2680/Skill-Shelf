@@ -549,7 +549,9 @@ fn build_workspace_snapshot(
         runtime_config.install_policy.clone(),
         runtime_config.index_policy.clone(),
     );
-    registry.rebuild()?;
+    if !registry.load_from_cache()? {
+        registry.rebuild()?;
+    }
     let records = registry.list_skill_records();
     let read_models = build_read_models(
         &registry,
