@@ -9,6 +9,7 @@
   - ✅ MCP Runtime
     - ✅ `skill-shelf mcp`
       - ✅ stdio shim
+      - ✅ package-relative default shelf root
       - ✅ daemon discovery
       - ✅ session registration
       - ✅ request forwarding

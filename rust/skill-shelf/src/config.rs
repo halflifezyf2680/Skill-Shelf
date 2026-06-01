@@ -157,10 +157,32 @@ pub fn resolve_storage_layout(shelf_root: impl AsRef<Path>) -> SkillShelfStorage
 }
 
 fn default_shelf_root() -> PathBuf {
+    if let Some(root) = package_relative_shelf_root() {
+        return root;
+    }
+
     std::env::current_dir()
         .unwrap_or_else(|_| PathBuf::from("."))
         .join("data")
         .join("hub")
+}
+
+fn package_relative_shelf_root() -> Option<PathBuf> {
+    let current_exe = std::env::current_exe().ok()?;
+    package_relative_shelf_root_from(&current_exe)
+}
+
+fn package_relative_shelf_root_from(exe_path: &Path) -> Option<PathBuf> {
+    for ancestor in exe_path.ancestors() {
+        let candidate = ancestor.join("data").join("hub");
+        if candidate.join("config").join("groups.json").exists()
+            || candidate.join("packages").is_dir()
+        {
+            return Some(candidate);
+        }
+    }
+
+    None
 }
 
 fn lookup_path<F>(lookup: &mut F, name: &str) -> Option<PathBuf>
@@ -195,4 +217,37 @@ where
     lookup(name)
         .and_then(|value| value.to_string_lossy().parse::<u64>().ok())
         .unwrap_or(default)
+}
+
+#[cfg(test)]
+mod tests {
+    use std::fs;
+
+    use super::package_relative_shelf_root_from;
+
+    #[test]
+    fn package_relative_shelf_root_is_resolved_from_binary_location() {
+        let temp = tempfile::tempdir().unwrap();
+        let package_root = temp.path().join("skill-shelf-package");
+        let exe_path = package_root
+            .join("rust")
+            .join("skill-shelf")
+            .join("target")
+            .join("release")
+            .join(if cfg!(windows) {
+                "skill-shelf.exe"
+            } else {
+                "skill-shelf"
+            });
+        let shelf_root = package_root.join("data").join("hub");
+
+        fs::create_dir_all(exe_path.parent().unwrap()).unwrap();
+        fs::create_dir_all(shelf_root.join("config")).unwrap();
+        fs::write(shelf_root.join("config").join("groups.json"), "[]").unwrap();
+
+        assert_eq!(
+            package_relative_shelf_root_from(&exe_path).unwrap(),
+            shelf_root
+        );
+    }
 }

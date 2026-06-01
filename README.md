@@ -10,6 +10,125 @@ Skill Shelf 的解法：skill 全部存本地仓库，context 里只有 7 个工
 
 不只是用内置的几百个 skill 和 group。工作中积累的经验、踩过的坑、反复用的工作流，都可以整理成 skill 入库——一份 Markdown 文件就是一个 skill。内置的 18 个组不够用就自己建，`manage_group` 创建自定义分组，`install_skills` 批量入库。把自己团队的 know-how 变成可复用的 skill 库。
 
+## 安装
+
+### 从 npm 使用（推荐）
+
+MCP 客户端里直接用 `npx` 启动即可，不需要手动 clone 仓库：
+
+```json
+{
+  "mcpServers": {
+    "skill-shelf": {
+      "command": "npx",
+      "args": ["-y", "skill-shelf", "mcp"]
+    }
+  }
+}
+```
+
+首次调用时 stdio shim 会自动拉起 Rust daemon。多个 MCP 客户端会共享同一个 daemon，不需要分别管理后台进程。
+
+### 从源码开发
+
+```bash
+git clone https://github.com/halflifezyf2680/Skill-Shelf.git
+cd Skill-Shelf
+npm install
+npm run rust:build
+```
+
+本地开发时有两种接法：
+
+```json
+{
+  "mcpServers": {
+    "skill-shelf": {
+      "command": "node",
+      "args": ["D:/AI_Project/Skill-Shelf/bin/skill-shelf.js", "mcp"]
+    }
+  }
+}
+```
+
+或者先 `npm link`，再使用 npm bin：
+
+```bash
+npm link
+```
+
+```json
+{
+  "mcpServers": {
+    "skill-shelf": {
+      "command": "skill-shelf",
+      "args": ["mcp"],
+      "cwd": "/your/path/to/Skill-Shelf"
+    }
+  }
+}
+```
+
+支持 Claude Code（`~/.claude.json`）、Claude Desktop（`claude_desktop_config.json`）、Cursor、Windsurf 等所有 MCP 兼容客户端。每个客户端各自启动一个 stdio shim，共享同一个 daemon 进程。
+
+## 使用
+
+配置完成后，在 MCP 客户端里先调用：
+
+```text
+browse_shelf()
+```
+
+正常结果应包含：
+
+```json
+{
+  "groupsCount": 18,
+  "totalSkills": 393,
+  "watcherStatus": {
+    "running": true
+  }
+}
+```
+
+常用流程：
+
+```text
+browse_shelf()
+  → 看到 group catalog
+  → browse_shelf(group="marketing", limit=10)
+  → read_skill(skill="微信公众号运营")
+```
+
+如果不知道该进哪个组，直接搜索：
+
+```text
+search_skills(query="运营 用户 增长 活动 社群 内容 数据", limit=10)
+```
+
+安装自己的 skill 包：
+
+```text
+install_skills(sourcePath="/path/to/my-skills")
+validate_skills()
+```
+
+如果你希望把 skill 库放到包目录以外的位置，设置 `SKILL_SHELF_ROOT`。例如：
+
+```json
+{
+  "mcpServers": {
+    "skill-shelf": {
+      "command": "npx",
+      "args": ["-y", "skill-shelf", "mcp"],
+      "env": {
+        "SKILL_SHELF_ROOT": "D:/SkillShelf/hub"
+      }
+    }
+  }
+}
+```
+
 ## 架构
 
 ```
@@ -28,7 +147,7 @@ Cursor / Windsurf / ...  ─┘
 ```
 browse_shelf()                ← Level 1: group catalog（name + description + count）
   │
-  ├─ 选定 group → list_group_skills(group) → skill summaries
+  ├─ 选定 group → browse_shelf(group="engineering") → skill summaries
   │
   ├─ 选定 skill → read_skill(skill) → 默认返回 summary
   │                  └─ 需要全文 → read_skill(skill, full=true)
@@ -115,33 +234,6 @@ Skill 正文内容...
 ## 热重载
 
 daemon 启动时自动监听 `packages/` 目录变更，新增、修改、删除 skill 后索引自动更新，无需重启。
-
-## 安装
-
-```bash
-git clone https://github.com/halflifezyf2680/Skill-Shelf.git
-cd Skill-Shelf
-npm install
-npm run rust:build
-```
-
-## 配置
-
-在任意 MCP 客户端的配置中添加：
-
-```json
-{
-  "mcpServers": {
-    "skill-shelf": {
-      "command": "skill-shelf",
-      "args": ["mcp"],
-      "cwd": "/your/path/to/Skill-Shelf"
-    }
-  }
-}
-```
-
-支持 Claude Code（`~/.claude.json`）、Claude Desktop（`claude_desktop_config.json`）、Cursor、Windsurf 等所有 MCP 兼容客户端。每个客户端各自启动一个 stdio shim，共享同一个 daemon 进程。
 
 ## CLI 命令
 
