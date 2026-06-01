@@ -12,24 +12,7 @@ Skill Shelf 的解法：skill 全部存本地仓库，context 里只有 7 个工
 
 ## 安装
 
-### 从 npm 使用（推荐）
-
-MCP 客户端里直接用 `npx` 启动即可，不需要手动 clone 仓库：
-
-```json
-{
-  "mcpServers": {
-    "skill-shelf": {
-      "command": "npx",
-      "args": ["-y", "skill-shelf", "mcp"]
-    }
-  }
-}
-```
-
-首次调用时 stdio shim 会自动拉起 Rust daemon。多个 MCP 客户端会共享同一个 daemon，不需要分别管理后台进程。
-
-### 从源码开发
+### 从源码使用
 
 ```bash
 git clone https://github.com/halflifezyf2680/Skill-Shelf.git
@@ -38,7 +21,7 @@ npm install
 npm run rust:build
 ```
 
-本地开发时有两种接法：
+MCP 客户端配置：
 
 ```json
 {
@@ -51,7 +34,7 @@ npm run rust:build
 }
 ```
 
-或者先 `npm link`，再使用 npm bin：
+也可以先 `npm link`，再使用 npm bin：
 
 ```bash
 npm link
@@ -70,6 +53,8 @@ npm link
 ```
 
 支持 Claude Code（`~/.claude.json`）、Claude Desktop（`claude_desktop_config.json`）、Cursor、Windsurf 等所有 MCP 兼容客户端。每个客户端各自启动一个 stdio shim，共享同一个 daemon 进程。
+
+首次调用时 stdio shim 会自动拉起 Rust daemon。多个 MCP 客户端会共享同一个 daemon，不需要分别管理后台进程。
 
 ## 使用
 
@@ -119,8 +104,8 @@ validate_skills()
 {
   "mcpServers": {
     "skill-shelf": {
-      "command": "npx",
-      "args": ["-y", "skill-shelf", "mcp"],
+      "command": "node",
+      "args": ["D:/AI_Project/Skill-Shelf/bin/skill-shelf.js", "mcp"],
       "env": {
         "SKILL_SHELF_ROOT": "D:/SkillShelf/hub"
       }

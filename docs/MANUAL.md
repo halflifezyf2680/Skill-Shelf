@@ -18,24 +18,7 @@ Skill Shelf 是一个本地 MCP 服务器，注册一组轻量工具到 LLM 的 
 
 ## 2. 安装与接入
 
-### 2.1 从 npm 使用
-
-MCP 客户端推荐直接通过 `npx` 启动：
-
-```json
-{
-  "mcpServers": {
-    "skill-shelf": {
-      "command": "npx",
-      "args": ["-y", "skill-shelf", "mcp"]
-    }
-  }
-}
-```
-
-首次工具调用会自动拉起 Rust daemon。多个客户端会共享同一个 daemon。
-
-### 2.2 从源码开发
+### 2.1 从源码使用
 
 ```bash
 git clone https://github.com/halflifezyf2680/Skill-Shelf.git
@@ -44,7 +27,7 @@ npm install
 npm run rust:build
 ```
 
-本地开发时可以直接指向仓库里的 npm wrapper：
+MCP 客户端可以直接指向仓库里的 npm wrapper：
 
 ```json
 {
@@ -70,7 +53,9 @@ npm run rust:build
 }
 ```
 
-### 2.3 验证
+首次工具调用会自动拉起 Rust daemon。多个客户端会共享同一个 daemon。
+
+### 2.2 验证
 
 配置完成后先调用：
 
@@ -93,7 +78,7 @@ browse_shelf()
 如果返回 `groupsCount: 0` / `totalSkills: 0`，优先检查：
 
 - 是否设置了错误的 `SKILL_SHELF_ROOT`
-- npm 包或源码仓库内是否存在 `data/hub/packages`
+- 源码仓库内是否存在 `data/hub/packages`
 - 本地开发时是否已经执行 `npm run rust:build`
 
 ## 3. 路由流程
