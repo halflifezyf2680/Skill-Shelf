@@ -3,7 +3,7 @@
   "name": "io.github.halflifezyf2680/skill-shelf",
   "title": "Skill Shelf (Rust singleton daemon)",
   "description": "Progressive group routing for 393 professional skills via Rust daemon stdio shim.",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "repository": {
     "url": "https://github.com/halflifezyf2680/skill-shelf",
     "source": "github",
