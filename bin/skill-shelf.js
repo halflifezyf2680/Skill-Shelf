@@ -14,7 +14,7 @@ if (rustBinaryPath) {
 } else {
   process.stderr.write(
     'skill-shelf: Rust binary not found for the requested command.\n' +
-      'Build it with `npm run rust:build` before running skill-shelf.\n',
+      'Install a platform release package or build it with `npm run rust:build` before running skill-shelf.\n',
   );
   process.exit(1);
 }
@@ -22,6 +22,7 @@ if (rustBinaryPath) {
 function resolveRustBinary() {
   const binaryName = process.platform === 'win32' ? 'skill-shelf.exe' : 'skill-shelf';
   const candidates = [
+    join(__dirname, binaryName),
     join(packageRoot, 'rust', 'skill-shelf', 'target', 'release', binaryName),
     join(packageRoot, 'rust', 'skill-shelf', 'target', 'debug', binaryName),
   ];

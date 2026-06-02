@@ -2,8 +2,8 @@
   "skillId": "what-if-oracle",
   "skillName": "what-if-oracle",
   "description": "Run structured What-If scenario analysis with multi-branch possibility exploration. Use this skill when the user asks speculative questions like \"what if...\", \"what would happen if...\", \"what are the possibilities\", \"explore scenarios\", \"scenario analysis\", \"possibility space\", \"what could go wrong\", \"best case / worst case\", \"risk analysis\", \"contingency planning\", \"strategic options\", or any question about uncertain futures. Also trigger when the user faces a fork-in-the-road decision, wants to stress-test an idea, or needs to think through consequences before committing.",
-  "group": "academic-research",
-  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
     "run",
     "structured",
@@ -18,6 +18,6 @@
     "this",
     "skill"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1780393511971.5557,
   "status": "ready"
 }

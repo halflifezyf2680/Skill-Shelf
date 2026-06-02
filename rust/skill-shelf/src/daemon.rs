@@ -321,13 +321,14 @@ impl DaemonState {
         let workspace_for_update = Arc::clone(workspace);
         workspace
             .with_write(|| async move {
-                if workspace_for_update.read_state().loaded
-                    && !workspace_for_update.poll_watcher_dirty()
-                {
+                let state = workspace_for_update.read_state();
+                let loaded = state.loaded;
+                let dirty = workspace_for_update.poll_watcher_dirty();
+                if loaded && !dirty {
                     return Ok(());
                 }
 
-                let snapshot = build_workspace_snapshot(&shelf_root, runtime_config)?;
+                let snapshot = build_workspace_snapshot(&shelf_root, runtime_config, !dirty)?;
                 workspace_for_update.replace_state(snapshot);
                 workspace_for_update.mark_watcher_clean();
                 Ok(())
@@ -376,7 +377,7 @@ impl DaemonState {
                 );
                 registry.rebuild()?;
                 let result = operation(&mut registry)?;
-                let snapshot = build_workspace_snapshot(&shelf_root, runtime_config)?;
+                let snapshot = build_workspace_snapshot(&shelf_root, runtime_config, false)?;
                 workspace_for_update.replace_state(snapshot);
                 workspace_for_update.mark_watcher_clean();
                 Ok(result)
@@ -542,6 +543,7 @@ fn string_array_param(params: &Value, key: &str) -> Option<Vec<String>> {
 fn build_workspace_snapshot(
     shelf_root: &Path,
     runtime_config: &SkillShelfRuntimeConfig,
+    allow_cache: bool,
 ) -> Result<WorkspaceSnapshot> {
     let layout = resolve_storage_layout(shelf_root);
     let mut registry = SkillRegistry::with_policies(
@@ -549,15 +551,28 @@ fn build_workspace_snapshot(
         runtime_config.install_policy.clone(),
         runtime_config.index_policy.clone(),
     );
-    if !registry.load_from_cache()? {
+    if !allow_cache || !registry.load_from_cache()? {
         registry.rebuild()?;
     }
-    let records = registry.list_skill_records();
+    let mut records = registry.list_skill_records();
     let read_models = build_read_models(
         &registry,
         &records,
         runtime_config.index_policy.max_related_skills,
-    )?;
+    )
+    .or_else(|error| {
+        if !allow_cache {
+            return Err(error);
+        }
+
+        registry.rebuild()?;
+        records = registry.list_skill_records();
+        build_read_models(
+            &registry,
+            &records,
+            runtime_config.index_policy.max_related_skills,
+        )
+    })?;
 
     Ok(WorkspaceSnapshot {
         loaded: true,

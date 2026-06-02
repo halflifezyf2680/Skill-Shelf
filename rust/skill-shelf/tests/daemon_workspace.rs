@@ -303,7 +303,7 @@ async fn daemon_read_dispatch_refreshes_snapshot_after_package_tree_delete() {
             "session-a",
             shelf,
             "cfg-1",
-            "get_shelf_status",
+            "browse_shelf",
             json!({}),
         ))
         .await
@@ -318,7 +318,7 @@ async fn daemon_read_dispatch_refreshes_snapshot_after_package_tree_delete() {
     let DaemonResponse::ToolResult {
         structured_content: status_content,
     } = status;
-    assert_eq!(status_content["skillsCount"], 0);
+    assert_eq!(status_content["totalSkills"], 0);
     assert_eq!(status_content["groupsCount"], 1);
     assert_eq!(status_content["watcherStatus"]["running"], true);
     assert!(status_content["watcherStatus"]["lastEventAtMs"].is_number());
@@ -370,7 +370,7 @@ async fn daemon_refreshes_workspace_snapshot_when_watcher_detects_skill_change()
             "session-a",
             shelf,
             "cfg-a",
-            "get_shelf_status",
+            "browse_shelf",
             json!({}),
         ))
         .await
@@ -422,7 +422,7 @@ description: broken
             "session-a",
             shelf,
             "cfg-1",
-            "get_shelf_status",
+            "browse_shelf",
             json!({}),
         ))
         .await
@@ -437,7 +437,7 @@ description: broken
     let DaemonResponse::ToolResult {
         structured_content: status_content,
     } = status;
-    assert_eq!(status_content["skillsCount"], 2);
+    assert_eq!(status_content["totalSkills"], 2);
     assert_eq!(status_content["issueCount"], 1);
 }
 
@@ -484,7 +484,7 @@ async fn daemon_browse_list_and_read_skill_support_progressive_disclosure() {
             "session-a",
             shelf.clone(),
             "cfg-1",
-            "list_group_skills",
+            "browse_shelf",
             json!({
                 "group": "engineering",
                 "limit": 1
@@ -671,7 +671,7 @@ async fn daemon_dispatch_and_session_lifecycle_keep_idle_cleanup_working() {
             "session-a",
             shelf.clone(),
             "cfg-1",
-            "get_shelf_status",
+            "browse_shelf",
             json!({}),
         ))
         .await

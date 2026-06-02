@@ -34,6 +34,8 @@
       - ✅ package Rust helper scripts
       - ✅ server metadata Rust-only recommendation
       - ✅ Rust binary as published default MCP entry
+      - ✅ GitHub Actions release packaging
+      - ✅ platform release binary discovery
       - ✅ TypeScript legacy removal
   - ✅ Shelf Workspace
     - ✅ workspace key
@@ -41,6 +43,7 @@
       - ✅ configHash
     - ✅ registry snapshot
     - ✅ skill watcher
+    - ✅ stale cache refresh
     - ✅ write queue
     - ✅ shelf disk lock
     - ✅ workspace unload

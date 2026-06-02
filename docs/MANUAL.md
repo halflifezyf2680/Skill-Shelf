@@ -18,7 +18,35 @@ Skill Shelf 是一个本地 MCP 服务器，注册一组轻量工具到 LLM 的 
 
 ## 2. 安装与接入
 
-### 2.1 从源码使用
+### 2.1 从 GitHub Release 使用
+
+优先下载与你的平台匹配的 release 包：
+
+```text
+skill-shelf-vX.Y.Z-windows-x64.zip
+skill-shelf-vX.Y.Z-windows-arm64.zip
+skill-shelf-vX.Y.Z-linux-x64.tar.gz
+skill-shelf-vX.Y.Z-linux-arm64.tar.gz
+skill-shelf-vX.Y.Z-macos-x64.tar.gz
+skill-shelf-vX.Y.Z-macos-arm64.tar.gz
+```
+
+解压后，MCP 客户端可以直接指向 release 包里的 npm wrapper：
+
+```json
+{
+  "mcpServers": {
+    "skill-shelf": {
+      "command": "node",
+      "args": ["D:/Tools/Skill-Shelf/bin/skill-shelf.js", "mcp"]
+    }
+  }
+}
+```
+
+release 包已经内置对应平台的 Rust daemon 二进制，不需要安装 Rust 或执行 `cargo build`。
+
+### 2.2 从源码使用
 
 ```bash
 git clone https://github.com/halflifezyf2680/Skill-Shelf.git
@@ -55,7 +83,7 @@ MCP 客户端可以直接指向仓库里的 npm wrapper：
 
 首次工具调用会自动拉起 Rust daemon。多个客户端会共享同一个 daemon。
 
-### 2.2 验证
+### 2.3 验证
 
 配置完成后先调用：
 

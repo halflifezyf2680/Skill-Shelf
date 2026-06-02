@@ -1,6 +1,6 @@
 {
   "name": "skill-shelf",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "license": "MIT",
   "mcpName": "io.github.halflifezyf2680/skill-shelf",
   "type": "module",
@@ -12,8 +12,7 @@
     "bin/",
     "server.json",
     "data/hub/config/",
-    "data/hub/packages/",
-    "rust/skill-shelf/target/release/skill-shelf*"
+    "data/hub/packages/"
   ],
   "scripts": {
     "skill-shelf": "node ./bin/skill-shelf.js",
@@ -21,6 +20,7 @@
     "daemon": "node ./bin/skill-shelf.js daemon",
     "status": "node ./bin/skill-shelf.js status",
     "stop": "node ./bin/skill-shelf.js stop",
+    "release:package": "node ./scripts/package-release.mjs",
     "rust:build": "cargo build --release --manifest-path rust/skill-shelf/Cargo.toml",
     "rust:build:debug": "cargo build --manifest-path rust/skill-shelf/Cargo.toml",
     "rust:test": "cargo test --manifest-path rust/skill-shelf/Cargo.toml"

@@ -149,13 +149,12 @@ fn tool_list_exposes_current_skill_shelf_tools() {
         names,
         &[
             "browse_shelf",
-            "list_group_skills",
             "search_skills",
             "read_skill",
             "install_skills",
             "validate_skills",
             "manage_group",
-            "get_shelf_status",
+            "reclassify_skill",
         ]
     );
 }
@@ -164,7 +163,7 @@ fn tool_list_exposes_current_skill_shelf_tools() {
 fn tool_definitions_expose_descriptions_annotations_and_input_schema() {
     let tool_definitions = serde_json::to_value(tools()).unwrap();
     let tools = tool_definitions.as_array().unwrap();
-    assert_eq!(tools.len(), 8);
+    assert_eq!(tools.len(), 7);
 
     let browse = &tools[0];
     assert_eq!(browse["name"], "browse_shelf");
@@ -173,28 +172,26 @@ fn tool_definitions_expose_descriptions_annotations_and_input_schema() {
         .unwrap()
         .contains("CURRENT SHELF CATALOG:"));
     assert_eq!(browse["inputSchema"]["additionalProperties"], false);
+    assert!(browse["inputSchema"]["properties"]["group"].is_object());
+    assert!(browse["inputSchema"]["properties"]["query"].is_object());
+    assert_eq!(browse["inputSchema"]["properties"]["limit"]["default"], 20);
 
-    let list_group = &tools[1];
-    assert_eq!(list_group["name"], "list_group_skills");
-    assert_eq!(list_group["inputSchema"]["required"], json!(["group"]));
-    assert!(list_group["inputSchema"]["properties"]["query"].is_object());
-
-    let search = &tools[2];
+    let search = &tools[1];
     assert_eq!(search["name"], "search_skills");
     assert!(search["description"]
         .as_str()
         .unwrap()
         .contains("browse_shelf"));
 
-    let read = &tools[3];
+    let read = &tools[2];
     assert_eq!(read["name"], "read_skill");
     assert_eq!(read["inputSchema"]["properties"]["full"]["default"], false);
     assert_eq!(read["inputSchema"]["required"], json!(["skill"]));
 
-    assert_eq!(tools[4]["name"], "install_skills");
-    assert_eq!(tools[5]["name"], "validate_skills");
-    assert_eq!(tools[6]["name"], "manage_group");
-    assert_eq!(tools[7]["name"], "get_shelf_status");
+    assert_eq!(tools[3]["name"], "install_skills");
+    assert_eq!(tools[4]["name"], "validate_skills");
+    assert_eq!(tools[5]["name"], "manage_group");
+    assert_eq!(tools[6]["name"], "reclassify_skill");
 }
 
 #[test]
@@ -278,10 +275,10 @@ fn json_rpc_stdio_loop_handles_initialize_list_and_call_with_valid_response_shap
 
     assert_eq!(lines[1]["jsonrpc"], "2.0");
     assert_eq!(lines[1]["id"], 2);
-    assert_eq!(lines[1]["result"]["tools"].as_array().unwrap().len(), 8);
+    assert_eq!(lines[1]["result"]["tools"].as_array().unwrap().len(), 7);
     assert_eq!(lines[1]["result"]["tools"][0]["name"], "browse_shelf");
-    assert_eq!(lines[1]["result"]["tools"][1]["name"], "list_group_skills");
-    assert_eq!(lines[1]["result"]["tools"][3]["name"], "read_skill");
+    assert_eq!(lines[1]["result"]["tools"][1]["name"], "search_skills");
+    assert_eq!(lines[1]["result"]["tools"][2]["name"], "read_skill");
 
     assert_eq!(lines[2]["jsonrpc"], "2.0");
     assert_eq!(lines[2]["id"], 3);
@@ -328,7 +325,7 @@ fn json_rpc_stdio_loop_supports_content_length_framed_mcp_messages() {
     assert_eq!(messages[0]["id"], 1);
     assert_eq!(messages[0]["result"]["serverInfo"]["name"], "skill-shelf");
     assert_eq!(messages[1]["id"], 2);
-    assert_eq!(messages[1]["result"]["tools"].as_array().unwrap().len(), 8);
+    assert_eq!(messages[1]["result"]["tools"].as_array().unwrap().len(), 7);
     assert_eq!(messages[2]["id"], 3);
     assert_eq!(messages[2]["result"]["structuredContent"]["query"], "rust");
     assert_eq!(forwarder.take_forwarded().len(), 1);

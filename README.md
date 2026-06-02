@@ -12,6 +12,34 @@ Skill Shelf 的解法：skill 全部存本地仓库，context 里只有 7 个工
 
 ## 安装
 
+### 从 GitHub Release 使用
+
+下载与你的平台匹配的 release 包并解压：
+
+```text
+skill-shelf-vX.Y.Z-windows-x64.zip
+skill-shelf-vX.Y.Z-windows-arm64.zip
+skill-shelf-vX.Y.Z-linux-x64.tar.gz
+skill-shelf-vX.Y.Z-linux-arm64.tar.gz
+skill-shelf-vX.Y.Z-macos-x64.tar.gz
+skill-shelf-vX.Y.Z-macos-arm64.tar.gz
+```
+
+MCP 客户端配置：
+
+```json
+{
+  "mcpServers": {
+    "skill-shelf": {
+      "command": "node",
+      "args": ["D:/Tools/Skill-Shelf/bin/skill-shelf.js", "mcp"]
+    }
+  }
+}
+```
+
+release 包已经内置对应平台的 Rust daemon 二进制，不需要安装 Rust 或执行 `cargo build`。
+
 ### 从源码使用
 
 ```bash
