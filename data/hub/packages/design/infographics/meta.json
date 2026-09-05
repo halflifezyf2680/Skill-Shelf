@@ -1,7 +1,7 @@
 {
   "skillId": "infographics",
   "skillName": "infographics",
-  "description": "Create professional infographics using Nano Banana Pro AI with smart iterative refinement. Uses Gemini 3 Pro for quality review. Integrates research-lookup and web search for accurate data. Supports 10 infographic types, 8 industry styles, and colorblind-safe palettes.",
+  "description": "Create professional infographics using Nano Banana Pro AI with smart iterative refinement. Uses Gemini 3.6 Flash for quality review. Integrates research-lookup and web search for accurate data. Supports 10 infographic types, 8 industry styles, and colorblind-safe palettes.",
   "group": "design",
   "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
   "keywords": [
@@ -18,6 +18,6 @@
     "refinement",
     "uses"
   ],
-  "updatedAtMs": 1780043422716.117,
+  "updatedAtMs": 1788539615782.7576,
   "status": "ready"
 }

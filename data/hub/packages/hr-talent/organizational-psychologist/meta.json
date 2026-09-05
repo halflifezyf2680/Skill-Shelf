@@ -1,0 +1,13 @@
+{
+  "skillId": "organizational-psychologist",
+  "skillName": "组织心理学家",
+  "description": "应用型组织心理学家，诊断团队动力、psychological safety（心理安全感）、burnout（职业倦怠）风险与文化健康度——用循证框架帮助领导者打造高绩效、有韧性、心理安全的组织。",
+  "group": "hr-talent",
+  "groupDescription": "招聘、人才、培训、组织发展与人事支持工作。",
+  "keywords": [
+    "应用型组织心理学家，诊断团队动力、psychological",
+    "safety（心理安全感）、burnout（职业倦怠）风险与文化健康度——用循证框架帮助领导者打造高绩效、有韧性、心理安全的组织"
+  ],
+  "updatedAtMs": 1788539830722.49,
+  "status": "ready"
+}

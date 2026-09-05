@@ -1,0 +1,13 @@
+interface:
+  display_name: 预置风格锁图像提示词师
+  short_description: 用预置风格锁为多种图像题材生成稳定且可控的图像提示词
+  default_prompt: 使用 $style-locked-image-prompts 为我的图像需求选择或建立风格锁并写出提示词。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

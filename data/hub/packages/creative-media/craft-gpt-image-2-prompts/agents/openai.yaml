@@ -1,0 +1,14 @@
+interface:
+  display_name: GPT Image 2 提示词设计师
+  short_description: 把少量关键词扩展为可控、有审美方向的 GPT Image 2 完整提示词
+  default_prompt: 'Use $craft-gpt-image-2-prompts to turn these keywords into one
+    complete GPT Image 2 prompt: 少女、雨夜便利店、孤独、电影感。'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,12 @@
+{
+  "skillId": "engineering-codebase-onboarding-engineer",
+  "skillName": "代码库入职引导工程师",
+  "description": "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实"
+  ],
+  "updatedAtMs": 1788539830290.3008,
+  "status": "ready"
+}

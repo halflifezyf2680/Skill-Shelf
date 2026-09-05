@@ -1,0 +1,23 @@
+{
+  "skillId": "taste-skill",
+  "skillName": "design-taste-frontend",
+  "description": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "anti-slop",
+    "frontend",
+    "skill",
+    "for",
+    "landing",
+    "pages",
+    "portfolios",
+    "and",
+    "redesigns",
+    "the",
+    "agent",
+    "reads"
+  ],
+  "updatedAtMs": 1780679903234.8174,
+  "status": "ready"
+}

@@ -1,191 +1,84 @@
 # Medchem API Reference
 
-Comprehensive reference for all medchem modules and functions.
+Reference for **medchem 2.0.5**. Official docs: https://medchem-docs.datamol.io/stable/api/
 
 ## Module: medchem.rules
 
 ### Class: RuleFilters
 
-Filter molecules based on multiple medicinal chemistry rules.
+Filter molecules by multiple medicinal chemistry rules. Returns a **pandas DataFrame**.
 
 **Constructor:**
-```python
-RuleFilters(rule_list: List[str])
-```
-
-**Parameters:**
-- `rule_list`: List of rule names to apply. See available rules below.
-
-**Methods:**
 
 ```python
-__call__(mols: List[Chem.Mol], n_jobs: int = 1, progress: bool = False) -> Dict
+RuleFilters(rule_list: List[Union[str, Callable]], rule_list_names: Optional[List[str]] = None)
 ```
-- `mols`: List of RDKit molecule objects
-- `n_jobs`: Number of parallel jobs (-1 uses all cores)
-- `progress`: Show progress bar
-- **Returns**: Dictionary with results for each rule
+
+**Call signature:**
+
+```python
+__call__(
+    mols: Sequence[Union[str, Mol]],
+    n_jobs: int = -1,
+    progress: bool = False,
+    progress_leave: bool = False,
+    scheduler: str = "auto",
+    keep_props: bool = False,
+    fail_if_invalid: bool = True,
+) -> pd.DataFrame
+```
+
+**Return columns:** `mol`, `pass_all`, `pass_any`, plus one boolean column per rule. With `keep_props=True`, descriptor columns (`mw`, `clogp`, `tpsa`, etc.) are included.
+
+**Class methods:**
+
+```python
+RuleFilters.list_available_rules_names()  # list of 22 rule names
+RuleFilters.list_available_rules()        # rules with property metadata
+```
 
 **Example:**
+
 ```python
 rfilter = mc.rules.RuleFilters(rule_list=["rule_of_five", "rule_of_cns"])
-results = rfilter(mols=mol_list, n_jobs=-1, progress=True)
+df = rfilter(mols=mol_list, n_jobs=-1, progress=True)
+passing = df[df["pass_all"]]
 ```
 
 ### Module: medchem.rules.basic_rules
 
-Individual rule functions that can be applied to single molecules.
+Individual rule functions for single molecules. Each returns `bool` (True = passes).
 
-#### rule_of_five()
+| Function | Description |
+|----------|-------------|
+| `rule_of_five(mol)` | Lipinski Rule of Five |
+| `rule_of_five_beyond(mol)` | Beyond Ro5 (large binding sites) |
+| `rule_of_four(mol)` | Rule of Four |
+| `rule_of_three(mol)` | Fragment library Rule of Three |
+| `rule_of_three_extended(mol)` | Extended Ro3 |
+| `rule_of_two(mol)` | Rule of Two |
+| `rule_of_ghose(mol)` | Ghose filter |
+| `rule_of_veber(mol)` | Veber oral bioavailability |
+| `rule_of_reos(mol)` | REOS filter |
+| `rule_of_chemaxon_druglikeness(mol)` | ChemAxon drug-likeness |
+| `rule_of_egan(mol)` | Egan permeability |
+| `rule_of_pfizer_3_75(mol)` | Pfizer 3/75 filter |
+| `rule_of_gsk_4_400(mol)` | GSK 4/400 filter |
+| `rule_of_oprea(mol)` | Oprea lead-like |
+| `rule_of_xu(mol)` | Xu filter |
+| `rule_of_cns(mol)` | CNS drug-likeness |
+| `rule_of_respiratory(mol)` | Respiratory drug-likeness |
+| `rule_of_zinc(mol)` | ZINC-like |
+| `rule_of_leadlike_soft(mol)` | Soft lead-like |
+| `rule_of_druglike_soft(mol)` | Soft drug-like |
+| `rule_of_generative_design(mol)` | Generative design space |
+| `rule_of_generative_design_strict(mol)` | Strict generative design |
 
-```python
-rule_of_five(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Lipinski's Rule of Five for oral bioavailability.
-
-**Criteria:**
-- Molecular weight ≤ 500 Da
-- LogP ≤ 5
-- H-bond donors ≤ 5
-- H-bond acceptors ≤ 10
-
-**Parameters:**
-- `mol`: SMILES string or RDKit molecule object
-
-**Returns:** True if molecule passes all criteria
-
-#### rule_of_three()
-
-```python
-rule_of_three(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Rule of Three for fragment screening libraries.
-
-**Criteria:**
-- Molecular weight ≤ 300 Da
-- LogP ≤ 3
-- H-bond donors ≤ 3
-- H-bond acceptors ≤ 3
-- Rotatable bonds ≤ 3
-- Polar surface area ≤ 60 Ų
-
-#### rule_of_oprea()
+### Descriptor helpers
 
 ```python
-rule_of_oprea(mol: Union[str, Chem.Mol]) -> bool
+mc.rules.list_descriptors()  # property names for query language
 ```
-
-Oprea's lead-like criteria for hit-to-lead optimization.
-
-**Criteria:**
-- Molecular weight: 200-350 Da
-- LogP: -2 to 4
-- Rotatable bonds ≤ 7
-- Rings ≤ 4
-
-#### rule_of_cns()
-
-```python
-rule_of_cns(mol: Union[str, Chem.Mol]) -> bool
-```
-
-CNS drug-likeness rules.
-
-**Criteria:**
-- Molecular weight ≤ 450 Da
-- LogP: -1 to 5
-- H-bond donors ≤ 2
-- TPSA ≤ 90 Ų
-
-#### rule_of_leadlike_soft()
-
-```python
-rule_of_leadlike_soft(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Soft lead-like criteria (more permissive).
-
-**Criteria:**
-- Molecular weight: 250-450 Da
-- LogP: -3 to 4
-- Rotatable bonds ≤ 10
-
-#### rule_of_leadlike_strict()
-
-```python
-rule_of_leadlike_strict(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Strict lead-like criteria (more restrictive).
-
-**Criteria:**
-- Molecular weight: 200-350 Da
-- LogP: -2 to 3.5
-- Rotatable bonds ≤ 7
-- Rings: 1-3
-
-#### rule_of_veber()
-
-```python
-rule_of_veber(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Veber's rules for oral bioavailability.
-
-**Criteria:**
-- Rotatable bonds ≤ 10
-- TPSA ≤ 140 Ų
-
-#### rule_of_reos()
-
-```python
-rule_of_reos(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Rapid Elimination Of Swill (REOS) filter.
-
-**Criteria:**
-- Molecular weight: 200-500 Da
-- LogP: -5 to 5
-- H-bond donors: 0-5
-- H-bond acceptors: 0-10
-
-#### rule_of_drug()
-
-```python
-rule_of_drug(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Combined drug-likeness criteria.
-
-**Criteria:**
-- Passes Rule of Five
-- Passes Veber rules
-- No PAINS substructures
-
-#### golden_triangle()
-
-```python
-golden_triangle(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Golden Triangle for drug-likeness balance.
-
-**Criteria:**
-- 200 ≤ MW ≤ 50×LogP + 400
-- LogP: -2 to 5
-
-#### pains_filter()
-
-```python
-pains_filter(mol: Union[str, Chem.Mol]) -> bool
-```
-
-Pan Assay INterference compoundS (PAINS) filter.
-
-**Returns:** True if molecule does NOT contain PAINS substructures
 
 ---
 
@@ -193,220 +86,156 @@ Pan Assay INterference compoundS (PAINS) filter.
 
 ### Class: CommonAlertsFilters
 
-Filter for common structural alerts derived from ChEMBL and literature.
+ChEMBL-derived structural alert filter sets (Glaxo, Dundee, BMS, etc.).
 
-**Constructor:**
 ```python
 CommonAlertsFilters()
 ```
 
+**Returns DataFrame columns:** `mol`, `pass_filter`, `status`, `reasons`
+
+- `status`: one of `"exclude"`, `"flag"`, `"annotations"`, `"ok"`
+- `pass_filter`: bool — True if compound passes
+
 **Methods:**
 
 ```python
-__call__(mols: List[Chem.Mol], n_jobs: int = 1, progress: bool = False) -> List[Dict]
+list_default_available_alerts()  # DataFrame of alert definitions
+__call__(mols, n_jobs=-1, progress=False, ...) -> pd.DataFrame
 ```
-
-Apply common alerts filter to a list of molecules.
-
-**Returns:** List of dictionaries with keys:
-- `has_alerts`: Boolean indicating if molecule has alerts
-- `alert_details`: List of matched alert patterns
-- `num_alerts`: Number of alerts found
-
-```python
-check_mol(mol: Chem.Mol) -> Tuple[bool, List[str]]
-```
-
-Check a single molecule for structural alerts.
-
-**Returns:** Tuple of (has_alerts, list_of_alert_names)
 
 ### Class: NIBRFilters
 
-Novartis NIBR medicinal chemistry filters.
+Novartis screening-deck curation filters ([Schuffenhauer et al., J. Med. Chem. 2020](https://dx.doi.org/10.1021/acs.jmedchem.0c01332)).
 
-**Constructor:**
 ```python
 NIBRFilters()
 ```
 
-**Methods:**
+**Returns DataFrame columns:** `mol`, `pass_filter`, `status`, `severity`, `reasons`, `n_covalent_motif`, `special_mol`
+
+- `severity`: 0 = clean; 1–9 = flags; ≥10 = excluded by default
+
+### Lilly demerits (optional)
+
+Requires `mamba install lilly-medchem-rules`. Access via:
 
 ```python
-__call__(mols: List[Chem.Mol], n_jobs: int = 1, progress: bool = False) -> List[bool]
+mc.functional.lilly_demerit_filter(mols, max_demerits=160, n_jobs=-1)
+# or
+from medchem.structural.lilly_demerits import LillyDemeritsFilters
 ```
-
-Apply NIBR filters to molecules.
-
-**Returns:** List of booleans (True if molecule passes)
-
-### Class: LillyDemeritsFilters
-
-Eli Lilly's demerit-based structural alert system (275 rules).
-
-**Constructor:**
-```python
-LillyDemeritsFilters()
-```
-
-**Methods:**
-
-```python
-__call__(mols: List[Chem.Mol], n_jobs: int = 1, progress: bool = False) -> List[Dict]
-```
-
-Calculate Lilly demerits for molecules.
-
-**Returns:** List of dictionaries with keys:
-- `demerits`: Total demerit score
-- `passes`: Boolean (True if demerits ≤ 100)
-- `matched_patterns`: List of matched patterns with scores
 
 ---
 
 ## Module: medchem.functional
 
-High-level functional API for common operations.
+High-level boolean-mask API. **True = passes** (no alert / passes all rules).
 
-### nibr_filter()
-
-```python
-nibr_filter(mols: List[Chem.Mol], n_jobs: int = 1) -> List[bool]
-```
-
-Apply NIBR filters using functional API.
-
-**Parameters:**
-- `mols`: List of molecules
-- `n_jobs`: Parallelization level
-
-**Returns:** List of pass/fail booleans
-
-### common_alerts_filter()
-
-```python
-common_alerts_filter(mols: List[Chem.Mol], n_jobs: int = 1) -> List[Dict]
-```
-
-Apply common alerts filter using functional API.
-
-**Returns:** List of results dictionaries
-
-### lilly_demerits_filter()
-
-```python
-lilly_demerits_filter(mols: List[Chem.Mol], n_jobs: int = 1) -> List[Dict]
-```
-
-Calculate Lilly demerits using functional API.
-
----
-
-## Module: medchem.groups
-
-### Class: ChemicalGroup
-
-Detect specific chemical groups in molecules.
-
-**Constructor:**
-```python
-ChemicalGroup(groups: List[str], custom_smarts: Optional[Dict[str, str]] = None)
-```
-
-**Parameters:**
-- `groups`: List of predefined group names
-- `custom_smarts`: Dictionary mapping custom group names to SMARTS patterns
-
-**Predefined Groups:**
-- `"hinge_binders"`: Kinase hinge binding motifs
-- `"phosphate_binders"`: Phosphate binding groups
-- `"michael_acceptors"`: Michael acceptor electrophiles
-- `"reactive_groups"`: General reactive functionalities
-
-**Methods:**
-
-```python
-has_match(mols: List[Chem.Mol]) -> List[bool]
-```
-
-Check if molecules contain any of the specified groups.
-
-```python
-get_matches(mol: Chem.Mol) -> Dict[str, List[Tuple]]
-```
-
-Get detailed match information for a single molecule.
-
-**Returns:** Dictionary mapping group names to lists of atom indices
-
-```python
-get_all_matches(mols: List[Chem.Mol]) -> List[Dict]
-```
-
-Get match information for all molecules.
-
-**Example:**
-```python
-group = mc.groups.ChemicalGroup(groups=["hinge_binders", "phosphate_binders"])
-matches = group.get_all_matches(mol_list)
-```
+| Function | Description |
+|----------|-------------|
+| `rules_filter(mols, rules, n_jobs=None, ...)` | Apply rule list |
+| `nibr_filter(mols, max_severity=10, n_jobs=None, ...)` | NIBR filter |
+| `alert_filter(mols, alerts, alerts_db=None, n_jobs=1, ...)` | Named alert catalogs |
+| `catalog_filter(mols, catalogs, n_jobs=-1, ...)` | RDKit FilterCatalog list |
+| `complexity_filter(mols, complexity_metric="bertz", limit="99", ...)` | Complexity threshold |
+| `lilly_demerit_filter(mols, max_demerits=160, ...)` | Lilly demerits (optional) |
+| `chemical_group_filter(mols, chemical_group, ...)` | Exclude group matches |
+| `catalog_filter(mols, catalogs, ...)` | Custom catalog list |
+| `bredt_filter(mols, ...)` | Bredt instability filter |
+| `macrocycle_filter(mols, ...)` | Macrocycle filter |
+| `protecting_groups_filter(mols, ...)` | Protecting group filter |
+| `ring_infraction_filter(mols, ...)` | Ring infraction filter |
+| `symmetry_filter(mols, ...)` | Symmetry filter |
 
 ---
 
 ## Module: medchem.catalogs
 
-### Class: NamedCatalogs
+### NamedCatalogs
 
-Access to curated chemical catalogs.
+Static methods returning RDKit `FilterCatalog` objects:
 
-**Available Catalogs:**
-- `"functional_groups"`: Common functional groups
-- `"protecting_groups"`: Protecting group structures
-- `"reagents"`: Common reagents
-- `"fragments"`: Standard fragments
-
-**Usage:**
 ```python
-catalog = mc.catalogs.NamedCatalogs.get("functional_groups")
-matches = catalog.get_matches(mol)
+mc.catalogs.list_named_catalogs()
+# tox, pains, pains_a, pains_b, pains_c, nih, zinc, brenk, dundee, bms,
+# glaxo, schembl, mlsmr, inpharmatica, lint, nibr, bredt, toxicophore, ...
+
+mc.catalogs.NamedCatalogs.pains()
+mc.catalogs.NamedCatalogs.brenk()
+mc.catalogs.NamedCatalogs.nibr()
+mc.catalogs.NamedCatalogs.bredt()
+```
+
+**Helpers:**
+
+```python
+catalog_from_smarts(smarts_list)
+merge_catalogs(catalogs)
+list_named_catalogs()
+```
+
+---
+
+## Module: medchem.groups
+
+### ChemicalGroup
+
+Detect functional groups from the global-chem curated library.
+
+```python
+ChemicalGroup(groups=None, n_jobs=None, groups_db=None)
+```
+
+**Methods:**
+
+```python
+has_match(mol, exact_match=False, terminal_only=False) -> bool
+get_matches(mol, use_smiles=True, exact_match=False, terminal_only=False) -> dict
+filter(mols) -> list[Mol]
+get_catalog() -> FilterCatalog
+list_groups() -> list
+list_hierarchy_groups() -> list
+```
+
+**Listing helpers:**
+
+```python
+mc.groups.list_default_chemical_groups(hierarchy=False)
+mc.groups.list_functional_group_names(unique=True)
+mc.groups.get_functional_group_map()  # name → SMARTS
 ```
 
 ---
 
 ## Module: medchem.complexity
 
-Calculate molecular complexity metrics.
-
-### calculate_complexity()
-
-```python
-calculate_complexity(mol: Chem.Mol, method: str = "bertz") -> float
-```
-
-Calculate complexity score for a molecule.
-
-**Parameters:**
-- `mol`: RDKit molecule
-- `method`: Complexity metric ("bertz", "whitlock", "barone")
-
-**Returns:** Complexity score (higher = more complex)
-
 ### Class: ComplexityFilter
 
-Filter molecules by complexity threshold.
-
-**Constructor:**
-```python
-ComplexityFilter(max_complexity: float, method: str = "bertz")
-```
-
-**Methods:**
+Compare a metric to ZINC-15 percentile thresholds. Operates on **single molecules**.
 
 ```python
-__call__(mols: List[Chem.Mol], n_jobs: int = 1) -> List[bool]
+ComplexityFilter(
+    limit="99",
+    complexity_metric="bertz",
+    threshold_stats_file="zinc_15_available",
+)
+cf(mol)  # -> bool
 ```
 
-Filter molecules exceeding complexity threshold.
+**Available metrics** (`ComplexityFilter.list_default_available_filters()`):
+`bertz`, `sas`, `qed`, `clogp`, `whitlock`, `barone`, `smcm`, `twc`
+
+**Direct metric functions:**
+
+```python
+mc.complexity.WhitlockCT(mol)
+mc.complexity.BaroneCT(mol)
+mc.complexity.SMCM(mol)
+mc.complexity.TWC(mol)
+```
+
+For batch filtering, use `mc.functional.complexity_filter()`.
 
 ---
 
@@ -414,187 +243,89 @@ Filter molecules exceeding complexity threshold.
 
 ### Class: Constraints
 
-Apply custom property-based constraints.
-
-**Constructor:**
-```python
-Constraints(
-    mw_range: Optional[Tuple[float, float]] = None,
-    logp_range: Optional[Tuple[float, float]] = None,
-    tpsa_max: Optional[float] = None,
-    tpsa_range: Optional[Tuple[float, float]] = None,
-    hbd_max: Optional[int] = None,
-    hba_max: Optional[int] = None,
-    rotatable_bonds_max: Optional[int] = None,
-    rings_range: Optional[Tuple[int, int]] = None,
-    aromatic_rings_max: Optional[int] = None,
-)
-```
-
-**Parameters:** All parameters are optional. Specify only the constraints needed.
-
-**Methods:**
+Scaffold-based substructure matching with per-atom constraint functions — **not** simple property-range filters.
 
 ```python
-__call__(mols: List[Chem.Mol], n_jobs: int = 1) -> List[Dict]
+Constraints(core: Mol, constraint_fns: Dict[str, Callable], prop_name: str = "query")
+constraints(mol)  # -> bool or match details
 ```
 
-Apply constraints to molecules.
-
-**Returns:** List of dictionaries with keys:
-- `passes`: Boolean indicating if all constraints pass
-- `violations`: List of constraint names that failed
-
-**Example:**
-```python
-constraints = mc.constraints.Constraints(
-    mw_range=(200, 500),
-    logp_range=(-2, 5),
-    tpsa_max=140
-)
-results = constraints(mols=mol_list, n_jobs=-1)
-```
+Use `RuleFilters` or the query language for MW/LogP/TPSA bounds.
 
 ---
 
 ## Module: medchem.query
 
-Query language for complex filtering.
+### Class: QueryFilter
 
-### parse()
-
-```python
-parse(query: str) -> Query
-```
-
-Parse a medchem query string into a Query object.
-
-**Query Syntax:**
-- Operators: `AND`, `OR`, `NOT`
-- Comparisons: `<`, `>`, `<=`, `>=`, `==`, `!=`
-- Properties: `complexity`, `lilly_demerits`, `mw`, `logp`, `tpsa`
-- Rules: `rule_of_five`, `rule_of_cns`, etc.
-- Filters: `common_alerts`, `nibr_filter`, `pains_filter`
-
-**Example Queries:**
-```python
-"rule_of_five AND NOT common_alerts"
-"rule_of_cns AND complexity < 400"
-"mw > 200 AND mw < 500 AND logp < 5"
-"(rule_of_five OR rule_of_oprea) AND NOT pains_filter"
-```
-
-### Class: Query
-
-**Methods:**
+Parse and evaluate the medchem query language.
 
 ```python
-apply(mols: List[Chem.Mol], n_jobs: int = 1) -> List[bool]
+QueryFilter(query: str, grammar: Optional[str] = None, parser: str = "lalr")
+qf(mols, n_jobs=-1, progress=True, scheduler="processes") -> list[bool]
 ```
 
-Apply parsed query to molecules.
+**Grammar constructs:**
 
-**Example:**
-```python
-query = mc.query.parse("rule_of_five AND NOT common_alerts")
-results = query.apply(mols=mol_list, n_jobs=-1)
-passing_mols = [mol for mol, passes in zip(mol_list, results) if passes]
-```
+| Construct | Example |
+|-----------|---------|
+| Rule match | `MATCHRULE("rule_of_five")` |
+| Alert catalog | `HASALERT("pains")` |
+| Property compare | `HASPROP("mw", <, 500)` |
+| Chemical group | `HASGROUP("privileged_scaffolds")` |
+| Substructure | `HASSUBSTRUCTURE("c1ccccc1")` |
+| Superstructure | `HASSUPERSTRUCTURE("CCO")` |
+| Boolean | `true`, `false` |
+| Logic | `AND`, `OR`, `NOT` |
 
----
-
-## Module: medchem.utils
-
-Utility functions for working with molecules.
-
-### batch_process()
-
-```python
-batch_process(
-    mols: List[Chem.Mol],
-    func: Callable,
-    n_jobs: int = 1,
-    progress: bool = False,
-    batch_size: Optional[int] = None
-) -> List
-```
-
-Process molecules in parallel batches.
-
-**Parameters:**
-- `mols`: List of molecules
-- `func`: Function to apply to each molecule
-- `n_jobs`: Number of parallel workers
-- `progress`: Show progress bar
-- `batch_size`: Size of processing batches
-
-### standardize_mol()
+**Example queries:**
 
 ```python
-standardize_mol(mol: Chem.Mol) -> Chem.Mol
+'MATCHRULE("rule_of_five") AND NOT HASALERT("pains")'
+'MATCHRULE("rule_of_cns") AND HASPROP("tpsa", <=, 90)'
+'NOT HASALERT("brenk") AND HASPROP("mw", >=, 200)'
 ```
 
-Standardize molecule representation (sanitize, neutralize charges, etc.).
+### Class: QueryOperator
+
+Holds available properties, catalogs, rules, and functional groups used by the parser.
 
 ---
 
 ## Common Patterns
 
-### Pattern: Parallel Processing
-
-All filters support parallelization:
+### Parallel processing
 
 ```python
-# Use all CPU cores
-results = filter_object(mols=mol_list, n_jobs=-1, progress=True)
-
-# Use specific number of cores
-results = filter_object(mols=mol_list, n_jobs=4, progress=True)
+df = mc.rules.RuleFilters(rule_list=["rule_of_five"])(mols=mol_list, n_jobs=-1, progress=True)
+mask = mc.functional.nibr_filter(mols=mol_list, n_jobs=-1)
 ```
 
-### Pattern: Combining Multiple Filters
+### Combining filters
 
 ```python
-import medchem as mc
+rules_df = mc.rules.RuleFilters(rule_list=["rule_of_five"])(mols=mol_list, n_jobs=-1)
+alerts_df = mc.structural.CommonAlertsFilters()(mols=mol_list, n_jobs=-1)
 
-# Apply multiple filters
-rule_filter = mc.rules.RuleFilters(rule_list=["rule_of_five"])
-alert_filter = mc.structural.CommonAlertsFilters()
-lilly_filter = mc.structural.LillyDemeritsFilters()
-
-# Get results
-rule_results = rule_filter(mols=mol_list, n_jobs=-1)
-alert_results = alert_filter(mols=mol_list, n_jobs=-1)
-lilly_results = lilly_filter(mols=mol_list, n_jobs=-1)
-
-# Combine criteria
-passing_mols = [
+passing = [
     mol for i, mol in enumerate(mol_list)
-    if rule_results[i]["passes"]
-    and not alert_results[i]["has_alerts"]
-    and lilly_results[i]["passes"]
+    if rules_df.iloc[i]["pass_all"] and alerts_df.iloc[i]["pass_filter"]
 ]
 ```
 
-### Pattern: Working with DataFrames
+### Working with DataFrames
 
 ```python
 import pandas as pd
 import datamol as dm
 import medchem as mc
 
-# Load data
 df = pd.read_csv("molecules.csv")
 df["mol"] = df["smiles"].apply(dm.to_mol)
 
-# Apply filters
-rfilter = mc.rules.RuleFilters(rule_list=["rule_of_five", "rule_of_cns"])
-results = rfilter(mols=df["mol"].tolist(), n_jobs=-1)
-
-# Add results to dataframe
-df["passes_ro5"] = [r["rule_of_five"] for r in results]
-df["passes_cns"] = [r["rule_of_cns"] for r in results]
-
-# Filter dataframe
-filtered_df = df[df["passes_ro5"] & df["passes_cns"]]
+results = mc.rules.RuleFilters(rule_list=["rule_of_five", "rule_of_cns"])(
+    mols=df["mol"].tolist(), n_jobs=-1
+)
+df = pd.concat([df, results.drop(columns=["mol"])], axis=1)
+filtered = df[df["pass_all"]]
 ```

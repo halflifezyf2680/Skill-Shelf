@@ -1,0 +1,15 @@
+{
+  "skillId": "game-development-technical-artist",
+  "skillName": "技术美术",
+  "description": "美术到引擎管线专家——精通 shader、VFX 系统、LOD 管线、性能预算和跨引擎资源优化",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "美术到引擎管线专家——精通",
+    "shader、vfx",
+    "系统、lod",
+    "管线、性能预算和跨引擎资源优化"
+  ],
+  "updatedAtMs": 1788539830397.734,
+  "status": "ready"
+}

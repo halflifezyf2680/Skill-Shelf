@@ -1,7 +1,7 @@
 {
   "skillId": "zarr-python",
   "skillName": "zarr-python",
-  "description": "Chunked N-D arrays for cloud storage. Compressed arrays, parallel I/O, S3/GCS integration, NumPy/Dask/Xarray compatible, for large-scale scientific computing pipelines.",
+  "description": "Chunked N-D arrays for cloud storage (Zarr-Python 3). Compressed arrays, parallel I/O, S3/GCS via fsspec, NumPy/Dask/Xarray compatible, for large-scale scientific computing pipelines.",
   "group": "engineering",
   "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
   "keywords": [
@@ -11,13 +11,13 @@
     "for",
     "cloud",
     "storage",
+    "zarr-python",
     "compressed",
     "parallel",
     "i/o",
     "s3/gcs",
-    "integration",
-    "numpy/dask/xarray"
+    "via"
   ],
-  "updatedAtMs": 1780043416516.5774,
+  "updatedAtMs": 1788539616885.1086,
   "status": "ready"
 }

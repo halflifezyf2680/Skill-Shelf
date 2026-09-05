@@ -1,0 +1,19 @@
+{
+  "skillId": "marketing-multi-platform-publisher",
+  "skillName": "多平台发布编排官",
+  "description": "一键中文博客发布的专家级编排官。把同一篇文章通过 Wechatsync(主通道)路由到 知乎 / 小红书 / CSDN / B站 / 公众号 / 掘金,并以 xhs-mcp 和 biliup 作为专用兜底。负责各平台内容适配、草稿优先发布、频率控制与风险规避。绝不自动发布——始终停在草稿阶段交由人工审核。",
+  "group": "marketing",
+  "groupDescription": "品牌营销、内容营销、市场传播、增长叙事与活动策略。",
+  "keywords": [
+    "一键中文博客发布的专家级编排官。把同一篇文章通过",
+    "wechatsync(主通道)路由到",
+    "小红书",
+    "csdn",
+    "公众号",
+    "xhs-mcp",
+    "biliup",
+    "作为专用兜底。负责各平台内容适配、草稿优先发布、频率控制与风险规避。绝不自动发布——始终停在草稿阶段交由人工审核"
+  ],
+  "updatedAtMs": 1788539830520.0571,
+  "status": "ready"
+}

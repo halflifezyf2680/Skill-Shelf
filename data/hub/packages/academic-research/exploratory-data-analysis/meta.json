@@ -1,23 +1,23 @@
 {
   "skillId": "exploratory-data-analysis",
   "skillName": "exploratory-data-analysis",
-  "description": "Perform comprehensive exploratory data analysis on scientific data files across 200+ file formats. This skill should be used when analyzing any scientific data file to understand its structure, content, quality, and characteristics. Automatically detects file type and generates detailed markdown reports with format-specific analysis, quality metrics, and downstream analysis recommendations. Covers chemistry, bioinformatics, microscopy, spectroscopy, proteomics, metabolomics, and general scientific data formats.",
+  "description": "Perform bounded, local exploratory analysis of explicitly supported scientific files. Use for redacted CSV/TSV/JSON profiles; optional NumPy, HDF5, FASTA/FASTQ, and basic image metadata inspection; missingness/leakage audits; outlier and transformation sensitivity; and rigorous EDA report scaffolds. Other domain formats are reference-only and unknown formats fail closed.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
     "perform",
-    "comprehensive",
+    "bounded",
+    "local",
     "exploratory",
-    "data",
     "analysis",
+    "explicitly",
+    "supported",
     "scientific",
     "files",
-    "across",
-    "200",
-    "file",
-    "formats",
-    "this"
+    "use",
+    "for",
+    "redacted"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539615599.5457,
   "status": "ready"
 }

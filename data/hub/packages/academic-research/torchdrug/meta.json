@@ -1,23 +1,23 @@
 {
   "skillId": "torchdrug",
   "skillName": "torchdrug",
-  "description": "PyTorch-native graph neural networks for molecules and proteins. Use when building custom GNN architectures for drug discovery, protein modeling, or knowledge graph reasoning. Best for custom model development, protein property prediction, retrosynthesis. For pre-trained models and diverse featurizers use deepchem; for benchmark datasets use pytdc.",
+  "description": "Build and troubleshoot TorchDrug 0.2.1 workflows for molecular graphs, property prediction, self-supervised pretraining, molecule generation, retrosynthesis, protein representation learning, and knowledge graph reasoning. Use when code imports torchdrug or needs its datasets, models, tasks, or Engine.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "pytorch-native",
-    "graph",
-    "neural",
-    "networks",
-    "for",
-    "molecules",
+    "build",
     "and",
-    "proteins",
-    "use",
-    "when",
-    "building",
-    "custom"
+    "troubleshoot",
+    "torchdrug",
+    "0.2.1",
+    "workflows",
+    "for",
+    "molecular",
+    "graphs",
+    "property",
+    "prediction",
+    "self-supervised"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616762.0598,
   "status": "ready"
 }

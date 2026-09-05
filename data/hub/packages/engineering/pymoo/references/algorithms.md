@@ -47,6 +47,37 @@ algorithm = GA(pop_size=100, eliminate_duplicates=True)
 **Purpose:** Simplex-based optimization
 **Best for:** Local optimization of continuous functions
 
+### MixedVariableGA
+**Purpose:** Single-objective optimization with mixed variable types
+**Best for:** Problems with continuous, integer, binary, and categorical variables
+
+**Usage:**
+```python
+from pymoo.core.mixed import MixedVariableGA
+from pymoo.core.variable import Real, Integer, Choice, Binary
+
+# Define problem with vars dict (see mixed-variable docs)
+algorithm = MixedVariableGA(pop_size=20)
+```
+
+For multi-objective mixed-variable problems, pass a survival operator:
+```python
+from pymoo.algorithms.moo.nsga2 import RankAndCrowdingSurvival
+algorithm = MixedVariableGA(pop_size=20, survival=RankAndCrowdingSurvival())
+```
+
+### Optuna (Mixed-Variable SOO)
+**Purpose:** Single-objective mixed-variable search via Optuna wrapper
+**Best for:** Hyperparameter-style mixed search when Optuna's TPE/samplers are preferred
+
+**Usage:**
+```python
+from pymoo.algorithms.soo.nonconvex.optuna import Optuna
+algorithm = Optuna()
+```
+
+Requires Optuna installed separately: `uv pip install optuna`
+
 ## Multi-Objective Optimization Algorithms
 
 ### NSGA-II (Non-dominated Sorting Genetic Algorithm II)
@@ -78,6 +109,27 @@ algorithm = NSGA2(pop_size=100)
 - Need for distributed solutions across Pareto front
 - Standard multi-objective benchmark
 
+### SPEA2 (Strength Pareto Evolutionary Algorithm 2)
+**Purpose:** Multi-objective optimization with external archive
+**Best for:** Bi- and tri-objective problems; alternative to NSGA-II when archive-based selection is preferred
+**Selection strategy:** Strength-based fitness + k-nearest-neighbor density estimation
+
+**Key features:**
+- External archive of non-dominated solutions
+- Strength value measures how many solutions a point dominates
+- Improved in pymoo 0.6.1.6
+
+**Usage:**
+```python
+from pymoo.algorithms.moo.spea2 import SPEA2
+algorithm = SPEA2(pop_size=100)
+```
+
+**When to use:**
+- 2-3 objectives
+- Prefer archive-based selection over crowding distance
+- Compare against NSGA-II on benchmark problems
+
 ### NSGA-III
 **Purpose:** Many-objective optimization (4+ objectives)
 **Best for:** Problems with 4 or more objectives requiring uniform Pareto front coverage
@@ -100,7 +152,7 @@ algorithm = NSGA2(pop_size=100)
 from pymoo.algorithms.moo.nsga3 import NSGA3
 from pymoo.util.ref_dirs import get_reference_directions
 
-ref_dirs = get_reference_directions("das-dennis", n_dim=4, n_partitions=12)
+ref_dirs = get_reference_directions("das-dennis", 4, n_partitions=12)  # n_dim is positional
 algorithm = NSGA3(ref_dirs=ref_dirs)
 ```
 
@@ -164,7 +216,7 @@ algorithm = NSGA3(ref_dirs=ref_dirs)
 - Use CMA-ES for difficult/noisy landscapes
 
 **For multi-objective problems:**
-- 2-3 objectives: NSGA-II
+- 2-3 objectives: NSGA-II or SPEA2
 - 4+ objectives: NSGA-III
 - Preference articulation: R-NSGA-II
 - Decomposition-friendly: MOEA/D

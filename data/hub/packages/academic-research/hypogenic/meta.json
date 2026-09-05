@@ -1,23 +1,23 @@
 {
   "skillId": "hypogenic",
   "skillName": "hypogenic",
-  "description": "Automated LLM-driven hypothesis generation and testing on tabular datasets. Use when you want to systematically explore hypotheses about patterns in empirical data (e.g., deception detection, content analysis). Combines literature insights with data-driven hypothesis testing. For manual hypothesis formulation use hypothesis-generation; for creative ideation use scientific-brainstorming.",
+  "description": "Plans and audits use of ChicagoHAI HypoGeniC/HypoRefine for LLM-assisted hypothesis generation from labeled text datasets. Use for the `hypogenic` package, its task configs, hypothesis banks, or HypoBench datasets—not for manual hypothesis formulation or scientific validation.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "automated",
-    "llm-driven",
+    "plans",
+    "and",
+    "audits",
+    "use",
+    "chicagohai",
+    "hypogenic/hyporefine",
+    "for",
+    "llm-assisted",
     "hypothesis",
     "generation",
-    "and",
-    "testing",
-    "tabular",
-    "datasets",
-    "use",
-    "when",
-    "you",
-    "want"
+    "from",
+    "labeled"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539615733.154,
   "status": "ready"
 }

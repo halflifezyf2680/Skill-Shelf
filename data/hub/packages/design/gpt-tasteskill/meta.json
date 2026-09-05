@@ -1,0 +1,23 @@
+{
+  "skillId": "gpt-tasteskill",
+  "skillName": "gpt-taste",
+  "description": "Page structure & motion engineering ONLY — AIDA page flow, Python-driven layout randomization, 2-line hero rule, gapless bento grids, GSAP ScrollTrigger choreography. For visual aesthetics, fonts, shadows and card textures use high-end-visual-design instead.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "page",
+    "structure",
+    "motion",
+    "engineering",
+    "only",
+    "aida",
+    "flow",
+    "python-driven",
+    "layout",
+    "randomization",
+    "2-line",
+    "hero"
+  ],
+  "updatedAtMs": 1788539251574.0244,
+  "status": "ready"
+}

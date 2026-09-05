@@ -1,23 +1,23 @@
 {
   "skillId": "qutip",
   "skillName": "qutip",
-  "description": "Quantum physics simulation library for open quantum systems. Use when studying master equations, Lindblad dynamics, decoherence, quantum optics, or cavity QED. Best for physics research, open system dynamics, and educational simulations. NOT for circuit-based quantum computing—use qiskit, cirq, or pennylane for quantum algorithms and hardware execution.",
+  "description": "Simulate and audit closed and open quantum-system models with QuTiP 5, including deterministic, trajectory, steady-state, spectral, and phase-space workflows. Use for local quantum-dynamics work where physical assumptions, dimensions, and numerical convergence must be explicit.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "quantum",
-    "physics",
-    "simulation",
-    "library",
-    "for",
+    "simulate",
+    "and",
+    "audit",
+    "closed",
     "open",
-    "systems",
-    "use",
-    "when",
-    "studying",
-    "master",
-    "equations"
+    "quantum-system",
+    "models",
+    "with",
+    "qutip",
+    "including",
+    "deterministic",
+    "trajectory"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616480.594,
   "status": "ready"
 }

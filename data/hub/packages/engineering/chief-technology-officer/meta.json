@@ -1,0 +1,12 @@
+{
+  "skillId": "chief-technology-officer",
+  "skillName": "首席技术官（CTO）",
+  "description": "技术最高负责人，掌管技术路线、架构决策、研发组织与技术债务——在业务速度与工程质量之间做显式权衡，让技术成为业务的杠杆而不是瓶颈。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "技术最高负责人，掌管技术路线、架构决策、研发组织与技术债务——在业务速度与工程质量之间做显式权衡，让技术成为业务的杠杆而不是瓶颈"
+  ],
+  "updatedAtMs": 1788539830260.2183,
+  "status": "ready"
+}

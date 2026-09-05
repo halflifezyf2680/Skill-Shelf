@@ -1,0 +1,23 @@
+{
+  "skillId": "openpiv",
+  "skillName": "openpiv",
+  "description": "Particle Image Velocimetry (PIV) analysis with OpenPIV. Use when extracting velocity fields from PIV image pairs, analyzing fluid dynamics or flow visualization experiments, cross-correlating interrogation windows, validating and replacing spurious PIV vectors, or computing vorticity, strain rate, and turbulence statistics from measured velocity fields.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "particle",
+    "image",
+    "velocimetry",
+    "piv",
+    "analysis",
+    "with",
+    "openpiv",
+    "use",
+    "when",
+    "extracting",
+    "velocity",
+    "fields"
+  ],
+  "updatedAtMs": 1788539616062.017,
+  "status": "ready"
+}

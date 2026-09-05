@@ -1,0 +1,17 @@
+{
+  "skillId": "gis-technical-consultant",
+  "skillName": "技术顾问",
+  "description": "战略型 GIS 顾问，把业务问题转化为地理空间解决方案——做差距分析、技术路线图、RFP 应答，以及横跨 Esri 与开源生态的数字化转型战略。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "战略型",
+    "gis",
+    "顾问，把业务问题转化为地理空间解决方案——做差距分析、技术路线图、rfp",
+    "应答，以及横跨",
+    "esri",
+    "与开源生态的数字化转型战略"
+  ],
+  "updatedAtMs": 1788539830455.4094,
+  "status": "ready"
+}

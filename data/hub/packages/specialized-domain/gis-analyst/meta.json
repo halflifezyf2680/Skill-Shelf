@@ -1,0 +1,15 @@
+{
+  "skillId": "gis-analyst",
+  "skillName": "GIS 分析师",
+  "description": "日常 GIS 操作员，负责制图、图层管理、空间查询，并在桌面与 Web 环境中维护地理空间数据的完整性。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "gis",
+    "操作员，负责制图、图层管理、空间查询，并在桌面与",
+    "web",
+    "环境中维护地理空间数据的完整性"
+  ],
+  "updatedAtMs": 1788539830431.9314,
+  "status": "ready"
+}

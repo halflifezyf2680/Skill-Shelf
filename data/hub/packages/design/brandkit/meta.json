@@ -1,0 +1,23 @@
+{
+  "skillId": "brandkit",
+  "skillName": "brandkit",
+  "description": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "premium",
+    "brand-kit",
+    "image",
+    "generation",
+    "skill",
+    "for",
+    "creating",
+    "high-end",
+    "brand-guidelines",
+    "boards",
+    "logo",
+    "systems"
+  ],
+  "updatedAtMs": 1780679903217.2263,
+  "status": "ready"
+}

@@ -1,23 +1,23 @@
 {
   "skillId": "dnanexus-integration",
   "skillName": "dnanexus-integration",
-  "description": "DNAnexus cloud genomics platform. Build apps/applets, manage data (upload/download), dxpy Python SDK, run workflows, FASTQ/BAM/VCF, for genomics pipeline development and execution.",
+  "description": "Build and operate reproducible genomics workloads on DNAnexus with the dx CLI, dxpy, apps/applets, native workflows, dxCompiler, and Nextflow. Use for DNAnexus data transfers, dxapp.json development, execution monitoring, workflow import, and project automation.",
   "group": "specialized-domain",
   "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
-    "dnanexus",
-    "cloud",
-    "genomics",
-    "platform",
     "build",
-    "apps/applets",
-    "manage",
-    "data",
-    "upload/download",
+    "and",
+    "operate",
+    "reproducible",
+    "genomics",
+    "workloads",
+    "dnanexus",
+    "with",
+    "the",
+    "cli",
     "dxpy",
-    "python",
-    "sdk"
+    "apps/applets"
   ],
-  "updatedAtMs": 1780043420361.1267,
+  "updatedAtMs": 1788539615519.1746,
   "status": "ready"
 }

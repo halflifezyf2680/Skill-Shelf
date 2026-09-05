@@ -1,23 +1,23 @@
 {
   "skillId": "pydicom",
   "skillName": "pydicom",
-  "description": "Python library for working with DICOM (Digital Imaging and Communications in Medicine) files. Use this skill when reading, writing, or modifying medical imaging data in DICOM format, extracting pixel data from medical images (CT, MRI, X-ray, ultrasound), anonymizing DICOM files, working with DICOM metadata and tags, converting DICOM images to other formats, handling compressed DICOM data, or processing medical imaging datasets. Applies to tasks involving medical image analysis, PACS systems, radiology workflows, and healthcare imaging applications.",
+  "description": "Use pydicom to read, inspect, write, transform, and safely preflight local DICOM datasets and pixel data. Applies to DICOM metadata, transfer syntaxes, compression plugins, frames, private elements, JSON, and bounded de-identification review.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "python",
-    "library",
-    "for",
-    "working",
-    "with",
-    "dicom",
-    "digital",
-    "imaging",
+    "use",
+    "pydicom",
+    "read",
+    "inspect",
+    "write",
+    "transform",
     "and",
-    "communications",
-    "medicine",
-    "files"
+    "safely",
+    "preflight",
+    "local",
+    "dicom",
+    "datasets"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616352.2424,
   "status": "ready"
 }

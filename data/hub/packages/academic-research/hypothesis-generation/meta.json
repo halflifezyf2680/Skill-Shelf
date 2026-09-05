@@ -1,23 +1,23 @@
 {
   "skillId": "hypothesis-generation",
   "skillName": "hypothesis-generation",
-  "description": "Structured hypothesis formulation from observations. Use when you have experimental observations or data and need to formulate testable hypotheses with predictions, propose mechanisms, and design experiments to test them. Follows scientific method framework. For open-ended ideation use scientific-brainstorming; for automated LLM-driven hypothesis testing on datasets use hypogenic.",
+  "description": "Formulate evidence-bounded scientific questions, candidate hypotheses, rival explanations, causal or associational claims, discriminating predictions, measurements, and preregistration-ready analysis plans. Use when turning observations or preliminary findings into transparent, testable research plans without treating hypotheses as facts.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "structured",
-    "hypothesis",
-    "formulation",
-    "from",
-    "observations",
-    "use",
-    "when",
-    "you",
-    "have",
-    "experimental",
-    "data",
-    "and"
+    "formulate",
+    "evidence-bounded",
+    "scientific",
+    "questions",
+    "candidate",
+    "hypotheses",
+    "rival",
+    "explanations",
+    "causal",
+    "associational",
+    "claims",
+    "discriminating"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539615749.0474,
   "status": "ready"
 }

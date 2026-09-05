@@ -1,0 +1,23 @@
+{
+  "skillId": "imagegen-frontend-web",
+  "skillName": "imagegen-frontend-web",
+  "description": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE — generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces composition variety (not always left-text / right-image), background-image freedom, varied CTAs, varied hero scales (giant / mid / mini minimalist), narrative concept spine, second-read moments, and a single consistent palette across all images. Optimized for landing pages, marketing sites, and product comps that developers or coding models can accurately recreate.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "elite",
+    "frontend",
+    "image-direction",
+    "skill",
+    "for",
+    "generating",
+    "premium",
+    "conversion-aware",
+    "website",
+    "design",
+    "references",
+    "critical"
+  ],
+  "updatedAtMs": 1780679903224.8145,
+  "status": "ready"
+}

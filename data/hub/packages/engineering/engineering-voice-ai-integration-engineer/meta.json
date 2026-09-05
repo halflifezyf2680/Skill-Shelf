@@ -1,0 +1,17 @@
+{
+  "skillId": "engineering-voice-ai-integration-engineer",
+  "skillName": "语音 AI 集成工程师",
+  "description": "专精于使用 Whisper 系列模型和云端 ASR 服务构建端到端语音转录流水线——从原始音频采集、预处理、转录文本清洗、字幕生成、说话人分离，到结构化下游集成至应用、API 和 CMS 平台。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专精于使用",
+    "whisper",
+    "系列模型和云端",
+    "asr",
+    "服务构建端到端语音转录流水线——从原始音频采集、预处理、转录文本清洗、字幕生成、说话人分离，到结构化下游集成至应用、api",
+    "cms"
+  ],
+  "updatedAtMs": 1788539830364.9065,
+  "status": "ready"
+}

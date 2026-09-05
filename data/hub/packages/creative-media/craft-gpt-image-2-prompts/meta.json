@@ -1,0 +1,23 @@
+{
+  "skillId": "craft-gpt-image-2-prompts",
+  "skillName": "craft-gpt-image-2-prompts",
+  "description": "Design, expand, diagnose, and rewrite prompts specifically for GPT Image 2 and ChatGPT Images 2.0. Turn visual intent into controllable art direction with professional camera language, composition, and physically coherent spatial constraints. When a user specifies a consequential visual style, first interpret and confirm a reusable Style lock before drafting prompts. Use when a user provides a few visual keywords, a rough image idea, a character concept, an existing image to edit, reference images to combine, an underperforming image prompt, or asks for a complete controllable prompt for gpt-image-2. The primary deliverable is a polished prompt, not an automatically generated image.",
+  "group": "creative-media",
+  "groupDescription": "艺术设计、视频制作、动画创作、媒体内容生产与视觉表达。",
+  "keywords": [
+    "design",
+    "expand",
+    "diagnose",
+    "and",
+    "rewrite",
+    "prompts",
+    "specifically",
+    "for",
+    "gpt",
+    "image",
+    "chatgpt",
+    "images"
+  ],
+  "updatedAtMs": 1786695818000.0,
+  "status": "ready"
+}

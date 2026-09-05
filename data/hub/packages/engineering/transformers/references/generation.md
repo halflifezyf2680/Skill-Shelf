@@ -4,6 +4,8 @@
 
 Generate text with language models using the `generate()` method. Control output quality and style through generation strategies and parameters.
 
+For quick prototyping, the [Pipeline API](pipelines.md) wraps tokenization and `generate()`; use `model.generate()` directly when you need custom preprocessing or decoding control.
+
 ## Basic Generation
 
 ```python
@@ -301,11 +303,15 @@ messages = [
     {"role": "user", "content": "What is the capital of France?"}
 ]
 
-input_text = tokenizer.apply_chat_template(messages, tokenize=False)
-inputs = tokenizer(input_text, return_tensors="pt")
+inputs = tokenizer.apply_chat_template(
+    messages,
+    tokenize=True,
+    add_generation_prompt=True,
+    return_tensors="pt"
+).to(model.device)
 
-outputs = model.generate(**inputs, max_new_tokens=100)
-response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+outputs = model.generate(inputs, max_new_tokens=100)
+response = tokenizer.decode(outputs[0][inputs.shape[-1]:], skip_special_tokens=True)
 ```
 
 ### Encoder-Decoder Models

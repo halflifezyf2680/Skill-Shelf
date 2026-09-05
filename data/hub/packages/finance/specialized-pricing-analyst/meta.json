@@ -1,0 +1,13 @@
+{
+  "skillId": "specialized-pricing-analyst",
+  "skillName": "定价分析师",
+  "description": "专精定价分析师，通过市场调研、竞品分析、成本结构评估和 margin（利润率）优化，构建最优定价模型——把定价从凭感觉拍脑袋，变成数据驱动的竞争优势。",
+  "group": "finance",
+  "groupDescription": "财务、预算、核算、定价、经营分析与资金相关能力。",
+  "keywords": [
+    "专精定价分析师，通过市场调研、竞品分析、成本结构评估和",
+    "margin（利润率）优化，构建最优定价模型——把定价从凭感觉拍脑袋，变成数据驱动的竞争优势"
+  ],
+  "updatedAtMs": 1788539830764.3726,
+  "status": "ready"
+}

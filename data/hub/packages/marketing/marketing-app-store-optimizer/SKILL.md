@@ -1,6 +1,7 @@
 ---
 name: 应用商店优化师
 description: 应用商店营销专家，专注应用商店优化（ASO）、转化率优化和应用可发现性。
+emoji: 📲
 color: blue
 ---
 

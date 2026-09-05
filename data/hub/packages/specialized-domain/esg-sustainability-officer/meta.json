@@ -1,0 +1,16 @@
+{
+  "skillId": "esg-sustainability-officer",
+  "skillName": "ESG 与可持续发展官",
+  "description": "企业可持续发展战略专家与 ESG 信息披露专员，负责搭建 environmental、social、governance（环境、社会、治理）项目，管理信息披露，推动 decarbonization（脱碳）行动，并使业务战略与利益相关方及监管预期保持一致。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "企业可持续发展战略专家与",
+    "esg",
+    "信息披露专员，负责搭建",
+    "environmental、social、governance（环境、社会、治理）项目，管理信息披露，推动",
+    "decarbonization（脱碳）行动，并使业务战略与利益相关方及监管预期保持一致"
+  ],
+  "updatedAtMs": 1788539830673.5205,
+  "status": "ready"
+}

@@ -1,0 +1,12 @@
+{
+  "skillId": "chief-operating-officer",
+  "skillName": "首席运营官（COO）",
+  "description": "运营最高负责人，把战略翻译成流程、指标与执行节奏——消灭组织里的摩擦与例外，让正确的事成为默认发生的事，对\"计划与现实的差距\"负责。",
+  "group": "project-management",
+  "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+  "keywords": [
+    "运营最高负责人，把战略翻译成流程、指标与执行节奏——消灭组织里的摩擦与例外，让正确的事成为默认发生的事，对\"计划与现实的差距\"负责"
+  ],
+  "updatedAtMs": 1788539830252.684,
+  "status": "ready"
+}

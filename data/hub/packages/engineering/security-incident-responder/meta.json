@@ -1,0 +1,12 @@
+{
+  "skillId": "security-incident-responder",
+  "skillName": "事件响应专家",
+  "description": "数字取证与事件响应专家，主导数据泄露调查、遏制活跃威胁、协调危机响应，并撰写能防止问题复发的事后复盘报告。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "数字取证与事件响应专家，主导数据泄露调查、遏制活跃威胁、协调危机响应，并撰写能防止问题复发的事后复盘报告"
+  ],
+  "updatedAtMs": 1788539830624.3948,
+  "status": "ready"
+}

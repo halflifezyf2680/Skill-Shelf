@@ -1,0 +1,18 @@
+{
+  "skillId": "medical-billing-coding-specialist",
+  "skillName": "医疗账单与编码专员",
+  "description": "精通 ICD-10-CM/PCS、CPT、HCPCS 编码的医疗账单与编码专家，擅长 claim（理赔单）提交、denial（拒付）管理、收入周期优化、合规审计与 payer（付款方）合同分析——为各种规模的医疗服务提供方最大化 clean claim 率（一次通过率）和收入回收",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "icd-10-cm/pcs、cpt、hcpcs",
+    "编码的医疗账单与编码专家，擅长",
+    "claim（理赔单）提交、denial（拒付）管理、收入周期优化、合规审计与",
+    "payer（付款方）合同分析——为各种规模的医疗服务提供方最大化",
+    "clean",
+    "claim",
+    "率（一次通过率）和收入回收"
+  ],
+  "updatedAtMs": 1788539830718.7488,
+  "status": "ready"
+}

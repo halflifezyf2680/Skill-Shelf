@@ -1,23 +1,23 @@
 {
   "skillId": "venue-templates",
   "skillName": "venue-templates",
-  "description": "Access comprehensive LaTeX templates, formatting requirements, and submission guidelines for major scientific publication venues (Nature, Science, PLOS, IEEE, ACM), academic conferences (NeurIPS, ICML, CVPR, CHI), research posters, and grant proposals (NSF, NIH, DOE, DARPA). This skill should be used when preparing manuscripts for journal submission, conference papers, research posters, or grant proposals and need venue-specific formatting requirements and templates.",
+  "description": "Prepare journal manuscripts, conference papers, research posters, and grant documents using venue-specific formatting guidance and bundled LaTeX scaffolds. Use when selecting an official template, checking current page or anonymity rules, adapting academic writing to a venue, or inspecting a submission PDF.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "access",
-    "comprehensive",
-    "latex",
-    "templates",
-    "formatting",
-    "requirements",
+    "prepare",
+    "journal",
+    "manuscripts",
+    "conference",
+    "papers",
+    "research",
+    "posters",
     "and",
-    "submission",
-    "guidelines",
-    "for",
-    "major",
-    "scientific"
+    "grant",
+    "documents",
+    "using",
+    "venue-specific"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616814.277,
   "status": "ready"
 }

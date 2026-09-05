@@ -1,23 +1,23 @@
 {
   "skillId": "pytdc",
   "skillName": "pytdc",
-  "description": "Therapeutics Data Commons. AI-ready drug discovery datasets (ADME, toxicity, DTI), benchmarks, scaffold splits, molecular oracles, for therapeutic ML and pharmacological prediction.",
+  "description": "Use Therapeutics Data Commons through the PyTDC Python package for registry discovery, approved dataset access, task-aware splits, evaluator metrics, benchmark groups, and bounded molecular-oracle workflows.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
+    "use",
     "therapeutics",
     "data",
     "commons",
-    "ai-ready",
-    "drug",
-    "discovery",
-    "datasets",
-    "adme",
-    "toxicity",
-    "dti",
-    "benchmarks",
-    "scaffold"
+    "through",
+    "the",
+    "pytdc",
+    "python",
+    "package",
+    "for",
+    "registry",
+    "discovery"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616441.252,
   "status": "ready"
 }

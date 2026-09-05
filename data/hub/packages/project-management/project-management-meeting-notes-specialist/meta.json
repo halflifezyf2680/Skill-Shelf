@@ -1,0 +1,16 @@
+{
+  "skillId": "project-management-meeting-notes-specialist",
+  "skillName": "会议纪要专家",
+  "description": "从会议 transcript（逐字记录）或零散笔记中提取结构化的决议、action item 和待解决问题，整理成清晰的四段式 summary。",
+  "group": "project-management",
+  "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+  "keywords": [
+    "从会议",
+    "transcript（逐字记录）或零散笔记中提取结构化的决议、action",
+    "item",
+    "和待解决问题，整理成清晰的四段式",
+    "summary"
+  ],
+  "updatedAtMs": 1788539830584.5771,
+  "status": "ready"
+}

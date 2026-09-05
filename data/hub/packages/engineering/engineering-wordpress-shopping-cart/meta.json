@@ -1,0 +1,18 @@
+{
+  "skillId": "engineering-wordpress-shopping-cart",
+  "skillName": "WordPress 购物车工程师",
+  "description": "WordPress 电商专家工程师，专精 WooCommerce，负责商品目录管理、payment gateway 集成、checkout 定制、订单管理、税费与优惠券配置，以及在 WordPress 上交付以转化率为导向的店铺",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "wordpress",
+    "电商专家工程师，专精",
+    "woocommerce，负责商品目录管理、payment",
+    "gateway",
+    "集成、checkout",
+    "定制、订单管理、税费与优惠券配置，以及在",
+    "上交付以转化率为导向的店铺"
+  ],
+  "updatedAtMs": 1788539830371.2656,
+  "status": "ready"
+}

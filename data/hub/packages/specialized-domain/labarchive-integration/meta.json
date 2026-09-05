@@ -1,23 +1,23 @@
 {
   "skillId": "labarchive-integration",
   "skillName": "labarchive-integration",
-  "description": "Electronic lab notebook API integration. Access notebooks, manage entries/attachments, backup notebooks, integrate with Protocols.io/Jupyter/REDCap, for programmatic ELN workflows.",
+  "description": "Securely integrate with the official LabArchives ELN REST-like API and Inventory API v1. Use for regional endpoint selection, signed-request construction, user authorization and UID flows, local LA container validation, and verified LabArchives integration workflows.",
   "group": "specialized-domain",
   "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
-    "electronic",
-    "lab",
-    "notebook",
-    "api",
-    "integration",
-    "access",
-    "notebooks",
-    "manage",
-    "entries/attachments",
-    "backup",
+    "securely",
     "integrate",
-    "with"
+    "with",
+    "the",
+    "official",
+    "labarchives",
+    "eln",
+    "rest-like",
+    "api",
+    "and",
+    "inventory",
+    "use"
   ],
-  "updatedAtMs": 1780043420859.8665,
+  "updatedAtMs": 1788539615825.6438,
   "status": "ready"
 }

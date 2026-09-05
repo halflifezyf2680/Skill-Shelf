@@ -18,10 +18,16 @@ from Bio import Align
 # Create aligner with default parameters
 aligner = Align.PairwiseAligner()
 
-# Default scores (as of Biopython 1.85+):
+# Default scores (as of Biopython 1.86+):
 # - Match score: +1.0
 # - Mismatch score: 0.0
-# - All gap scores: -1.0
+# - All gap scores: -1.0  (changed from 0 in 1.86 to avoid trivial tie alignments)
+```
+
+**Note (1.86+):** The default gap score changed from 0 to -1. Previously, mismatches and gap combinations could score 0, producing many logically equivalent alignments. To restore pre-1.86 behavior:
+
+```python
+aligner.gap_score = 0
 ```
 
 ### Customizing Alignment Parameters
@@ -174,21 +180,25 @@ seq_record = alignment[0]  # First sequence
 ### Alignment Analysis
 
 ```python
-# Calculate alignment statistics
-from Bio.Align import AlignInfo
+# Calculate alignment statistics with current Biopython APIs.
+# Avoid Bio.AlignInfo.SummaryInfo: it is deprecated in 1.86 and several
+# methods were removed in 1.85/1.86.
+from Bio import AlignIO
+from Bio.motifs import Motif
 
-summary = AlignInfo.SummaryInfo(alignment)
+msa = AlignIO.read("alignment.aln", "clustal")
+alignment = msa.alignment  # New-style Bio.Align.Alignment
 
-# Get consensus sequence
-consensus = summary.gap_consensus(threshold=0.7)
+# Build a motif from a DNA alignment to inspect per-column counts
+motif = Motif("ACGT", alignment)
+counts = motif.counts
+consensus = counts.consensus
 
-# Position-specific scoring matrix (PSSM)
-pssm = summary.pos_specific_score_matrix(consensus)
+# Information content replacement for deprecated SummaryInfo methods
+information_content = sum(motif.relative_entropy)
 
-# Calculate information content
-from Bio import motifs
-motif = motifs.create([record.seq for record in alignment])
-information = motif.counts.information_content()
+# Replacement dictionary from the new-style Alignment object
+substitutions = alignment.substitutions
 ```
 
 ## Creating Alignments Programmatically
@@ -231,8 +241,6 @@ alignment.extend(other_alignment)
 
 ```python
 # Remove all gap-only columns
-from Bio.Align import AlignInfo
-
 no_gaps = []
 for i in range(alignment.get_alignment_length()):
     column = alignment[:, i]
@@ -266,36 +274,43 @@ for i, record1 in enumerate(alignment):
 
 ## Running External Alignment Tools
 
-### Clustal Omega (via Command Line)
+Biopython 1.86 removed `Bio.Application` and all command-line wrapper modules, including `Bio.Align.Applications`. Use Python's standard `subprocess` module with argument lists. Keep executable names and flags explicit, and do not construct command arguments from unsanitized user input.
+
+### Clustal Omega (via subprocess)
 
 ```python
-from Bio.Align.Applications import ClustalOmegaCommandline
+import subprocess
+from Bio import AlignIO
 
-# Setup command
-clustal_cmd = ClustalOmegaCommandline(
-    infile="sequences.fasta",
-    outfile="alignment.aln",
-    verbose=True,
-    auto=True
-)
+cmd = [
+    "clustalo",
+    "-i", "sequences.fasta",
+    "-o", "alignment.aln",
+    "--outfmt", "clu",
+    "--force",
+    "--auto",
+]
 
-# Run alignment
-stdout, stderr = clustal_cmd()
+subprocess.run(cmd, check=True)
 
 # Read result
 alignment = AlignIO.read("alignment.aln", "clustal")
 ```
 
-### MUSCLE (via Command Line)
+### MUSCLE (via subprocess)
 
 ```python
-from Bio.Align.Applications import MuscleCommandline
+import subprocess
+from Bio import AlignIO
 
-muscle_cmd = MuscleCommandline(
-    input="sequences.fasta",
-    out="alignment.aln"
-)
-stdout, stderr = muscle_cmd()
+cmd = [
+    "muscle",
+    "-align", "sequences.fasta",
+    "-output", "alignment.fasta",
+]
+
+subprocess.run(cmd, check=True)
+alignment = AlignIO.read("alignment.fasta", "fasta")
 ```
 
 ## Best Practices

@@ -1,0 +1,14 @@
+{
+  "skillId": "finance-bookkeeper-controller",
+  "skillName": "簿记与财务总监",
+  "description": "专业簿记与财务总监，精通日常会计操作、财务对账、月末结账流程和内部控制。确保财务记录的准确性、完整性和时效性，始终保持 GAAP 合规和审计就绪状态。",
+  "group": "finance",
+  "groupDescription": "财务、预算、核算、定价、经营分析与资金相关能力。",
+  "keywords": [
+    "专业簿记与财务总监，精通日常会计操作、财务对账、月末结账流程和内部控制。确保财务记录的准确性、完整性和时效性，始终保持",
+    "gaap",
+    "合规和审计就绪状态"
+  ],
+  "updatedAtMs": 1788539830372.1528,
+  "status": "ready"
+}

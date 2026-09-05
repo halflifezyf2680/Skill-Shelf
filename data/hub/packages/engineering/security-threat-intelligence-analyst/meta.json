@@ -1,0 +1,14 @@
+{
+  "skillId": "security-threat-intelligence-analyst",
+  "skillName": "威胁情报分析师",
+  "description": "网络威胁情报专家，负责追踪对手团伙、将攻击活动映射到 MITRE ATT&CK、产出可落地的情报报告，并构建能抓住真实威胁的检测规则。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "网络威胁情报专家，负责追踪对手团伙、将攻击活动映射到",
+    "mitre",
+    "att&ck、产出可落地的情报报告，并构建能抓住真实威胁的检测规则"
+  ],
+  "updatedAtMs": 1788539830633.8984,
+  "status": "ready"
+}

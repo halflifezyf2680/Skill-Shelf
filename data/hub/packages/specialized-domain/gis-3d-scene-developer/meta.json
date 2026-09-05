@@ -1,0 +1,18 @@
+{
+  "skillId": "gis-3d-scene-developer",
+  "skillName": "三维场景开发者",
+  "description": "Web 三维可视化专家，使用 Cesium、ArcGIS Scene Viewer 及现代三维 Web 框架，打造沉浸式三维场景、地形模型、点云可视化和交互式 Web 体验。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "web",
+    "三维可视化专家，使用",
+    "cesium、arcgis",
+    "scene",
+    "viewer",
+    "及现代三维",
+    "框架，打造沉浸式三维场景、地形模型、点云可视化和交互式"
+  ],
+  "updatedAtMs": 1788539830429.9321,
+  "status": "ready"
+}

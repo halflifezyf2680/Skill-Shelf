@@ -1,23 +1,23 @@
 {
   "skillId": "benchling-integration",
   "skillName": "benchling-integration",
-  "description": "Benchling R&D platform integration. Access registry (DNA, proteins), inventory, ELN entries, workflows via API, build Benchling Apps, query Data Warehouse, for lab data management automation.",
+  "description": "Benchling Python SDK and REST API integration for registry entities, inventory, ELN entries, workflows, Benchling Apps, and Data Warehouse queries. Use when automating lab data with benchling-sdk or the v2 API.",
   "group": "specialized-domain",
   "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
     "benchling",
-    "r&d",
-    "platform",
+    "python",
+    "sdk",
+    "and",
+    "rest",
+    "api",
     "integration",
-    "access",
+    "for",
     "registry",
-    "dna",
-    "proteins",
+    "entities",
     "inventory",
-    "eln",
-    "entries",
-    "workflows"
+    "eln"
   ],
-  "updatedAtMs": 1780043419677.0645,
+  "updatedAtMs": 1788539615305.9714,
   "status": "ready"
 }

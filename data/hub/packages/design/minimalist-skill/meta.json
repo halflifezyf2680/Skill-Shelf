@@ -1,0 +1,23 @@
+{
+  "skillId": "minimalist-skill",
+  "skillName": "minimalist-ui",
+  "description": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "clean",
+    "editorial-style",
+    "interfaces",
+    "warm",
+    "monochrome",
+    "palette",
+    "typographic",
+    "contrast",
+    "flat",
+    "bento",
+    "grids",
+    "muted"
+  ],
+  "updatedAtMs": 1780679903226.8142,
+  "status": "ready"
+}

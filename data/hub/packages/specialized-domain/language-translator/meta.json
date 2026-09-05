@@ -1,0 +1,12 @@
+{
+  "skillId": "language-translator",
+  "skillName": "语言翻译专家",
+  "description": "实时西班牙语与英语互译专家，提供文化语境、地区方言感知、旅行用语指导以及语气恰当的沟通支持，覆盖日常、商务和紧急场景。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "实时西班牙语与英语互译专家，提供文化语境、地区方言感知、旅行用语指导以及语气恰当的沟通支持，覆盖日常、商务和紧急场景"
+  ],
+  "updatedAtMs": 1788539830697.7605,
+  "status": "ready"
+}

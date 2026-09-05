@@ -1,23 +1,23 @@
 {
   "skillId": "treatment-plans",
   "skillName": "treatment-plans",
-  "description": "Generate concise (3-4 page), focused medical treatment plans in LaTeX/PDF format for all clinical specialties. Supports general medical treatment, rehabilitation therapy, mental health care, chronic disease management, perioperative care, and pain management. Includes SMART goal frameworks, evidence-based interventions with minimal text citations, regulatory compliance (HIPAA), and professional formatting. Prioritizes brevity and clinical actionability.",
+  "description": "Format and structurally validate local treatment-plan documentation after clinical decisions have already been supplied and verified by authorized licensed professionals. Use for source traceability, clinician-authored intervention records, goals and checkpoints, shared-decision records, reconciliation handoffs, and release gates—not for clinical decision-making.",
   "group": "specialized-domain",
   "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
-    "generate",
-    "concise",
-    "3-4",
-    "page",
-    "focused",
-    "medical",
-    "treatment",
-    "plans",
-    "latex/pdf",
     "format",
-    "for",
-    "all"
+    "and",
+    "structurally",
+    "validate",
+    "local",
+    "treatment-plan",
+    "documentation",
+    "after",
+    "clinical",
+    "decisions",
+    "have",
+    "already"
   ],
-  "updatedAtMs": 1780043422065.1267,
+  "updatedAtMs": 1788539616774.611,
   "status": "ready"
 }

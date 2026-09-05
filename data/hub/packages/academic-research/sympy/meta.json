@@ -1,23 +1,23 @@
 {
   "skillId": "sympy",
   "skillName": "sympy",
-  "description": "Use this skill when working with symbolic mathematics in Python. This skill should be used for symbolic computation tasks including solving equations algebraically, performing calculus operations (derivatives, integrals, limits), manipulating algebraic expressions, working with matrices symbolically, physics calculations, number theory problems, geometry computations, and generating executable code from mathematical expressions. Apply this skill when the user needs exact symbolic results rather than numerical approximations, or when working with mathematical formulas that contain variables and parameters.",
+  "description": "Use when you need exact symbolic math in Python — algebra, calculus, equation solving, symbolic linear algebra, or code generation via lambdify/LaTeX. Prefer NumPy or SciPy when floating-point approximations are sufficient.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
     "use",
-    "this",
-    "skill",
     "when",
-    "working",
-    "with",
+    "you",
+    "need",
+    "exact",
     "symbolic",
-    "mathematics",
+    "math",
     "python",
-    "should",
-    "used",
-    "for"
+    "algebra",
+    "calculus",
+    "equation",
+    "solving"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616713.2231,
   "status": "ready"
 }

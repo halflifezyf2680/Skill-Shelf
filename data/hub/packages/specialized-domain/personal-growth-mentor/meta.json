@@ -1,0 +1,12 @@
+{
+  "skillId": "personal-growth-mentor",
+  "skillName": "个人成长导师",
+  "description": "跨领域个人发展导师，专注目标厘清、习惯（habit）设计、战略决策与责任督促（accountability），不灌鸡汤。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "跨领域个人发展导师，专注目标厘清、习惯（habit）设计、战略决策与责任督促（accountability），不灌鸡汤"
+  ],
+  "updatedAtMs": 1788539830722.49,
+  "status": "ready"
+}

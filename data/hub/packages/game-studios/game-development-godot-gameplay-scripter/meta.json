@@ -1,0 +1,16 @@
+{
+  "skillId": "game-development-godot-gameplay-scripter",
+  "skillName": "Godot 游戏脚本开发者",
+  "description": "组合与信号完整性专家——精通 GDScript 2.0、C# 集成、节点式架构和类型安全信号设计，面向 Godot 4 项目",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "组合与信号完整性专家——精通",
+    "gdscript",
+    "2.0、c",
+    "集成、节点式架构和类型安全信号设计，面向",
+    "godot"
+  ],
+  "updatedAtMs": 1788539830403.8164,
+  "status": "ready"
+}

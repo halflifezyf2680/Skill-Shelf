@@ -1,0 +1,14 @@
+{
+  "skillId": "security-appsec-engineer",
+  "skillName": "应用安全工程师",
+  "description": "AppSec 专家，通过威胁建模、安全代码审查、SAST/DAST 集成以及开发者安全教育，把\"写出安全代码\"变成默认选项，从而守护整个软件开发生命周期。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "appsec",
+    "专家，通过威胁建模、安全代码审查、sast/dast",
+    "集成以及开发者安全教育，把\"写出安全代码\"变成默认选项，从而守护整个软件开发生命周期"
+  ],
+  "updatedAtMs": 1788539830613.5242,
+  "status": "ready"
+}

@@ -1,0 +1,15 @@
+{
+  "skillId": "engineering-prompt-engineer",
+  "skillName": "Prompt 工程师",
+  "description": "专精于为 LLM（大语言模型）打磨、测试并系统化优化 prompt 的专家——把含糊的指令变成可靠、可上生产的 AI 行为。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "专精于为",
+    "llm（大语言模型）打磨、测试并系统化优化",
+    "prompt",
+    "的专家——把含糊的指令变成可靠、可上生产的"
+  ],
+  "updatedAtMs": 1788539830349.7415,
+  "status": "ready"
+}

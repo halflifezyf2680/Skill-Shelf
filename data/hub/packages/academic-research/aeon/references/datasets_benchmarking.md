@@ -2,6 +2,8 @@
 
 Aeon provides comprehensive tools for loading datasets and benchmarking time series algorithms.
 
+From **aeon 1.4** onward, most classification and regression archives are hosted on **Zenodo** (including the relaunched Multiverse multivariate classification archive). Loaders download on first use; cache location follows aeon defaults.
+
 ## Dataset Loading
 
 ### Task-Specific Loaders
@@ -10,9 +12,12 @@ Aeon provides comprehensive tools for loading datasets and benchmarking time ser
 ```python
 from aeon.datasets import load_classification
 
-# Load train/test split
+# Load train/test split (or use load_gunpoint for this benchmark)
+from aeon.datasets import load_gunpoint
+
 X_train, y_train = load_classification("GunPoint", split="train")
 X_test, y_test = load_classification("GunPoint", split="test")
+# X_train, y_train = load_gunpoint(split="train")
 
 # Load entire dataset
 X, y = load_classification("GunPoint")

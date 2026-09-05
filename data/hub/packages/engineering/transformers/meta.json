@@ -1,23 +1,23 @@
 {
   "skillId": "transformers",
   "skillName": "transformers",
-  "description": "This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, classification, question answering, translation, summarization, image classification, object detection, speech recognition, and fine-tuning models on custom datasets.",
+  "description": "Hugging Face Transformers for loading Hub models, running pipeline inference, text generation, and Trainer fine-tuning on NLP, vision, audio, and multimodal tasks. Use when working with AutoModel, pipelines, tokenizers, or TrainingArguments—not for general ML outside the Transformers library.",
   "group": "engineering",
   "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
   "keywords": [
-    "this",
-    "skill",
-    "should",
-    "used",
-    "when",
-    "working",
-    "with",
-    "pre-trained",
-    "transformer",
-    "models",
+    "hugging",
+    "face",
+    "transformers",
     "for",
-    "natural"
+    "loading",
+    "hub",
+    "models",
+    "running",
+    "pipeline",
+    "inference",
+    "text",
+    "generation"
   ],
-  "updatedAtMs": 1780043417190.6902,
+  "updatedAtMs": 1788539616769.403,
   "status": "ready"
 }

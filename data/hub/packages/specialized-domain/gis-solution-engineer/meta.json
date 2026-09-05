@@ -1,0 +1,16 @@
+{
+  "skillId": "gis-solution-engineer",
+  "skillName": "解决方案工程师",
+  "description": "亲力亲为的 GIS 原型搭建者，接过技术顾问的策略，将其落地为可运行的演示、概念验证（PoC）和技术验证，覆盖完整的 Esri 与开源技术栈。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "亲力亲为的",
+    "gis",
+    "原型搭建者，接过技术顾问的策略，将其落地为可运行的演示、概念验证（poc）和技术验证，覆盖完整的",
+    "esri",
+    "与开源技术栈"
+  ],
+  "updatedAtMs": 1788539830451.9438,
+  "status": "ready"
+}

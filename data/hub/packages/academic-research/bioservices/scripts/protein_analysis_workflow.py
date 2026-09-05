@@ -11,19 +11,41 @@ This script performs a comprehensive protein analysis pipeline:
 6. GO annotation retrieval
 
 Usage:
-    python protein_analysis_workflow.py PROTEIN_NAME EMAIL [--skip-blast]
+    export NCBI_EMAIL=you@lab.org
+    python protein_analysis_workflow.py PROTEIN_NAME [EMAIL] [--skip-blast]
 
 Examples:
-    python protein_analysis_workflow.py ZAP70_HUMAN user@example.com
+    python protein_analysis_workflow.py ZAP70_HUMAN
     python protein_analysis_workflow.py P43403 user@example.com --skip-blast
 
 Note: BLAST searches can take several minutes. Use --skip-blast to skip this step.
+Email is read from NCBI_EMAIL when the optional EMAIL argument is omitted.
 """
 
+import os
+import re
 import sys
 import time
 import argparse
-from bioservices import UniProt, KEGG, NCBIblast, PSICQUIC, QuickGO
+from bioservices import UniProt, KEGG, NCBIblast, QuickGO
+
+try:
+    # PSICQUIC is not shipped by every bioservices release (it is absent from
+    # 1.16.0). Importing it unconditionally would take the whole workflow down
+    # over one optional step, so degrade instead.
+    from bioservices import PSICQUIC
+except ImportError:  # pragma: no cover - depends on the installed release
+    PSICQUIC = None
+
+_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
+def resolve_ncbi_email(cli_email=None):
+    """Return a validated NCBI contact email from CLI or NCBI_EMAIL."""
+    email = (cli_email or os.environ.get("NCBI_EMAIL", "")).strip()
+    if email and _EMAIL_RE.match(email):
+        return email
+    return None
 
 
 def search_protein(query):
@@ -123,8 +145,8 @@ def run_blast(sequence, email, skip=False):
         print("⊘ Skipped (--skip-blast flag)")
         return None
 
-    if not email or "@" not in email:
-        print("⊘ Skipped (valid email required for BLAST)")
+    if not email:
+        print("⊘ Skipped (set NCBI_EMAIL or pass email for BLAST)")
         return None
 
     try:
@@ -246,6 +268,10 @@ def find_interactions(protein_query):
     print("STEP 5: Protein-Protein Interactions")
     print(f"{'='*70}")
 
+    if PSICQUIC is None:
+        print("⊘ Skipped (this bioservices release does not ship PSICQUIC)")
+        return []
+
     try:
         p = PSICQUIC()
 
@@ -350,12 +376,18 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python protein_analysis_workflow.py ZAP70_HUMAN user@example.com
+  export NCBI_EMAIL=you@lab.org
+  python protein_analysis_workflow.py ZAP70_HUMAN
   python protein_analysis_workflow.py P43403 user@example.com --skip-blast
         """
     )
     parser.add_argument("protein", help="Protein name or UniProt ID")
-    parser.add_argument("email", help="Email address (required for BLAST)")
+    parser.add_argument(
+        "email",
+        nargs="?",
+        default=None,
+        help="NCBI contact email (optional if NCBI_EMAIL is set)",
+    )
     parser.add_argument("--skip-blast", action="store_true",
                        help="Skip BLAST search (faster)")
 
@@ -377,8 +409,9 @@ Examples:
         print("\n⚠ Warning: Could not retrieve sequence")
 
     # Step 3: BLAST search
+    ncbi_email = resolve_ncbi_email(args.email)
     if sequence:
-        blast_results = run_blast(sequence, args.email, args.skip_blast)
+        blast_results = run_blast(sequence, ncbi_email, args.skip_blast)
 
     # Step 4: Pathway discovery
     kegg = KEGG()

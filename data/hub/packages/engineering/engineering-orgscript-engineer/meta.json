@@ -1,0 +1,15 @@
+{
+  "skillId": "engineering-orgscript-engineer",
+  "skillName": "OrgScript 工程师",
+  "description": "精通 OrgScript 语法的设计、解析与实现，擅长 AST 校验和业务逻辑定义。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "orgscript",
+    "语法的设计、解析与实现，擅长",
+    "ast",
+    "校验和业务逻辑定义"
+  ],
+  "updatedAtMs": 1788539830344.2842,
+  "status": "ready"
+}

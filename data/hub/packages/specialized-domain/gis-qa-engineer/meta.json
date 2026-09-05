@@ -1,0 +1,13 @@
+{
+  "skillId": "gis-qa-engineer",
+  "skillName": "GIS 质检工程师",
+  "description": "质量保证专家，负责校验地理空间数据的完整性——拓扑检查、元数据审计、CRS 一致性、精度评估与合规验证。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "质量保证专家，负责校验地理空间数据的完整性——拓扑检查、元数据审计、crs",
+    "一致性、精度评估与合规验证"
+  ],
+  "updatedAtMs": 1788539830445.5852,
+  "status": "ready"
+}

@@ -1,0 +1,16 @@
+{
+  "skillId": "game-development-godot-multiplayer-engineer",
+  "skillName": "Godot 多人游戏工程师",
+  "description": "Godot 4 网络专家——精通 MultiplayerAPI、场景复制、ENet/WebRTC 传输、RPC 和权威模型，面向实时多人游戏",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "godot",
+    "网络专家——精通",
+    "multiplayerapi、场景复制、enet/webrtc",
+    "传输、rpc",
+    "和权威模型，面向实时多人游戏"
+  ],
+  "updatedAtMs": 1788539830405.3474,
+  "status": "ready"
+}

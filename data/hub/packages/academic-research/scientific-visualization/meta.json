@@ -1,23 +1,23 @@
 {
   "skillId": "scientific-visualization",
   "skillName": "scientific-visualization",
-  "description": "Meta-skill for publication-ready figures. Use when creating journal submission figures requiring multi-panel layouts, significance annotations, error bars, colorblind-safe palettes, and specific journal formatting (Nature, Science, Cell). Orchestrates matplotlib/seaborn/plotly with publication styles. For quick exploration use seaborn or plotly directly.",
+  "description": "Create and audit truthful, accessible, publication-ready scientific figures with Matplotlib, Seaborn, or Plotly. Use for figure design, multi-panel layouts, uncertainty and missing-data displays, color/contrast review, image metadata validation, and journal export planning.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "meta-skill",
-    "for",
+    "create",
+    "and",
+    "audit",
+    "truthful",
+    "accessible",
     "publication-ready",
+    "scientific",
     "figures",
-    "use",
-    "when",
-    "creating",
-    "journal",
-    "submission",
-    "requiring",
-    "multi-panel",
-    "layouts"
+    "with",
+    "matplotlib",
+    "seaborn",
+    "plotly"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616589.9817,
   "status": "ready"
 }

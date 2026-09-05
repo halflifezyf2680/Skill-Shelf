@@ -1,23 +1,23 @@
 {
   "skillId": "pysam",
   "skillName": "pysam",
-  "description": "Genomic file toolkit. Read/write SAM/BAM/CRAM alignments, VCF/BCF variants, FASTA/FASTQ sequences, extract regions, calculate coverage, for NGS data processing pipelines.",
+  "description": "Python/HTSlib workflows for genomic files. Use when reading, querying, filtering, or writing SAM/BAM/CRAM, VCF/BCF, FASTA/FASTQ, or tabix data with pysam, including pileup, coverage, indexing, and CRAM references.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
+    "python/htslib",
+    "workflows",
+    "for",
     "genomic",
-    "file",
-    "toolkit",
-    "read/write",
-    "sam/bam/cram",
-    "alignments",
-    "vcf/bcf",
-    "variants",
-    "fasta/fastq",
-    "sequences",
-    "extract",
-    "regions"
+    "files",
+    "use",
+    "when",
+    "reading",
+    "querying",
+    "filtering",
+    "writing",
+    "sam/bam/cram"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616428.4421,
   "status": "ready"
 }

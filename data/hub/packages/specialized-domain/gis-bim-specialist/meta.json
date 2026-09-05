@@ -1,0 +1,16 @@
+{
+  "skillId": "gis-bim-specialist",
+  "skillName": "BIM/GIS 专家",
+  "description": "整合专家，打通 BIM（建筑信息模型）与 GIS（地理信息系统）——负责 Revit/IFC 数据转换、室内地图、数字孪生架构与设施管理数据模型。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "整合专家，打通",
+    "bim（建筑信息模型）与",
+    "gis（地理信息系统）——负责",
+    "revit/ifc",
+    "数据转换、室内地图、数字孪生架构与设施管理数据模型"
+  ],
+  "updatedAtMs": 1788539830433.9368,
+  "status": "ready"
+}

@@ -1,23 +1,23 @@
 {
   "skillId": "generate-image",
   "skillName": "generate-image",
-  "description": "Generate or edit images using AI models (FLUX, Nano Banana 2). Use for general-purpose image generation including photos, illustrations, artwork, visual assets, concept art, and any image that is not a technical diagram or schematic. For flowcharts, circuits, pathways, and technical diagrams, use the scientific-schematics skill instead.",
+  "description": "Generate or edit images with AI models through the OpenRouter Image API (Gemini, Seedream, Recraft, GPT-Image, Riverflow). Use for photos, illustrations, artwork, concept art, visual assets, logos, and image editing or compositing from reference images. For flowcharts, circuits, pathways, and other technical diagrams, use the scientific-schematics skill instead.",
   "group": "design",
   "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
   "keywords": [
     "generate",
     "edit",
     "images",
-    "using",
+    "with",
     "models",
-    "flux",
-    "nano",
-    "banana",
-    "use",
-    "for",
-    "general-purpose",
-    "image"
+    "through",
+    "the",
+    "openrouter",
+    "image",
+    "api",
+    "gemini",
+    "seedream"
   ],
-  "updatedAtMs": 1780043422563.737,
+  "updatedAtMs": 1788539615633.9692,
   "status": "ready"
 }

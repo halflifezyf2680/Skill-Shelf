@@ -1,23 +1,23 @@
 {
   "skillId": "neuropixels-analysis",
   "skillName": "neuropixels-analysis",
-  "description": "Neuropixels neural recording analysis. Load SpikeGLX/OpenEphys data, preprocess, motion correction, Kilosort4 spike sorting, quality metrics, Allen/IBL curation, AI-assisted visual analysis, for Neuropixels 1.0/2.0 extracellular electrophysiology. Use when working with neural recordings, spike sorting, extracellular electrophysiology, or when the user mentions Neuropixels, SpikeGLX, Open Ephys, Kilosort, quality metrics, or unit curation.",
+  "description": "Analyze Neuropixels extracellular recordings end-to-end with SpikeInterface. Covers loading SpikeGLX/Open Ephys/NWB data, preprocessing, drift/motion correction, Kilosort4 (and CPU) spike sorting, quality metrics, and unit curation (threshold-based, model-based UnitRefine, and AI-assisted visual review). Use when working with Neuropixels 1.0/2.0 recordings, spike sorting, or extracellular electrophysiology analysis.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
+    "analyze",
     "neuropixels",
-    "neural",
-    "recording",
-    "analysis",
-    "load",
-    "spikeglx/openephys",
-    "data",
-    "preprocess",
-    "motion",
-    "correction",
-    "kilosort4",
-    "spike"
+    "extracellular",
+    "recordings",
+    "end-to-end",
+    "with",
+    "spikeinterface",
+    "covers",
+    "loading",
+    "spikeglx/open",
+    "ephys/nwb",
+    "data"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616007.2996,
   "status": "ready"
 }

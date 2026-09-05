@@ -1,23 +1,23 @@
 {
   "skillId": "shap",
   "skillName": "shap",
-  "description": "Model interpretability and explainability using SHAP (SHapley Additive exPlanations). Use this skill when explaining machine learning model predictions, computing feature importance, generating SHAP plots (waterfall, beeswarm, bar, scatter, force, heatmap), debugging models, analyzing model bias or fairness, comparing models, or implementing explainable AI. Works with tree-based models (XGBoost, LightGBM, Random Forest), deep learning (TensorFlow, PyTorch), linear models, and any black-box model.",
+  "description": "Explain and audit machine-learning predictions with SHAP. Use for selecting SHAP explainers and maskers, computing and validating feature attributions, handling multi-output explanations, and producing local or global SHAP visualizations.",
   "group": "engineering",
   "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
   "keywords": [
-    "model",
-    "interpretability",
+    "explain",
     "and",
-    "explainability",
-    "using",
+    "audit",
+    "machine-learning",
+    "predictions",
+    "with",
     "shap",
-    "shapley",
-    "additive",
-    "explanations",
     "use",
-    "this",
-    "skill"
+    "for",
+    "selecting",
+    "explainers",
+    "maskers"
   ],
-  "updatedAtMs": 1780043418104.282,
+  "updatedAtMs": 1788539616652.6804,
   "status": "ready"
 }

@@ -1,23 +1,23 @@
 {
   "skillId": "scikit-survival",
   "skillName": "scikit-survival",
-  "description": "Comprehensive toolkit for survival analysis and time-to-event modeling in Python using scikit-survival. Use this skill when working with censored survival data, performing time-to-event analysis, fitting Cox models, Random Survival Forests, Gradient Boosting models, or Survival SVMs, evaluating survival predictions with concordance index or Brier score, handling competing risks, or implementing any survival analysis workflow with the scikit-survival library.",
+  "description": "Build, evaluate, and audit right-censored or competing-risk survival workflows with scikit-survival, including leakage-safe preprocessing, model selection, probability prediction, and censoring-aware metrics.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "comprehensive",
-    "toolkit",
-    "for",
-    "survival",
-    "analysis",
+    "build",
+    "evaluate",
     "and",
-    "time-to-event",
-    "modeling",
-    "python",
-    "using",
+    "audit",
+    "right-censored",
+    "competing-risk",
+    "survival",
+    "workflows",
+    "with",
     "scikit-survival",
-    "use"
+    "including",
+    "leakage-safe"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616639.6194,
   "status": "ready"
 }

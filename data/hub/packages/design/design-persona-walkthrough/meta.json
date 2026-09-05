@@ -1,0 +1,16 @@
+{
+  "skillId": "design-persona-walkthrough",
+  "skillName": "Persona 走查专家",
+  "description": "从设定好的 persona（用户画像）心理视角出发，对网页进行认知走查的模拟——捕捉每个滚动位置上的情绪反应与理性思考，再输出植根于 LIFT、Cialdini、Fogg 框架的结构化 CRO 报告",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "从设定好的",
+    "persona（用户画像）心理视角出发，对网页进行认知走查的模拟——捕捉每个滚动位置上的情绪反应与理性思考，再输出植根于",
+    "lift、cialdini、fogg",
+    "框架的结构化",
+    "cro"
+  ],
+  "updatedAtMs": 1788539830269.3596,
+  "status": "ready"
+}

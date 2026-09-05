@@ -1,23 +1,23 @@
 {
   "skillId": "lamindb",
   "skillName": "lamindb",
-  "description": "This skill should be used when working with LaminDB, an open-source data framework for biology that makes data queryable, traceable, reproducible, and FAIR. Use when managing biological datasets (scRNA-seq, spatial, flow cytometry, etc.), tracking computational workflows, curating and validating data with biological ontologies, building data lakehouses, or ensuring data lineage and reproducibility in biological research. Covers data management, annotation, ontologies (genes, cell types, diseases, tissues), schema validation, integrations with workflow managers (Nextflow, Snakemake) and MLOps platforms (W&B, MLflow), and deployment strategies.",
+  "description": "Use when working with LaminDB, the open-source lineage-native lakehouse for biological datasets and models. Covers setup, artifact registration, query/search, lineage tracking, validation, ontology-backed annotation with Bionty, collections, branches, storage, and workflow integrations.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "this",
-    "skill",
-    "should",
-    "used",
+    "use",
     "when",
     "working",
     "with",
     "lamindb",
+    "the",
     "open-source",
-    "data",
-    "framework",
-    "for"
+    "lineage-native",
+    "lakehouse",
+    "for",
+    "biological",
+    "datasets"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539615833.0913,
   "status": "ready"
 }

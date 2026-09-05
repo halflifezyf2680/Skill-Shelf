@@ -1,23 +1,23 @@
 {
   "skillId": "geopandas",
   "skillName": "geopandas",
-  "description": "Python library for working with geospatial vector data including shapefiles, GeoJSON, and GeoPackage files. Use when working with geographic data for spatial analysis, geometric operations, coordinate transformations, spatial joins, overlay operations, choropleth mapping, or any task involving reading/writing/analyzing vector geographic data. Supports PostGIS databases, interactive maps, and integration with matplotlib/folium/cartopy. Use for tasks like buffer analysis, spatial joins between datasets, dissolving boundaries, clipping data, calculating areas/distances, reprojecting coordinate systems, creating maps, or converting between spatial file formats.",
+  "description": "Guidance and local audit tools for Python workflows that directly use GeoPandas GeoSeries, GeoDataFrame, spatial operations, or vector-data I/O.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "python",
-    "library",
+    "guidance",
+    "and",
+    "local",
+    "audit",
+    "tools",
     "for",
-    "working",
-    "with",
-    "geospatial",
-    "vector",
-    "data",
-    "including",
-    "shapefiles",
-    "geojson",
-    "and"
+    "python",
+    "workflows",
+    "that",
+    "directly",
+    "use",
+    "geopandas"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539615670.6587,
   "status": "ready"
 }

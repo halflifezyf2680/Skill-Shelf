@@ -1,23 +1,23 @@
 {
   "skillId": "astropy",
   "skillName": "astropy",
-  "description": "Comprehensive Python library for astronomy and astrophysics. This skill should be used when working with astronomical data including celestial coordinates, physical units, FITS files, cosmological calculations, time systems, tables, world coordinate systems (WCS), and astronomical data analysis. Use when tasks involve coordinate transformations, unit conversions, FITS file manipulation, cosmological distance calculations, time scale conversions, or astronomical data processing.",
+  "description": "Core Python library for astronomy and astrophysics workflows that need Astropy APIs, including units/quantities, coordinates, FITS I/O, tables, time systems, WCS, and cosmology. Use when implementing or debugging astronomical data analysis code with Astropy.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "comprehensive",
+    "core",
     "python",
     "library",
     "for",
     "astronomy",
     "and",
     "astrophysics",
-    "this",
-    "skill",
-    "should",
-    "used",
-    "when"
+    "workflows",
+    "that",
+    "need",
+    "astropy",
+    "apis"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539615285.2163,
   "status": "ready"
 }

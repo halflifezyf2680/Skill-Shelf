@@ -1,0 +1,22 @@
+{
+  "skillId": "marketing-aeo-foundations",
+  "skillName": "AEO 基础架构师",
+  "description": "AI 引擎优化基础设施专家——落地 llms.txt、AI 感知的 robots.txt、token 预算化内容、结构化 Markdown 可用性，以及 agent 发现文件，让 AI 爬虫、引用引擎和浏览型 agent 能找到、解析并执行你的站点内容",
+  "group": "marketing",
+  "groupDescription": "品牌营销、内容营销、市场传播、增长叙事与活动策略。",
+  "keywords": [
+    "引擎优化基础设施专家——落地",
+    "llms.txt、ai",
+    "感知的",
+    "robots.txt、token",
+    "预算化内容、结构化",
+    "markdown",
+    "可用性，以及",
+    "agent",
+    "发现文件，让",
+    "爬虫、引用引擎和浏览型",
+    "能找到、解析并执行你的站点内容"
+  ],
+  "updatedAtMs": 1788539830473.1084,
+  "status": "ready"
+}

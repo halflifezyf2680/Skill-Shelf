@@ -1,23 +1,23 @@
 {
   "skillId": "umap-learn",
   "skillName": "umap-learn",
-  "description": "UMAP dimensionality reduction. Fast nonlinear manifold learning for 2D/3D visualization, clustering preprocessing (HDBSCAN), supervised/parametric UMAP, for high-dimensional data.",
+  "description": "Use UMAP-learn for nonlinear dimensionality reduction, 2D/3D embeddings, clustering preprocessing, supervised or semi-supervised UMAP, DensMAP, AlignedUMAP, and Parametric UMAP workflows.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "umap",
+    "use",
+    "umap-learn",
+    "for",
+    "nonlinear",
     "dimensionality",
     "reduction",
-    "fast",
-    "nonlinear",
-    "manifold",
-    "learning",
-    "for",
     "2d/3d",
-    "visualization",
+    "embeddings",
     "clustering",
-    "preprocessing"
+    "preprocessing",
+    "supervised",
+    "semi-supervised"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616790.6343,
   "status": "ready"
 }

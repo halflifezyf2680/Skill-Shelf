@@ -1,23 +1,23 @@
 {
   "skillId": "pymatgen",
   "skillName": "pymatgen",
-  "description": "Materials science toolkit. Crystal structures (CIF, POSCAR), phase diagrams, band structure, DOS, Materials Project integration, format conversion, for computational materials science.",
+  "description": "Analyze, validate, convert, and transform materials structures and computed materials data with current pymatgen APIs, including local phase diagrams, symmetry sensitivity, electronic-structure I/O, and explicitly bounded Materials Project queries.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
+    "analyze",
+    "validate",
+    "convert",
+    "and",
+    "transform",
     "materials",
-    "science",
-    "toolkit",
-    "crystal",
     "structures",
-    "cif",
-    "poscar",
-    "phase",
-    "diagrams",
-    "band",
-    "structure",
-    "dos"
+    "computed",
+    "data",
+    "with",
+    "current",
+    "pymatgen"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616369.1365,
   "status": "ready"
 }

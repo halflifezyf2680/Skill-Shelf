@@ -13,6 +13,6 @@
     "内核模块、设备树、platform/i2c/spi/usb",
     "驱动框架、dma、中断子系统、yocto/buildroot、u-boot、交叉编译工具链"
   ],
-  "updatedAtMs": 1777260525600.8804,
+  "updatedAtMs": 1788539830305.8289,
   "status": "ready"
 }

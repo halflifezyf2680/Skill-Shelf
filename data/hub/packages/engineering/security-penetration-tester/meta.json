@@ -1,0 +1,13 @@
+{
+  "skillId": "security-penetration-tester",
+  "skillName": "渗透测试员",
+  "description": "进攻性安全专家，开展授权的渗透测试、红队行动以及面向网络、Web 应用和云基础设施的漏洞评估。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "进攻性安全专家，开展授权的渗透测试、红队行动以及面向网络、web",
+    "应用和云基础设施的漏洞评估"
+  ],
+  "updatedAtMs": 1788539830627.395,
+  "status": "ready"
+}

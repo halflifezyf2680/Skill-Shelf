@@ -1,0 +1,14 @@
+{
+  "skillId": "engineering-multi-agent-systems-architect",
+  "skillName": "多智能体系统架构师",
+  "description": "系统架构师，专精于 multi-agent（多智能体）AI 流水线的设计、协调与治理——涵盖拓扑选型、上下文管理、智能体间信任、故障恢复、human-in-the-loop（人在环中）门控，以及面向生产级智能体系统的可观测性。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "系统架构师，专精于",
+    "multi-agent（多智能体）ai",
+    "流水线的设计、协调与治理——涵盖拓扑选型、上下文管理、智能体间信任、故障恢复、human-in-the-loop（人在环中）门控，以及面向生产级智能体系统的可观测性"
+  ],
+  "updatedAtMs": 1788539830339.781,
+  "status": "ready"
+}

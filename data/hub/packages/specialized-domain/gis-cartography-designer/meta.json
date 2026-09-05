@@ -1,0 +1,14 @@
+{
+  "skillId": "gis-cartography-designer",
+  "skillName": "地图制图设计师",
+  "description": "地图美学专家，设计美观、易读、有效的地图——配色理论、字体排印、标注布局、底图选择，以及面向打印和 Web 的视觉层次。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "地图美学专家，设计美观、易读、有效的地图——配色理论、字体排印、标注布局、底图选择，以及面向打印和",
+    "web",
+    "的视觉层次"
+  ],
+  "updatedAtMs": 1788539830436.937,
+  "status": "ready"
+}

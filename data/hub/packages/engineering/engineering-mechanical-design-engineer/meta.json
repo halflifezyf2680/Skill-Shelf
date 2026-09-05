@@ -1,0 +1,16 @@
+{
+  "skillId": "engineering-mechanical-design-engineer",
+  "skillName": "机械设计工程师",
+  "description": "通用机械产品设计专家——精通方案选型、传动/机构/结构件/连接设计、强度刚度疲劳振动校核、DFMA 与标准件选型，遵循 GB/ISO/JIS 国家标准，输出可制造可装配的工程图与 BOM。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "通用机械产品设计专家——精通方案选型、传动/机构/结构件/连接设计、强度刚度疲劳振动校核、dfma",
+    "与标准件选型，遵循",
+    "gb/iso/jis",
+    "国家标准，输出可制造可装配的工程图与",
+    "bom"
+  ],
+  "updatedAtMs": 1788539830331.37,
+  "status": "ready"
+}

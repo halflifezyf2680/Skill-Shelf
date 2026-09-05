@@ -1,0 +1,23 @@
+{
+  "skillId": "redesign-skill",
+  "skillName": "redesign-existing-projects",
+  "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "upgrades",
+    "existing",
+    "websites",
+    "and",
+    "apps",
+    "premium",
+    "quality",
+    "audits",
+    "current",
+    "design",
+    "identifies",
+    "generic"
+  ],
+  "updatedAtMs": 1780679903228.815,
+  "status": "ready"
+}

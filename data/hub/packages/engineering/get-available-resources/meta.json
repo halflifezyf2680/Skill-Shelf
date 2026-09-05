@@ -1,23 +1,23 @@
 {
   "skillId": "get-available-resources",
   "skillName": "get-available-resources",
-  "description": "This skill should be used at the start of any computationally intensive scientific task to detect and report available system resources (CPU cores, GPUs, memory, disk space). It creates a JSON file with resource information and strategic recommendations that inform computational approach decisions such as whether to use parallel processing (joblib, multiprocessing), out-of-core computing (Dask, Zarr), GPU acceleration (PyTorch, JAX), or memory-efficient strategies. Use this skill before running analyses, training models, processing large datasets, or any task where resource constraints matter.",
+  "description": "Detect host inventory and effective CPU, memory, disk, scheduler, container, and accelerator limits when a user asks for resource-aware planning or before a clearly resource-sensitive local workload. Produces a redacted JSON snapshot and conservative planning helpers without stress tests or assuming visible host hardware is usable.",
   "group": "engineering",
   "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
   "keywords": [
-    "this",
-    "skill",
-    "should",
-    "used",
-    "the",
-    "start",
-    "any",
-    "computationally",
-    "intensive",
-    "scientific",
-    "task",
-    "detect"
+    "detect",
+    "host",
+    "inventory",
+    "and",
+    "effective",
+    "cpu",
+    "memory",
+    "disk",
+    "scheduler",
+    "container",
+    "accelerator",
+    "limits"
   ],
-  "updatedAtMs": 1780043418624.2268,
+  "updatedAtMs": 1788539615680.848,
   "status": "ready"
 }

@@ -1,7 +1,7 @@
 {
   "skillId": "pydeseq2",
   "skillName": "pydeseq2",
-  "description": "Differential gene expression analysis (Python DESeq2). Identify DE genes from bulk RNA-seq counts, Wald tests, FDR correction, volcano/MA plots, for RNA-seq analysis.",
+  "description": "Differential gene expression analysis for bulk RNA-seq with PyDESeq2, including formulaic designs, Wald tests, FDR correction, LFC shrinkage, and result visualization.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
@@ -9,15 +9,15 @@
     "gene",
     "expression",
     "analysis",
-    "python",
-    "deseq2",
-    "identify",
-    "genes",
-    "from",
+    "for",
     "bulk",
     "rna-seq",
-    "counts"
+    "with",
+    "pydeseq2",
+    "including",
+    "formulaic",
+    "designs"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539616346.6936,
   "status": "ready"
 }

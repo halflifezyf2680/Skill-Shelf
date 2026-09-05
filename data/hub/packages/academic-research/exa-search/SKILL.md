@@ -4,9 +4,16 @@ description: "Web toolkit powered by Exa, tuned for scientific and technical con
 compatibility: Requires exa-py Python SDK, an EXA_API_KEY, and internet access.
 license: MIT
 metadata:
+  version: "1.2"
   skill-author: Exa
   website: https://exa.ai
   docs: https://exa.ai/docs
+  openclaw:
+    primaryEnv: EXA_API_KEY
+    envVars:
+    - name: EXA_API_KEY
+      required: true
+      description: Exa search API key.
 ---
 
 # Exa Web Toolkit
@@ -70,7 +77,7 @@ First, check if a `.env` file exists in the project root and contains `EXA_API_K
 dotenv -f .env run -- uv run --with exa-py python "$SKILL_PATH/scripts/exa_search.py" "your query"
 ```
 
-If `dotenv` isn't available, install it: `pip install python-dotenv[cli]` or `uv pip install python-dotenv[cli]`.
+If `dotenv` isn't available, install it: `uv pip install python-dotenv[cli]`.
 
 If there's no `.env`, export the key for the session:
 

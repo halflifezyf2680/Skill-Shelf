@@ -1,0 +1,23 @@
+{
+  "skillId": "lab-hardware-cad",
+  "skillName": "lab-hardware-cad",
+  "description": "Design custom laboratory hardware as parametric build123d models and export fabrication-ready STEP, STL, and DXF files - microfluidic chips and molds, optomechanical mounts and breadboard adapters, cuvette and microplate holders, tube racks, animal-behavior rigs, and 3D-printed instrument fixtures. Use when a research task needs a physical part that must mate with standardized labware, an optical table, a cage system, or a printer, CNC, or laser process.",
+  "group": "academic-research",
+  "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
+  "keywords": [
+    "design",
+    "custom",
+    "laboratory",
+    "hardware",
+    "parametric",
+    "build123d",
+    "models",
+    "and",
+    "export",
+    "fabrication-ready",
+    "step",
+    "stl"
+  ],
+  "updatedAtMs": 1788539615814.5173,
+  "status": "ready"
+}

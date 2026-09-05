@@ -1,23 +1,23 @@
 {
   "skillId": "latchbio-integration",
   "skillName": "latchbio-integration",
-  "description": "Latch platform for bioinformatics workflows. Build pipelines with Latch SDK, @workflow/@task decorators, deploy serverless workflows, LatchFile/LatchDir, Nextflow/Snakemake integration.",
+  "description": "Build, register, debug, and operate bioinformatics workflows on Latch using the Python SDK, CLI, Latch Data and Registry, Nextflow, Snakemake, programmatic execution, and Latch MCP. Use when authoring or deploying Latch workflows, configuring resources or interfaces, moving data, integrating Registry, or launching and monitoring runs.",
   "group": "specialized-domain",
   "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
-    "latch",
-    "platform",
-    "for",
+    "build",
+    "register",
+    "debug",
+    "and",
+    "operate",
     "bioinformatics",
     "workflows",
-    "build",
-    "pipelines",
-    "with",
-    "sdk",
-    "workflow/@task",
-    "decorators",
-    "deploy"
+    "latch",
+    "using",
+    "the",
+    "python",
+    "sdk"
   ],
-  "updatedAtMs": 1780043421037.6523,
+  "updatedAtMs": 1788539615835.2034,
   "status": "ready"
 }

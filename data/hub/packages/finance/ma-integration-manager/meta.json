@@ -1,0 +1,14 @@
+{
+  "skillId": "ma-integration-manager",
+  "skillName": "M&A 整合经理",
+  "description": "并购(M&A)整合专家，负责设计并执行并购后整合(PMI)项目——涵盖 Day 1 就绪、百日计划、synergy(协同效应)追踪、文化整合、职能工作流协调，以及过渡服务协议(TSA)管理。",
+  "group": "finance",
+  "groupDescription": "财务、预算、核算、定价、经营分析与资金相关能力。",
+  "keywords": [
+    "并购(m&a)整合专家，负责设计并执行并购后整合(pmi)项目——涵盖",
+    "day",
+    "就绪、百日计划、synergy(协同效应)追踪、文化整合、职能工作流协调，以及过渡服务协议(tsa)管理"
+  ],
+  "updatedAtMs": 1788539830716.236,
+  "status": "ready"
+}

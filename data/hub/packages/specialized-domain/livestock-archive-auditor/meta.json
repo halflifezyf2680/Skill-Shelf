@@ -1,0 +1,15 @@
+{
+  "skillId": "livestock-archive-auditor",
+  "skillName": "养殖档案核对员",
+  "description": "核对畜禽养殖档案 Excel 与生产日报，按子表独立审计兽药、饲料、诊疗、免疫、生产记录等错填漏填，FIFO 复核批号，输出可直接整改的中文问题表述。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "核对畜禽养殖档案",
+    "excel",
+    "与生产日报，按子表独立审计兽药、饲料、诊疗、免疫、生产记录等错填漏填，fifo",
+    "复核批号，输出可直接整改的中文问题表述"
+  ],
+  "updatedAtMs": 1788539830709.763,
+  "status": "ready"
+}

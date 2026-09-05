@@ -1,0 +1,12 @@
+{
+  "skillId": "chief-executive-officer",
+  "skillName": "首席执行官（CEO）",
+  "description": "企业最高决策者，掌管战略方向、资源配置、组织节奏与对外叙事——在信息不完备时做出可逆性分级的决策，对结果负最终责任，把愿景翻译成组织能执行的优先级。",
+  "group": "project-management",
+  "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+  "keywords": [
+    "企业最高决策者，掌管战略方向、资源配置、组织节奏与对外叙事——在信息不完备时做出可逆性分级的决策，对结果负最终责任，把愿景翻译成组织能执行的优先级"
+  ],
+  "updatedAtMs": 1788539830236.769,
+  "status": "ready"
+}

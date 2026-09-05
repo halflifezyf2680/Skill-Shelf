@@ -1,23 +1,23 @@
 {
   "skillId": "clinical-reports",
   "skillName": "clinical-reports",
-  "description": "Write comprehensive clinical reports including case reports (CARE guidelines), diagnostic reports (radiology/pathology/lab), clinical trial reports (ICH-E3, SAE, CSR), and patient documentation (SOAP, H&P, discharge summaries). Full support with templates, regulatory compliance (HIPAA, FDA, ICH-GCP), and validation tools.",
+  "description": "Create safety-bounded draft structures and run local deterministic checks for clinical case, diagnostic, trial, safety, and aggregate research reports. Use only with synthetic, de-identified, or aggregate inputs and verified source-fact manifests; every output requires qualified review.",
   "group": "specialized-domain",
   "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
-    "write",
-    "comprehensive",
+    "create",
+    "safety-bounded",
+    "draft",
+    "structures",
+    "and",
+    "run",
+    "local",
+    "deterministic",
+    "checks",
+    "for",
     "clinical",
-    "reports",
-    "including",
-    "case",
-    "care",
-    "guidelines",
-    "diagnostic",
-    "radiology/pathology/lab",
-    "trial",
-    "ich-e3"
+    "case"
   ],
-  "updatedAtMs": 1780043420038.7114,
+  "updatedAtMs": 1788539615391.5845,
   "status": "ready"
 }

@@ -1,0 +1,23 @@
+{
+  "skillId": "brutalist-skill",
+  "skillName": "industrial-brutalist-ui",
+  "description": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+  "group": "design",
+  "groupDescription": "UI/UX、品牌、视觉系统、设计语言、创意素材与体验表达。",
+  "keywords": [
+    "raw",
+    "mechanical",
+    "interfaces",
+    "fusing",
+    "swiss",
+    "typographic",
+    "print",
+    "with",
+    "military",
+    "terminal",
+    "aesthetics",
+    "rigid"
+  ],
+  "updatedAtMs": 1780679903219.2266,
+  "status": "ready"
+}

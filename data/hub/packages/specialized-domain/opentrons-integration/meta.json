@@ -1,23 +1,23 @@
 {
   "skillId": "opentrons-integration",
   "skillName": "opentrons-integration",
-  "description": "Official Opentrons Protocol API for OT-2 and Flex robots. Use when writing protocols specifically for Opentrons hardware with full access to Protocol API v2 features. Best for production Opentrons protocols, official API compatibility. For multi-vendor automation or broader equipment control use pylabrobot.",
+  "description": "Author, review, migrate, simulate, and troubleshoot official Opentrons Python Protocol API v2 protocols for Flex and OT-2 robots. Use for robot-specific liquid handling, deck and labware setup, pipettes, modules, runtime parameters, liquid classes, and Opentrons App analysis. Use pylabrobot instead when one workflow must support multiple robot vendors.",
   "group": "specialized-domain",
   "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
+    "author",
+    "review",
+    "migrate",
+    "simulate",
+    "and",
+    "troubleshoot",
     "official",
     "opentrons",
+    "python",
     "protocol",
     "api",
-    "for",
-    "ot-2",
-    "and",
-    "flex",
-    "robots",
-    "use",
-    "when",
-    "writing"
+    "protocols"
   ],
-  "updatedAtMs": 1780043421368.4019,
+  "updatedAtMs": 1788539616067.0251,
   "status": "ready"
 }

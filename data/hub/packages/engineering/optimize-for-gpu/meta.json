@@ -1,23 +1,23 @@
 {
   "skillId": "optimize-for-gpu",
   "skillName": "optimize-for-gpu",
-  "description": "GPU-accelerate Python code using CuPy, Numba CUDA, Warp, cuDF, cuML, cuGraph, KvikIO, cuCIM, cuxfilter, cuVS, cuSpatial, and RAFT. Use whenever the user mentions GPU/CUDA/NVIDIA acceleration, or wants to speed up NumPy, pandas, scikit-learn, scikit-image, NetworkX, GeoPandas, or Faiss workloads. Covers physics simulation, differentiable rendering, mesh ray casting, particle systems (DEM/SPH/fluids), vector/similarity search, GPUDirect Storage file IO, interactive dashboards, geospatial analysis, medical imaging, and sparse eigensolvers. Also use when you see CPU-bound Python code (loops, large arrays, ML pipelines, graph analytics, image processing) that would benefit from GPU acceleration, even if not explicitly requested.",
+  "description": "GPU-accelerates scientific Python on NVIDIA hardware and verifies that the result is correct and faster. Use for CUDA/GPU optimization; CPU-bound NumPy, SciPy, pandas, scikit-learn, NetworkX, scikit-image, vector-search, image-processing, graph, simulation, or file-I/O workloads; CuPy, cuDF, cuML, cuGraph, cuVS, cuCIM, KvikIO, Warp, Newton, Numba-CUDA, or RAFT questions; and profiling, memory-transfer, kernel, or multi-GPU bottlenecks. Also use when large data-parallel Python code is slow and GPU acceleration is a plausible option, even if the user does not name CUDA.",
   "group": "engineering",
   "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
   "keywords": [
-    "gpu-accelerate",
+    "gpu-accelerates",
+    "scientific",
     "python",
-    "code",
-    "using",
-    "cupy",
-    "numba",
-    "cuda",
-    "warp",
-    "cudf",
-    "cuml",
-    "cugraph",
-    "kvikio"
+    "nvidia",
+    "hardware",
+    "and",
+    "verifies",
+    "that",
+    "the",
+    "result",
+    "correct",
+    "faster"
   ],
-  "updatedAtMs": 1780043418293.713,
+  "updatedAtMs": 1788539616079.667,
   "status": "ready"
 }

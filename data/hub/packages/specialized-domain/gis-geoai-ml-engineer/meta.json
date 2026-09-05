@@ -1,0 +1,12 @@
+{
+  "skillId": "gis-geoai-ml-engineer",
+  "skillName": "GeoAI/ML 工程师",
+  "description": "地理空间机器学习专家，构建模型从卫星与航拍影像中做特征提取、目标检测、影像分割和地表覆盖分类。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "地理空间机器学习专家，构建模型从卫星与航拍影像中做特征提取、目标检测、影像分割和地表覆盖分类"
+  ],
+  "updatedAtMs": 1788539830438.9375,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "character-turnaround",
+  "skillName": "character-turnaround",
+  "description": "Create prompt-only four-view character turnaround sheets from one or more reference images. Use when a user asks for front, 45-degree side, profile, and back views, character design sheets, identity locking, or reusable character prompts. The skill outputs copy-ready prompts and never generates images directly. Do not use for LoRA training, model fine-tuning, seed management, or external image-generation accounts.",
+  "group": "creative-media",
+  "groupDescription": "艺术设计、视频制作、动画创作、媒体内容生产与视觉表达。",
+  "keywords": [
+    "create",
+    "prompt-only",
+    "four-view",
+    "character",
+    "turnaround",
+    "sheets",
+    "from",
+    "one",
+    "more",
+    "reference",
+    "images",
+    "use"
+  ],
+  "updatedAtMs": 1787496727710.0925,
+  "status": "ready"
+}

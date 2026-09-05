@@ -1,0 +1,15 @@
+{
+  "skillId": "chattts-voice-generation",
+  "skillName": "chattts-voice-generation",
+  "description": "使用 ChatTTS 进行本地文本转语音（TTS）的系统化技巧。覆盖音色锁定、文本清洗与发音纠正、空白裁剪、基于音节计数的 FFmpeg 语速归一化（atempo），以及声画时间线同步工作流。",
+  "group": "creative-media",
+  "groupDescription": "艺术设计、视频制作、动画创作、媒体内容生产与视觉表达。",
+  "keywords": [
+    "chattts",
+    "进行本地文本转语音（tts）的系统化技巧。覆盖音色锁定、文本清洗与发音纠正、空白裁剪、基于音节计数的",
+    "ffmpeg",
+    "语速归一化（atempo），以及声画时间线同步工作流"
+  ],
+  "updatedAtMs": 1781544320865.6868,
+  "status": "ready"
+}

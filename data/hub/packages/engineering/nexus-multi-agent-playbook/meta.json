@@ -1,0 +1,23 @@
+{
+  "skillId": "nexus-multi-agent-playbook",
+  "skillName": "nexus-multi-agent-playbook",
+  "description": "NEXUS multi-agent orchestration playbook from agency-agents-zh. Full operating manual for coordinating AI expert agents into a pipeline - 7 phase playbooks (discovery to operations), 4 scenario scripts (startup MVP, enterprise feature, incident response, marketing campaign), handoff templates and agent activation prompts. Use when orchestrating multiple role-card agents on one project, defining quality gates, or planning sprint-style agent workflows.",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "nexus",
+    "multi-agent",
+    "orchestration",
+    "playbook",
+    "from",
+    "agency-agents-zh",
+    "full",
+    "operating",
+    "manual",
+    "for",
+    "coordinating",
+    "expert"
+  ],
+  "updatedAtMs": 1788539930791.9995,
+  "status": "ready"
+}

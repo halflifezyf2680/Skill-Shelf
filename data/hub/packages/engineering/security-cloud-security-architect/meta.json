@@ -1,0 +1,15 @@
+{
+  "skillId": "security-cloud-security-architect",
+  "skillName": "云安全架构师",
+  "description": "云原生安全专家，设计零信任架构，在 AWS、Azure 与 GCP 上落地纵深防御，并从第一天起就为基础设施即代码（IaC）流水线保驾护航。",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "云原生安全专家，设计零信任架构，在",
+    "aws、azure",
+    "gcp",
+    "上落地纵深防御，并从第一天起就为基础设施即代码（iac）流水线保驾护航"
+  ],
+  "updatedAtMs": 1788539830615.962,
+  "status": "ready"
+}

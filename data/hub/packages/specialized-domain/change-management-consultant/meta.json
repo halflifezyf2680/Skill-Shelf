@@ -1,0 +1,15 @@
+{
+  "skillId": "change-management-consultant",
+  "skillName": "变革管理顾问",
+  "description": "资深变革管理专家，运用 ADKAR、Kotter 和 Prosci 框架，引导组织顺利完成技术落地、组织重构、文化转型与并购整合——管理阻力、推动接纳，并确保变革在上线之后长久落地",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "资深变革管理专家，运用",
+    "adkar、kotter",
+    "prosci",
+    "框架，引导组织顺利完成技术落地、组织重构、文化转型与并购整合——管理阻力、推动接纳，并确保变革在上线之后长久落地"
+  ],
+  "updatedAtMs": 1788539830657.8582,
+  "status": "ready"
+}

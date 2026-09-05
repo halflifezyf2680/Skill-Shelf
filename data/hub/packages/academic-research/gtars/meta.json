@@ -1,23 +1,23 @@
 {
   "skillId": "gtars",
   "skillName": "gtars",
-  "description": "High-performance toolkit for genomic interval analysis in Rust with Python bindings. Use when working with genomic regions, BED files, coverage tracks, overlap detection, tokenization for ML models, or fragment analysis in computational genomics and machine learning applications.",
+  "description": "Use Gtars for local genomic interval models and set algebra, overlaps and counts, consensus and coverage, tokenization, fragment processing, and refget/BEDbase planning across Python, Rust, and the CLI.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
-    "high-performance",
-    "toolkit",
+    "use",
+    "gtars",
     "for",
+    "local",
     "genomic",
     "interval",
-    "analysis",
-    "rust",
-    "with",
-    "python",
-    "bindings",
-    "use",
-    "when"
+    "models",
+    "and",
+    "set",
+    "algebra",
+    "overlaps",
+    "counts"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539615708.789,
   "status": "ready"
 }

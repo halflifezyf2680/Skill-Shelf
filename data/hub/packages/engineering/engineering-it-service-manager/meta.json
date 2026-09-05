@@ -1,0 +1,18 @@
+{
+  "skillId": "engineering-it-service-manager",
+  "skillName": "IT 服务经理",
+  "description": "资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA 治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "服务管理（itsm）专家，运用",
+    "itil",
+    "框架进行服务目录设计、incident（事件）与",
+    "problem（问题）管理、变更控制、sla",
+    "治理、cmdb",
+    "维护以及持续服务改进——确保",
+    "在任何规模的组织中都能交付可靠、可衡量的业务价值"
+  ],
+  "updatedAtMs": 1788539830326.1265,
+  "status": "ready"
+}

@@ -148,7 +148,7 @@ doi OR url    % At least one required
 #### Validation Script
 
 ```bash
-python scripts/validate_citations.py references.bib --check-required-fields
+python scripts/validate_citations.py references.bib
 ```
 
 **Output**:
@@ -215,7 +215,7 @@ author = {{World Health Organization}}
 
 **Automated validation**:
 ```bash
-python scripts/validate_citations.py references.bib --check-authors
+python scripts/validate_citations.py references.bib
 ```
 
 **Checks for**:
@@ -367,7 +367,7 @@ url = {bit.ly/...}  % URL shortener (not permanent)
 
 **Automated detection**:
 ```bash
-python scripts/validate_citations.py references.bib --check-duplicates
+python scripts/validate_citations.py references.bib
 ```
 
 **Output**:
@@ -454,7 +454,7 @@ title = {Title with {Protected} Text}
 #### Validation
 
 ```bash
-python scripts/validate_citations.py references.bib --check-syntax
+python scripts/validate_citations.py references.bib
 ```
 
 **Checks**:
@@ -539,27 +539,29 @@ Examine validation report:
 1. Standardize formatting
 2. Add URLs for accessibility
 
-### Step 4: Auto-Fix
+### Step 4: Apply the safe corrections
 
-Use auto-fix for safe corrections:
+`validate_citations.py` only reports; `format_bibtex.py` is what rewrites.
+Send the result to a new file so the original survives a bad run:
 
 ```bash
-python scripts/validate_citations.py references.bib \
-  --auto-fix \
+python scripts/format_bibtex.py references.bib \
   --output fixed_references.bib
 ```
 
-**Auto-fix can**:
-- Fix page range format (- to --)
+**It can**:
+- Fix page range format (- to --), and expand abbreviated ranges (1123-30)
 - Remove "pp." from pages
 - Standardize author separators
-- Fix common syntax errors
+- Strip URL prefixes from DOIs
 - Normalize field order
+- Rewrite citation keys to one scheme (`--rekey`)
+- Drop duplicates by DOI or key (`--deduplicate`)
 
-**Auto-fix cannot**:
+**It cannot**:
 - Add missing information
 - Find correct DOIs
-- Determine which duplicate to keep
+- Determine which duplicate to keep — it keeps the first
 - Fix semantic errors
 
 ### Step 5: Manual Review
@@ -641,7 +643,7 @@ python scripts/validate_citations.py refs.bib
 python scripts/validate_citations.py refs.bib
 
 # Before submission
-python scripts/validate_citations.py refs.bib --strict
+python scripts/validate_citations.py refs.bib --check-dois
 ```
 
 ### 2. Use Automated Tools
@@ -652,15 +654,14 @@ Don't validate manually - use scripts:
 - Catches errors humans miss
 - Generates reports
 
-### 3. Keep Backup
+### 3. Write to a new file and diff before replacing
+
+`format_bibtex.py` writes only where you tell it to: with neither `--output`
+nor `--in-place` it prints to stdout and leaves the input alone.
 
 ```bash
-# Before auto-fix
-cp references.bib references_backup.bib
-
-# Run auto-fix
-python scripts/validate_citations.py references.bib \
-  --auto-fix \
+# Reformat into a separate file
+python scripts/format_bibtex.py references.bib \
   --output references_fixed.bib
 
 # Review changes
@@ -740,19 +741,59 @@ title = {Study of H\textsubscript{2}O}  % H₂O
 % Or use UTF-8 with proper LaTeX packages
 ```
 
-### Issue 3: Incomplete Extraction
+### Issue 3: Incomplete Extraction (REQUIRES WEB SEARCH)
 
-**Problem**: Extracted metadata missing fields.
+**Problem**: Extracted metadata missing fields (volume, pages, DOI, issue number).
 
 **Cause**:
-- Source doesn't provide all metadata
+- Source API doesn't provide all metadata
 - Extraction error
-- Incomplete record
+- Incomplete database record
+- Online-first publication without final pagination
 
-**Solution**:
-1. Check original article
-2. Manually add missing fields
-3. Use alternative source (PubMed vs CrossRef)
+**Solution — MANDATORY web search to fill gaps**:
+
+1. **Identify the missing fields** by scanning the BibTeX entry for empty or absent `volume`, `pages`, `number`, `doi` fields.
+
+2. **Search for the missing metadata using web search** (parallel-web skill):
+   ```bash
+   # Search by author + title to find complete citation info
+   parallel-cli search "AUTHOR_NAME PAPER_TITLE JOURNAL volume pages DOI" \
+     --json --max-results 10 \
+     -o sources/search_citation_CITATIONKEY.json
+   ```
+
+3. **If DOI is known, extract from DOI resolver page**:
+   ```bash
+   parallel-cli extract "https://doi.org/DOI_HERE" --json \
+     --objective "extract volume, issue number, page range, publication date" \
+     -o sources/extract_doi_CITATIONKEY.json
+   ```
+
+4. **If DOI is unknown, search for it**:
+   ```bash
+   parallel-cli search "AUTHOR_NAME PAPER_TITLE JOURNAL_NAME DOI" \
+     --json --max-results 10 \
+     -o sources/search_find_doi_CITATIONKEY.json
+   ```
+
+5. **Try alternative metadata sources**:
+   - CrossRef API (via DOI): Most reliable for volume/pages
+   - PubMed (via PMID): Good for biomedical papers
+   - Google Scholar: Fallback for hard-to-find papers
+   - Publisher website: Last resort
+
+6. **Update the BibTeX entry** with the found metadata and log:
+   ```
+   [HH:MM:SS] METADATA ENRICHED: [CitationKey] - added volume, pages, doi ✅
+   ```
+
+7. **If truly unfindable** (rare), add a note field:
+   ```bibtex
+   note = {Complete pagination not yet assigned — online-first publication}
+   ```
+
+**CRITICAL**: Never leave an `@article` entry without `volume`, `pages`, and `doi` unless you have exhausted all search options and documented the reason.
 
 ### Issue 4: Cannot Find Duplicate
 

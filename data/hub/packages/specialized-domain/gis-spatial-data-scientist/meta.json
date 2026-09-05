@@ -1,0 +1,12 @@
+{
+  "skillId": "gis-spatial-data-scientist",
+  "skillName": "空间数据科学家",
+  "description": "高级空间分析专家，把统计建模、空间计量经济学、聚类和预测分析应用到地理空间数据上——找出地图上看不见的规律。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "高级空间分析专家，把统计建模、空间计量经济学、聚类和预测分析应用到地理空间数据上——找出地图上看不见的规律"
+  ],
+  "updatedAtMs": 1788539830455.4094,
+  "status": "ready"
+}

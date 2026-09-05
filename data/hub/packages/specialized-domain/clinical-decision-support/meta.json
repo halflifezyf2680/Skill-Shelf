@@ -1,23 +1,23 @@
 {
   "skillId": "clinical-decision-support",
   "skillName": "clinical-decision-support",
-  "description": "Generate professional clinical decision support (CDS) documents for pharmaceutical and clinical research settings, including patient cohort analyses (biomarker-stratified with outcomes) and treatment recommendation reports (evidence-based guidelines with decision algorithms). Supports GRADE evidence grading, statistical analysis (hazard ratios, survival curves, waterfall plots), biomarker integration, and regulatory compliance. Outputs publication-ready LaTeX/PDF format optimized for drug development, clinical research, and evidence synthesis.",
+  "description": "Prepare and validate research-only clinical decision-support evaluation, evidence-profile, cohort, survival, biomarker/model, privacy, and governance artifacts. Use for aggregate or synthetic research documentation and traceability—not patient care or live clinical operation.",
   "group": "specialized-domain",
   "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
   "keywords": [
-    "generate",
-    "professional",
-    "clinical",
-    "decision",
-    "support",
-    "cds",
-    "documents",
-    "for",
-    "pharmaceutical",
+    "prepare",
     "and",
-    "research",
-    "settings"
+    "validate",
+    "research-only",
+    "clinical",
+    "decision-support",
+    "evaluation",
+    "evidence-profile",
+    "cohort",
+    "survival",
+    "biomarker/model",
+    "privacy"
   ],
-  "updatedAtMs": 1780043419867.9905,
+  "updatedAtMs": 1788539615366.8423,
   "status": "ready"
 }

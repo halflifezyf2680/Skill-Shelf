@@ -1,0 +1,13 @@
+{
+  "skillId": "gis-spatial-data-engineer",
+  "skillName": "空间数据工程师",
+  "description": "ETL 专家，把来自任何来源的杂乱地理空间数据，转换成干净、标准化、可投产的数据集——格式转换、坐标系重投影、属性归一化，以及自动化管线。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "etl",
+    "专家，把来自任何来源的杂乱地理空间数据，转换成干净、标准化、可投产的数据集——格式转换、坐标系重投影、属性归一化，以及自动化管线"
+  ],
+  "updatedAtMs": 1788539830455.4094,
+  "status": "ready"
+}

@@ -1,23 +1,23 @@
 {
   "skillId": "modal",
   "skillName": "modal",
-  "description": "Cloud computing platform for running Python on GPUs and serverless infrastructure. Use when deploying AI/ML models, running GPU-accelerated workloads, serving web endpoints, scheduling batch jobs, or scaling Python code to the cloud. Use this skill whenever the user mentions Modal, serverless GPU compute, deploying ML models to the cloud, serving inference endpoints, running batch processing in the cloud, or needs to scale Python workloads beyond their local machine. Also use when the user wants to run code on H100s, A100s, or other cloud GPUs, or needs to create a web API for a model.",
+  "description": "Modal is a serverless cloud platform for running Python on demand, including on-demand GPUs. Use when deploying or serving AI/ML models, running GPU-accelerated workloads (training, fine-tuning, inference), serving web endpoints, scheduling batch jobs, or scaling Python code to cloud containers with the Modal SDK.",
   "group": "engineering",
   "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
   "keywords": [
+    "modal",
+    "serverless",
     "cloud",
-    "computing",
     "platform",
     "for",
     "running",
     "python",
+    "demand",
+    "including",
+    "on-demand",
     "gpus",
-    "and",
-    "serverless",
-    "infrastructure",
-    "use",
-    "when"
+    "use"
   ],
-  "updatedAtMs": 1780043418458.2444,
+  "updatedAtMs": 1788539615966.7563,
   "status": "ready"
 }

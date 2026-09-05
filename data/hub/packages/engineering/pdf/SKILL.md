@@ -2,6 +2,10 @@
 name: pdf
 description: Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.
 license: Proprietary. LICENSE.txt has complete terms
+metadata:
+  version: "1.2"
+  skill-author: Anthropic, PBC
+  source: https://github.com/anthropics/skills/tree/main/skills/pdf
 ---
 
 # PDF Processing Guide
@@ -232,7 +236,7 @@ pdftk input.pdf rotate 1east output rotated.pdf
 
 ### Extract Text from Scanned PDFs
 ```python
-# Requires: pip install pytesseract pdf2image
+# Requires: uv pip install pytesseract pdf2image
 import pytesseract
 from pdf2image import convert_from_path
 
@@ -312,3 +316,7 @@ with open("encrypted.pdf", "wb") as output:
 - For JavaScript libraries (pdf-lib), see reference.md
 - If you need to fill out a PDF form, follow the instructions in forms.md
 - For troubleshooting guides, see reference.md
+
+---
+
+*This skill is created and maintained by [Anthropic](https://github.com/anthropics/skills/tree/main/skills/pdf). Vendored here unmodified except for frontmatter metadata and the case of the `reference.md`/`forms.md` links, which upstream writes uppercase; see LICENSE.txt for terms.*

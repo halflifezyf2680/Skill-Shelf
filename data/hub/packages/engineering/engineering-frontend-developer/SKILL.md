@@ -1,6 +1,7 @@
 ---
 name: 前端开发者
 description: 精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家
+emoji: 💻
 color: cyan
 ---
 

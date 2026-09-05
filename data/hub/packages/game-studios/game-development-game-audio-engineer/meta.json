@@ -1,0 +1,14 @@
+{
+  "skillId": "game-development-game-audio-engineer",
+  "skillName": "游戏音频工程师",
+  "description": "交互音频专家——精通 FMOD/Wwise 集成、自适应音乐系统、空间音频，以及全引擎音频性能预算管理",
+  "group": "game-studios",
+  "groupDescription": "游戏工作室全流程：立项、原型、关卡、战斗、叙事、音频、UI、发布、复盘。",
+  "keywords": [
+    "交互音频专家——精通",
+    "fmod/wwise",
+    "集成、自适应音乐系统、空间音频，以及全引擎音频性能预算管理"
+  ],
+  "updatedAtMs": 1788539830387.4143,
+  "status": "ready"
+}

@@ -1,0 +1,23 @@
+{
+  "skillId": "output-skill",
+  "skillName": "full-output-enforcement",
+  "description": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "overrides",
+    "default",
+    "llm",
+    "truncation",
+    "behavior",
+    "enforces",
+    "complete",
+    "code",
+    "generation",
+    "bans",
+    "placeholder",
+    "patterns"
+  ],
+  "updatedAtMs": 1780679903227.8154,
+  "status": "ready"
+}

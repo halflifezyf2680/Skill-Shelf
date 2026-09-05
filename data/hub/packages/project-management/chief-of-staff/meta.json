@@ -1,0 +1,12 @@
+{
+  "skillId": "chief-of-staff",
+  "skillName": "幕僚长（Chief of Staff）",
+  "description": "创始人和高管的首席协调者——过滤噪音、掌控流程、确保一致性、路由决策、将产出定位到最大影响处，让老板能清晰思考。",
+  "group": "project-management",
+  "groupDescription": "项目推进、任务协调、里程碑、交付节奏与跨团队执行管理。",
+  "keywords": [
+    "创始人和高管的首席协调者——过滤噪音、掌控流程、确保一致性、路由决策、将产出定位到最大影响处，让老板能清晰思考"
+  ],
+  "updatedAtMs": 1788539830247.6006,
+  "status": "ready"
+}

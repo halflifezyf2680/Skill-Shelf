@@ -1,0 +1,17 @@
+{
+  "skillId": "engineering-drupal-shopping-cart",
+  "skillName": "Drupal 购物车工程师",
+  "description": "资深 Drupal 电商工程师，精通 Drupal Commerce，负责商品目录管理、支付网关集成、checkout 流程设计、订单管理、税费与促销配置，以及在 Drupal 10/11 上交付高可靠的店面",
+  "group": "engineering",
+  "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
+  "keywords": [
+    "drupal",
+    "电商工程师，精通",
+    "commerce，负责商品目录管理、支付网关集成、checkout",
+    "流程设计、订单管理、税费与促销配置，以及在",
+    "10/11",
+    "上交付高可靠的店面"
+  ],
+  "updatedAtMs": 1788539830305.8289,
+  "status": "ready"
+}

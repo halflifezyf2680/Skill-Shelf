@@ -1,7 +1,7 @@
 {
   "skillId": "pytorch-lightning",
   "skillName": "pytorch-lightning",
-  "description": "Deep learning framework (PyTorch Lightning). Organize PyTorch code into LightningModules, configure Trainers for multi-GPU/TPU, implement data pipelines, callbacks, logging (W&B, TensorBoard), distributed training (DDP, FSDP, DeepSpeed), for scalable neural network training.",
+  "description": "Deep learning framework (PyTorch Lightning / lightning package). Organize PyTorch code into LightningModules, configure Trainers for multi-GPU/TPU, implement data pipelines, callbacks, logging (W&B, TensorBoard, MLflow), distributed training (DDP, FSDP, DeepSpeed), for scalable neural network training.",
   "group": "engineering",
   "groupDescription": "软件工程、系统架构、前后端实现、数据与 AI 工程、自动化与基础设施能力。",
   "keywords": [
@@ -10,14 +10,14 @@
     "framework",
     "pytorch",
     "lightning",
+    "package",
     "organize",
     "code",
     "into",
     "lightningmodules",
     "configure",
-    "trainers",
-    "for"
+    "trainers"
   ],
-  "updatedAtMs": 1780043416751.5251,
+  "updatedAtMs": 1788539616445.0735,
   "status": "ready"
 }

@@ -1,0 +1,21 @@
+{
+  "skillId": "gis-geoprocessing-specialist",
+  "skillName": "地理处理专家",
+  "description": "精通 ArcPy 与 Python 工具箱的自动化专家，专攻空间工作流自动化——构建 .pyt 工具箱、Model Builder 流程、批量地理处理自动化，以及为 ArcGIS Pro 编写自定义分析脚本。",
+  "group": "specialized-domain",
+  "groupDescription": "无法稳定归入其他一级组的垂直行业、跨界领域或特殊专业技能。",
+  "keywords": [
+    "arcpy",
+    "python",
+    "工具箱的自动化专家，专攻空间工作流自动化——构建",
+    "pyt",
+    "工具箱、model",
+    "builder",
+    "流程、批量地理处理自动化，以及为",
+    "arcgis",
+    "pro",
+    "编写自定义分析脚本"
+  ],
+  "updatedAtMs": 1788539830438.9375,
+  "status": "ready"
+}

@@ -1,0 +1,12 @@
+interface:
+  display_name: 角色四视图提示词
+  short_description: 输出正面、45°侧前、正侧面、背面的角色四视图提示词，可选带肩头像、身体服饰或全身像取景。
+  default_prompt: 根据我上传的角色参考图，输出一条全身像四视图提示词，固定顺序为正面、45°侧前、正侧面、背面；不要直接生成图片。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - atlas
+  allow_implicit_invocation: true

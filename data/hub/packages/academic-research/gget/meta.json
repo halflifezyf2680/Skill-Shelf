@@ -1,7 +1,7 @@
 {
   "skillId": "gget",
   "skillName": "gget",
-  "description": "Fast CLI/Python queries to 20+ bioinformatics databases. Use for quick lookups: gene info, BLAST searches, AlphaFold structures, enrichment analysis. Best for interactive exploration, simple queries. For batch processing or advanced BLAST use biopython; for multi-database Python workflows use bioservices.",
+  "description": "Fast CLI/Python queries to 20+ bioinformatics databases. Use for quick lookups: gene info, BLAST/BLAT, viral sequence downloads, AlphaFold structures, enrichment analysis, OpenTargets, COSMIC, CELLxGENE, and 8cube mouse specificity/expression data. Best for interactive exploration and simple queries. For batch processing or advanced BLAST use biopython; for multi-database Python workflows use bioservices.",
   "group": "academic-research",
   "groupDescription": "学术研究、学习规划、人文社科分析、资料整理与研究方法。",
   "keywords": [
@@ -16,8 +16,8 @@
     "lookups",
     "gene",
     "info",
-    "blast"
+    "blast/blat"
   ],
-  "updatedAtMs": 1779385161000,
+  "updatedAtMs": 1788539615687.8484,
   "status": "ready"
 }

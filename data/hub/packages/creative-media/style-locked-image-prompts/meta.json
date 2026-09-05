@@ -1,0 +1,23 @@
+{
+  "skillId": "style-locked-image-prompts",
+  "skillName": "style-locked-image-prompts",
+  "description": "Create, analyze, list, select, and apply reusable visual Style locks for GPT Image 2 and ChatGPT Images prompts. Use when a user wants an image prompt in a curated preset style, wants to browse or inspect available style presets, wants to turn reference images into content-independent style locks, needs a consistent visual series across different subjects, scenes, edits, or reference images, or needs coherent original-art or xianxia character design with stable faces, clothing, hairstyles, accessories, equipment, weapons, or treasures.",
+  "group": "creative-media",
+  "groupDescription": "艺术设计、视频制作、动画创作、媒体内容生产与视觉表达。",
+  "keywords": [
+    "create",
+    "analyze",
+    "list",
+    "select",
+    "and",
+    "apply",
+    "reusable",
+    "visual",
+    "style",
+    "locks",
+    "for",
+    "gpt"
+  ],
+  "updatedAtMs": 1786943050000.0,
+  "status": "ready"
+}

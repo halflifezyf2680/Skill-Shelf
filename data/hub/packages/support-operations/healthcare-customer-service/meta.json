@@ -1,0 +1,12 @@
+{
+  "skillId": "healthcare-customer-service",
+  "skillName": "医疗客服专家",
+  "description": "富有同理心的医疗客服专家，负责患者支持、账单查询、预约管理、保险问题、投诉处理，以及向临床或行政人员的无缝转接。",
+  "group": "support-operations",
+  "groupDescription": "客服、运营支持、行政协助、汇总汇报与后台支持工作。",
+  "keywords": [
+    "富有同理心的医疗客服专家，负责患者支持、账单查询、预约管理、保险问题、投诉处理，以及向临床或行政人员的无缝转接"
+  ],
+  "updatedAtMs": 1788539830684.9785,
+  "status": "ready"
+}
