@@ -245,6 +245,7 @@ impl SkillRegistry {
         } else {
             std::env::current_dir()?.join(source_path)
         };
+        self.reject_packages_store_source(&source_path)?;
 
         let installables = collect_installables(&source_path, &self.install_policy)?;
         let mut result = SkillInstallResult {
@@ -303,6 +304,31 @@ impl SkillRegistry {
         }
 
         Ok(result)
+    }
+
+    /// Installing from the packages store itself would make every existing
+    /// skill its own install target: `remove_path_if_exists(destination)`
+    /// deletes the source before `copy_directory` reads it. Reject that path
+    /// family up front instead of relying on callers to pass a sane source.
+    fn reject_packages_store_source(&self, source_path: &Path) -> Result<()> {
+        let packages_root = &self.layout.packages_root;
+        let source_resolved = source_path
+            .canonicalize()
+            .unwrap_or_else(|_| source_path.to_path_buf());
+        let packages_resolved = packages_root
+            .canonicalize()
+            .unwrap_or_else(|_| packages_root.to_path_buf());
+        if source_resolved == packages_resolved
+            || source_resolved.starts_with(&packages_resolved)
+        {
+            bail!(
+                "sourcePath must not be the shelf packages store or inside it ({}). \
+                 Install from an external directory, or use reclassify_skill to move \
+                 an installed skill between groups.",
+                packages_resolved.display()
+            );
+        }
+        Ok(())
     }
 
     pub fn validate_skills(&self, skill: Option<&str>) -> Result<SkillValidationResult> {

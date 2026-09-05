@@ -766,3 +766,44 @@ fn daemon_ipc_server_accepts_shutdown_control_frame() {
     assert!(response.accepted);
     assert!(shutdown_called.load(Ordering::SeqCst));
 }
+
+#[test]
+fn daemon_ipc_server_returns_ipc_error_frame_when_dispatch_fails() {
+    let temp = tempfile::tempdir().unwrap();
+    let shelf = temp.path().join("hub");
+    copy_dir_all(PathBuf::from("tests/fixtures/rebuild_shelf").as_path(), shelf.as_path());
+
+    let daemon = DaemonState::new();
+    let server = spawn_daemon_ipc_server(
+        std::net::SocketAddr::from(([127, 0, 0, 1], 0)),
+        "expected-token",
+        daemon,
+    )
+    .unwrap();
+    let forwarder = IpcForwarder::new(
+        IpcDaemonState {
+            pid: std::process::id(),
+            port: server.local_addr().port(),
+            token: "expected-token".to_string(),
+            version: "0.1.0-test".to_string(),
+            started_at_ms: 1,
+        },
+        Duration::from_secs(5),
+    );
+
+    // Regression: dispatch errors used to drop the IPC connection, surfacing
+    // as an opaque "ipc frame ended before payload" IO error on the shim side.
+    let error = forwarder
+        .forward(ForwardRequestEnvelope::new(
+            &forwarding_context(shelf),
+            "req-unknown-tool",
+            "tools/call",
+            json!({ "name": "no_such_tool_dispatch", "arguments": {} }),
+        ))
+        .unwrap_err();
+    assert!(
+        error.to_string().contains("unknown tool method"),
+        "expected business error text, got: {error}"
+    );
+    assert!(!error.to_string().contains("ended before payload"));
+}

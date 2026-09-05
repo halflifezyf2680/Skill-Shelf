@@ -495,8 +495,14 @@ fn serve_forward_stream_with_shutdown(
         let envelope: ForwardRequestEnvelope =
             serde_json::from_value(frame).context("failed to parse forward request envelope")?;
         let request = forward_envelope_to_daemon_request(envelope)?;
-        let response = runtime.block_on(daemon.dispatch(request))?;
-        send_framed_json(&mut stream, &response.into_structured_content())?;
+        // Business errors (unknown skill/group, install guards, invalid params)
+        // must reach the client as an error frame — dropping the connection
+        // here would surface as an opaque "ipc frame ended before payload".
+        let response = match runtime.block_on(daemon.dispatch(request)) {
+            Ok(response) => response.into_structured_content(),
+            Err(error) => json!({ "ipcError": format!("{error:#}") }),
+        };
+        send_framed_json(&mut stream, &response)?;
     }
 }
 

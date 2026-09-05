@@ -35,3 +35,6 @@ Thumbs.db
 
 # MCP Registry publisher binary
 mcp-publisher*
+
+# Local data backups
+backups/

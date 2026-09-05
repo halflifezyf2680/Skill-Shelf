@@ -545,7 +545,13 @@ impl RequestForwarder for IpcForwarder {
     fn forward(&self, envelope: ForwardRequestEnvelope) -> Result<Value> {
         let mut stream = connect_and_handshake(&self.state, self.timeout)?;
         send_framed_json(&mut stream, &envelope)?;
-        read_framed_json(&mut stream)
+        let reply = read_framed_json::<Value>(&mut stream)?;
+        // The daemon reports business errors as an ipcError payload instead of
+        // dropping the connection; surface that text to the MCP client.
+        if let Some(error) = reply.get("ipcError").and_then(Value::as_str) {
+            bail!("{error}");
+        }
+        Ok(reply)
     }
 }
 

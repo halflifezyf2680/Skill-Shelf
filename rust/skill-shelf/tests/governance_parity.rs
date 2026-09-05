@@ -452,3 +452,51 @@ description: broken frontmatter
     assert_eq!(issues.len(), 1);
     assert!(issues[0].path.contains("invalid-helper"));
 }
+
+#[test]
+fn install_skills_rejects_packages_store_as_source_without_destroying_it() {
+    let (_temp, shelf, mut registry) = make_shelf();
+
+    let package_dir = shelf.join("incoming/pkg-skill");
+    write_file(
+        package_dir.join("SKILL.md"),
+        r#"---
+name: Package Skill
+description: Helps with package installs
+---
+Body
+"#,
+    );
+    registry
+        .install_skills(package_dir.to_str().unwrap(), Some("engineering"))
+        .unwrap();
+    let installed_skill = shelf.join("packages/engineering/pkg-skill/SKILL.md");
+    assert!(installed_skill.exists());
+
+    // Regression: sourcePath pointing at the packages store itself used to
+    // delete every skill (remove-then-copy with source == destination).
+    let packages_root = shelf.join("packages");
+    let err = registry
+        .install_skills(packages_root.to_str().unwrap(), Some("engineering"))
+        .unwrap_err();
+    assert!(
+        err.to_string().contains("packages store"),
+        "expected guard error, got: {err}"
+    );
+    assert!(
+        installed_skill.exists(),
+        "existing skill must survive a rejected install"
+    );
+
+    // A skill directory inside the store is the same self-install trap.
+    let inside = shelf.join("packages/engineering/pkg-skill");
+    let err = registry
+        .install_skills(inside.to_str().unwrap(), Some("general"))
+        .unwrap_err();
+    assert!(
+        err.to_string().contains("packages store"),
+        "expected guard error, got: {err}"
+    );
+    assert!(installed_skill.exists());
+    assert_eq!(registry.list_skill_records().len(), 1);
+}
